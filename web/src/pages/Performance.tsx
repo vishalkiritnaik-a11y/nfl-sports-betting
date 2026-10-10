@@ -25,8 +25,18 @@ export default function PerformancePage() {
       </div>
 
       {p.tiers && <Section title="What the confidence labels mean">
-        <p className="text-sm text-muted mb-3 max-w-[80ch]">Confidence is set by how likely the pick is, using the bands below. A pick drops one tier when something makes its probability shaky: a questionable tag, an uncertain QB, high wind, or the model disagreeing sharply with the market. Hit rates are from walk-forward backtests. This season's column was not used to set the bands.</p>
+        <p className="text-sm text-muted mb-3 max-w-[80ch]">Each player gets a score out of 10: one point per 6 points of TD probability, minus one for a questionable tag or an uncertain QB. 9–10 is High, 6–8 Medium, 1–5 Low. Game confidence uses the favourite's win probability. A pick drops one tier when something makes its probability shaky: a questionable tag, an uncertain QB, high wind, or the model disagreeing sharply with the market. Hit rates are from walk-forward backtests. The bands were set from prior seasons, and this season's column is the check.</p>
         <div className="grid md:grid-cols-2 gap-5">
+          {p.tiers.td_scores && <div className="md:col-span-2 scroll-x"><table className="dtable text-[14px]">
+            <thead><tr><th>TD score</th>{Array.from({ length: 10 }, (_, i) => <th key={i} style={{ textAlign: "right" }}>{i + 1}</th>)}</tr></thead>
+            <tbody>
+              <tr><td className="text-muted">Probability</td>{Array.from({ length: 10 }, (_, i) => <td key={i} className="text-right text-muted text-xs">{p.tiers!.td_scores!.prior[String(i + 1)]?.band}</td>)}</tr>
+              {(["prior", "current"] as const).map((k) => (
+                <tr key={k}><td>{k === "prior" ? "Hit rate, prior seasons" : "Hit rate, this season"}</td>
+                  {Array.from({ length: 10 }, (_, i) => { const st = p.tiers!.td_scores![k]?.[String(i + 1)];
+                    return <td key={i} className="text-right tnum" title={st ? `n=${st.n}` : ""}>{pct(st?.hit ?? null)}<div className="text-[11px] text-muted">n={st?.n ?? 0}</div></td>; })}
+                </tr>))}
+            </tbody></table></div>}
           {(["td", "game"] as const).map((k) => (
             <div key={k} className="scroll-x"><table className="dtable text-[14px]">
               <thead><tr><th>{k === "td" ? "Anytime TD" : "Game pick"}</th><th>Probability</th><th style={{ textAlign: "right" }}>Prior seasons: hit rate</th><th style={{ textAlign: "right" }}>This season: hit rate</th></tr></thead>

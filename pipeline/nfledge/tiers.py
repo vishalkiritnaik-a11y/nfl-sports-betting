@@ -14,7 +14,8 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 
-TD_CUTS = [(0.40, "High"), (0.25, "Medium"), (0.0, "Low")]
+TD_CUTS = [(0.48, "High"), (0.30, "Medium"), (0.0, "Low")]   # = score 9-10 / 6-8 / 1-5
+SCORE_STEP = 0.06   # one score point per 6 percentage points of TD probability
 GAME_CUTS = [(0.70, "High"), (0.60, "Medium"), (0.0, "Low")]
 ORDER = ["Low", "Medium", "High"]
 
@@ -68,3 +69,39 @@ def assess(p: float, cuts, stats: dict | None, risks: list[str], notes: list[str
         reasons += [f"Lowered one tier: {r}" for r in risks] if label != base else risks
     reasons += notes or []
     return {"label": label, "base": base, "reasons": reasons}
+
+
+def td_score(p: float) -> int:
+    """1-10 anytime-TD score: 1 + floor(p / 6 pts), capped at 10."""
+    return int(min(10, max(1, 1 + np.floor(p / SCORE_STEP))))
+
+
+def score_tier(score: int) -> str:
+    return "High" if score >= 9 else "Medium" if score >= 6 else "Low"
+
+
+def score_stats(p: np.ndarray, y: np.ndarray) -> dict:
+    sc = np.array([td_score(x) for x in p])
+    out = {}
+    for k in range(1, 11):
+        m = sc == k
+        lo = (k - 1) * SCORE_STEP
+        out[str(k)] = {"n": int(m.sum()), "pred": float(p[m].mean()) if m.any() else None,
+                       "hit": float(y[m].mean()) if m.any() else None,
+                       "band": f"{lo:.0%}+" if k == 10 else f"{lo:.0%}–{k * SCORE_STEP:.0%}"}
+    return out
+
+
+def assess_td(p: float, sstats: dict | None, tstats: dict | None, risks: list[str], notes: list[str] | None = None) -> dict:
+    """Score out of 10 (minus one per risk flag) and the tier it implies."""
+    base = td_score(p)
+    score = max(1, base - len(risks))
+    label = score_tier(score)
+    st = (sstats or {}).get(str(base))
+    reasons = [f"{p:.0%} to score: {base}/10" + (f". Backtest players at {base}/10 scored {st['hit']:.0%} of the time (n={st['n']:,})" if st and st.get("hit") is not None else "")]
+    reasons += [f"Minus 1: {r}" for r in risks]
+    tst = (tstats or {}).get(label)
+    if tst and tst.get("hit") is not None:
+        reasons.append(f"{label} tier ({'9-10' if label == 'High' else '6-8' if label == 'Medium' else '1-5'}/10): hit {tst['hit']:.0%} in backtests")
+    reasons += notes or []
+    return {"label": label, "base": score_tier(base), "score": score, "base_score": base, "reasons": reasons}

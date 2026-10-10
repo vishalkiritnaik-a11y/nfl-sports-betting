@@ -56,8 +56,8 @@ export default function DataPage() {
       <div className="grid lg:grid-cols-2 gap-5">
         <Section title="Confidence labels">
           <ul className="list-disc pl-5 text-sm grid gap-1 max-w-[75ch]">
-            <li><b>Players:</b> High at 40%+ to score, Medium at 25–40%, Low under 25%. <b>Games:</b> High when the favourite is 70%+, Medium at 60–70%, Low under 60%.</li>
-            <li>A pick drops one tier when its probability is shaky: listed questionable or doubtful (the projection assumes he plays), an uncertain starting QB, high wind, a gap of more than 8 pts from the market, or the two game models disagreeing.</li>
+            <li><b>Players</b> get a score out of 10: one point per 6 pts of TD probability (10 = 54%+). 9–10 is High, 6–8 Medium, 1–5 Low. <b>Games:</b> High when the favourite is 70%+, Medium at 60–70%, Low under 60%.</li>
+            <li>A player loses a point, and a game drops a tier, when the probability is shaky: listed questionable or doubtful (the projection assumes he plays), an uncertain starting QB, high wind, a gap of more than 8 pts from the market, or the two game models disagreeing.</li>
             <li>Thin usage history and swinging snap counts were tested and did not make the model's probabilities less accurate, so they appear as notes and don't change the tier.</li>
             <li>Each tier's backtested hit rate is on the Track record page, so you can check what High actually delivers.</li>
           </ul>

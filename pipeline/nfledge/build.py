@@ -238,6 +238,9 @@ def run(args):
         rows = pd.concat([rows, new], ignore_index=True)
         rows.to_pickle(cache_f)
     log.info("td rows %d (%.0fs)", len(rows), time.time() - t0)
+    act_gd = act.merge(games[["game_id", "gameday"]], on="game_id")
+    rows = rows.drop(columns=[c for c in ("snap_prev", "snap_avg3") if c in rows]).merge(
+        TD.snap_features(act_gd), on=["game_id", "player_id"], how="left")
     gmeta = games.set_index("game_id")
     tg = tog.merge(pred_all, on="game_id")
     tg["home_team"] = tg.game_id.map(gmeta.home_team)
@@ -267,6 +270,7 @@ def run(args):
     # confidence tiers: hit rates measured on seasons before the current one
     tdb_prior = td_bt[td_bt.season < season]
     td_tiers = TR.tier_stats(tdb_prior.p.values, tdb_prior.y.values, TR.TD_CUTS)
+    td_scores = TR.score_stats(tdb_prior.p.values, tdb_prior.y.values)
     gb = gp_bt.merge(gf[["game_id", "margin", "season", "played"]], on="game_id")
     gb = gb[gb.played & (gb.margin != 0) & (gb.season < season)]
     fav = np.maximum(gb.p_home, 1 - gb.p_home).values
@@ -592,7 +596,8 @@ def run(args):
                     eff = D.eff_from(hc, rates_live)
                     lr, lc, eo = TD.TDModel.lambdas(c, team_opps, rates_live, eff, mr, mc)
                     c[f"lam_{scen_name}"] = (lr, lc)
-                    c[f"p_{scen_name}"] = float(td_live.prob(pd.DataFrame([{"lam_rush": lr, "lam_rec": lc, "position": c["position"], "games": c["games"]}]))[0])
+                    sf = TD.snap_features_live(act_gd, c["player_id"], g.gameday)
+                    c[f"p_{scen_name}"] = float(td_live.prob(pd.DataFrame([{"lam_rush": lr, "lam_rec": lc, "position": c["position"], "games": c["games"], **sf}]))[0])
                     if scen_name == "uncertain_active":
                         c["exp_opps"] = eo; c["eff"] = eff; c["opp_mult"] = (mr, mc)
             for c in cand:
@@ -600,8 +605,20 @@ def run(args):
             out.extend(cand)
         return out
 
+    cur_u = usage[usage.season == season]
+    team_i10 = (cur_u.c_i5 + cur_u.c_6_10).groupby(cur_u.team).sum().to_dict()
+    pl_i10 = (cur_u.c_i5 + cur_u.c_6_10).groupby(cur_u.player_id).sum().to_dict()
+    team_rzt = (cur_u.t_rz + cur_u.t_ez).groupby(cur_u.team).sum().to_dict()
+    pl_rzt = (cur_u.t_rz + cur_u.t_ez).groupby(cur_u.player_id).sum().to_dict()
+
     def td_confidence(c, qb_unc, p):
         risks, notes = [], []
+        ti, pi_ = team_i10.get(c["team"], 0), pl_i10.get(c["player_id"], 0)
+        if c["position"] in ("RB", "QB") and ti >= 3 and c.get("sh_c_6_10", 0) >= 0.25 and pi_ / ti < c["sh_c_6_10"] / 2:
+            notes.append(f"Role check: {int(pi_)} of {c['team']}'s {int(ti)} carries inside the 10 this season vs a {c['sh_c_6_10']:.0%} projected share, which leans on earlier games")
+        tr_, pr_ = team_rzt.get(c["team"], 0), pl_rzt.get(c["player_id"], 0)
+        if c["position"] in ("WR", "TE") and tr_ >= 6 and c.get("sh_t_rz", 0) >= 0.2 and pr_ / tr_ < c["sh_t_rz"] / 2:
+            notes.append(f"Role check: {int(pr_)} of {c['team']}'s {int(tr_)} red-zone targets this season vs a {c['sh_t_rz']:.0%} projected share")
         if c["status"] in UNCERTAIN:
             risks.append(f"listed {c['status']}; the projection assumes he plays")
         if qb_unc:
@@ -611,7 +628,7 @@ def run(args):
         sr = snap_recent.get(c["player_id"], [])
         if len(sr) >= 3 and (max(sr) - min(sr)) > 0.25:
             notes.append("Snap share has swung more than 25 pts over the last 3 games")
-        return TR.assess(p, TR.TD_CUTS, td_tiers, risks, notes)
+        return TR.assess_td(p, td_scores, td_tiers, risks, notes)
 
     def td_explain(c, p):
         eo, pos = c["exp_opps"], c["position"]
@@ -687,7 +704,7 @@ def run(args):
                                 "opp": r.opp, "position": r.position, "game_id": r.game_id, "p": float(r.p),
                                 "lam_rush": float(r.lam_rush), "lam_rec": float(r.lam_rec), "status": "Played",
                                 "scored": int(r.y), "backtest": True, "headshot": head_map.get(r.player_id),
-                                "confidence": TR.assess(float(r.p), TR.TD_CUTS, td_tiers, [])})
+                                "confidence": TR.assess_td(float(r.p), td_scores, td_tiers, [])})
             else:
                 pr = gp_all_live.loc[g.game_id].to_dict()
                 full = wk == cur_week
@@ -756,7 +773,7 @@ def run(args):
                                 "opp": r.opp, "position": r.position, "game_id": r.game_id, "p": float(r.p),
                                 "lam_rush": float(r.lam_rush), "lam_rec": float(r.lam_rec), "status": "Played",
                                 "scored": int(r.y), "backtest": True, "headshot": head_map.get(r.player_id),
-                                "confidence": TR.assess(float(r.p), TR.TD_CUTS, td_tiers, [])})
+                                "confidence": TR.assess_td(float(r.p), td_scores, td_tiers, [])})
             fname = f"{S}_{int(wk):02d}.json"
             write_json(C.OUT_DIR / "weeks" / fname, {"season": S, "week": int(wk), "generated": run_id, "is_current": False,
                                                       "games": recs, "td": tds})
@@ -818,6 +835,7 @@ def tier_report(td_bt, gp_bt, gf, season) -> dict:
     out = {"td": {}, "game": {}, "td_cuts": TR.TD_CUTS, "game_cuts": TR.GAME_CUTS}
     for name, d in (("prior", td_bt[td_bt.season < season]), ("current", td_bt[td_bt.season == season])):
         out["td"][name] = TR.tier_stats(d.p.values, d.y.values, TR.TD_CUTS) if len(d) else {}
+        out.setdefault("td_scores", {})[name] = TR.score_stats(d.p.values, d.y.values) if len(d) else {}
     gb = gp_bt.merge(gf[["game_id", "margin", "season", "played"]], on="game_id")
     gb = gb[gb.played & (gb.margin != 0)]
     for name, d in (("prior", gb[gb.season < season]), ("current", gb[gb.season == season])):

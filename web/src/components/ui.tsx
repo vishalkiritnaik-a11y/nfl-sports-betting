@@ -186,3 +186,22 @@ export function ProbViewToggle() {
     </div>
   );
 }
+
+/** Anytime-TD score out of 10: ten segments coloured by tier. */
+export function ScoreBadge({ c }: { c?: Confidence }) {
+  if (!c || c.score == null) return <span className="text-muted">—</span>;
+  const col = c.label === "High" ? "var(--pos)" : c.label === "Medium" ? "var(--model)" : "var(--muted)";
+  const dropped = c.base_score != null && c.base_score > c.score;
+  return (
+    <span className="inline-flex items-center gap-2" title={c.reasons.join("\n")} aria-label={`Score ${c.score} out of 10, ${c.label}`}>
+      <span className="inline-flex gap-[2px]" aria-hidden>
+        {Array.from({ length: 10 }, (_, i) => (
+          <span key={i} className="inline-block w-[5px] h-3 rounded-[1px]" style={{ background: i < c.score! ? col : "var(--rule)" }} />
+        ))}
+      </span>
+      <span className="tnum font-semibold" style={{ color: col }}>{c.score}</span>
+      {dropped && <span className="text-[11px] text-muted">was {c.base_score}</span>}
+      {c.reasons.some((r) => r.startsWith("Role check")) && <span className="text-[11px]" style={{ color: "var(--warn)" }}>role check</span>}
+    </span>
+  );
+}

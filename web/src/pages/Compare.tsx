@@ -46,7 +46,7 @@ const PLAYER_ROWS: [string, (t: TDPlayer, wu: boolean) => string][] = [
   ["Snap share, last 3", (t) => t.snap_pct_last3?.map((x) => pct(x)).join(", ") || "—"],
   ["Team projected points", (t) => num(t.team_exp_points)],
   ["Opponent TDs allowed to position", (t) => (t.opp_vs_pos ? `${t.opp_vs_pos.td_pg.toFixed(2)}/g` : "—")],
-  ["Confidence", (t) => t.confidence?.label ?? "—"],
+  ["Score", (t) => (t.confidence?.score != null ? `${t.confidence.score}/10 (${t.confidence.label})` : "—")],
 ];
 
 export default function Compare() {

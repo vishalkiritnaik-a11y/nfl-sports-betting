@@ -100,7 +100,7 @@ export interface H2H {
   home_coach: string; away_coach: string; same_qbs: number; same_coaches: number; relevance: string;
 }
 
-export interface Confidence { label: "High" | "Medium" | "Low" | "n/a"; base?: "High" | "Medium" | "Low"; score?: number; reasons: string[] }
+export interface Confidence { label: "High" | "Medium" | "Low" | "n/a"; base?: "High" | "Medium" | "Low"; score?: number; base_score?: number; reasons: string[] }
 
 export interface Game {
   game_id: string; season: number; week: number; game_type: string; gameday: string; weekday: string;
@@ -168,6 +168,7 @@ export interface Performance {
   tiers?: {
     td: Record<"prior" | "current", Record<string, TierStat>>;
     game: Record<"prior" | "current", Record<string, TierStat>>;
+    td_scores?: Record<"prior" | "current", Record<string, TierStat>>;
   };
 }
 

@@ -131,6 +131,7 @@ export default function Slate() {
                     <TeamMark team={t.team} info={meta.teams[t.team]} size={18} />
                     <span className="flex-1 truncate">{t.name} <span className="text-muted text-xs">{t.position}, vs {t.opp}</span></span>
                     {t.scored != null && <span className="text-xs" style={{ color: t.scored ? "var(--pos)" : "var(--muted)" }}>{t.scored ? "scored" : "no TD"}</span>}
+                    {t.confidence?.score != null && <span className="tnum text-xs text-muted w-9 text-right" title="Score out of 10">{t.confidence.score}/10</span>}
                     <span className="tnum font-semibold w-12 text-right">{pct(p)}</span>
                   </li>
                 ))}

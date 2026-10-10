@@ -203,13 +203,15 @@ class TDModel:
     def design(df: pd.DataFrame) -> np.ndarray:
         lam = (df.lam_rush + df.lam_rec).clip(lower=1e-4)
         ll = np.log(lam)
+        snap_prev = df["snap_prev"].fillna(0) if "snap_prev" in df else np.zeros(len(df))
+        snap_avg3 = df["snap_avg3"].fillna(0) if "snap_avg3" in df else np.zeros(len(df))
         cols = [ll, ll ** 2] + [(df.position == p).astype(float) for p in POSITIONS[:-1]] + [
-            df.lam_rush / lam, np.minimum(df.games, 6) / 6.0, (df.games == 0).astype(float)]
+            df.lam_rush / lam, np.minimum(df.games, 6) / 6.0, (df.games == 0).astype(float), snap_prev, snap_avg3]
         return np.column_stack(cols)
 
     def fit_calibration(self, df: pd.DataFrame):
         X = self.design(df)
-        self.calib = LogisticRegression(C=1.0, max_iter=2000).fit(X, df.y)
+        self.calib = LogisticRegression(C=1.0, max_iter=5000).fit(X, df.y)
         self.n_train = len(df)
         return self
 
@@ -217,7 +219,8 @@ class TDModel:
         return self.calib.predict_proba(self.design(df))[:, 1]
 
     def calib_coefs(self) -> dict:
-        names = ["log_lambda", "log_lambda_sq", "is_QB", "is_RB", "is_WR", "rush_fraction", "history_depth", "no_history"]
+        names = ["log_lambda", "log_lambda_sq", "is_QB", "is_RB", "is_WR", "rush_fraction", "history_depth", "no_history",
+                 "snap_share_last_game", "snap_share_last3"]
         return dict(zip(names, [float(c) for c in self.calib.coef_[0]])) | {"intercept": float(self.calib.intercept_[0])}
 
 
@@ -230,3 +233,19 @@ def first_td_approx(lams: list[float], p_any_game_td: float = 0.985) -> list[flo
     Shown only for contrast with anytime-TD; not a separate market model."""
     tot = sum(lams)
     return [p_any_game_td * l / tot if tot else 0.0 for l in lams]
+
+
+def snap_features(act: pd.DataFrame) -> pd.DataFrame:
+    """Leak-free snap-share features per (game_id, player_id): share in the player's previous
+    game and mean of his previous three (any team, any season)."""
+    a = act.sort_values("gameday")
+    g = a.groupby("player_id").offense_pct
+    a = a.assign(snap_prev=g.shift(1), snap_avg3=g.transform(lambda x: x.shift(1).rolling(3, min_periods=1).mean()))
+    return a[["game_id", "player_id", "snap_prev", "snap_avg3"]]
+
+
+def snap_features_live(act: pd.DataFrame, player_id: str, before: str) -> dict:
+    x = act[(act.player_id == player_id) & (act.gameday < before)].sort_values("gameday").offense_pct.tail(3)
+    if x.empty:
+        return {"snap_prev": 0.0, "snap_avg3": 0.0}
+    return {"snap_prev": float(x.iloc[-1]), "snap_avg3": float(x.mean())}

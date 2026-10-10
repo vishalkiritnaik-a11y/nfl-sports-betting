@@ -1,12 +1,11 @@
 import type { TDPlayer, TeamInfo } from "../types";
-import { ConfidenceTag, Edge, SortTable, StatusTag, Star, TeamMark, type Col } from "./ui";
+import { ConfidenceTag, Edge, ScoreBadge, SortTable, StatusTag, Star, TeamMark, type Col } from "./ui";
 import { OppBars } from "./charts";
 import { num, pct, ZONE_LABEL } from "../lib/format";
 import { fmtAmerican, probToAmerican } from "../lib/odds";
 import { tdEV, tdP } from "../lib/derive";
 import { useSettings } from "../lib/store";
 
-const CONF = { High: 3, Medium: 2, Low: 1, "n/a": 0 } as const;
 
 export function tdExportRows(rows: TDPlayer[], withoutUncertain: boolean) {
   return rows.map((t) => {
@@ -16,7 +15,7 @@ export function tdExportRows(rows: TDPlayer[], withoutUncertain: boolean) {
       fair_american: p && p > 0 && p < 1 ? probToAmerican(p) : null, p_first_td_approx: t.p_first_td_approx ?? null,
       rush_td_lambda: t.lam_rush, rec_td_lambda: t.lam_rec, market_odds: t.market?.odds ?? null, market_book: t.market?.book ?? null,
       edge_pp: t.market && p != null ? (p - t.market.raw_implied) * 100 : null, ev_per_unit: tdEV(t, p),
-      confidence: t.confidence?.label ?? null, season_tds: t.recent?.season_tds ?? null, last3_tds: t.recent?.last3 ?? null,
+      score_out_of_10: t.confidence?.score ?? null, confidence: t.confidence?.label ?? null, season_tds: t.recent?.season_tds ?? null, last3_tds: t.recent?.last3 ?? null,
       last5_tds: t.recent?.last5 ?? null, last10_tds: t.recent?.last10 ?? null, scored: t.scored ?? null, game_id: t.game_id,
     };
   });
@@ -57,7 +56,7 @@ function Detail({ t, p }: { t: TDPlayer; p: number | null }) {
         <dt className="text-muted">Uncalibrated Poisson</dt><dd>{pct(t.p_raw_poisson ?? null, 1)}</dd>
         <dt className="text-muted">If questionable teammates sit</dt><dd>{t.p_if_uncertain_out != null ? pct(t.p_if_uncertain_out, 1) : "—"}</dd>
         <dt className="text-muted">Fair odds</dt><dd>{p ? fmtAmerican(probToAmerican(p)) : "—"}</dd>
-        <dt className="text-muted">Confidence</dt><dd><ConfidenceTag c={t.confidence} /></dd>
+        <dt className="text-muted">Score</dt><dd className="flex items-center gap-2"><ScoreBadge c={t.confidence} /><ConfidenceTag c={t.confidence} /></dd>
         {t.confidence?.reasons?.length ? <dd className="col-span-2 text-xs text-muted">{t.confidence.reasons.join(". ")}.</dd> : null}
         {t.market && <dd className="col-span-2 text-xs text-muted">{t.market.note}</dd>}
       </dl>
@@ -92,7 +91,8 @@ export default function TDTable({ rows, teams, showGame = true }: { rows: TDPlay
         render: (t: TDPlayer) => { const p = tdP(t, withoutUncertain); return <Edge v={t.market && p != null ? (p - t.market.raw_implied) * 100 : null} />; } },
       { key: "ev", label: "EV / unit", align: "right" as const, sort: (t: TDPlayer) => tdEV(t, tdP(t, withoutUncertain)), render: (t: TDPlayer) => { const v = tdEV(t, tdP(t, withoutUncertain)); return v == null ? "—" : <Edge v={v} />; } },
     ] : []),
-    { key: "conf", label: "Confidence", sort: (t) => CONF[t.confidence?.label ?? "n/a"], render: (t) => <ConfidenceTag c={t.confidence} /> },
+    { key: "score", label: "Score /10", sort: (t) => (t.confidence?.score ?? 0) + (t.confidence?.score != null ? tdP(t, withoutUncertain) ?? 0 : 0), render: (t) => <ScoreBadge c={t.confidence} />,
+      title: "1 point per 6 pts of TD probability, minus 1 for a questionable tag or uncertain QB. 9-10 = High, 6-8 = Medium, 1-5 = Low" },
     ...(anyResult ? [{ key: "res", label: "Result", sort: (t: TDPlayer) => t.scored ?? null, render: (t: TDPlayer) => t.scored == null ? "—" : <span style={{ color: t.scored ? "var(--pos)" : "var(--muted)" }}>{t.scored ? "Scored" : "No TD"}</span> }] : []),
   ];
   return <SortTable rows={rows} cols={cols} initial="p" rowKey={(t) => t.player_id + t.game_id} expand={(t) => <Detail t={t} p={tdP(t, withoutUncertain)} />}
