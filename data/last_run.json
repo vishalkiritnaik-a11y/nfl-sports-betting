@@ -1,5 +1,5 @@
 {
- "last_run": "2026-10-10T02:24:18Z",
+ "last_run": "2026-10-10T02:29:39Z",
  "season": 2026,
  "week": 5,
  "trigger_slot": null,
@@ -16,7 +16,7 @@
    "wind_kickoff_mph": 5.4,
    "gust_mph": 12.5,
    "precip_prob_pct": 2,
-   "lead_hours": 35.1,
+   "lead_hours": 35.0,
    "total_delta": 0.0
   },
   "2026_05_CHI_GB": {
@@ -27,7 +27,7 @@
    "wind_kickoff_mph": 13.9,
    "gust_mph": 26.8,
    "precip_prob_pct": 0,
-   "lead_hours": 38.6,
+   "lead_hours": 38.5,
    "total_delta": -1.96
   },
   "2026_05_CIN_MIA": {
@@ -38,7 +38,7 @@
    "wind_kickoff_mph": 6.1,
    "gust_mph": 10.1,
    "precip_prob_pct": 13,
-   "lead_hours": 38.6,
+   "lead_hours": 38.5,
    "total_delta": 0.0
   },
   "2026_05_LV_NE": {
@@ -49,7 +49,7 @@
    "wind_kickoff_mph": 10.5,
    "gust_mph": 18.1,
    "precip_prob_pct": 23,
-   "lead_hours": 38.6,
+   "lead_hours": 38.5,
    "total_delta": -0.25
   },
   "2026_05_MIN_NO": {
@@ -63,23 +63,41 @@
    "wind_kickoff_mph": 13.8,
    "gust_mph": 28.9,
    "precip_prob_pct": 96,
-   "lead_hours": 38.6,
+   "lead_hours": 38.5,
    "total_delta": -1.91
   },
   "2026_05_IND_PIT": {
-   "status": "unavailable",
+   "status": "forecast",
    "roof_type": "outdoor",
-   "error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=30)"
+   "temp_f": 69.7,
+   "wind_mph": 9.2,
+   "wind_kickoff_mph": 9.2,
+   "gust_mph": 21.3,
+   "precip_prob_pct": 97,
+   "lead_hours": 38.5,
+   "total_delta": 0.0
   },
   "2026_05_HOU_TEN": {
-   "status": "unavailable",
+   "status": "forecast",
    "roof_type": "outdoor",
-   "error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=30)"
+   "temp_f": 64.4,
+   "wind_mph": 9.5,
+   "wind_kickoff_mph": 8.3,
+   "gust_mph": 17.4,
+   "precip_prob_pct": 17,
+   "lead_hours": 38.5,
+   "total_delta": 0.0
   },
   "2026_05_NYG_WAS": {
-   "status": "unavailable",
+   "status": "forecast",
    "roof_type": "outdoor",
-   "error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=30)"
+   "temp_f": 66.9,
+   "wind_mph": 11.8,
+   "wind_kickoff_mph": 11.0,
+   "gust_mph": 26.6,
+   "precip_prob_pct": 97,
+   "lead_hours": 38.5,
+   "total_delta": -0.5
   },
   "2026_05_DEN_LAC": {
    "status": "indoor"
@@ -92,7 +110,7 @@
    "wind_kickoff_mph": 18.4,
    "gust_mph": 33.3,
    "precip_prob_pct": 45,
-   "lead_hours": 42.0
+   "lead_hours": 41.9
   },
   "2026_05_SF_SEA": {
    "status": "forecast",
@@ -102,7 +120,7 @@
    "wind_kickoff_mph": 7.6,
    "gust_mph": 12.5,
    "precip_prob_pct": 0,
-   "lead_hours": 42.0,
+   "lead_hours": 41.9,
    "total_delta": 0.0
   },
   "2026_05_BAL_ATL": {
@@ -113,7 +131,7 @@
    "wind_kickoff_mph": 9.2,
    "gust_mph": 25.4,
    "precip_prob_pct": 4,
-   "lead_hours": 45.9
+   "lead_hours": 45.8
   },
   "2026_05_BUF_LA": {
    "status": "indoor"
