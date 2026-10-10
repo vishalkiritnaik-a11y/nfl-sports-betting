@@ -1,0 +1,135 @@
+"""Tests for model building blocks, storage and API-failure handling (no network)."""
+import math
+import sqlite3
+from datetime import datetime, timezone
+
+import numpy as np
+import pandas as pd
+import pytest
+
+from nfledge import db as DB
+from nfledge.ingest import weather as W
+from nfledge.models import elo
+from nfledge.models import td_model as TD
+
+
+# ------------------------------------------------------------------ elo
+def test_elo_expected_symmetric():
+    assert abs(elo.expected(0) - 0.5) < 1e-12
+    assert abs(elo.expected(100) + elo.expected(-100) - 1) < 1e-12
+
+
+def test_elo_updates_are_zero_sum_and_leak_free():
+    g = pd.DataFrame({
+        "game_id": ["a", "b"], "season": [2020, 2020], "gameday": ["2020-09-10", "2020-09-17"],
+        "home_team": ["X", "X"], "away_team": ["Y", "Y"], "home_score": [30, np.nan], "away_score": [10, np.nan],
+        "location": ["Home", "Home"]})
+    pre, now = elo.run(g)
+    assert pre.loc[0, "home_elo"] == pre.loc[0, "away_elo"] == elo.MEAN      # pre-game rating unaffected by own result
+    assert pre.loc[1, "home_elo"] > pre.loc[1, "away_elo"]                    # second game sees the first result
+    assert abs((now["X"] - elo.MEAN) + (now["Y"] - elo.MEAN)) < 1e-9
+
+
+# ------------------------------------------------------------------ TD model
+def _cand(pid, **sh):
+    base = {f"sh_{z}": 0.0 for z in TD.ALL_ZONES}
+    base.update({f"sh_{k}": v for k, v in sh.items()})
+    return {"player_id": pid, **base}
+
+
+def test_renormalize_redistributes_shares_of_unavailable_players():
+    rows = [_cand("rb1", c_i5=0.6, c_out=0.6), _cand("rb2", c_i5=0.3, c_out=0.3), _cand("wr", t_out=0.5)]
+    TD.renormalize(rows, {"rb2", "wr"})
+    assert rows[0]["adj_c_i5"] == 0.0
+    assert abs(rows[1]["adj_c_i5"] - 0.9) < 1e-9            # absorbs rb1's share, capped at team total
+    assert abs(rows[2]["adj_t_out"] - 0.5) < 1e-9
+
+
+def test_lambdas_add_rush_and_receiving_without_double_count():
+    rates = {z: 0.1 for z in TD.ALL_ZONES}
+    team = {z: 10.0 for z in TD.ALL_ZONES}
+    c = _cand("p", c_i5=0.5, t_ez=0.2)
+    lr, lc, eo = TD.TDModel.lambdas(c, team, rates, 1.0, 1.0, 1.0, prefix="sh_")
+    assert abs(lr - 0.5) < 1e-9 and abs(lc - 0.2) < 1e-9
+    assert abs(TD.raw_poisson_p(lr, lc) - (1 - math.exp(-0.7))) < 1e-12
+
+
+def test_first_td_less_than_anytime():
+    lams = [0.8, 0.5, 0.3, 0.1]
+    ft = TD.first_td_approx(lams)
+    assert abs(sum(ft) - 0.985) < 1e-9
+    assert all(f < TD.raw_poisson_p(l, 0) for f, l in zip(ft, lams))
+
+
+def test_td_calibration_outputs_probabilities():
+    rng = np.random.default_rng(0)
+    n = 2000
+    lam = rng.uniform(0.01, 1.0, n)
+    df = pd.DataFrame({"lam_rush": lam * 0.6, "lam_rec": lam * 0.4, "position": rng.choice(TD.POSITIONS, n),
+                       "games": rng.integers(0, 12, n)})
+    df["y"] = (rng.uniform(size=n) < 1 - np.exp(-lam)).astype(int)
+    m = TD.TDModel().fit_calibration(df)
+    p = m.prob(df)
+    assert ((p > 0) & (p < 1)).all()
+    assert np.corrcoef(p, lam)[0, 1] > 0.8
+
+
+# ------------------------------------------------------------------ storage
+def test_migrations_and_append_only_log(tmp_path):
+    con = DB.connect(tmp_path / "t.sqlite")
+    assert DB.migrate(con) == []                                           # idempotent
+    DB.log_run(con, "2026-10-01T00:00:00Z", "v", 2026, 5, {}, "x", "y")
+    DB.log_run(con, "2026-10-02T00:00:00Z", "v", 2026, 5, {}, "x", "y")
+    rec = {"game_id": "g1", "kickoff_utc": "2026-10-03T17:00:00Z", "home_team": "A", "away_team": "B",
+           "p_home": 0.6, "exp_margin": 3, "exp_total": 44, "confidence": "Medium"}
+    DB.log_game(con, "2026-10-01T00:00:00Z", rec)
+    DB.log_game(con, "2026-10-02T00:00:00Z", {**rec, "p_home": 0.55})
+    DB.log_game(con, "2026-10-04T00:00:00Z", {**rec, "p_home": 0.99})    # after kickoff: never graded
+    DB.record_results(con, pd.DataFrame({"game_id": ["g1"], "home_score": [20], "away_score": [17]}))
+    last = DB.last_pregame_games(con)
+    assert len(last) == 1 and last[0]["p_home"] == 0.55 and last[0]["home_score"] == 20
+    assert len(DB.history_for_game(con, "g1")) == 3
+
+
+# ------------------------------------------------------------------ weather / API failures
+def test_kickoff_times_are_eastern():
+    ko = W.kickoff_utc("2026-10-11", "13:00")
+    assert ko.hour == 17 and ko.tzinfo == timezone.utc               # EDT = UTC-4
+    assert W.kickoff_utc("2026-12-06", "13:00").hour == 18           # EST = UTC-5
+
+
+def test_weather_failure_reports_unavailable(monkeypatch):
+    import requests
+
+    def boom(*a, **k):
+        raise requests.ConnectionError("no route")
+    monkeypatch.setattr(W.requests, "get", boom)
+    now = datetime(2026, 10, 9, tzinfo=timezone.utc)
+    out = W.forecast(40.0, -74.0, datetime(2026, 10, 11, 17, tzinfo=timezone.utc), now)
+    assert out["status"] == "unavailable"
+    far = W.forecast(40.0, -74.0, datetime(2026, 12, 1, tzinfo=timezone.utc), now)
+    assert far["status"] == "beyond_forecast_range"
+
+
+def test_weather_parses_game_window(monkeypatch):
+    times = [f"2026-10-11T{h:02d}:00" for h in range(24)]
+    payload = {"hourly": {"time": times, "temperature_2m": [50] * 24, "relative_humidity_2m": [60] * 24,
+                          "precipitation_probability": [0] * 17 + [70] + [0] * 6, "precipitation": [0.0] * 24,
+                          "snowfall": [0.0] * 24, "wind_speed_10m": [5] * 18 + [22] + [5] * 5,
+                          "wind_gusts_10m": [9] * 24, "weather_code": [1] * 24}}
+
+    class R:
+        def raise_for_status(self): pass
+        def json(self): return payload
+    monkeypatch.setattr(W.requests, "get", lambda *a, **k: R())
+    monkeypatch.setattr(W, "_ensemble", lambda *a: {})
+    out = W.forecast(40, -74, datetime(2026, 10, 11, 17, tzinfo=timezone.utc), datetime(2026, 10, 10, tzinfo=timezone.utc))
+    assert out["status"] == "forecast"
+    assert out["wind_mph"] == 22 and out["precip_prob_pct"] == 70   # max over kickoff + 3h window
+
+
+def test_odds_api_disabled_without_key(monkeypatch):
+    from nfledge.ingest import odds_api
+    monkeypatch.setattr(odds_api, "ODDS_API_KEY", "")
+    assert odds_api.enabled() is False
+    assert odds_api.game_odds() == {}

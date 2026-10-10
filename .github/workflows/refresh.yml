@@ -1,0 +1,101 @@
+name: Refresh data and deploy
+
+on:
+  schedule:
+    # All times UTC. Daily morning refresh, plus extra runs around injury reports and kickoffs.
+    - cron: "0 11 * * *"          # daily, 7am ET
+    - cron: "30 21 * * 3,4,5"     # Wed-Fri after practice reports
+    - cron: "0 23 * * 5"          # Friday evening: final game statuses
+    - cron: "30 15 * * 0"         # Sunday ~90 min before 1pm ET kickoffs (inactives)
+    - cron: "45 18 * * 0"         # Sunday before late games
+    - cron: "45 22 * * 0,1,4"     # before night games (Sun/Mon/Thu)
+    - cron: "0 12 * * 2"          # Tuesday: grade Monday night
+  workflow_dispatch:
+    inputs:
+      rebuild:
+        description: "Rebuild cached historical TD rows"
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths: ["pipeline/**", "web/src/**", "web/index.html", ".github/workflows/refresh.yml"]
+
+permissions:
+  contents: write      # commit the append-only prediction log
+  pages: write
+  id-token: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: pipeline/requirements.txt
+
+      - name: Restore nflverse download cache
+        uses: actions/cache@v4
+        with:
+          path: .cache
+          key: nfl-cache-${{ github.run_id }}
+          restore-keys: nfl-cache-
+
+      - name: Install pipeline
+        run: pip install -r pipeline/requirements.txt
+
+      - name: Test pipeline math
+        working-directory: pipeline
+        run: python -m pytest -q tests
+
+      - name: Run pipeline
+        working-directory: pipeline
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          ODDS_API_REGIONS: ${{ vars.ODDS_API_REGIONS || 'us' }}
+          ODDS_API_TD_PROPS: ${{ vars.ODDS_API_TD_PROPS || '0' }}
+          NFLEDGE_MIN_EDGE_PP: ${{ vars.NFLEDGE_MIN_EDGE_PP || '3.0' }}
+        run: python -m nfledge.build ${{ inputs.rebuild && '--rebuild' || '' }}
+
+      - name: Commit prediction log
+        run: |
+          git config user.name "nfl-edge-bot"
+          git config user.email "nfl-edge-bot@users.noreply.github.com"
+          git add data/nfledge.sqlite
+          git diff --cached --quiet || git commit -m "Prediction log $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
+          git push || (git pull --rebase && git push)
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Build dashboard
+        working-directory: web
+        run: |
+          npm ci
+          npx vitest run
+          npm run build
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

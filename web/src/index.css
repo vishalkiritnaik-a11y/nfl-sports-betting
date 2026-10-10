@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #0e1726;
+  --panel: #152238;
+  --raised: #1b2b45;
+  --rule: #24344f;
+  --fg: #e6ecf5;
+  --muted: #8a9bb5;
+  --model: #5ab4ff;
+  --market: #cdae6e;
+  --pos: #5ed3b3;
+  --neg: #f0727a;
+  --warn: #f2c14e;
+  color-scheme: dark;
+}
+
+html, body { background: var(--ink); color: var(--fg); }
+body {
+  font-family: "Archivo", system-ui, sans-serif;
+  font-variation-settings: "wdth" 100;
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+.tnum { font-variant-numeric: tabular-nums; }
+.wide { font-variation-settings: "wdth" 125; }
+.narrow { font-variation-settings: "wdth" 75; }
+.display { font-variation-settings: "wdth" 125; font-weight: 800; letter-spacing: -0.01em; }
+
+:focus-visible { outline: 2px solid var(--model); outline-offset: 2px; border-radius: 4px; }
+a { color: inherit; }
+.link { color: var(--model); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+
+.panel { background: var(--panel); border: 1px solid var(--rule); border-radius: 10px; }
+.subpanel { background: var(--raised); border-radius: 8px; }
+
+table.grid { width: 100%; border-collapse: collapse; }
+table.grid th { text-align: left; font-weight: 500; color: var(--muted); font-size: 12.5px; padding: 8px 10px; border-bottom: 1px solid var(--rule); white-space: nowrap; }
+table.grid td { padding: 8px 10px; border-bottom: 1px solid color-mix(in srgb, var(--rule) 60%, transparent); font-variant-numeric: tabular-nums; vertical-align: middle; }
+table.grid tbody tr:hover { background: color-mix(in srgb, var(--raised) 70%, transparent); }
+table.grid th button { all: unset; cursor: pointer; }
+table.grid th button:focus-visible { outline: 2px solid var(--model); }
+
+input[type="range"] { accent-color: var(--model); }
+select, input[type="search"], input[type="text"] {
+  background: var(--raised); border: 1px solid var(--rule); color: var(--fg); border-radius: 6px; padding: 6px 10px; font: inherit; font-size: 14px;
+}
+
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* the one orchestrated motion: probability bars fill on first paint */
+@keyframes fillbar { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.fill-in { transform-origin: left; animation: fillbar 600ms cubic-bezier(.2,.7,.2,1) both; }
+.fill-in-r { transform-origin: right; animation: fillbar 600ms cubic-bezier(.2,.7,.2,1) both; }
+
+/* grid tracks must be allowed to shrink below their content (tables scroll inside .scroll-x) */
+div.grid > *, main > * { min-width: 0; }
