@@ -1,5 +1,5 @@
 {
- "last_run": "2026-10-10T02:43:26Z",
+ "last_run": "2026-10-10T15:58:27Z",
  "season": 2026,
  "week": 5,
  "trigger_slot": null,
@@ -11,46 +11,46 @@
   "2026_05_PHI_JAX": {
    "status": "forecast",
    "roof_type": "outdoor",
-   "temp_f": 58.4,
-   "wind_mph": 5.4,
-   "wind_kickoff_mph": 5.4,
-   "gust_mph": 12.5,
-   "precip_prob_pct": 2,
-   "lead_hours": 34.8,
+   "temp_f": 59.2,
+   "wind_mph": 6.5,
+   "wind_kickoff_mph": 5.1,
+   "gust_mph": 14.1,
+   "precip_prob_pct": 0,
+   "lead_hours": 21.5,
    "total_delta": 0.0
   },
   "2026_05_CHI_GB": {
    "status": "forecast",
    "roof_type": "outdoor",
-   "temp_f": 75.3,
-   "wind_mph": 13.9,
-   "wind_kickoff_mph": 13.9,
-   "gust_mph": 26.8,
+   "temp_f": 74.0,
+   "wind_mph": 14.1,
+   "wind_kickoff_mph": 13.8,
+   "gust_mph": 26.2,
    "precip_prob_pct": 0,
-   "lead_hours": 38.3,
-   "total_delta": -1.96
+   "lead_hours": 25.0,
+   "total_delta": -1.91
   },
   "2026_05_CIN_MIA": {
    "status": "forecast",
    "roof_type": "outdoor",
-   "temp_f": 86.4,
-   "wind_mph": 7.3,
-   "wind_kickoff_mph": 6.1,
-   "gust_mph": 10.1,
-   "precip_prob_pct": 13,
-   "lead_hours": 38.3,
+   "temp_f": 89.6,
+   "wind_mph": 9.8,
+   "wind_kickoff_mph": 9.8,
+   "gust_mph": 12.8,
+   "precip_prob_pct": 7,
+   "lead_hours": 25.0,
    "total_delta": 0.0
   },
   "2026_05_LV_NE": {
    "status": "forecast",
    "roof_type": "outdoor",
-   "temp_f": 64.8,
-   "wind_mph": 11.0,
-   "wind_kickoff_mph": 10.5,
-   "gust_mph": 18.1,
-   "precip_prob_pct": 23,
-   "lead_hours": 38.3,
-   "total_delta": -0.25
+   "temp_f": 64.5,
+   "wind_mph": 10.9,
+   "wind_kickoff_mph": 9.7,
+   "gust_mph": 17.2,
+   "precip_prob_pct": 14,
+   "lead_hours": 25.0,
+   "total_delta": 0.0
   },
   "2026_05_MIN_NO": {
    "status": "indoor"
@@ -58,46 +58,46 @@
   "2026_05_CLE_NYJ": {
    "status": "forecast",
    "roof_type": "outdoor",
-   "temp_f": 70.6,
-   "wind_mph": 13.8,
-   "wind_kickoff_mph": 13.8,
-   "gust_mph": 28.9,
-   "precip_prob_pct": 96,
-   "lead_hours": 38.3,
-   "total_delta": -1.91
+   "temp_f": 65.8,
+   "wind_mph": 10.9,
+   "wind_kickoff_mph": 10.3,
+   "gust_mph": 24.4,
+   "precip_prob_pct": 81,
+   "lead_hours": 25.0,
+   "total_delta": -0.15
   },
   "2026_05_IND_PIT": {
    "status": "forecast",
    "roof_type": "outdoor",
-   "temp_f": 69.7,
-   "wind_mph": 9.2,
-   "wind_kickoff_mph": 9.2,
-   "gust_mph": 21.3,
-   "precip_prob_pct": 97,
-   "lead_hours": 38.3,
-   "total_delta": 0.0
+   "temp_f": 64.4,
+   "wind_mph": 15.6,
+   "wind_kickoff_mph": 15.6,
+   "gust_mph": 36.0,
+   "precip_prob_pct": 45,
+   "lead_hours": 25.0,
+   "total_delta": -2.81
   },
   "2026_05_HOU_TEN": {
    "status": "forecast",
    "roof_type": "outdoor",
-   "temp_f": 64.4,
-   "wind_mph": 9.5,
-   "wind_kickoff_mph": 8.3,
-   "gust_mph": 17.4,
-   "precip_prob_pct": 17,
-   "lead_hours": 38.3,
+   "temp_f": 65.9,
+   "wind_mph": 8.9,
+   "wind_kickoff_mph": 8.4,
+   "gust_mph": 17.2,
+   "precip_prob_pct": 9,
+   "lead_hours": 25.0,
    "total_delta": 0.0
   },
   "2026_05_NYG_WAS": {
    "status": "forecast",
    "roof_type": "outdoor",
-   "temp_f": 66.9,
-   "wind_mph": 11.8,
-   "wind_kickoff_mph": 11.0,
-   "gust_mph": 26.6,
-   "precip_prob_pct": 97,
-   "lead_hours": 38.3,
-   "total_delta": -0.5
+   "temp_f": 68.3,
+   "wind_mph": 9.6,
+   "wind_kickoff_mph": 7.9,
+   "gust_mph": 21.7,
+   "precip_prob_pct": 74,
+   "lead_hours": 25.0,
+   "total_delta": 0.0
   },
   "2026_05_DEN_LAC": {
    "status": "indoor"
@@ -105,33 +105,33 @@
   "2026_05_DET_ARI": {
    "status": "forecast",
    "roof_type": "retractable",
-   "temp_f": 79.6,
-   "wind_mph": 21.8,
-   "wind_kickoff_mph": 18.4,
+   "temp_f": 81.5,
+   "wind_mph": 22.3,
+   "wind_kickoff_mph": 16.2,
    "gust_mph": 33.3,
-   "precip_prob_pct": 45,
-   "lead_hours": 41.7
+   "precip_prob_pct": 20,
+   "lead_hours": 28.4
   },
   "2026_05_SF_SEA": {
    "status": "forecast",
    "roof_type": "outdoor",
-   "temp_f": 59.5,
-   "wind_mph": 8.3,
-   "wind_kickoff_mph": 7.6,
-   "gust_mph": 12.5,
-   "precip_prob_pct": 0,
-   "lead_hours": 41.7,
+   "temp_f": 59.0,
+   "wind_mph": 9.9,
+   "wind_kickoff_mph": 8.8,
+   "gust_mph": 19.5,
+   "precip_prob_pct": 1,
+   "lead_hours": 28.4,
    "total_delta": 0.0
   },
   "2026_05_BAL_ATL": {
    "status": "forecast",
    "roof_type": "retractable",
-   "temp_f": 65.0,
-   "wind_mph": 9.2,
-   "wind_kickoff_mph": 9.2,
-   "gust_mph": 25.4,
-   "precip_prob_pct": 4,
-   "lead_hours": 45.6
+   "temp_f": 65.1,
+   "wind_mph": 10.3,
+   "wind_kickoff_mph": 10.3,
+   "gust_mph": 24.2,
+   "precip_prob_pct": 1,
+   "lead_hours": 32.4
   },
   "2026_05_BUF_LA": {
    "status": "indoor"
