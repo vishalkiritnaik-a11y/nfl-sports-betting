@@ -13,6 +13,7 @@ import PerformancePage from "./pages/Performance";
 import Compare from "./pages/Compare";
 import Watchlist from "./pages/Watchlist";
 import DataPage from "./pages/Data";
+import BetsPage from "./pages/Bets";
 
 interface Ctx { meta: Meta; ref: WeekRef; week: WeekData | null; weekError: string | null; weekLoading: boolean }
 const AppCtx = createContext<Ctx | null>(null);
@@ -64,7 +65,7 @@ function WeekSelect() {
 
 const NAV = [
   ["/", "Slate"], ["/touchdowns", "Touchdowns"], ["/value", "Value"], ["/performance", "Track record"],
-  ["/compare", "Compare"], ["/watchlist", "Watchlist"], ["/data", "Data & method"],
+  ["/compare", "Compare"], ["/watchlist", "Watchlist"], ["/bets", "My bets"], ["/data", "Data & method"],
 ] as const;
 
 function Shell({ children }: { children: ReactNode }) {
@@ -117,6 +118,7 @@ function Routed() {
         <Route path="/performance" element={<PerformancePage />} />
         <Route path="/compare" element={needsWeek(<Compare />)} />
         <Route path="/watchlist" element={needsWeek(<Watchlist />)} />
+        <Route path="/bets" element={needsWeek(<BetsPage />)} />
         <Route path="/data" element={<DataPage />} />
         <Route path="*" element={<div className="text-muted">That page doesn't exist. Use the tabs above.</div>} />
       </Routes>
