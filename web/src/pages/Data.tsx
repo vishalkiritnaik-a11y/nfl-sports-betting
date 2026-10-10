@@ -18,7 +18,7 @@ export default function DataPage() {
           <p className="text-xs text-muted mt-3">Nothing is filled in by hand or estimated when a source is missing. Missing data shows as unavailable.</p>
         </Section>
         <Section title="Sources and freshness">
-          <div className="scroll-x max-h-[360px] overflow-y-auto"><div className="scroll-x"><table className="grid text-[13px]"><thead><tr><th>File</th><th>Source last updated</th><th>Fetched</th></tr></thead>
+          <div className="scroll-x max-h-[360px] overflow-y-auto"><div className="scroll-x"><table className="dtable text-[13px]"><thead><tr><th>File</th><th>Source last updated</th><th>Fetched</th></tr></thead>
             <tbody>{meta.sources.map((s) => <tr key={s.file}><td><a className="link" href={s.url} target="_blank" rel="noreferrer">{s.file}</a></td>
               <td className="tnum">{s.source_updated ? `${new Date(s.source_updated).toLocaleString()} (${ago(s.source_updated)})` : "—"}</td><td className="tnum text-muted">{s.fetched ? ago(s.fetched) : "—"}</td></tr>)}</tbody></table></div></div>
           <p className="text-xs text-muted mt-2">nflverse data is CC-BY 4.0 and refreshes nightly, more often on game days. FTN charting is provided through nflverse under FTN's terms. Weather comes from Open-Meteo (CC-BY 4.0). This page was built {new Date(meta.generated).toLocaleString()}, taking {meta.build_seconds}s.</p>
@@ -33,7 +33,7 @@ export default function DataPage() {
             <p>Context: home field (zero at neutral sites), rest days, travel distance, time-zone shift, Denver altitude, division games, and for totals the observed wind and cold at outdoor venues. Head-to-head history is shown but deliberately not used.</p>
             <p>Trained on {M.game.trained_on} ({M.game.n_train.toLocaleString()} games). Backtests retrain each season on earlier seasons only.</p>
           </div>
-          <div className="scroll-x"><div className="scroll-x"><table className="grid text-[13px]"><thead><tr><th>Feature</th><th style={{ textAlign: "right" }}>Margin pts per SD</th><th style={{ textAlign: "right" }}>Logit per SD</th></tr></thead>
+          <div className="scroll-x"><div className="scroll-x"><table className="dtable text-[13px]"><thead><tr><th>Feature</th><th style={{ textAlign: "right" }}>Margin pts per SD</th><th style={{ textAlign: "right" }}>Logit per SD</th></tr></thead>
             <tbody>{[...M.game.coefficients].sort((a, b) => Math.abs(b.pts_per_sd) - Math.abs(a.pts_per_sd)).map((c) => <tr key={c.feature}><td>{c.label}</td><td className="text-right tnum">{c.pts_per_sd.toFixed(2)}</td><td className="text-right tnum">{c.logit_per_sd.toFixed(3)}</td></tr>)}</tbody></table></div></div>
         </div>
       </Section>
@@ -47,7 +47,7 @@ export default function DataPage() {
             <p>Calibration layer fit on {M.td.n_calibration.toLocaleString()} walk-forward player-games.</p>
           </div>
           <div>
-            <div className="scroll-x"><table className="grid text-[13px]"><thead><tr><th>Opportunity</th><th style={{ textAlign: "right" }}>League TD rate</th></tr></thead>
+            <div className="scroll-x"><table className="dtable text-[13px]"><thead><tr><th>Opportunity</th><th style={{ textAlign: "right" }}>League TD rate</th></tr></thead>
               <tbody>{Object.entries(M.td.rates_per_opportunity).map(([k, v]) => <tr key={k}><td>{ZONE_LABEL[k] ?? k}</td><td className="text-right tnum">{pct(v, 1)}</td></tr>)}</tbody></table></div>
           </div>
         </div>
@@ -56,9 +56,10 @@ export default function DataPage() {
       <div className="grid lg:grid-cols-2 gap-5">
         <Section title="Confidence labels">
           <ul className="list-disc pl-5 text-sm grid gap-1 max-w-[75ch]">
-            <li><b>Games</b> score points for model agreement (margin vs logistic within 3 pts) and at least 3 current-season games per team. They lose points for an uncertain starting QB, 3 or more key players questionable, doubtful or not practising, and high or uncertain wind. High is 2 or more, Low is below 0.</li>
-            <li><b>Players</b> score for 6+ recent games and stable snap share. They lose points for fewer than 3 games, a snap share swinging more than 25 pts, a questionable or doubtful tag, and an uncertain team QB.</li>
-            <li>These labels describe how much the inputs could change. They are not calibrated probabilities. Probability and confidence are separate: a 35% player isn't automatically a better bet than a 25% player.</li>
+            <li><b>Players:</b> High at 40%+ to score, Medium at 25–40%, Low under 25%. <b>Games:</b> High when the favourite is 70%+, Medium at 60–70%, Low under 60%.</li>
+            <li>A pick drops one tier when its probability is shaky: listed questionable or doubtful (the projection assumes he plays), an uncertain starting QB, high wind, a gap of more than 8 pts from the market, or the two game models disagreeing.</li>
+            <li>Thin usage history and swinging snap counts were tested and did not make the model's probabilities less accurate, so they appear as notes and don't change the tier.</li>
+            <li>Each tier's backtested hit rate is on the Track record page, so you can check what High actually delivers.</li>
           </ul>
         </Section>
         <Section title="Responsible use">

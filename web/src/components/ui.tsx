@@ -116,7 +116,7 @@ export function SortTable<T>({ rows, cols, initial, desc = true, rowKey, onRow, 
   }, [rows, cols, key, d]);
   return (
     <div className="scroll-x">
-      <table className="grid text-[14px]">
+      <table className="dtable text-[14px]">
         <thead>
           <tr>
             {cols.map((c) => (

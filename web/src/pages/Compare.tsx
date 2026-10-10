@@ -73,7 +73,7 @@ export default function Compare() {
               </select>))}
           </div>
           {A && B ? (
-            <div className="scroll-x"><table className="grid text-[14px]"><thead><tr><th /><th><span className="flex items-center gap-2"><TeamMark team={a} info={meta.teams[a]} size={20} />{a}</span></th><th><span className="flex items-center gap-2"><TeamMark team={b} info={meta.teams[b]} size={20} />{b}</span></th></tr></thead>
+            <div className="scroll-x"><table className="dtable text-[14px]"><thead><tr><th /><th><span className="flex items-center gap-2"><TeamMark team={a} info={meta.teams[a]} size={20} />{a}</span></th><th><span className="flex items-center gap-2"><TeamMark team={b} info={meta.teams[b]} size={20} />{b}</span></th></tr></thead>
               <tbody>{TEAM_ROWS.map(([l, f]) => <tr key={l}><td className="text-muted">{l}</td><td className="tnum">{f(A)}</td><td className="tnum">{f(B)}</td></tr>)}</tbody></table></div>
           ) : <Note>Pick two teams playing this week.</Note>}
         </Section>
@@ -85,7 +85,7 @@ export default function Compare() {
                   {players.map((t) => <option key={t.player_id + t.game_id} value={t.player_id}>{t.name} ({t.team} {t.position})</option>)}
                 </select>))}
             </div>
-            {PA && PB && <div className="scroll-x"><table className="grid text-[14px]"><thead><tr><th /><th>{PA.name}</th><th>{PB.name}</th></tr></thead>
+            {PA && PB && <div className="scroll-x"><table className="dtable text-[14px]"><thead><tr><th /><th>{PA.name}</th><th>{PB.name}</th></tr></thead>
               <tbody>{PLAYER_ROWS.map(([l, f]) => <tr key={l}><td className="text-muted">{l}</td><td className="tnum">{f(PA, withoutUncertain)}</td><td className="tnum">{f(PB, withoutUncertain)}</td></tr>)}</tbody></table></div>}
             <p className="text-xs text-muted mt-2">A higher probability isn't automatically a better bet. That depends on the price.</p>
           </>}

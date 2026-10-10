@@ -53,7 +53,7 @@ function StatCompare({ g, which }: { g: Game; which: "season" | "blended" }) {
   ];
   return (
     <div className="scroll-x">
-      <table className="grid text-[14px]">
+      <table className="dtable text-[14px]">
         <thead><tr><th className="text-right" style={{ textAlign: "right" }}>{g.away.team}</th><th style={{ textAlign: "center" }}>Offense</th><th>{g.home.team}</th></tr></thead>
         <tbody>{STAT_ROWS.map((r) => row(...r))}</tbody>
         <thead><tr><th /><th style={{ textAlign: "center" }}>Defense</th><th /></tr></thead>
@@ -69,7 +69,7 @@ function MatchupTable({ rows, off, def }: { rows: MatchupRow[]; off: string; def
   const f = (k: string, v: number) => (k.includes("rate") ? pct(v, 1) : v.toFixed(3));
   return (
     <div className="scroll-x">
-      <table className="grid text-[13.5px]">
+      <table className="dtable text-[13.5px]">
         <thead><tr><th>Dimension</th><th style={{ textAlign: "right" }}>{off} offense</th><th style={{ textAlign: "right" }}>{def} defense allows</th><th>Read</th></tr></thead>
         <tbody>{rows.map((r) => (
           <tr key={r.key}>
@@ -231,7 +231,7 @@ export default function GamePage() {
 
       {(g.scenarios?.length ?? 0) > 0 && (
         <Section title="Alternative scenarios">
-          <div className="scroll-x"><table className="grid text-[14px]"><thead><tr><th>Scenario</th><th>Trigger</th><th style={{ textAlign: "right" }}>{g.home.team} win</th><th style={{ textAlign: "right" }}>Margin</th><th style={{ textAlign: "right" }}>Total</th><th style={{ textAlign: "right" }}>Change</th></tr></thead>
+          <div className="scroll-x"><table className="dtable text-[14px]"><thead><tr><th>Scenario</th><th>Trigger</th><th style={{ textAlign: "right" }}>{g.home.team} win</th><th style={{ textAlign: "right" }}>Margin</th><th style={{ textAlign: "right" }}>Total</th><th style={{ textAlign: "right" }}>Change</th></tr></thead>
             <tbody>
               <tr><td>Base projection</td><td className="text-muted">listed starters play</td><td className="text-right tnum">{pct(pr.p_home, 1)}</td><td className="text-right tnum">{signed(pr.exp_margin)}</td><td className="text-right tnum">{num(pr.exp_total)}</td><td /></tr>
               {g.scenarios!.map((s) => (
@@ -249,7 +249,7 @@ export default function GamePage() {
           <p className="text-xs text-muted mt-2">{statView === "season" ? "Raw season-to-date numbers before this game." : "What the model uses: this season blended with last season (regressed halfway to league average) so that small samples don't dominate."} The better side is bold.</p>
         </Section>
         <Section title="Recent form">
-          <div className="scroll-x"><table className="grid text-[14px]"><thead><tr><th>Window</th><th>Team</th><th style={{ textAlign: "right" }}>Record</th><th style={{ textAlign: "right" }}>Pts for / against</th><th style={{ textAlign: "right" }}>Off EPA</th><th style={{ textAlign: "right" }}>Def EPA allowed</th></tr></thead>
+          <div className="scroll-x"><table className="dtable text-[14px]"><thead><tr><th>Window</th><th>Team</th><th style={{ textAlign: "right" }}>Record</th><th style={{ textAlign: "right" }}>Pts for / against</th><th style={{ textAlign: "right" }}>Off EPA</th><th style={{ textAlign: "right" }}>Def EPA allowed</th></tr></thead>
             <tbody>{(["last3", "last5", "last10"] as const).flatMap((w) => (["away", "home"] as const).map((side) => {
               const f = g[side].form?.[w];
               return f ? <tr key={w + side}><td className="text-muted">{w.replace("last", "Last ")}{f.spans_prior_season ? "*" : ""}</td><td>{g[side].team}</td><td className="text-right tnum">{f.record}</td>
@@ -258,7 +258,7 @@ export default function GamePage() {
           <p className="text-xs text-muted mt-2">* includes games from last season. Form is shown for context. The model weights it through the season blend rather than chasing streaks.</p>
           {g.h2h && g.h2h.length > 0 && <>
             <h3 className="font-semibold text-sm mt-4 mb-1">Head to head</h3>
-            <div className="scroll-x"><table className="grid text-[13.5px]"><thead><tr><th>Season</th><th>Result</th><th>QBs</th><th>Relevance today</th></tr></thead>
+            <div className="scroll-x"><table className="dtable text-[13.5px]"><thead><tr><th>Season</th><th>Result</th><th>QBs</th><th>Relevance today</th></tr></thead>
               <tbody>{g.h2h.map((h) => <tr key={h.game_id}><td className="tnum">{h.season} wk {h.week}</td><td className="tnum">{h.away} {h.away_score} @ {h.home} {h.home_score}</td>
                 <td className="text-muted">{h.away_qb} vs {h.home_qb}</td><td className="text-muted">{h.relevance} ({h.same_qbs}/2 same QBs, {h.same_coaches}/2 same coaches)</td></tr>)}</tbody></table></div>
             <p className="text-xs text-muted mt-2">Head-to-head history is context only and is not a model input. Meetings with different quarterbacks or coaches say little about this one.</p>
@@ -299,9 +299,9 @@ export default function GamePage() {
         <Note>Every input behind this projection, as computed before kickoff. Margin contributions are in points; total contributions are relative to an average game ({num(pr.baseline_total, 1)} points).</Note>
         {showRaw && (
           <div className="grid md:grid-cols-2 gap-5 mt-3 text-[13px]">
-            <table className="grid"><thead><tr><th>Margin feature</th><th style={{ textAlign: "right" }}>Value</th><th style={{ textAlign: "right" }}>Pts</th></tr></thead>
+            <table className="dtable"><thead><tr><th>Margin feature</th><th style={{ textAlign: "right" }}>Value</th><th style={{ textAlign: "right" }}>Pts</th></tr></thead>
               <tbody>{pr.contributions.map((c) => <tr key={c.feature}><td>{c.label}</td><td className="text-right tnum">{c.value.toFixed(3)}</td><td className="text-right tnum">{signed(c.points, 2)}</td></tr>)}</tbody></table>
-            <table className="grid"><thead><tr><th>Total feature</th><th style={{ textAlign: "right" }}>Value</th><th style={{ textAlign: "right" }}>Pts</th></tr></thead>
+            <table className="dtable"><thead><tr><th>Total feature</th><th style={{ textAlign: "right" }}>Value</th><th style={{ textAlign: "right" }}>Pts</th></tr></thead>
               <tbody>{pr.total_contributions.map((c) => <tr key={c.feature}><td>{c.label}</td><td className="text-right tnum">{c.value.toFixed(3)}</td><td className="text-right tnum">{signed(c.points, 2)}</td></tr>)}</tbody></table>
           </div>)}
       </Section>

@@ -20,7 +20,7 @@ from . import db as DB
 from . import features as F
 from . import matchups as M
 from . import odds as O
-from . import stadiums, tddata as D, teamdata as T
+from . import stadiums, tddata as D, teamdata as T, tiers as TR
 from .ingest import nflverse as N, odds_api, weather as W
 from .models import td_model as TD
 from .models.game_model import MARGIN_FEATURES, TOTAL_FEATURES, GameModel, game_features
@@ -158,29 +158,22 @@ def value_rows(pred: dict, dist: dict, mkt: dict | None, home: str, away: str) -
     return rows
 
 
-def game_confidence(pred, fe_meta, inj_flags, weather, played_counts) -> dict:
-    score, reasons = 0, []
-    dis = abs(pred["p_margin_model"] - pred["p_logit_model"])
-    if dis < 0.03:
-        score += 1; reasons.append("Margin and logistic models agree (within 3 pts)")
-    elif dis > 0.07:
-        score -= 1; reasons.append(f"Models disagree by {dis*100:.0f} pts")
-    if min(played_counts) < 3:
-        score -= 1; reasons.append("Fewer than 3 games of current-season data for a team (prior season weighted heavily)")
-    else:
-        score += 1; reasons.append("At least 3 current-season games for both teams")
+def game_confidence(pred, fe_meta, inj_flags, weather, played_counts, mkt=None, stats=None) -> dict:
+    p_fav = max(pred["p_home"], 1 - pred["p_home"])
+    risks, notes = [], []
     if inj_flags.get("qb_uncertain"):
-        score -= 2; reasons.append("Starting QB availability uncertain")
+        risks.append("starting QB availability is uncertain")
+    if weather and weather.get("status") == "forecast" and (weather.get("wind_mph") or 0) >= 15:
+        risks.append("high wind forecast")
+    if mkt and mkt.get("home_no_vig") is not None and abs(pred["p_home"] - mkt["home_no_vig"]) > 0.08:
+        risks.append(f"model and market disagree by {abs(pred['p_home'] - mkt['home_no_vig'])*100:.0f} pts (the market has usually been right)")
+    if abs(pred["p_margin_model"] - pred["p_logit_model"]) > 0.07:
+        risks.append("the two component models disagree")
     if inj_flags.get("n_key_uncertain", 0) >= 3:
-        score -= 1; reasons.append(f"{inj_flags['n_key_uncertain']} starters/rotation players questionable, doubtful or not practising")
-    if weather and weather.get("status") == "forecast":
-        wr = weather.get("wind_range_mph")
-        if (weather.get("wind_mph") or 0) >= 15 or (wr and wr[1] - wr[0] > 10):
-            score -= 1; reasons.append("Wind forecast is high or uncertain")
-    if abs(pred["p_home"] - 0.5) < 0.05:
-        reasons.append("Near coin-flip: small information changes can flip the pick")
-    label = "High" if score >= 2 else "Medium" if score >= 0 else "Low"
-    return {"label": label, "score": score, "reasons": reasons}
+        notes.append(f"{inj_flags['n_key_uncertain']} starters or rotation players questionable, doubtful or not practising")
+    if min(played_counts) < 3:
+        notes.append("Fewer than 3 current-season games for a team, so last season carries more weight")
+    return TR.assess(p_fav, TR.GAME_CUTS, stats, risks, notes, what="for the favourite")
 
 
 def explain_game(contribs: list, home: str, away: str) -> tuple[list, list]:
@@ -266,10 +259,19 @@ def run(args):
         te["p"] = cm.prob(te)
         td_bt.append(te)
     td_bt = pd.concat(td_bt, ignore_index=True)
+    td_bt.to_pickle(C.CACHE_DIR / "td_backtest.pkl")
     rates_live = TD.league_rates(usage)
     om_live = TD.TeamOppModel().fit(tg[tg.game_id.isin(games[games.home_score.notna()].game_id)])
     td_live = TD.TDModel(rates=rates_live, opp_model=om_live).fit_calibration(td_bt)
     log.info("td models done (%.0fs)", time.time() - t0)
+    # confidence tiers: hit rates measured on seasons before the current one
+    tdb_prior = td_bt[td_bt.season < season]
+    td_tiers = TR.tier_stats(tdb_prior.p.values, tdb_prior.y.values, TR.TD_CUTS)
+    gb = gp_bt.merge(gf[["game_id", "margin", "season", "played"]], on="game_id")
+    gb = gb[gb.played & (gb.margin != 0) & (gb.season < season)]
+    fav = np.maximum(gb.p_home, 1 - gb.p_home).values
+    fav_won = np.where(gb.p_home >= 0.5, gb.margin > 0, gb.margin < 0).astype(int)
+    game_tiers = TR.tier_stats(fav, fav_won, TR.GAME_CUTS)
 
     # ---------------- current-season context
     inj = N.injuries(season, True)
@@ -404,8 +406,9 @@ def run(args):
                              "winner": home if g.home_score > g.away_score else away if g.away_score > g.home_score else "TIE",
                              "model_correct": None if g.home_score == g.away_score else bool((p_home > 0.5) == (g.home_score > g.away_score))}
         if not full:
-            rec["confidence"] = {"label": "Low" if rec["lookahead"] else "n/a",
-                                 "reasons": ["Look-ahead projection: injuries, weather and lines will change"] if rec["lookahead"] else []}
+            rec["confidence"] = game_confidence(rec["prediction"], meta, {}, None, [9, 9], mkt, game_tiers)
+            if rec["lookahead"]:
+                rec["confidence"]["reasons"].append("Early look: injuries, weather and lines will change")
             fh, fa = explain_game(contribs, home, away)
             rec["factors"] = {"home": fh, "away": fa}
             return rec
@@ -459,7 +462,7 @@ def run(args):
             rec["prediction"]["exp_total_weather_adj"] = float(pf.exp_total)
             rec["prediction"]["weather_total_delta"] = float(pf.exp_total - pred["exp_total"])
         rec["scenarios"] = scen
-        rec["confidence"] = game_confidence(rec["prediction"], meta, flags, rec["weather"], [H["n_games"], A["n_games"]]) \
+        rec["confidence"] = game_confidence(rec["prediction"], meta, flags, rec["weather"], [H["n_games"], A["n_games"]], mkt, game_tiers) \
             if not played or pred.get("backtest") else {"label": "n/a", "reasons": []}
         fh, fa = explain_game(contribs, home, away)
         risks = []
@@ -597,23 +600,18 @@ def run(args):
             out.extend(cand)
         return out
 
-    def td_confidence(c, qb_unc):
-        score, reasons = 0, []
-        if c["games"] >= 6:
-            score += 1; reasons.append("6+ recent games of usage history")
-        elif c["games"] < 3:
-            score -= 1; reasons.append("Fewer than 3 recent games: role estimate is thin")
+    def td_confidence(c, qb_unc, p):
+        risks, notes = [], []
+        if c["status"] in UNCERTAIN:
+            risks.append(f"listed {c['status']}; the projection assumes he plays")
+        if qb_unc:
+            risks.append("team's starting QB is uncertain")
+        if c["games"] < 3:
+            notes.append("Fewer than 3 recent games, so the role estimate leans on shrinkage")
         sr = snap_recent.get(c["player_id"], [])
         if len(sr) >= 3 and (max(sr) - min(sr)) > 0.25:
-            score -= 1; reasons.append("Snap share has swung >25 pts over the last 3 games")
-        elif len(sr) >= 3:
-            score += 1; reasons.append("Stable snap share over the last 3 games")
-        if c["status"] in UNCERTAIN:
-            score -= 2; reasons.append(f"Listed {c['status']}")
-        if qb_unc:
-            score -= 1; reasons.append("Team's starting QB is uncertain")
-        lab = "High" if score >= 2 else "Medium" if score >= 0 else "Low"
-        return {"label": lab, "score": score, "reasons": reasons}
+            notes.append("Snap share has swung more than 25 pts over the last 3 games")
+        return TR.assess(p, TR.TD_CUTS, td_tiers, risks, notes)
 
     def td_explain(c, p):
         eo, pos = c["exp_opps"], c["position"]
@@ -649,7 +647,7 @@ def run(args):
                "season": plines.get(c["player_id"], {}), "recent": td_recent(c["player_id"], g.gameday, int(g.season)),
                "snap_pct_last3": snap_recent.get(c["player_id"], []),
                "opp_vs_pos": dvp.get(c["opp"], {}).get(c["position"]),
-               "confidence": td_confidence(c, qb_unc), "why": td_explain(c, p)}
+               "confidence": td_confidence(c, qb_unc, p), "why": td_explain(c, p)}
         mk = None
         if mkt_props:
             nm = re.sub(r"[^a-z]", "", rec["name"].lower())
@@ -688,7 +686,8 @@ def run(args):
                     tds.append({"player_id": r.player_id, "name": name_map.get(r.player_id, r.player_id), "team": r.team,
                                 "opp": r.opp, "position": r.position, "game_id": r.game_id, "p": float(r.p),
                                 "lam_rush": float(r.lam_rush), "lam_rec": float(r.lam_rec), "status": "Played",
-                                "scored": int(r.y), "backtest": True, "headshot": head_map.get(r.player_id)})
+                                "scored": int(r.y), "backtest": True, "headshot": head_map.get(r.player_id),
+                                "confidence": TR.assess(float(r.p), TR.TD_CUTS, td_tiers, [])})
             else:
                 pr = gp_all_live.loc[g.game_id].to_dict()
                 full = wk == cur_week
@@ -756,7 +755,8 @@ def run(args):
                     tds.append({"player_id": r.player_id, "name": name_map.get(r.player_id, r.player_id), "team": r.team,
                                 "opp": r.opp, "position": r.position, "game_id": r.game_id, "p": float(r.p),
                                 "lam_rush": float(r.lam_rush), "lam_rec": float(r.lam_rec), "status": "Played",
-                                "scored": int(r.y), "backtest": True, "headshot": head_map.get(r.player_id)})
+                                "scored": int(r.y), "backtest": True, "headshot": head_map.get(r.player_id),
+                                "confidence": TR.assess(float(r.p), TR.TD_CUTS, td_tiers, [])})
             fname = f"{S}_{int(wk):02d}.json"
             write_json(C.OUT_DIR / "weeks" / fname, {"season": S, "week": int(wk), "generated": run_id, "is_current": False,
                                                       "games": recs, "td": tds})
@@ -773,6 +773,7 @@ def run(args):
     db.commit()
     from .evaluate import performance
     perf = performance(gf, gp_bt, games, td_bt, db, live, td_live, season)
+    perf["tiers"] = tier_report(td_bt, gp_bt, gf, season)
     write_json(C.OUT_DIR / "performance.json", perf)
 
     # ------------------------------------------------- meta
@@ -810,6 +811,21 @@ def run(args):
 
 
 bt_models: dict = {}
+
+
+def tier_report(td_bt, gp_bt, gf, season) -> dict:
+    """Hit rate per confidence tier: seasons before the current one, and the current season to date (out of sample for the cut-offs)."""
+    out = {"td": {}, "game": {}, "td_cuts": TR.TD_CUTS, "game_cuts": TR.GAME_CUTS}
+    for name, d in (("prior", td_bt[td_bt.season < season]), ("current", td_bt[td_bt.season == season])):
+        out["td"][name] = TR.tier_stats(d.p.values, d.y.values, TR.TD_CUTS) if len(d) else {}
+    gb = gp_bt.merge(gf[["game_id", "margin", "season", "played"]], on="game_id")
+    gb = gb[gb.played & (gb.margin != 0)]
+    for name, d in (("prior", gb[gb.season < season]), ("current", gb[gb.season == season])):
+        if len(d):
+            fav = np.maximum(d.p_home, 1 - d.p_home).values
+            won = np.where(d.p_home >= 0.5, d.margin > 0, d.margin < 0).astype(int)
+            out["game"][name] = TR.tier_stats(fav, won, TR.GAME_CUTS)
+    return out
 
 
 def main():

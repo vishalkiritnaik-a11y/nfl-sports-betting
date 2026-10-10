@@ -37,12 +37,12 @@ a { color: inherit; }
 .panel { background: var(--panel); border: 1px solid var(--rule); border-radius: 10px; }
 .subpanel { background: var(--raised); border-radius: 8px; }
 
-table.grid { width: 100%; border-collapse: collapse; }
-table.grid th { text-align: left; font-weight: 500; color: var(--muted); font-size: 12.5px; padding: 8px 10px; border-bottom: 1px solid var(--rule); white-space: nowrap; }
-table.grid td { padding: 8px 10px; border-bottom: 1px solid color-mix(in srgb, var(--rule) 60%, transparent); font-variant-numeric: tabular-nums; vertical-align: middle; }
-table.grid tbody tr:hover { background: color-mix(in srgb, var(--raised) 70%, transparent); }
-table.grid th button { all: unset; cursor: pointer; }
-table.grid th button:focus-visible { outline: 2px solid var(--model); }
+table.dtable { width: 100%; border-collapse: collapse; }
+table.dtable th { text-align: left; font-weight: 500; color: var(--muted); font-size: 12.5px; padding: 8px 10px; border-bottom: 1px solid var(--rule); white-space: nowrap; }
+table.dtable td { padding: 8px 10px; border-bottom: 1px solid color-mix(in srgb, var(--rule) 60%, transparent); font-variant-numeric: tabular-nums; vertical-align: middle; }
+table.dtable tbody tr:hover { background: color-mix(in srgb, var(--raised) 70%, transparent); }
+table.dtable th button { all: unset; cursor: pointer; }
+table.dtable th button:focus-visible { outline: 2px solid var(--model); }
 
 input[type="range"] { accent-color: var(--model); }
 select, input[type="search"], input[type="text"] {

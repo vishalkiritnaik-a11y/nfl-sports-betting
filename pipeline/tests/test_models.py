@@ -133,3 +133,24 @@ def test_odds_api_disabled_without_key(monkeypatch):
     monkeypatch.setattr(odds_api, "ODDS_API_KEY", "")
     assert odds_api.enabled() is False
     assert odds_api.game_odds() == {}
+
+
+# ------------------------------------------------------------------ confidence tiers
+def test_tiers_follow_probability_and_downgrade_on_risk():
+    from nfledge import tiers as TR
+    assert TR.assess(0.10, TR.TD_CUTS, None, [])["label"] == "Low"        # low chance is never High
+    assert TR.assess(0.30, TR.TD_CUTS, None, [])["label"] == "Medium"
+    assert TR.assess(0.45, TR.TD_CUTS, None, [])["label"] == "High"
+    a = TR.assess(0.45, TR.TD_CUTS, None, ["listed Questionable"])
+    assert a["label"] == "Medium" and a["base"] == "High"
+    assert TR.assess(0.20, TR.TD_CUTS, None, ["x"])["label"] == "Low"     # floor
+    assert TR.assess(0.72, TR.GAME_CUTS, None, [])["label"] == "High"
+
+
+def test_tier_stats_hit_rates():
+    from nfledge import tiers as TR
+    p = np.array([0.05, 0.1, 0.3, 0.35, 0.5, 0.6])
+    y = np.array([0, 0, 1, 0, 1, 1])
+    st = TR.tier_stats(p, y, TR.TD_CUTS)
+    assert st["Low"]["n"] == 2 and st["Low"]["hit"] == 0
+    assert st["Medium"]["hit"] == 0.5 and st["High"]["hit"] == 1.0
