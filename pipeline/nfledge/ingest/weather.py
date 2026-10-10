@@ -10,6 +10,7 @@ records it after the game; a forecast is never presented as a game-day observati
 from __future__ import annotations
 
 import logging
+import time
 from datetime import datetime, timedelta, timezone
 from statistics import quantiles
 from zoneinfo import ZoneInfo
@@ -19,6 +20,23 @@ import requests
 log = logging.getLogger(__name__)
 ET = ZoneInfo("America/New_York")
 HOURLY = "temperature_2m,relative_humidity_2m,precipitation_probability,precipitation,snowfall,wind_speed_10m,wind_gusts_10m,weather_code"
+
+
+def _get(url: str, params: dict, tries: int = 4, timeout: int = 45) -> dict:
+    """GET with exponential backoff: Open-Meteo occasionally stalls under burst load."""
+    last = None
+    for i in range(tries):
+        try:
+            r = requests.get(url, params=params, timeout=timeout)
+            if r.status_code == 429 or r.status_code >= 500:
+                raise requests.HTTPError(f"HTTP {r.status_code}")
+            r.raise_for_status()
+            return r.json()
+        except Exception as e:  # noqa: BLE001 - any failure is retried, then reported
+            last = e
+            if i < tries - 1:
+                time.sleep(2 * 2 ** i)
+    raise last
 
 
 def kickoff_utc(gameday: str, gametime: str) -> datetime:
@@ -45,15 +63,13 @@ def forecast(lat: float, lon: float, ko: datetime, now: datetime | None = None) 
     if lead_h < -4:
         return None
     try:
-        r = requests.get("https://api.open-meteo.com/v1/forecast", params={
+        h = _get("https://api.open-meteo.com/v1/forecast", {
             "latitude": lat, "longitude": lon, "hourly": HOURLY, "timezone": "UTC",
             "temperature_unit": "fahrenheit", "wind_speed_unit": "mph", "precipitation_unit": "inch",
             "start_date": (ko - timedelta(hours=3)).date().isoformat(),
             "end_date": (ko + timedelta(hours=4)).date().isoformat(),
-        }, timeout=30)
-        r.raise_for_status()
-        h = r.json()["hourly"]
-    except Exception as e:  # network / API failure: report unavailable, never guess
+        })["hourly"]
+    except Exception as e:  # network / API failure after retries: report unavailable, never guess
         log.warning("weather unavailable: %s", e)
         return {"status": "unavailable", "error": str(e)[:120]}
     i = _nearest(h["time"], ko)
@@ -80,13 +96,11 @@ def forecast(lat: float, lon: float, ko: datetime, now: datetime | None = None) 
 def _ensemble(lat: float, lon: float, ko: datetime) -> dict:
     """10th-90th percentile range for wind and temperature across GFS members."""
     try:
-        r = requests.get("https://ensemble-api.open-meteo.com/v1/ensemble", params={
+        h = _get("https://ensemble-api.open-meteo.com/v1/ensemble", {
             "latitude": lat, "longitude": lon, "hourly": "temperature_2m,wind_speed_10m", "models": "gfs_seamless",
             "timezone": "UTC", "temperature_unit": "fahrenheit", "wind_speed_unit": "mph",
             "start_date": ko.date().isoformat(), "end_date": (ko + timedelta(hours=4)).date().isoformat(),
-        }, timeout=30)
-        r.raise_for_status()
-        h = r.json()["hourly"]
+        }, tries=2)["hourly"]
         i = _nearest(h["time"], ko)
         winds = [v[i] for k, v in h.items() if k.startswith("wind_speed_10m") and v[i] is not None]
         temps = [v[i] for k, v in h.items() if k.startswith("temperature_2m") and v[i] is not None]

@@ -104,6 +104,7 @@ def test_weather_failure_reports_unavailable(monkeypatch):
     def boom(*a, **k):
         raise requests.ConnectionError("no route")
     monkeypatch.setattr(W.requests, "get", boom)
+    monkeypatch.setattr(W.time, "sleep", lambda s: None)
     now = datetime(2026, 10, 9, tzinfo=timezone.utc)
     out = W.forecast(40.0, -74.0, datetime(2026, 10, 11, 17, tzinfo=timezone.utc), now)
     assert out["status"] == "unavailable"
@@ -119,6 +120,7 @@ def test_weather_parses_game_window(monkeypatch):
                           "wind_gusts_10m": [9] * 24, "weather_code": [1] * 24}}
 
     class R:
+        status_code = 200
         def raise_for_status(self): pass
         def json(self): return payload
     monkeypatch.setattr(W.requests, "get", lambda *a, **k: R())
@@ -183,3 +185,28 @@ def test_gate_fires_once_about_an_hour_before_kickoff():
     assert G.decide(ks, t("2026-10-11T16:20:00Z"), set()) == "2026-10-11T17:00:00Z"   # delayed tick still in window
     assert G.decide(ks, t("2026-10-11T16:10:00Z"), {"2026-10-11T17:00:00Z"}) is None  # already refreshed
     assert G.decide(ks, t("2026-10-11T19:25:00Z"), {"2026-10-11T17:00:00Z"}) == "2026-10-11T20:25:00Z"
+
+
+
+def test_weather_retries_then_succeeds(monkeypatch):
+    import requests
+    calls = {"n": 0}
+    times = [f"2026-10-11T{h:02d}:00" for h in range(24)]
+    payload = {"hourly": {"time": times, **{k: [5] * 24 for k in ("temperature_2m", "relative_humidity_2m", "precipitation_probability",
+               "precipitation", "snowfall", "wind_speed_10m", "wind_gusts_10m", "weather_code")}}}
+
+    class R:
+        status_code = 200
+        def raise_for_status(self): pass
+        def json(self): return payload
+
+    def flaky(*a, **k):
+        calls["n"] += 1
+        if calls["n"] < 3:
+            raise requests.ReadTimeout("slow")
+        return R()
+    monkeypatch.setattr(W.requests, "get", flaky)
+    monkeypatch.setattr(W.time, "sleep", lambda s: None)
+    monkeypatch.setattr(W, "_ensemble", lambda *a: {})
+    out = W.forecast(40, -74, datetime(2026, 10, 11, 17, tzinfo=timezone.utc), datetime(2026, 10, 10, tzinfo=timezone.utc))
+    assert out["status"] == "forecast" and calls["n"] == 3
