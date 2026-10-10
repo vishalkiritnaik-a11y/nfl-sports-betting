@@ -20,7 +20,7 @@ It runs on **GitHub Pages + GitHub Actions**. A Python pipeline runs on a schedu
 | Official injury report + practice participation | **Live** | nflverse injuries |
 | Snap counts, weekly rosters, depth charts | **Live** | nflverse (PFR / ESPN) |
 | Play action, motion, blitz, box counts | **Live** | FTN charting via nflverse |
-| Weather forecasts at kickoff + ensemble range | **Live** (in Actions) | Open-Meteo forecast + GFS ensemble |
+| Weather forecasts at kickoff + ensemble range, applied to totals, over/under value and TD odds | **Live** (in Actions) | Open-Meteo forecast + GFS ensemble |
 | Man/zone coverage, single-high vs two-high, route participation, personnel | **Unavailable** (licensed data). Shown as unavailable, never inferred | — |
 | Historical anytime-TD odds (to backtest TD betting) | **Unavailable** | — |
 
@@ -59,7 +59,7 @@ docs/DATA_CONTRACTS.md       JSON contracts between pipeline and UI
    - Variables `ODDS_API_TD_PROPS=1` (paid plan), `ODDS_API_REGIONS`, `NFLEDGE_MIN_EDGE_PP`.
 5. **Actions → Refresh data and deploy → Run workflow.** The first run takes ~10 minutes because it downloads 2016+ play-by-play and builds the TD training rows. Later runs reuse the cache and take ~3–4 minutes.
 
-The schedule refreshes daily, after Wednesday–Friday practice reports, Friday evening (final game statuses), ~90 minutes before Sunday 1pm kickoffs (inactives), and before late and night games. Edit the cron lines in `refresh.yml` to change it.
+The pipeline refreshes daily, after Wednesday–Friday practice reports, Friday evening (final game statuses), Tuesday (to grade Monday night), and **about one hour before every kickoff slot**. GitHub can't schedule jobs at arbitrary times, so a 10-minute cron runs a small gate (`pipeline/nfledge/gate.py`) that checks the schedule. When a kickoff is 35–65 minutes away and that slot hasn't been refreshed, it runs the full pipeline once. Games sharing a kickoff time share one run. Refreshed slots and each game's weather fetch result are recorded in `data/last_run.json`. GitHub's scheduler can run a few minutes late under load, and the 35-minute floor is there to absorb that.
 
 API keys only exist inside GitHub Actions. The browser receives finished JSON and never sees a key.
 

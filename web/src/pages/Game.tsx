@@ -99,7 +99,7 @@ function WeatherCard({ w, g }: { w?: Weather; g: Game }) {
         <div><dt className="text-xs text-muted">Humidity</dt><dd>{w.humidity_pct ?? "—"}%</dd></div>
       </dl>
       <p className="text-xs text-muted">Forecast from {w.source}, {w.lead_hours != null ? `${Math.round(w.lead_hours)} hours before kickoff` : ""}. Ranges are the 10th–90th percentile of the GFS ensemble. {w.roof_note ?? ""}
-        {g.prediction.weather_total_delta != null && ` Applying the forecast to the totals model moves the projected total by ${signed(g.prediction.weather_total_delta, 1)} points; that effect is learned from past outdoor games, not assumed.`}</p>
+        {g.prediction.weather_total_delta != null && ` The kickoff-hour forecast moves the projected total by ${signed(g.prediction.weather_total_delta, 1)} points, an effect learned from past outdoor games rather than assumed. That adjusted total also feeds the over/under math and each player's touchdown odds.`}</p>
     </div>
   );
 }
@@ -185,7 +185,7 @@ export default function GamePage() {
             <div><dt className="text-xs text-muted">Projected score</dt><dd className="display text-[22px]">{g.away.team} {num(pr.away_pts, 0)}, {g.home.team} {num(pr.home_pts, 0)}</dd></div>
             <div><dt className="text-xs text-muted">Projected margin</dt><dd className="text-[18px]">{fav} by {Math.abs(pr.exp_margin).toFixed(1)}</dd>
               <dd className="text-xs text-muted">80% range {g.home.team} {signed(pr.distribution.margin_p10_p90[0], 0)} to {signed(pr.distribution.margin_p10_p90[1], 0)}</dd></div>
-            <div><dt className="text-xs text-muted">Projected total</dt><dd className="text-[18px]">{num(pr.exp_total, 1)}{pr.exp_total_weather_adj != null && <span className="text-sm text-muted"> ({num(pr.exp_total_weather_adj, 1)} with forecast)</span>}</dd>
+            <div><dt className="text-xs text-muted">Projected total</dt><dd className="text-[18px]">{num(pr.exp_total, 1)}{pr.weather_applied && pr.exp_total_base != null && <span className="text-sm text-muted"> (includes weather; {num(pr.exp_total_base, 1)} before)</span>}</dd>
               <dd className="text-xs text-muted">80% range {num(pr.distribution.total_p10_p90[0], 0)}–{num(pr.distribution.total_p10_p90[1], 0)}</dd></div>
             <div><dt className="text-xs text-muted">Margin model</dt><dd>{g.home.team} {pct(pr.p_margin_model, 1)}</dd></div>
             <div><dt className="text-xs text-muted">Logistic model</dt><dd>{g.home.team} {pct(pr.p_logit_model, 1)}</dd></div>

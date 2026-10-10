@@ -165,3 +165,21 @@ def test_td_score_out_of_ten():
     b = TR.assess_td(0.50, None, None, ["listed Questionable", "QB uncertain"])
     assert b["score"] == 7 and b["label"] == "Medium"
     assert TR.assess_td(0.02, None, None, ["x"])["score"] == 1
+
+
+# ------------------------------------------------------------------ pre-kickoff gate
+def test_gate_fires_once_about_an_hour_before_kickoff():
+    from nfledge import gate as G
+    csvtext = ("game_id,gameday,gametime,home_score\n"
+               "g1,2026-10-11,13:00,\n"           # 17:00Z
+               "g2,2026-10-11,13:00,\n"
+               "g3,2026-10-11,16:25,\n"           # 20:25Z
+               "g0,2026-10-08,20:15,24\n")        # already played
+    t = lambda s: datetime.strptime(s, G.ISO).replace(tzinfo=timezone.utc)
+    ks = G.kickoffs(csvtext, t("2026-10-11T15:00:00Z"))
+    assert len(ks) == 2                                                  # same-time games share one slot
+    assert G.decide(ks, t("2026-10-11T15:50:00Z"), set()) is None        # 70 min out: too early
+    assert G.decide(ks, t("2026-10-11T16:00:00Z"), set()) == "2026-10-11T17:00:00Z"   # 60 min out
+    assert G.decide(ks, t("2026-10-11T16:20:00Z"), set()) == "2026-10-11T17:00:00Z"   # delayed tick still in window
+    assert G.decide(ks, t("2026-10-11T16:10:00Z"), {"2026-10-11T17:00:00Z"}) is None  # already refreshed
+    assert G.decide(ks, t("2026-10-11T19:25:00Z"), {"2026-10-11T17:00:00Z"}) == "2026-10-11T20:25:00Z"

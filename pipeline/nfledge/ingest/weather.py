@@ -65,6 +65,7 @@ def forecast(lat: float, lon: float, ko: datetime, now: datetime | None = None) 
         "temp_f": h["temperature_2m"][i],
         "humidity_pct": h["relative_humidity_2m"][i],
         "wind_mph": max(h["wind_speed_10m"][j] for j in win),
+        "wind_kickoff_mph": h["wind_speed_10m"][i],
         "gust_mph": max(h["wind_gusts_10m"][j] for j in win),
         "precip_prob_pct": max((h["precipitation_probability"][j] or 0) for j in win),
         "precip_in": round(sum((h["precipitation"][j] or 0) for j in win), 2),

@@ -37,7 +37,7 @@ export interface Distribution {
 export interface Prediction {
   p_home: number; p_away: number; p_margin_model: number; p_logit_model: number; elo_prob: number;
   exp_margin: number; exp_total: number; home_pts: number; away_pts: number;
-  exp_total_weather_adj?: number; weather_total_delta?: number;
+  exp_total_weather_adj?: number; weather_total_delta?: number; exp_total_base?: number; weather_applied?: boolean;
   distribution: Distribution; contributions: Contribution[]; total_contributions: Contribution[];
   baseline_margin: number; baseline_total: number;
   tie_note: string; model_version: string; trained_on: string; backtest: boolean;
@@ -81,7 +81,7 @@ export interface Weather {
   roof?: string | null; roof_type?: string | null; roof_note?: string; source?: string; lead_hours?: number;
   temp_f?: number | null; humidity_pct?: number; wind_mph?: number | null; gust_mph?: number;
   precip_prob_pct?: number; precip_in?: number; snow_in?: number; wind_range_mph?: [number, number];
-  temp_range_f?: [number, number]; fetched?: string; error?: string;
+  temp_range_f?: [number, number]; fetched?: string; error?: string; wind_kickoff_mph?: number;
 }
 
 export interface Scenario {

@@ -449,22 +449,29 @@ def run(args):
                                  "kind": "qb", "team": team, "trigger_status": st or prac,
                                  "p_home": float(pa.p_home), "exp_margin": float(pa.exp_margin), "exp_total": float(pa.exp_total),
                                  "delta_p_team": float((pa.p_home - p_home) * (1 if side == "home" else -1))})
-        if rec["weather"].get("status") == "forecast" and venue and venue.get("roof_type") == "outdoor":
-            xw = dict(xd); xw["wind_excess"] = xw["wind_excess"] + 10
-            xw2 = pd.DataFrame([xw]); pw = live.predict(xw2).iloc[0]
-            scen.append({"name": "Wind 10 mph stronger than forecast", "kind": "weather", "p_home": float(pw.p_home),
-                         "exp_margin": float(pw.exp_margin), "exp_total": float(pw.exp_total),
-                         "delta_total": float(pw.exp_total - pred["exp_total"])})
-        if (rec["weather"].get("status") == "forecast" and rec["weather"].get("wind_mph") is not None
-                and venue and venue.get("roof_type") == "outdoor"):
-            # apply forecast wind/temp to the total model (observed values are used historically)
+        wx = rec["weather"]
+        if wx.get("status") == "forecast" and wx.get("wind_mph") is not None and venue and venue.get("roof_type") == "outdoor":
+            # The totals model was trained on wind/temperature recorded at kickoff, so feed it the
+            # kickoff-hour forecast; the window maximum is shown for context only.
             xf = dict(xd)
-            xf["wind_excess"] = max(0.0, rec["weather"]["wind_mph"] - 10)
-            xf["cold_excess"] = max(0.0, 40 - (rec["weather"].get("temp_f") or 60))
+            xf["wind_excess"] = max(0.0, (wx.get("wind_kickoff_mph", wx["wind_mph"]) or 0) - 10)
+            xf["cold_excess"] = max(0.0, 40 - (wx.get("temp_f") if wx.get("temp_f") is not None else 60))
             xf["outdoor"] = 1
             pf = live.predict(pd.DataFrame([xf])).iloc[0]
-            rec["prediction"]["exp_total_weather_adj"] = float(pf.exp_total)
-            rec["prediction"]["weather_total_delta"] = float(pf.exp_total - pred["exp_total"])
+            base_total = pred["exp_total"]
+            adj_total = float(pf.exp_total)
+            P = rec["prediction"]
+            P.update({"exp_total_base": base_total, "exp_total_weather_adj": adj_total, "weather_total_delta": adj_total - base_total,
+                      "exp_total": adj_total, "home_pts": (adj_total + pred["exp_margin"]) / 2, "away_pts": (adj_total - pred["exp_margin"]) / 2,
+                      "weather_applied": True})
+            P["distribution"] = mdl.distribution(pred["exp_margin"], adj_total, mkt.get("spread_line") if mkt else None,
+                                                 mkt.get("total_line") if mkt else None)
+            rec["values"] = value_rows(P, P["distribution"], mkt, home, away)
+            xw = dict(xf); xw["wind_excess"] = xw["wind_excess"] + 10
+            pw = live.predict(pd.DataFrame([xw])).iloc[0]
+            scen.append({"name": "Wind 10 mph stronger than forecast", "kind": "weather", "p_home": float(pw.p_home),
+                         "exp_margin": float(pw.exp_margin), "exp_total": float(pw.exp_total),
+                         "delta_total": float(pw.exp_total - adj_total)})
         rec["scenarios"] = scen
         rec["confidence"] = game_confidence(rec["prediction"], meta, flags, rec["weather"], [H["n_games"], A["n_games"]], mkt, game_tiers) \
             if not played or pred.get("backtest") else {"label": "n/a", "reasons": []}
@@ -711,6 +718,8 @@ def run(args):
                 pr["home_qb_id"] = metas[g.game_id]["qb"]["home"]["id"]
                 pr["away_qb_id"] = metas[g.game_id]["qb"]["away"]["id"]
                 rec = game_record(gser, pr, full=full, week_inj=wk)
+                if rec["prediction"].get("weather_applied"):
+                    pr = {**pr, "exp_total": rec["prediction"]["exp_total"]}   # weather flows into team points -> TD odds
                 if full:
                     qb_unc = any(s_["kind"] == "qb" and s_.get("trigger_status") for s_ in rec.get("scenarios", []))
                     cands = td_live_rows(gser, pr, rec["home"].get("injuries", []), rec["away"].get("injuries", []))
@@ -823,11 +832,36 @@ def run(args):
         "build_seconds": round(time.time() - t0),
     }
     write_json(C.OUT_DIR / "meta.json", meta)
+    write_run_status(run_id, season, cur_week, week_files)
     db.close()
     log.info("done in %.0fs", time.time() - t0)
 
 
 bt_models: dict = {}
+
+
+def write_run_status(run_id, season, week, week_files):
+    """Small status file committed to the repo: which kickoff slots got their pre-game
+    refresh, and what the weather fetch returned for each game this week."""
+    import os
+    path = C.DB_PATH.parent / "last_run.json"
+    state = json.loads(path.read_text()) if path.exists() else {}
+    done = set(state.get("pregame_refreshed", []))
+    slot = os.environ.get("NFLEDGE_PREGAME_SLOT", "").strip()
+    if slot:
+        done.add(slot)
+    cutoff = (NOW - pd.Timedelta(days=21)).strftime(ISO)
+    wk = json.loads((C.OUT_DIR / "weeks" / f"{season}_{week:02d}.json").read_text())
+    weather = {}
+    for g in wk["games"]:
+        w = g.get("weather") or {}
+        weather[g["game_id"]] = {k: w.get(k) for k in ("status", "roof_type", "temp_f", "wind_mph", "wind_kickoff_mph", "gust_mph",
+                                                      "precip_prob_pct", "lead_hours", "error") if w.get(k) is not None}
+        if g["prediction"].get("weather_applied"):
+            weather[g["game_id"]]["total_delta"] = round(g["prediction"]["weather_total_delta"], 2)
+    state.update({"last_run": run_id, "season": season, "week": week, "trigger_slot": slot or None,
+                  "pregame_refreshed": sorted(x for x in done if x >= cutoff), "weather": weather})
+    path.write_text(json.dumps(state, indent=1, default=str))
 
 
 def tier_report(td_bt, gp_bt, gf, season) -> dict:

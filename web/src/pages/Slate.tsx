@@ -61,7 +61,7 @@ export default function Slate() {
           <p className="text-muted text-sm">
             {isPast ? "Completed week. Predictions shown are walk-forward backtests made with data available before each game."
               : ref.kind === "lookahead" ? "Early look. Team projections only; injuries, weather and lines will move."
-              : "Pre-kickoff projections, refreshed several times a day."}
+              : "Pre-kickoff projections. Refreshed daily, after injury reports, and about an hour before every kickoff."}
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-4"><ProbViewToggle /><EdgeSlider /></div>
