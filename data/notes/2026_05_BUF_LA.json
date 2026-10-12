@@ -1,0 +1,32 @@
+{
+  "game_id": "2026_05_BUF_LA",
+  "updated": "2026-10-12T15:55:00Z",
+  "open": {
+    "source": "DraftKings line on Oct 7, via SI",
+    "url": "https://www.si.com/betting/bills-vs-rams-prediction-odds-spread-injuries-trends-for-nfl-week-5-2026",
+    "home_ml": -148, "away_ml": 124, "spread_line": 2.5, "total_line": 54.5
+  },
+  "items": [
+    {"text": "Bills ruled out DT Ed Oliver (knee) and WR Josh Palmer (shoulder). WR DJ Moore is questionable (shoulder) but expected to play; CB Christian Benford is back.",
+     "source": "Yahoo Sports", "url": "https://sports.yahoo.com/articles/bills-final-week-5-injury-160314435.html"},
+    {"text": "Rams' final report: only S Quentin Lake questionable ('trending in the right direction'). Aaron Donald, Colby Parkinson, Jaylen Watson and Davante Adams are good to go.",
+     "source": "therams.com", "url": "https://www.therams.com/news/rams-injury-report-week-5-2026-vs-bills-aaron-donald-colby-parkinson-and-jaylen-watson-good-to-go-for-monday-night-football"},
+    {"text": "Line moved from Rams -2.5 / -148 on Oct 7 to Rams -3.5 / -180. Sports Gambling Podcast called it a 'pros vs. joes' game with bigger money on the Rams.",
+     "source": "Sports Gambling Podcast", "url": "https://www.sportsgamblingpodcast.com/2026/10/08/bills-vs-rams-prediction-week-5-2026/"},
+    {"text": "SI: Buffalo's defense ranks 30th in EPA per play allowed; the Rams' defense ranks 3rd.",
+     "source": "SI", "url": "https://www.si.com/betting/bills-vs-rams-prediction-odds-spread-injuries-trends-for-nfl-week-5-2026"},
+    {"text": "Dimers' model: Rams 63.8% to win, projected about 28-24 (52 total, under 54.5).",
+     "source": "Dimers", "url": "https://www.dimers.com/nfl/predictions/2026_5_la_buf"}
+  ],
+  "experts": [
+    {"market": "spread", "side": "LA", "source": "SI (Iain MacMillan)", "url": "https://www.si.com/betting/bills-vs-rams-prediction-odds-spread-injuries-trends-for-nfl-week-5-2026"},
+    {"market": "spread", "side": "LA", "source": "SGP (Ryan Kramer)", "url": "https://www.sportsgamblingpodcast.com/2026/10/08/bills-vs-rams-prediction-week-5-2026/"},
+    {"market": "spread", "side": "BUF", "source": "SGP (Sean Green)", "url": "https://www.sportsgamblingpodcast.com/2026/10/08/bills-vs-rams-prediction-week-5-2026/"},
+    {"market": "moneyline", "side": "LA", "source": "Dimers model", "url": "https://www.dimers.com/nfl/predictions/2026_5_la_buf"},
+    {"market": "total", "side": "under", "source": "Dimers model (projection)", "url": "https://www.dimers.com/nfl/predictions/2026_5_la_buf"}
+  ],
+  "adjust": [
+    {"market": "all", "side": "LA", "points": 0.5,
+     "reason": "Bills are without DT Ed Oliver and WR Josh Palmer, and the Rams' injury list cleared. The stats model doesn't price non-QB injuries"}
+  ]
+}

@@ -17,7 +17,6 @@ import math
 import numpy as np
 import pandas as pd
 from scipy.stats import norm
-from sklearn.linear_model import LogisticRegression
 
 from . import odds as O
 
@@ -50,18 +49,30 @@ def backtest_sides(gp_bt: pd.DataFrame, gf: pd.DataFrame, games: pd.DataFrame, s
     return pd.DataFrame(rows)
 
 
+def _fit_b(off: np.ndarray, x: np.ndarray, y: np.ndarray) -> float:
+    """Logistic regression with the market logit as a fixed offset: one free coefficient, b."""
+    from scipy.optimize import minimize_scalar
+
+    def nll(b):
+        z = off + b * x
+        return float(np.sum(np.logaddexp(0, z) - y * z))
+    return float(minimize_scalar(nll, bounds=(-3, 3), method="bounded").x)
+
+
 def fit(sides: pd.DataFrame) -> dict:
-    """{market: {"c","a","b","n","b_ci90"}} fit on the given sides."""
+    """{market: {"c","a","b","n","b_ci90"}}. The market is taken at face value (c=0, a=1): fitting a free
+    slope on spread/total prices mostly fits juice noise around 50%. Only b, the weight on the model's
+    disagreement with the market, is estimated."""
     out = {}
     for mkt, d in sides.groupby("market"):
-        X = np.column_stack([_lg(d.mp), _lg(d.p) - _lg(d.mp)])
-        m = LogisticRegression(C=1e6, max_iter=1000).fit(X, d.win)
+        off, x, y = _lg(d.mp), _lg(d.p) - _lg(d.mp), d.win.values.astype(float)
+        b = _fit_b(off, x, y)
         rng = np.random.default_rng(0)
         bs = []
         for _ in range(200):
             i = rng.integers(0, len(d), len(d))
-            bs.append(LogisticRegression(C=1e6, max_iter=1000).fit(X[i], d.win.values[i]).coef_[0][1])
-        out[mkt] = {"c": float(m.intercept_[0]), "a": float(m.coef_[0][0]), "b": float(m.coef_[0][1]), "n": int(len(d)),
+            bs.append(_fit_b(off[i], x[i], y[i]))
+        out[mkt] = {"c": 0.0, "a": 1.0, "b": b, "n": int(len(d)),
                     "b_ci90": [float(np.percentile(bs, 5)), float(np.percentile(bs, 95))]}
     return out
 
@@ -71,5 +82,6 @@ def anchored(coef: dict | None, market: str, p_model: float, p_market: float) ->
     if not coef or market not in coef:
         return p_market
     k = coef[market]
-    z = k["c"] + k["a"] * float(_lg(p_market)) + k["b"] * (float(_lg(p_model)) - float(_lg(p_market)))
+    b = max(0.0, k["b"])   # never fade the model on weak evidence: a negative fit is treated as "no information"
+    z = k["c"] + k["a"] * float(_lg(p_market)) + b * (float(_lg(p_model)) - float(_lg(p_market)))
     return 1 / (1 + math.exp(-z))

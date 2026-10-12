@@ -235,3 +235,34 @@ def test_anchor_keeps_real_signal():
     coef = AN.fit(pd.DataFrame({"market": "total", "p": truth, "mp": mp, "win": y, "season": 2024}))
     assert coef["total"]["b"] > 0.7
     assert AN.anchored(None, "total", 0.6, 0.5) == 0.5
+
+
+def _rec_game(model_home_cover=0.60, nv_home=0.50, ev=-0.02):
+    vals = []
+    for team, p, nv in (("H", model_home_cover, nv_home), ("A", 1 - model_home_cover, 1 - nv_home)):
+        vals.append({"market": "spread", "selection": f"{team} -3", "team": team, "model_p": p, "no_vig": nv,
+                     "odds": -110.0, "ev_per_unit": ev, "anchored_p": nv})
+    return {"home": {"team": "H"}, "away": {"team": "A"}, "values": vals,
+            "market": {"spread_line": 3.0, "home_no_vig": 0.6, "total_line": 44.0}}
+
+
+def test_recs_model_alone_caps_at_lean():
+    from nfledge import recs as RC
+    r = RC.recommend(_rec_game(0.70), None, None)["markets"]["spread"]
+    assert r["side"] == "H" and r["score"] == 6 and r["verdict"] == "Lean"
+
+
+def test_recs_bet_needs_agreeing_signal():
+    from nfledge import recs as RC
+    opening = {"spread_line": 2.0}           # line moved 1 pt toward home
+    r = RC.recommend(_rec_game(0.70), opening, None)["markets"]["spread"]
+    assert r["score"] == 7 and r["verdict"] == "Bet"
+    notes = {"adjust": [{"market": "all", "side": "A", "points": 1.5, "reason": "x"}]}
+    r2 = RC.recommend(_rec_game(0.70), opening, notes)["markets"]["spread"]
+    assert r2["verdict"] != "Bet"
+
+
+def test_anchor_never_fades_model():
+    from nfledge import anchor as AN
+    coef = {"spread": {"c": 0.0, "a": 1.0, "b": -0.3}}
+    assert abs(AN.anchored(coef, "spread", 0.6, 0.5) - 0.5) < 1e-9

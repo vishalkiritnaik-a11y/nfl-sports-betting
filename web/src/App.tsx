@@ -5,6 +5,7 @@ import { SettingsProvider } from "./lib/store";
 import { ago } from "./lib/format";
 import type { Meta, WeekData, WeekRef } from "./types";
 import { ErrorBox, Loading } from "./components/ui";
+import BetSheet from "./pages/BetSheet";
 import Slate from "./pages/Slate";
 import GamePage from "./pages/Game";
 import Touchdowns from "./pages/Touchdowns";
@@ -65,7 +66,7 @@ function WeekSelect() {
 }
 
 const NAV = [
-  ["/", "Slate"], ["/touchdowns", "Touchdowns"], ["/value", "Value"], ["/picks", "Model picks"], ["/performance", "Track record"],
+  ["/", "What to bet"], ["/slate", "Slate"], ["/touchdowns", "Touchdowns"], ["/value", "Value"], ["/picks", "Pick history"], ["/performance", "Track record"],
   ["/compare", "Compare"], ["/watchlist", "Watchlist"], ["/bets", "My bets"], ["/data", "Data & method"],
 ] as const;
 
@@ -112,7 +113,8 @@ function Routed() {
   return (
     <Shell>
       <Routes>
-        <Route path="/" element={needsWeek(<Slate />)} />
+        <Route path="/" element={needsWeek(<BetSheet />)} />
+        <Route path="/slate" element={needsWeek(<Slate />)} />
         <Route path="/game/:id" element={needsWeek(<GamePage />)} />
         <Route path="/touchdowns" element={needsWeek(<Touchdowns />)} />
         <Route path="/value" element={needsWeek(<Value />)} />

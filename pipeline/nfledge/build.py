@@ -20,7 +20,7 @@ from . import db as DB
 from . import features as F
 from . import matchups as M
 from . import odds as O
-from . import anchor as AN, stadiums, tddata as D, teamdata as T, tiers as TR
+from . import anchor as AN, recs as RC, stadiums, tddata as D, teamdata as T, tiers as TR
 from .ingest import nflverse as N, odds_api, weather as W
 from .models import td_model as TD
 from .models.game_model import MARGIN_FEATURES, TOTAL_FEATURES, GameModel, game_features
@@ -770,6 +770,10 @@ def run(args):
                 pr["home_qb_id"] = metas[g.game_id]["qb"]["home"]["id"]
                 pr["away_qb_id"] = metas[g.game_id]["qb"]["away"]["id"]
                 rec = game_record(gser, pr, full=full, week_inj=wk)
+                if rec["kickoff_utc"] > run_id and rec.get("values"):
+                    notes = RC.load_notes(C.DB_PATH.parent / "notes", g.game_id)
+                    opening = (notes or {}).get("open") or RC.first_logged(db, g.game_id)
+                    rec["recs"] = RC.recommend(rec, opening, notes)
                 if rec["prediction"].get("weather_applied"):
                     pr = {**pr, "exp_total": rec["prediction"]["exp_total"]}   # weather flows into team points -> TD odds
                 if full:
@@ -804,6 +808,8 @@ def run(args):
                                                                                (-m["spread_line"] if v["team"] == g.home_team else m["spread_line"]) if v["market"] == "spread"
                                                                                else m.get("total_line")),
                                                                       "odds": v["odds"], "model_p": v["model_p"], "anchored_p": v.get("anchored_p")} for v in rec["values"]],
+                                                          "recs": {k: {f: r_[f] for f in ("side", "label", "line", "odds", "score", "verdict", "p_win")}
+                                                                   for k, r_ in rec.get("recs", {}).get("markets", {}).items()},
                                                           "sigma_margin": live.sigma_margin, "sigma_total": live.sigma_total}})
                         for t in trs:
                             DB.log_td(db, run_id, {"game_id": g.game_id, "player_id": t["player_id"], "player_name": t["name"],
@@ -860,9 +866,10 @@ def run(args):
     perf = performance(gf, gp_bt, games, td_bt, db, live, td_live, season)
     perf["tiers"] = tier_report(td_bt, gp_bt, gf, season)
     write_json(C.OUT_DIR / "performance.json", perf)
-    from .picks import game_ledger, td_ledger
+    from .picks import game_ledger, rec_ledger, td_ledger
     write_json(C.OUT_DIR / "picks.json", {"generated": run_id,
                                           "game": game_ledger(db, games, live.sigma_margin, live.sigma_total, anchor_by_season),
+                                          "recs": rec_ledger(db),
                                           "anchor": {str(k): v for k, v in anchor_by_season.items()},
                                           "td": td_ledger(db, usage_by_game, pbp_games)})
 

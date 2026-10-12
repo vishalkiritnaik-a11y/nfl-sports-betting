@@ -116,3 +116,20 @@ def td_ledger(con, usage_by_game: dict, pbp_games: set) -> list[dict]:
                     "name": r["player_name"], "team": r["team"], "position": r["position"], "p": p,
                     "score": TR.td_score(p), "status": r["status"], "odds": r["market_odds"], "result": res})
     return sorted(out, key=lambda d: (d["kickoff_utc"], -d["p"]))
+
+
+def rec_ledger(con) -> list[dict]:
+    """The Spread / ML / Total recommendation shown before kickoff (last pre-game run), graded."""
+    out = []
+    for r in DB.last_pregame_games(con):
+        info = json.loads(r.get("info") or "{}")
+        H, A = r["home_team"], r["away_team"]
+        for mk, rc in (info.get("recs") or {}).items():
+            o = {"market": mk, "side": rc["side"], "line": rc["line"]}
+            res = _grade(o, H, r.get("home_score"), r.get("away_score"))
+            dec = O.american_to_decimal(rc["odds"])
+            out.append({**rc, "market": mk, "game_id": r["game_id"], "matchup": f"{A} @ {H}", "kickoff_utc": r["kickoff_utc"],
+                        "logged_at": r["run_id"], "season": int(r["game_id"][:4]), "week": int(r["game_id"][5:7]), "result": res,
+                        "profit": (dec - 1) if res == "won" else -1.0 if res == "lost" else 0.0,
+                        "final": None if res == "pending" else f"{A} {int(r['away_score'])}, {H} {int(r['home_score'])}"})
+    return sorted(out, key=lambda d: (d["kickoff_utc"], d["game_id"], d["market"]))

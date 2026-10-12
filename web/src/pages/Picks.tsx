@@ -46,7 +46,7 @@ export default function PicksPage() {
   return (
     <div className="grid gap-5">
       <div>
-        <h1 className="display text-[30px] leading-tight">Model picks</h1>
+        <h1 className="display text-[30px] leading-tight">Pick history</h1>
         <p className="text-muted text-sm max-w-[80ch]">Every pick the model logged before kickoff, graded against the result. Game picks are sides with positive expected value at the logged price, using the market-anchored probability by default. Anchoring is fit only on seasons before each pick, so it isn't hindsight. Switch on raw model edges to see what the unanchored model would have bet. TD picks are its top-scored players. Losing picks stay in the record. Nothing is removed after the fact.</p>
       </div>
 

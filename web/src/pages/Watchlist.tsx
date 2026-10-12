@@ -18,7 +18,7 @@ export default function Watchlist() {
         <p className="text-muted text-sm">Star games and players anywhere to keep them here. Players stay starred from week to week. The list is saved in this browser only.</p>
       </div>
       <Section title={`Games (${games.length})`}>
-        {games.length === 0 ? <Note>No starred games in this week. Use the star on any matchup on the <Link className="link" to={{ pathname: "/", search }}>slate</Link>.</Note> :
+        {games.length === 0 ? <Note>No starred games in this week. Use the star on any matchup on the <Link className="link" to={{ pathname: "/slate", search }}>slate</Link>.</Note> :
           <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4">{games.map((g) => <MatchupCard key={g.game_id} g={g} teams={meta.teams} />)}</div>}
       </Section>
       <Section title={`Players (${players.length})`}>

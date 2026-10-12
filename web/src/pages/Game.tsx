@@ -140,7 +140,7 @@ export default function GamePage() {
   const [statView, setStatView] = useState<"season" | "blended">("season");
   const [showRaw, setShowRaw] = useState(false);
   const g = week!.games.find((x) => x.game_id === id);
-  if (!g) return <div className="panel p-6">That game isn't in the selected week. <Link className="link" to={{ pathname: "/", search }}>Back to the slate</Link></div>;
+  if (!g) return <div className="panel p-6">That game isn't in the selected week. <Link className="link" to={{ pathname: "/slate", search }}>Back to the slate</Link></div>;
   const T: Record<string, TeamInfo> = meta.teams;
   const pr = g.prediction, m = g.market;
   const k = kickoffLocal(g.kickoff_utc);
@@ -150,7 +150,7 @@ export default function GamePage() {
   const alerts = alertsFor(g);
   return (
     <div className="grid gap-5">
-      <Link to={{ pathname: "/", search }} className="text-sm text-muted hover:text-fg w-fit">← Back to the slate</Link>
+      <Link to={{ pathname: "/slate", search }} className="text-sm text-muted hover:text-fg w-fit">← Back to the slate</Link>
       <header className="panel p-5">
         <div className="flex flex-wrap items-center justify-between gap-2 text-sm text-muted mb-4">
           <span>{k.day}, {k.time}. {g.venue.stadium}{g.location === "Neutral" ? " (neutral site)" : ""}. {g.venue.roof ?? g.venue.roof_type ?? ""}{g.venue.surface ? `, ${g.venue.surface}` : ""}{g.div_game ? ". Division game" : ""}</span>

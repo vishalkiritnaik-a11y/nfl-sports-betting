@@ -103,12 +103,31 @@ export interface H2H {
 
 export interface Confidence { label: "High" | "Medium" | "Low" | "n/a"; base?: "High" | "Medium" | "Low"; score?: number; base_score?: number; reasons: string[] }
 
+export interface RecWhy { factor: string; points: number; text: string }
+export interface Rec {
+  market: "spread" | "moneyline" | "total"; side: string; label: string; line: number | null; odds: number;
+  score: number; verdict: "Bet" | "Lean" | "Pass"; p_model: number; p_market: number; p_win: number; ev: number;
+  other_score: number; why: RecWhy[];
+}
+export interface NoteItem { text: string; source: string; url?: string }
+export interface GameRecs {
+  markets: Partial<Record<"spread" | "moneyline" | "total", Rec>>;
+  opening: { source: string; url?: string; home_ml?: number; away_ml?: number; spread_line?: number; total_line?: number } | null;
+  notes: { updated?: string; items?: NoteItem[]; experts?: { market: string; side: string; source: string; url?: string }[] } | null;
+}
+export interface RecPick {
+  game_id: string; matchup: string; kickoff_utc: string; season: number; week: number; market: "spread" | "moneyline" | "total";
+  side: string; label: string; line: number | null; odds: number; score: number; verdict: "Bet" | "Lean" | "Pass"; p_win: number;
+  result: "won" | "lost" | "push" | "pending"; profit: number; final: string | null;
+}
+
 export interface Game {
   game_id: string; season: number; week: number; game_type: string; gameday: string; weekday: string;
   gametime_et: string; kickoff_utc: string; location: string; div_game: boolean;
   venue: { stadium: string; surface: string | null; roof: string | null; name?: string; roof_type?: string; elevation_m?: number };
   lookahead: boolean; home: Side; away: Side; prediction: Prediction; market: Market | null; values: ValueRow[];
   result?: { home_score: number; away_score: number; winner: string; model_correct: boolean | null };
+  recs?: GameRecs;
   confidence: Confidence; factors: { home: string[]; away: string[]; risks?: string[] };
   weather?: Weather; scenarios?: Scenario[]; h2h?: H2H[];
   matchups?: { home_off: MatchupRow[]; away_off: MatchupRow[]; home_extras: Record<string, number>;
@@ -187,4 +206,4 @@ export interface TDPick {
   team: string; position: string; p: number; score: number; status: string | null; odds: number | null;
   result: "won" | "lost" | "void" | "pending";
 }
-export interface Picks { generated: string; game: GamePick[]; td: TDPick[]; anchor?: Record<string, Record<string, { b: number; b_ci90: [number, number]; n: number }>> }
+export interface Picks { generated: string; game: GamePick[]; td: TDPick[]; recs?: RecPick[]; anchor?: Record<string, Record<string, { b: number; b_ci90: [number, number]; n: number }>> }
