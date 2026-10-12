@@ -210,3 +210,28 @@ def test_weather_retries_then_succeeds(monkeypatch):
     monkeypatch.setattr(W, "_ensemble", lambda *a: {})
     out = W.forecast(40, -74, datetime(2026, 10, 11, 17, tzinfo=timezone.utc), datetime(2026, 10, 10, tzinfo=timezone.utc))
     assert out["status"] == "forecast" and calls["n"] == 3
+
+
+# ------------------------------------------------------------------ market anchoring
+def test_anchor_collapses_to_market_when_model_is_noise():
+    from nfledge import anchor as AN
+    rng = np.random.default_rng(1)
+    n = 4000
+    mp = rng.uniform(0.3, 0.7, n)
+    y = (rng.uniform(size=n) < mp).astype(int)                 # outcomes follow the market
+    p = np.clip(mp + rng.normal(0, 0.08, n), 0.05, 0.95)        # model = market + noise
+    coef = AN.fit(pd.DataFrame({"market": "spread", "p": p, "mp": mp, "win": y, "season": 2024}))
+    assert abs(coef["spread"]["b"]) < 0.25
+    assert abs(AN.anchored(coef, "spread", 0.62, 0.50) - 0.50) < 0.04   # a 12-pt raw edge mostly disappears
+
+
+def test_anchor_keeps_real_signal():
+    from nfledge import anchor as AN
+    rng = np.random.default_rng(2)
+    n = 4000
+    truth = rng.uniform(0.3, 0.7, n)
+    y = (rng.uniform(size=n) < truth).astype(int)
+    mp = np.full(n, 0.5)                                         # market knows nothing
+    coef = AN.fit(pd.DataFrame({"market": "total", "p": truth, "mp": mp, "win": y, "season": 2024}))
+    assert coef["total"]["b"] > 0.7
+    assert AN.anchored(None, "total", 0.6, 0.5) == 0.5

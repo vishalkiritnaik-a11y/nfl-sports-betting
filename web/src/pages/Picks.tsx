@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { CartesianGrid, Line, LineChart, ReferenceLine, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { useApp } from "../App";
-import { EdgeSlider, ErrorBox, Loading, Note, Section, SortTable, type Col } from "../components/ui";
+import { EdgeSlider, ErrorBox, Loading, Note, Section, SortTable, Toggle, type Col } from "../components/ui";
 import { usePicks } from "../lib/data";
 import { pct, units } from "../lib/format";
 import { fmtAmerican, probToAmerican } from "../lib/odds";
@@ -27,11 +27,14 @@ export default function PicksPage() {
   const [week, setWeek] = useState("All");
   const [market, setMarket] = useState("All");
   const [minScore, setMinScore] = useState(9);
+  const [raw, setRaw] = useState(false);
   if (error) return <ErrorBox msg={error} />;
   if (!data) return <Loading />;
   const weeks = [...new Set([...data.game, ...data.td].map((r) => wkKey(r.season, r.week)))].sort().reverse();
   const inWeek = (r: { season: number; week: number }) => week === "All" || wkKey(r.season, r.week) === week;
-  const games = data.game.filter((r) => inWeek(r) && r.edge_pp >= minEdge && (market === "All" || r.market === market));
+  const edgeOf = (r: GamePick) => (raw ? r.edge_pp : r.anchored_edge_pp);
+  const evOf = (r: GamePick) => (raw ? r.ev : r.anchored_ev);
+  const games = data.game.filter((r) => inWeek(r) && evOf(r) > 0 && edgeOf(r) >= minEdge && (market === "All" || r.market === market));
   const settled = games.filter((r) => r.result !== "pending");
   const staked = settled.filter((r) => r.result !== "push").length;
   const pl = settled.reduce((a, r) => a + r.profit, 0);
@@ -44,7 +47,7 @@ export default function PicksPage() {
     <div className="grid gap-5">
       <div>
         <h1 className="display text-[30px] leading-tight">Model picks</h1>
-        <p className="text-muted text-sm max-w-[80ch]">Every pick the model logged before kickoff, graded against the result. Game picks are the sides it rated as positive expected value at the logged price. TD picks are its top-scored players. Losing picks stay in the record. Nothing is removed after the fact.</p>
+        <p className="text-muted text-sm max-w-[80ch]">Every pick the model logged before kickoff, graded against the result. Game picks are sides with positive expected value at the logged price, using the market-anchored probability by default. Anchoring is fit only on seasons before each pick, so it isn't hindsight. Switch on raw model edges to see what the unanchored model would have bet. TD picks are its top-scored players. Losing picks stay in the record. Nothing is removed after the fact.</p>
       </div>
 
       <div className="flex flex-wrap items-center gap-4 text-sm">
@@ -56,6 +59,7 @@ export default function PicksPage() {
           <option value="All">All game markets</option><option value="moneyline">Moneyline</option><option value="spread">Spread</option><option value="total">Total</option>
         </select>
         <EdgeSlider />
+        <Toggle on={raw} set={setRaw} label="Use raw model edges" />
         <label className="flex items-center gap-2"><span className="text-muted">TD picks at</span>
           <select id="picks-score" value={minScore} onChange={(e) => setMinScore(Number(e.target.value))} aria-label="Minimum TD score">
             {[10, 9, 8, 7, 6].map((s) => <option key={s} value={s}>{s}+/10</option>)}
@@ -88,15 +92,16 @@ export default function PicksPage() {
       </div>
 
       <Section title={`Game picks (${games.length})`}>
-        <SortTable<GamePick> rows={games} initial="ko" desc={false} rowKey={(r) => r.game_id + r.selection} empty={`No picks clear a ${minEdge.toFixed(1)}-pt edge for this filter. Lower the minimum edge to see more.`} cols={[
+        <SortTable<GamePick> rows={games} initial="ko" desc={false} rowKey={(r) => r.game_id + r.selection} empty={raw ? `No picks clear a ${minEdge.toFixed(1)}-pt edge for this filter.` : `No market-anchored picks clear a ${minEdge.toFixed(1)}-pt edge. That is expected: in backtests the model's disagreements with the market carried almost no information, so anchoring leaves few or no bets. Toggle raw model edges to see what it would have bet.`} cols={[
           { key: "ko", label: "Game", sort: (r) => r.kickoff_utc, render: (r) => <Link className="hover:underline" to={{ pathname: `/game/${r.game_id}`, search: `?w=${wkKey(r.season, r.week)}` }}>{r.matchup}<div className="text-xs text-muted">wk {r.week}</div></Link> },
           { key: "mkt", label: "Market", sort: (r) => r.market, render: (r) => <span className="text-muted">{MKT[r.market]}</span> },
           { key: "sel", label: "Pick", sort: (r) => r.selection, render: (r) => <span className="font-medium">{r.selection}</span> },
           { key: "odds", label: "Price", align: "right", sort: (r) => r.odds, render: (r) => <span title={`Price source: ${r.price_source}`}>{fmtAmerican(r.odds)}{r.price_source !== "logged" ? "*" : ""}</span> },
           { key: "p", label: "Model", align: "right", sort: (r) => r.model_p, render: (r) => <span style={{ color: "var(--model)" }}>{pct(r.model_p, 1)}</span> },
           { key: "nv", label: "Market", align: "right", sort: (r) => r.no_vig, render: (r) => <span style={{ color: "var(--market)" }}>{pct(r.no_vig, 1)}</span> },
-          { key: "edge", label: "Edge", align: "right", sort: (r) => r.edge_pp, render: (r) => `+${r.edge_pp.toFixed(1)}` },
-          { key: "ev", label: "EV / $1", align: "right", sort: (r) => r.ev, render: (r) => `+${(r.ev * 100).toFixed(0)}¢` },
+          { key: "anc", label: "Anchored", align: "right", sort: (r) => r.anchored_p, render: (r) => pct(r.anchored_p, 1) },
+          { key: "edge", label: raw ? "Raw edge" : "Edge", align: "right", sort: edgeOf, render: (r) => `${edgeOf(r) >= 0 ? "+" : ""}${edgeOf(r).toFixed(1)}` },
+          { key: "ev", label: "EV / $1", align: "right", sort: evOf, render: (r) => `${evOf(r) >= 0 ? "+" : ""}${(evOf(r) * 100).toFixed(0)}¢` },
           { key: "res", label: "Result", sort: (r) => r.result, render: (r) => <span style={{ color: RES_COLOR[r.result] }}>{RES_TEXT[r.result]}{r.final ? <span className="text-xs text-muted"> {r.final}</span> : null}</span> },
           { key: "pl", label: "Units", align: "right", sort: (r) => r.profit, render: (r) => r.result === "pending" ? "—" : <span style={{ color: r.profit > 0 ? "var(--pos)" : r.profit < 0 ? "var(--neg)" : undefined }}>{units(r.profit)}</span> },
         ]} />

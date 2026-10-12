@@ -29,8 +29,9 @@ export default function Value() {
     { key: "sel", label: "Selection", sort: (r) => r.selection, render: (r) => <span className="font-medium">{r.selection}</span> },
     { key: "odds", label: "Price", align: "right", sort: (r) => r.odds, render: (r) => fmtAmerican(r.odds) },
     { key: "model", label: "Model", align: "right", sort: (r) => r.model_p, render: (r) => <span style={{ color: "var(--model)" }}>{pct(r.model_p, 1)}</span> },
-    { key: "raw", label: "Raw implied", align: "right", sort: (r) => r.raw_implied, render: (r) => pct(r.raw_implied, 1) },
+    { key: "anc", label: "Anchored", align: "right", title: "Model probability shrunk toward the market by as much as backtests say the model deserves", sort: (r) => r.anchored_p ?? null, render: (r) => pct(r.anchored_p ?? null, 1) },
     { key: "nv", label: "No-vig", align: "right", sort: (r) => r.no_vig, render: (r) => <span style={{ color: "var(--market)" }}>{pct(r.no_vig, 1)}</span> },
+    { key: "redge", label: "Raw edge", align: "right", sort: (r) => r.raw_edge_pp ?? null, render: (r) => <span className="text-muted">{r.raw_edge_pp != null ? `${r.raw_edge_pp > 0 ? "+" : ""}${r.raw_edge_pp.toFixed(1)}` : "—"}</span> },
     { key: "edge", label: "Edge (pts)", align: "right", sort: (r) => r.edge_pp, render: (r) => <Edge v={r.edge_pp} /> },
     { key: "ev", label: "EV / unit", align: "right", sort: (r) => r.ev_per_unit, render: (r) => <Edge v={r.ev_per_unit} /> },
     { key: "roi", label: "ROI %", align: "right", sort: (r) => r.roi_pct, render: (r) => <Edge v={r.roi_pct} /> },
@@ -40,7 +41,7 @@ export default function Value() {
     <div className="grid gap-5">
       <div>
         <h1 className="display text-[30px] leading-tight">Value finder</h1>
-        <p className="text-muted text-sm max-w-[80ch]">Where the model's probability differs from the market's. The market probability has the bookmaker's margin removed
+        <p className="text-muted text-sm max-w-[80ch]">Where the model's view differs from the market's, after correcting for how often that disagreement has actually paid off. Backtests showed results track the closing line, not the raw model, so edges use a market-anchored probability: the model shrunk toward the market by the amount history supports. Raw edges are shown for reference only. The market probability has the bookmaker's margin removed
           proportionally, so the two sides sum to 100%. A spot is flagged only when the model beats it by your minimum edge.</p>
       </div>
       <Section title={`${ref.season} ${ref.label}: ${shown.length} of ${rows.length} prices`} aside={

@@ -124,8 +124,9 @@ const vcols: Col<ValueRow>[] = [
   { key: "sel", label: "Selection", sort: (v) => v.selection, render: (v) => <span className="font-medium">{v.selection}</span> },
   { key: "odds", label: "Price", align: "right", sort: (v) => v.odds, render: (v) => fmtAmerican(v.odds) },
   { key: "model", label: "Model", align: "right", sort: (v) => v.model_p, render: (v) => <span style={{ color: "var(--model)" }}>{pct(v.model_p, 1)}</span> },
-  { key: "raw", label: "Implied (raw)", align: "right", sort: (v) => v.raw_implied, render: (v) => pct(v.raw_implied, 1) },
+  { key: "anc", label: "Anchored", align: "right", sort: (v) => v.anchored_p ?? null, render: (v) => pct(v.anchored_p ?? null, 1) },
   { key: "nv", label: "No-vig market", align: "right", sort: (v) => v.no_vig, render: (v) => <span style={{ color: "var(--market)" }}>{pct(v.no_vig, 1)}</span> },
+  { key: "redge", label: "Raw edge", align: "right", sort: (v) => v.raw_edge_pp ?? null, render: (v) => <span className="text-muted">{v.raw_edge_pp != null ? v.raw_edge_pp.toFixed(1) : "—"}</span> },
   { key: "edge", label: "Edge (pts)", align: "right", sort: (v) => v.edge_pp, render: (v) => <Edge v={v.edge_pp} /> },
   { key: "ev", label: "EV / unit", align: "right", sort: (v) => v.ev_per_unit, render: (v) => <Edge v={v.ev_per_unit} /> },
   { key: "roi", label: "ROI", align: "right", sort: (v) => v.roi_pct, render: (v) => <Edge v={v.roi_pct} /> },
@@ -213,7 +214,7 @@ export default function GamePage() {
               </dl>
               <SortTable rows={g.values} cols={vcols} initial="edge" rowKey={(v) => v.selection} />
               <p className="text-xs text-muted mt-2">Highlighted as potential value only when edge ≥ {minEdge.toFixed(1)} pts (your threshold).
-                {g.values.filter((v) => v.edge_pp >= minEdge).length ? ` Clears it: ${g.values.filter((v) => v.edge_pp >= minEdge).map((v) => v.selection).join(", ")}.` : " Nothing clears it."} EV = p × (decimal − 1) − (1 − p) per unit. Spread and total probabilities assume a normal margin with SD {num(pr.distribution.margin_sd, 1)} and ignore pushes.</p>
+                {g.values.filter((v) => v.edge_pp >= minEdge).length ? ` Clears it: ${g.values.filter((v) => v.edge_pp >= minEdge).map((v) => v.selection).join(", ")}.` : " Nothing clears it."} Edge and EV use the market-anchored probability; the raw model edge is shown for reference. EV = p × (decimal − 1) − (1 − p) per unit. Spread and total probabilities assume a normal margin with SD {num(pr.distribution.margin_sd, 1)} and ignore pushes.</p>
             </>)}
         </Section>
       </div>

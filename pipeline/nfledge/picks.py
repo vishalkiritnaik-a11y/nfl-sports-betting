@@ -14,6 +14,7 @@ import math
 import pandas as pd
 from scipy.stats import norm
 
+from . import anchor as AN
 from . import db as DB
 from . import odds as O
 from . import tiers as TR
@@ -43,7 +44,7 @@ def _grade(o: dict, home: str, hs, as_) -> str:
     return "won" if (o["side"] == "over") == (t > o["line"]) else "lost"
 
 
-def game_ledger(con, games: pd.DataFrame, sigma_m: float, sigma_t: float) -> list[dict]:
+def game_ledger(con, games: pd.DataFrame, sigma_m: float, sigma_t: float, anchors: dict | None = None) -> list[dict]:
     sched = games.set_index("game_id")
     out = []
     for r in DB.last_pregame_games(con):
@@ -78,15 +79,20 @@ def game_ledger(con, games: pd.DataFrame, sigma_m: float, sigma_t: float) -> lis
             if len(pair) != 2:
                 continue
             nv = O.remove_vig_proportional([O.american_to_implied(p["odds"]) for p in pair])
+            season = int(r["game_id"][:4])
+            coef = (anchors or {}).get(season)        # fit only on seasons before this pick's season
             for o, fair in zip(pair, nv):
                 dec = O.american_to_decimal(o["odds"])
                 ev = O.expected_profit(o["model_p"], dec)
-                if ev <= 0:
-                    continue          # ledger holds positive-EV picks only
+                pa = AN.anchored(coef, o["market"], o["model_p"], fair)
+                ev_a = O.expected_profit(pa, dec)
+                if ev <= 0 and ev_a <= 0:
+                    continue          # ledger holds sides that were positive-EV on either basis
                 res = _grade(o, H, r.get("home_score"), r.get("away_score"))
                 out.append({**o, "game_id": r["game_id"], "matchup": f"{A} @ {H}", "kickoff_utc": r["kickoff_utc"],
                             "logged_at": r["run_id"], "season": int(r["game_id"][:4]), "week": int(r["game_id"][5:7]),
                             "no_vig": fair, "edge_pp": (o["model_p"] - fair) * 100, "ev": ev, "result": res,
+                            "anchored_p": pa, "anchored_edge_pp": (pa - fair) * 100, "anchored_ev": ev_a,
                             "profit": (dec - 1) if res == "won" else -1.0 if res == "lost" else 0.0,
                             "final": None if res == "pending" else f"{A} {int(r['away_score'])}, {H} {int(r['home_score'])}"})
     return sorted(out, key=lambda d: (d["kickoff_utc"], d["game_id"], d["market"]))

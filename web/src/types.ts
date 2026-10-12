@@ -56,6 +56,7 @@ export interface ValueRow {
   market: "moneyline" | "spread" | "total"; selection: string; team: string | null; model_p: number;
   odds: number; decimal: number; raw_implied: number; no_vig: number; overround: number;
   edge_pp: number; edge_vs_raw_pp: number; ev_per_unit: number; roi_pct: number;
+  anchored_p?: number; raw_edge_pp?: number; raw_ev_per_unit?: number;
 }
 
 export interface Injury {
@@ -178,6 +179,7 @@ export interface GamePick {
   game_id: string; matchup: string; kickoff_utc: string; logged_at: string; season: number; week: number;
   market: "moneyline" | "spread" | "total"; selection: string; side: string; line: number | null; odds: number;
   model_p: number; no_vig: number; edge_pp: number; ev: number; price_source: string;
+  anchored_p: number; anchored_edge_pp: number; anchored_ev: number;
   result: "won" | "lost" | "push" | "pending"; profit: number; final: string | null;
 }
 export interface TDPick {
@@ -185,4 +187,4 @@ export interface TDPick {
   team: string; position: string; p: number; score: number; status: string | null; odds: number | null;
   result: "won" | "lost" | "void" | "pending";
 }
-export interface Picks { generated: string; game: GamePick[]; td: TDPick[] }
+export interface Picks { generated: string; game: GamePick[]; td: TDPick[]; anchor?: Record<string, Record<string, { b: number; b_ci90: [number, number]; n: number }>> }

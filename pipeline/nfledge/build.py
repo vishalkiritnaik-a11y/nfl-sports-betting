@@ -20,7 +20,7 @@ from . import db as DB
 from . import features as F
 from . import matchups as M
 from . import odds as O
-from . import stadiums, tddata as D, teamdata as T, tiers as TR
+from . import anchor as AN, stadiums, tddata as D, teamdata as T, tiers as TR
 from .ingest import nflverse as N, odds_api, weather as W
 from .models import td_model as TD
 from .models.game_model import MARGIN_FEATURES, TOTAL_FEATURES, GameModel, game_features
@@ -131,7 +131,24 @@ def market_from_api(ev: dict) -> dict | None:
             "under_odds": first.get("total_under_price"), "book": "best of " + ", ".join(ev["books"].keys())}
 
 
+ANCHOR: dict = {}   # market-anchoring coefficients, fit each run on prior-season backtests
+
+
+def _anchor_rows(rows: list[dict]) -> list[dict]:
+    """Replace edge/EV with market-anchored versions; keep the raw model numbers alongside."""
+    for r in rows:
+        pa = AN.anchored(ANCHOR, r["market"], r["model_p"], r["no_vig"])
+        r.update({"raw_edge_pp": r["edge_pp"], "raw_ev_per_unit": r["ev_per_unit"], "anchored_p": pa,
+                  "edge_pp": (pa - r["no_vig"]) * 100, "ev_per_unit": O.expected_profit(pa, r["decimal"]),
+                  "roi_pct": O.roi_pct(pa, r["decimal"])})
+    return rows
+
+
 def value_rows(pred: dict, dist: dict, mkt: dict | None, home: str, away: str) -> list[dict]:
+    return _anchor_rows(_value_rows(pred, dist, mkt, home, away))
+
+
+def _value_rows(pred: dict, dist: dict, mkt: dict | None, home: str, away: str) -> list[dict]:
     if not mkt:
         return []
     rows = []
@@ -212,6 +229,12 @@ def run(args):
                            f"2017-{season} wk{cur_week-1}" if cur_week > 1 else f"2017-{season-1}")
     gp_live = gf[~gf.played][["game_id"]].join(live.predict(gf[~gf.played]))
     log.info("game models done (%.0fs)", time.time() - t0)
+    sides = AN.backtest_sides(gp_bt, gf, games, live.sigma_margin, live.sigma_total)
+    ANCHOR.clear()
+    ANCHOR.update(AN.fit(sides[sides.season < season]))
+    anchor_by_season = {S: AN.fit(sides[sides.season < S]) for S in sorted(sides.season.unique()) if (sides.season < S).sum() > 300}
+    anchor_by_season[season] = dict(ANCHOR)
+    log.info("market anchoring: %s", {k: round(v["b"], 3) for k, v in ANCHOR.items()})
 
     # ---------------- TD data
     usage = TD.player_game_usage(pbp)
@@ -780,7 +803,7 @@ def run(args):
                                                                       "line": (None if v["market"] == "moneyline" else
                                                                                (-m["spread_line"] if v["team"] == g.home_team else m["spread_line"]) if v["market"] == "spread"
                                                                                else m.get("total_line")),
-                                                                      "odds": v["odds"], "model_p": v["model_p"]} for v in rec["values"]],
+                                                                      "odds": v["odds"], "model_p": v["model_p"], "anchored_p": v.get("anchored_p")} for v in rec["values"]],
                                                           "sigma_margin": live.sigma_margin, "sigma_total": live.sigma_total}})
                         for t in trs:
                             DB.log_td(db, run_id, {"game_id": g.game_id, "player_id": t["player_id"], "player_name": t["name"],
@@ -839,7 +862,8 @@ def run(args):
     write_json(C.OUT_DIR / "performance.json", perf)
     from .picks import game_ledger, td_ledger
     write_json(C.OUT_DIR / "picks.json", {"generated": run_id,
-                                          "game": game_ledger(db, games, live.sigma_margin, live.sigma_total),
+                                          "game": game_ledger(db, games, live.sigma_margin, live.sigma_total, anchor_by_season),
+                                          "anchor": {str(k): v for k, v in anchor_by_season.items()},
                                           "td": td_ledger(db, usage_by_game, pbp_games)})
 
     # ------------------------------------------------- meta
@@ -866,6 +890,7 @@ def run(args):
         "methodology": {
             "game": {"trained_on": live.train_span, "n_train": live.n_train, "sigma_margin": live.sigma_margin,
                      "sigma_total": live.sigma_total, "coefficients": live.coef_table()},
+            "anchor": ANCHOR,
             "td": {"rates_per_opportunity": rates_live, "calibration": td_live.calib_coefs(), "n_calibration": td_live.n_train,
                    "team_opportunity_model": om_live.coefs},
         },
