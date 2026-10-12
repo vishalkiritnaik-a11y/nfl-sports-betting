@@ -774,7 +774,14 @@ def run(args):
                                                  "market_p_home": m.get("home_no_vig"), "home_ml": m.get("home_moneyline"),
                                                  "away_ml": m.get("away_moneyline"), "spread_line": m.get("spread_line"),
                                                  "total_line": m.get("total_line"), "confidence": rec["confidence"]["label"],
-                                                 "info": {"scenarios": [s["name"] for s in rec.get("scenarios", [])]}})
+                                                 "info": {"scenarios": [s["name"] for s in rec.get("scenarios", [])],
+                                                          "values": [{"market": v["market"], "selection": v["selection"],
+                                                                      "side": (v["team"] or ("over" if v["selection"].startswith("Over") else "under")),
+                                                                      "line": (None if v["market"] == "moneyline" else
+                                                                               (-m["spread_line"] if v["team"] == g.home_team else m["spread_line"]) if v["market"] == "spread"
+                                                                               else m.get("total_line")),
+                                                                      "odds": v["odds"], "model_p": v["model_p"]} for v in rec["values"]],
+                                                          "sigma_margin": live.sigma_margin, "sigma_total": live.sigma_total}})
                         for t in trs:
                             DB.log_td(db, run_id, {"game_id": g.game_id, "player_id": t["player_id"], "player_name": t["name"],
                                                    "team": t["team"], "position": t["position"], "p_anytime": t["p"],
@@ -830,6 +837,10 @@ def run(args):
     perf = performance(gf, gp_bt, games, td_bt, db, live, td_live, season)
     perf["tiers"] = tier_report(td_bt, gp_bt, gf, season)
     write_json(C.OUT_DIR / "performance.json", perf)
+    from .picks import game_ledger, td_ledger
+    write_json(C.OUT_DIR / "picks.json", {"generated": run_id,
+                                          "game": game_ledger(db, games, live.sigma_margin, live.sigma_total),
+                                          "td": td_ledger(db, usage_by_game, pbp_games)})
 
     # ------------------------------------------------- meta
     fresh = [{"file": k, **v} for k, v in N.FRESHNESS.items()]

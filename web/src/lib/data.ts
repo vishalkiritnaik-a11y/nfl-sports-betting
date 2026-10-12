@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import type { Meta, Performance, WeekData } from "../types";
+import type { Meta, Performance, Picks, WeekData } from "../types";
 
 const cache = new Map<string, Promise<unknown>>();
 
@@ -37,3 +37,5 @@ export const usePerformance = () => useJson<Performance>("performance.json");
 export const useWeek = (file: string | null) => useJson<WeekData>(file);
 
 export function loadWeek(file: string) { return load<WeekData>(file); }
+
+export const usePicks = () => useJson<Picks>("picks.json");

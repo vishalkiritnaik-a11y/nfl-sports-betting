@@ -173,3 +173,16 @@ export interface Performance {
 }
 
 export interface TierStat { n: number; pred: number | null; hit: number | null; band: string }
+
+export interface GamePick {
+  game_id: string; matchup: string; kickoff_utc: string; logged_at: string; season: number; week: number;
+  market: "moneyline" | "spread" | "total"; selection: string; side: string; line: number | null; odds: number;
+  model_p: number; no_vig: number; edge_pp: number; ev: number; price_source: string;
+  result: "won" | "lost" | "push" | "pending"; profit: number; final: string | null;
+}
+export interface TDPick {
+  game_id: string; season: number; week: number; kickoff_utc: string; logged_at: string; player_id: string; name: string;
+  team: string; position: string; p: number; score: number; status: string | null; odds: number | null;
+  result: "won" | "lost" | "void" | "pending";
+}
+export interface Picks { generated: string; game: GamePick[]; td: TDPick[] }
