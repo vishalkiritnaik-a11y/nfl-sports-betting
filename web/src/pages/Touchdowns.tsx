@@ -55,6 +55,7 @@ export default function Touchdowns() {
             <input type="range" min={0} max={50} step={1} value={minP} onChange={(e) => setMinP(+e.target.value)} aria-label="Minimum probability" />
             <span className="tnum w-10">{minP}%</span></label>
         </div>
+        {all.some((t) => t.logged_at) && <div className="mb-3"><Note>For games that have finished, these are the projections logged before kickoff, graded from play-by-play as soon as the game ends. "No touches" means the player never carried or was targeted, which usually means he didn't play.</Note></div>}
         {isBacktest && <div className="mb-3"><Note>This is a completed week. Probabilities are walk-forward backtests, and the population is players who actually took a snap.</Note></div>}
         {!meta.td_market_available && !isBacktest && <div className="mb-3"><Note>Sportsbook anytime-TD prices aren't connected (they need a paid odds plan), so edge and EV columns are hidden. Fair odds show the price at which a bet breaks even if the model is right.</Note></div>}
         <TDTable rows={rows} teams={meta.teams} />

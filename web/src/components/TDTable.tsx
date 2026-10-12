@@ -67,7 +67,7 @@ function Detail({ t, p }: { t: TDPlayer; p: number | null }) {
 export default function TDTable({ rows, teams, showGame = true }: { rows: TDPlayer[]; teams: Record<string, TeamInfo>; showGame?: boolean }) {
   const { withoutUncertain, watch, togglePlayer } = useSettings();
   const anyMarket = rows.some((t) => t.market);
-  const anyResult = rows.some((t) => t.scored != null);
+  const anyResult = rows.some((t) => t.scored != null || t.graded_from !== undefined || t.logged_at != null);
   const cols: Col<TDPlayer>[] = [
     { key: "w", label: <span className="sr-only">Watch</span>, render: (t) => <Star on={watch.players.includes(t.player_id)} onClick={() => togglePlayer(t.player_id)} label={t.name} /> },
     { key: "name", label: "Player", sort: (t) => t.name, render: (t) => (
@@ -93,7 +93,7 @@ export default function TDTable({ rows, teams, showGame = true }: { rows: TDPlay
     ] : []),
     { key: "score", label: "Score /10", sort: (t) => (t.confidence?.score ?? 0) + (t.confidence?.score != null ? tdP(t, withoutUncertain) ?? 0 : 0), render: (t) => <ScoreBadge c={t.confidence} />,
       title: "1 point per 6 pts of TD probability, minus 1 for a questionable tag or uncertain QB. 9-10 = High, 6-8 = Medium, 1-5 = Low" },
-    ...(anyResult ? [{ key: "res", label: "Result", sort: (t: TDPlayer) => t.scored ?? null, render: (t: TDPlayer) => t.scored == null ? "—" : <span style={{ color: t.scored ? "var(--pos)" : "var(--muted)" }}>{t.scored ? "Scored" : "No TD"}</span> }] : []),
+    ...(anyResult ? [{ key: "res", label: "Result", sort: (t: TDPlayer) => t.scored ?? null, render: (t: TDPlayer) => t.scored == null ? <span className="text-muted">Pending</span> : <span style={{ color: t.scored ? "var(--pos)" : "var(--muted)" }}>{t.scored ? "Scored" : t.touches === 0 ? "No touches" : "No TD"}</span> }] : []),
   ];
   return <SortTable rows={rows} cols={cols} initial="p" rowKey={(t) => t.player_id + t.game_id} expand={(t) => <Detail t={t} p={tdP(t, withoutUncertain)} />}
     empty="No players match these filters." />;

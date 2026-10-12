@@ -687,6 +687,17 @@ def run(args):
         return rec
 
     # ------------------------------------------------- assemble current & future weeks
+    logged_td: dict = {}
+    for r in DB.last_pregame_tds(db):
+        logged_td.setdefault(r["game_id"], []).append(r)
+    pbp_games = set(pbp.loc[pbp.season == season, "game_id"].unique())
+    ug = usage[usage.season == season].copy()
+    ug["tds"] = ug.rush_td + ug.rec_td
+    ug["touches"] = ug[TD.ALL_ZONES].sum(axis=1)
+    usage_by_game: dict = {}
+    for r in ug.itertuples(index=False):
+        usage_by_game.setdefault(r.game_id, {})[r.player_id] = {"tds": r.tds, "touches": r.touches}
+    recs_logged_td: set = set()
     sched_cur = games[games.season == season].sort_values(["gameday", "gametime"])
     gp_all_live = gp_live.set_index("game_id")
     week_files = []
@@ -704,8 +715,26 @@ def run(args):
                 trS = played[played.season < season]
                 pr["model"] = bt_models.setdefault(season, GameModel().fit(trS, trS.margin.values, trS.total.values, f"2017-{season-1}"))
                 rec = game_record(gser, pr, full=(wk >= cur_week - 1), week_inj=wk)
-                # TD backtest rows for this game
-                tb = td_bt[td_bt.game_id == g.game_id]
+                # Prefer the projections actually logged before kickoff, graded from play-by-play
+                # (available right after the game; snap counts arrive a day later).
+                logged = logged_td.get(g.game_id, [])
+                if logged:
+                    in_pbp = g.game_id in pbp_games
+                    gu = usage_by_game.get(g.game_id, {})
+                    for r in sorted(logged, key=lambda d: -d["p_anytime"]):
+                        u = gu.get(r["player_id"])
+                        opp = g.away_team if r["team"] == g.home_team else g.home_team
+                        tds.append({"player_id": r["player_id"], "name": r["player_name"], "team": r["team"], "opp": opp,
+                                    "position": r["position"], "game_id": g.game_id, "p": float(r["p_anytime"]),
+                                    "lam_rush": float(r["lam_rush"]), "lam_rec": float(r["lam_rec"]),
+                                    "status": r["status"] or "Active", "logged_at": r["run_id"],
+                                    "scored": (int(u["tds"] > 0) if u else 0) if in_pbp else None,
+                                    "touches": (int(u["touches"]) if u else 0) if in_pbp else None,
+                                    "backtest": False, "graded_from": "play-by-play" if in_pbp else None,
+                                    "headshot": head_map.get(r["player_id"]),
+                                    "confidence": TR.assess_td(float(r["p_anytime"]), td_scores, td_tiers, [])})
+                    recs_logged_td.add(g.game_id)
+                tb = td_bt[td_bt.game_id == g.game_id] if not logged else td_bt.iloc[:0]
                 for r in tb.sort_values("p", ascending=False).itertuples(index=False):
                     tds.append({"player_id": r.player_id, "name": name_map.get(r.player_id, r.player_id), "team": r.team,
                                 "opp": r.opp, "position": r.position, "game_id": r.game_id, "p": float(r.p),

@@ -73,7 +73,9 @@ export function grade(market: Market, side: string, line: number | null, g: Game
   }
   if (market === "anytime_td") {
     const p = td?.find((x) => x.game_id === g.game_id && x.player_id === side);
-    if (!p || p.scored == null) return "void";
+    if (!p) return "void";
+    if (p.scored == null) return "pending";
+    if (p.touches === 0) return "void";      // no recorded touches: books usually void a player who doesn't play
     return p.scored ? "won" : "lost";
   }
   return "pending";

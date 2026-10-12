@@ -129,7 +129,7 @@ export interface TDPlayer {
   snap_pct_last3?: number[]; opp_vs_pos?: { td_pg: number; rank: number; games: number } | null;
   confidence?: Confidence; why?: string;
   market?: { odds: number; book: string; raw_implied: number; edge_pp: number; ev_per_unit: number; roi_pct: number; note: string } | null;
-  scored?: number; backtest?: boolean;
+  scored?: number | null; backtest?: boolean; touches?: number | null; logged_at?: string; graded_from?: string | null;
 }
 
 export interface WeekData { season: number; week: number; generated: string; is_current: boolean; games: Game[]; td: TDPlayer[] }
