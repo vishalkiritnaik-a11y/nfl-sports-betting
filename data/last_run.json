@@ -1,5 +1,5 @@
 {
- "last_run": "2026-10-11T23:50:16Z",
+ "last_run": "2026-10-12T02:52:20Z",
  "season": 2026,
  "week": 5,
  "trigger_slot": null,
@@ -42,25 +42,17 @@
    "status": "observed"
   },
   "2026_05_SF_SEA": {
-   "status": "forecast",
-   "roof_type": "outdoor",
-   "temp_f": 57.4,
-   "wind_mph": 8.1,
-   "wind_kickoff_mph": 8.1,
-   "gust_mph": 12.8,
-   "precip_prob_pct": 0,
-   "lead_hours": -3.4,
-   "total_delta": 0.0
+   "status": "observed"
   },
   "2026_05_BAL_ATL": {
    "status": "forecast",
    "roof_type": "retractable",
-   "temp_f": 63.5,
-   "wind_mph": 7.1,
-   "wind_kickoff_mph": 7.1,
-   "gust_mph": 16.1,
+   "temp_f": 64.7,
+   "wind_mph": 7.5,
+   "wind_kickoff_mph": 7.5,
+   "gust_mph": 19.7,
    "precip_prob_pct": 0,
-   "lead_hours": 0.5
+   "lead_hours": -2.5
   },
   "2026_05_BUF_LA": {
    "status": "indoor"
