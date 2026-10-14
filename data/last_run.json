@@ -1,5 +1,5 @@
 {
- "last_run": "2026-10-14T14:52:38Z",
+ "last_run": "2026-10-14T15:34:39Z",
  "season": 2026,
  "week": 6,
  "trigger_slot": null,
@@ -8,12 +8,12 @@
   "2026_06_SEA_DEN": {
    "status": "forecast",
    "roof_type": "outdoor",
-   "temp_f": 44.9,
-   "wind_mph": 4.7,
-   "wind_kickoff_mph": 4.4,
-   "gust_mph": 17.4,
-   "precip_prob_pct": 2,
-   "lead_hours": 33.4,
+   "temp_f": 44.8,
+   "wind_mph": 6.0,
+   "wind_kickoff_mph": 6.0,
+   "gust_mph": 17.2,
+   "precip_prob_pct": 1,
+   "lead_hours": 32.7,
    "total_delta": 0.0
   },
   "2026_06_HOU_JAX": {
@@ -24,7 +24,7 @@
    "wind_kickoff_mph": 10.1,
    "gust_mph": 20.6,
    "precip_prob_pct": 16,
-   "lead_hours": 94.6,
+   "lead_hours": 93.9,
    "total_delta": -0.05
   },
   "2026_06_CHI_ATL": {
@@ -34,8 +34,8 @@
    "wind_mph": 12.3,
    "wind_kickoff_mph": 12.3,
    "gust_mph": 17.2,
-   "precip_prob_pct": 0,
-   "lead_hours": 98.1
+   "precip_prob_pct": 1,
+   "lead_hours": 97.4
   },
   "2026_06_BAL_CLE": {
    "status": "forecast",
@@ -44,8 +44,8 @@
    "wind_mph": 11.9,
    "wind_kickoff_mph": 11.3,
    "gust_mph": 16.1,
-   "precip_prob_pct": 0,
-   "lead_hours": 98.1,
+   "precip_prob_pct": 1,
+   "lead_hours": 97.4,
    "total_delta": -0.66
   },
   "2026_06_TEN_IND": {
@@ -55,8 +55,8 @@
    "wind_mph": 7.7,
    "wind_kickoff_mph": 7.4,
    "gust_mph": 11.9,
-   "precip_prob_pct": 0,
-   "lead_hours": 98.1
+   "precip_prob_pct": 1,
+   "lead_hours": 97.4
   },
   "2026_06_NYJ_NE": {
    "status": "forecast",
@@ -66,7 +66,7 @@
    "wind_kickoff_mph": 9.7,
    "gust_mph": 14.5,
    "precip_prob_pct": 1,
-   "lead_hours": 98.1,
+   "lead_hours": 97.4,
    "total_delta": 0.0
   },
   "2026_06_NO_NYG": {
@@ -77,7 +77,7 @@
    "wind_kickoff_mph": 7.4,
    "gust_mph": 12.3,
    "precip_prob_pct": 1,
-   "lead_hours": 98.1,
+   "lead_hours": 97.4,
    "total_delta": 0.0
   },
   "2026_06_CAR_PHI": {
@@ -88,7 +88,7 @@
    "wind_kickoff_mph": 6.1,
    "gust_mph": 8.9,
    "precip_prob_pct": 1,
-   "lead_hours": 98.1,
+   "lead_hours": 97.4,
    "total_delta": 0.0
   },
   "2026_06_PIT_TB": {
@@ -99,7 +99,7 @@
    "wind_kickoff_mph": 20.8,
    "gust_mph": 28.0,
    "precip_prob_pct": 15,
-   "lead_hours": 98.1,
+   "lead_hours": 97.4,
    "total_delta": -5.47
   },
   "2026_06_ARI_LA": {
@@ -113,7 +113,7 @@
    "wind_kickoff_mph": 15.3,
    "gust_mph": 22.4,
    "precip_prob_pct": 0,
-   "lead_hours": 101.5,
+   "lead_hours": 100.8,
    "total_delta": -2.68
   },
   "2026_06_BUF_LV": {
@@ -127,7 +127,7 @@
    "wind_kickoff_mph": 17.5,
    "gust_mph": 38.0,
    "precip_prob_pct": 0,
-   "lead_hours": 105.5,
+   "lead_hours": 104.8,
    "total_delta": -3.8
   },
   "2026_06_WAS_SF": {
@@ -138,7 +138,7 @@
    "wind_kickoff_mph": 10.5,
    "gust_mph": 10.7,
    "precip_prob_pct": 2,
-   "lead_hours": 129.4,
+   "lead_hours": 128.7,
    "total_delta": -0.25
   }
  }
