@@ -20,7 +20,7 @@ from . import db as DB
 from . import features as F
 from . import matchups as M
 from . import odds as O
-from . import anchor as AN, recs as RC, stadiums, tddata as D, teamdata as T, tiers as TR
+from . import anchor as AN, recs as RC, retrain as RT, stadiums, tddata as D, teamdata as T, tiers as TR
 from .ingest import nflverse as N, odds_api, weather as W
 from .models import td_model as TD
 from .models.game_model import MARGIN_FEATURES, TOTAL_FEATURES, GameModel, game_features
@@ -217,21 +217,30 @@ def run(args):
     log.info("season %s current week %s (%.0fs)", season, cur_week, time.time() - t0)
 
     # ---------------- team features & models
-    gf, metas, tgs, rater, qbr, elo_df, elo_now, venue_cache = T.build_game_frame(games, pbp, 2017)
+    PARAMS.clear(); PARAMS.update(RT.load_params())
+    gf, metas, tgs, rater, qbr, elo_df, elo_now, venue_cache = T.build_game_frame(games, pbp, 2017, PARAMS["rating"])
     played = gf[gf.played]
     bt_parts = []
-    for S in range(C.BACKTEST_FIRST_SEASON, season + 1):
+    for S in range(C.BACKTEST_FIRST_SEASON, season):
         tr, te = played[played.season < S], gf[(gf.season == S)]
-        m = GameModel().fit(tr, tr.margin.values, tr.total.values, f"2017-{S-1}")
+        m = GM(f"2017-{S-1}", tr)
         bt_parts.append(te[["game_id"]].join(m.predict(te)))
-    gp_bt = pd.concat(bt_parts)  # walk-forward, season-level retrain
-    live = GameModel().fit(played, played.margin.values, played.total.values,
+    # current season: week-level walk-forward (each week predicted by a model trained on all games before it)
+    for wk in sorted(gf[gf.season == season].week.unique()):
+        te = gf[(gf.season == season) & (gf.week == wk)]
+        if not te.played.any():
+            continue
+        tr = played[(played.season < season) | ((played.season == season) & (played.week < wk))]
+        m = bt_models.setdefault((season, int(wk)), GM(f"2017-{season} wk{wk-1}", tr))
+        bt_parts.append(te[["game_id"]].join(m.predict(te)))
+    gp_bt = pd.concat(bt_parts)
+    live = GameModel(**PARAMS["model"]).fit(played, played.margin.values, played.total.values,
                            f"2017-{season} wk{cur_week-1}" if cur_week > 1 else f"2017-{season-1}")
     gp_live = gf[~gf.played][["game_id"]].join(live.predict(gf[~gf.played]))
     log.info("game models done (%.0fs)", time.time() - t0)
     sides = AN.backtest_sides(gp_bt, gf, games, live.sigma_margin, live.sigma_total)
     ANCHOR.clear()
-    ANCHOR.update(AN.fit(sides[sides.season < season]))
+    ANCHOR.update(AN.fit(sides[(sides.season < season) | ((sides.season == season) & (sides.week < cur_week))]))
     anchor_by_season = {S: AN.fit(sides[sides.season < S]) for S in sorted(sides.season.unique()) if (sides.season < S).sum() > 300}
     anchor_by_season[season] = dict(ANCHOR)
     log.info("market anchoring: %s", {k: round(v["b"], 3) for k, v in ANCHOR.items()})
@@ -329,7 +338,7 @@ def run(args):
             qb_depth[team] = x[["gsis_id", "player_name", "pos_rank"]].to_dict("records")
 
     db = DB.connect()
-    DB.log_run(db, run_id, C.MODEL_VERSION, season, cur_week, {k: v.get("source_updated") for k, v in N.FRESHNESS.items()},
+    DB.log_run(db, run_id, model_version(), season, cur_week, {k: v.get("source_updated") for k, v in N.FRESHNESS.items()},
                odds_source, "open-meteo")
 
     gfi = gf.set_index("game_id")
@@ -423,7 +432,7 @@ def run(args):
             "home_pts": (pred["exp_total"] + pred["exp_margin"]) / 2, "away_pts": (pred["exp_total"] - pred["exp_margin"]) / 2,
             "distribution": dist, "contributions": contribs, "total_contributions": tcontribs,
             "baseline_margin": mdl.baseline_margin(), "baseline_total": float(mdl.total.intercept_),
-            "tie_note": C.TIE_RATE_NOTE, "model_version": C.MODEL_VERSION,
+            "tie_note": C.TIE_RATE_NOTE, "model_version": model_version(),
             "trained_on": mdl.train_span, "backtest": bool(pred.get("backtest")),
         }
         rec["market"] = mkt
@@ -735,8 +744,7 @@ def run(args):
                     continue
                 pr = gp_bt_i.loc[g.game_id].to_dict()
                 pr["backtest"] = True
-                trS = played[played.season < season]
-                pr["model"] = bt_models.setdefault(season, GameModel().fit(trS, trS.margin.values, trS.total.values, f"2017-{season-1}"))
+                pr["model"] = bt_models[(season, int(wk))]
                 rec = game_record(gser, pr, full=(wk >= cur_week - 1), week_inj=wk)
                 # Prefer the projections actually logged before kickoff, graded from play-by-play
                 # (available right after the game; snap counts arrive a day later).
@@ -833,7 +841,7 @@ def run(args):
         if S < C.BACKTEST_FIRST_SEASON:
             continue
         trS = played[played.season < S]
-        mS = GameModel().fit(trS, trS.margin.values, trS.total.values, f"2017-{S-1}")
+        mS = GM(f"2017-{S-1}", trS)
         bpred = gp_bt.set_index("game_id")
         for wk, wg in games[games.season == S].groupby("week"):
             recs, tds = [], []
@@ -876,7 +884,8 @@ def run(args):
     # ------------------------------------------------- meta
     fresh = [{"file": k, **v} for k, v in N.FRESHNESS.items()]
     meta = {
-        "generated": run_id, "season": season, "current_week": cur_week, "model_version": C.MODEL_VERSION,
+        "generated": run_id, "season": season, "current_week": cur_week, "model_version": model_version(),
+        "retrain": retrain_summary(),
         "weeks": sorted(week_files, key=lambda w: (-w["season"], w["week"])), "teams": team_info,
         "default_min_edge_pp": C.DEFAULT_MIN_EDGE_PP, "odds_source": odds_source,
         "odds_error": odds_live.get("_error") if isinstance(odds_live, dict) else None,
@@ -910,6 +919,28 @@ def run(args):
 
 
 bt_models: dict = {}
+PARAMS: dict = {}
+
+
+def retrain_summary() -> dict | None:
+    """Latest weekly-retrain report plus the settings history, for the Data & method page."""
+    files = sorted(RT.REPORT_DIR.glob("*.json")) if RT.REPORT_DIR.exists() else []
+    if not files:
+        return None
+    r = json.loads(files[-1].read_text())
+    return {k: r.get(k) for k in ("season", "trained_through_week", "for_week", "generated", "version", "changed", "rule",
+                                  "incumbent", "chosen", "weekly_current_season", "games_in_training")} | \
+        {"history": PARAMS.get("history", [])[-12:], "grid_top": r.get("grid", [])[:5]}
+
+
+def model_version() -> str:
+    tt = PARAMS.get("trained_through")
+    return f"{PARAMS.get('version', 'game-v1.0')}" + (f" (tuned through {tt['season']} wk{tt['week']})" if tt else "") + "+td-v1.0"
+
+
+def GM(span: str, tr: pd.DataFrame) -> GameModel:
+    """Game model with the current weekly-retrained settings."""
+    return GameModel(**PARAMS["model"]).fit(tr, tr.margin.values, tr.total.values, span)
 
 
 def write_run_status(run_id, season, week, week_files):

@@ -41,9 +41,10 @@ def load(today: date | None = None):
     return games, pbp, season
 
 
-def build_game_frame(games: pd.DataFrame, pbp: pd.DataFrame, first_season: int):
-    tgs = F.team_game_stats(pbp, games)
-    rater = F.TeamRater(tgs)
+def build_game_frame(games: pd.DataFrame, pbp: pd.DataFrame, first_season: int, params: dict | None = None, tgs=None):
+    params = params or {}
+    tgs = F.team_game_stats(pbp, games) if tgs is None else tgs
+    rater = F.TeamRater(tgs, params.get("k_mult", 1.0), params.get("prior_regress", F.PRIOR_REGRESS))
     qbr = QBRater(F.qb_game_epa(pbp), games)
     elo_df, elo_now = elo_mod.run(games)
     elo_df["elo_diff_nohfa"] = elo_df.home_elo - elo_df.away_elo

@@ -7,7 +7,7 @@ on:
     - cron: "0 11 * * *"          # daily, 7am ET
     - cron: "30 21 * * 3,4,5"     # Wed-Fri after practice reports
     - cron: "0 23 * * 5"          # Friday evening: final game statuses
-    - cron: "0 12 * * 2"          # Tuesday: grade Monday night
+    - cron: "0 12 * * 2"          # Tuesday: grade Monday night + weekly retrain
   workflow_dispatch:
     inputs:
       rebuild:
@@ -51,7 +51,7 @@ jobs:
     needs: gate
     if: needs.gate.outputs.run == 'true'
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 90
     concurrency:
       group: refresh-build
       cancel-in-progress: false
@@ -78,6 +78,10 @@ jobs:
         working-directory: pipeline
         run: python -m pytest -q tests
 
+      - name: Weekly retrain (only runs once a new week is complete)
+        working-directory: pipeline
+        run: python -m nfledge.retrain
+
       - name: Run pipeline
         working-directory: pipeline
         env:
@@ -92,7 +96,7 @@ jobs:
         run: |
           git config user.name "nfl-edge-bot"
           git config user.email "nfl-edge-bot@users.noreply.github.com"
-          git add data/nfledge.sqlite data/last_run.json
+          git add data/nfledge.sqlite data/last_run.json data/model_params.json data/models
           SLOT="${{ needs.gate.outputs.slot }}"
           MSG="Prediction log $(date -u +%Y-%m-%dT%H:%MZ)"; [ -n "$SLOT" ] && MSG="Pre-kickoff refresh for $SLOT"
           git diff --cached --quiet || git commit -m "$MSG [skip ci]"

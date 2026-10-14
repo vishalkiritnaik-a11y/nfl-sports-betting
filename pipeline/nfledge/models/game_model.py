@@ -143,17 +143,25 @@ class GameModel:
     mean_t: dict = field(default_factory=dict)
     n_train: int = 0
     train_span: str = ""
+    alpha: float = 25.0            # ridge penalty (margin and total)
+    logit_c: float = 0.05          # inverse penalty for the win/loss logistic model
+    half_life: float | None = None # seasons; recent games weigh more when set
 
     def fit(self, X: pd.DataFrame, margin: np.ndarray, total: np.ndarray, span: str = ""):
         mf, tf = list(MARGIN_FEATURES), list(TOTAL_FEATURES)
         self.sc_m = StandardScaler().fit(X[mf])
         self.sc_t = StandardScaler().fit(X[tf])
         Xm, Xt = self.sc_m.transform(X[mf]), self.sc_t.transform(X[tf])
-        self.margin = Ridge(alpha=25.0).fit(Xm, margin)
-        self.total = Ridge(alpha=25.0).fit(Xt, total)
+        w = None
+        if self.half_life and "season" in X:
+            age = (X["season"].max() - X["season"]).values + (1 - X["week"].values / 22 if "week" in X else 0)
+            w = 0.5 ** (age / self.half_life)
+            w = w / w.mean()
+        self.margin = Ridge(alpha=self.alpha).fit(Xm, margin, sample_weight=w)
+        self.total = Ridge(alpha=self.alpha).fit(Xt, total, sample_weight=w)
         y = (margin > 0).astype(int)
         keep = margin != 0
-        self.logit = LogisticRegression(C=0.05, max_iter=2000).fit(Xm[keep], y[keep])
+        self.logit = LogisticRegression(C=self.logit_c, max_iter=2000).fit(Xm[keep], y[keep], sample_weight=None if w is None else w[keep])
         rm = margin - self.margin.predict(Xm)
         rt = total - self.total.predict(Xt)
         self.sigma_margin = float(np.sqrt(np.mean(rm ** 2)))

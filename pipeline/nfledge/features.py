@@ -120,8 +120,11 @@ def _league_rates(tgs: pd.DataFrame, side: str = "") -> dict:
 class TeamRater:
     """Leak-free blended team ratings as of any date."""
 
-    def __init__(self, tgs: pd.DataFrame):
+    def __init__(self, tgs: pd.DataFrame, k_mult: float = 1.0, prior_regress: float = PRIOR_REGRESS):
+        """k_mult scales how many plays/games of last-season prior a team carries (higher = slower to
+        trust the current season); prior_regress is the share of last season kept in that prior."""
         self.tgs = tgs
+        self.k_mult, self.prior_regress = k_mult, prior_regress
         self.by_team = {t: d.sort_values("gameday") for t, d in tgs.groupby("team")}
         self.league = {}
         for s in sorted(tgs.season.unique()):
@@ -144,7 +147,8 @@ class TeamRater:
             for f, (num, den, k) in RATE_FEATURES.items():
                 pn, pd_ = prev[f"{pre}{num}"].sum(), prev[f"{pre}{den}"].sum()
                 last = pn / pd_ if pd_ else lg[f]
-                prior = PRIOR_REGRESS * last + (1 - PRIOR_REGRESS) * lg[f]
+                prior = self.prior_regress * last + (1 - self.prior_regress) * lg[f]
+                k = k * self.k_mult
                 cn, cd = cur[f"{pre}{num}"].sum(), cur[f"{pre}{den}"].sum()
                 rec[f"{side}_{f}"] = float((cn + k * prior) / (cd + k))
         return rec

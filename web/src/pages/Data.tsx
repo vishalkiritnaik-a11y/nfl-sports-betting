@@ -1,6 +1,31 @@
 import { useApp } from "../App";
 import { Note, Section } from "../components/ui";
 import { ago, pct, ZONE_LABEL } from "../lib/format";
+import type { Retrain, RetrainCfg } from "../types";
+
+const cfg = (c: RetrainCfg) => `prior weight ×${c.rating.k_mult}, ${Math.round(c.rating.prior_regress * 100)}% of last season kept, ridge ${c.model.alpha}${c.model.half_life ? `, ${c.model.half_life}-season recency weighting` : ""}`;
+
+function RetrainSection({ r }: { r: Retrain }) {
+  const tot = r.weekly_current_season.reduce((a, w) => ({ g: a.g + w.games, m: a.m + w.model_correct, k: a.k + w.market_correct }), { g: 0, m: 0, k: 0 });
+  return (
+    <Section title={`Weekly retrain: ${r.version}, trained through ${r.season} week ${r.trained_through_week}`}>
+      <div className="grid lg:grid-cols-[1fr_1.1fr] gap-5 text-sm">
+        <div className="grid gap-2 max-w-[75ch]">
+          <p>Once a week's games are final (Tuesday after Monday night), the pipeline replays every week from {r.season - 5} on. Each week is
+            predicted by a model trained only on games before it, then the pipeline tests {r.grid_top.length ? "a grid of" : ""} settings for how fast
+            this season's data overrides last season's and how strongly the model is regularized. The game model's weights are refit on every
+            build. This weekly step decides the settings.</p>
+          <p><b>This week:</b> {r.changed ? <>settings changed to {cfg(r.chosen)}.</> : <>settings kept ({cfg(r.incumbent)}). No alternative was better on both {r.season - 5}–{r.season - 1} and {r.season} to date by enough to rule out noise.</>}</p>
+          <p className="text-muted">Out-of-sample log loss: {r.chosen.prior.log_loss.toFixed(4)} on {r.season - 5}–{r.season - 1} ({r.chosen.prior.n} games), {r.chosen.current.log_loss.toFixed(4)} on {r.season} ({r.chosen.current.n} games). Lower is better; 0.693 is a coin flip. Rule: {r.rule}. {r.games_in_training.toLocaleString()} games in training.</p>
+        </div>
+        <div className="scroll-x"><table className="dtable text-[13px]"><thead><tr><th>{r.season} week</th><th>Model picked winner</th><th>Market picked winner</th><th>Model log loss</th><th>Market log loss</th></tr></thead>
+          <tbody>{r.weekly_current_season.map((w) => <tr key={w.week}><td>{w.week}</td><td className="tnum">{w.model_correct}/{w.games}</td><td className="tnum">{w.market_correct}/{w.games}</td>
+            <td className="tnum">{w.model_log_loss.toFixed(3)}</td><td className="tnum">{w.market_log_loss?.toFixed(3) ?? "—"}</td></tr>)}
+            <tr className="font-semibold"><td>Total</td><td className="tnum">{tot.m}/{tot.g}</td><td className="tnum">{tot.k}/{tot.g}</td><td /><td /></tr></tbody></table></div>
+      </div>
+    </Section>
+  );
+}
 
 export default function DataPage() {
   const { meta } = useApp();
@@ -24,6 +49,8 @@ export default function DataPage() {
           <p className="text-xs text-muted mt-2">nflverse data is CC-BY 4.0 and refreshes nightly, more often on game days. FTN charting is provided through nflverse under FTN's terms. Weather comes from Open-Meteo (CC-BY 4.0). This page was built {new Date(meta.generated).toLocaleString()}, taking {meta.build_seconds}s.</p>
         </Section>
       </div>
+
+      {meta.retrain && <RetrainSection r={meta.retrain} />}
 
       <Section title="Game model">
         <div className="grid lg:grid-cols-[1fr_1.2fr] gap-5 text-sm">

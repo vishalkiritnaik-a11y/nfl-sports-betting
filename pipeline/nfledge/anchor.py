@@ -30,7 +30,7 @@ def backtest_sides(gp_bt: pd.DataFrame, gf: pd.DataFrame, games: pd.DataFrame, s
     """One row per (game, market): model prob for the home/over side, no-vig market prob, outcome."""
     cols = ["game_id", "home_moneyline", "away_moneyline", "spread_line", "home_spread_odds", "away_spread_odds",
             "total_line", "over_odds", "under_odds"]
-    b = gp_bt.merge(gf[["game_id", "season", "margin", "total", "played"]], on="game_id").merge(games[cols], on="game_id")
+    b = gp_bt.merge(gf[["game_id", "season", "week", "margin", "total", "played"]], on="game_id").merge(games[cols], on="game_id")
     b = b[b.played]
     rows = []
     for r in b.itertuples(index=False):
@@ -38,7 +38,7 @@ def backtest_sides(gp_bt: pd.DataFrame, gf: pd.DataFrame, games: pd.DataFrame, s
             if pd.isna(oa) or pd.isna(ob) or push:
                 return
             nv = O.remove_vig_proportional([O.american_to_implied(oa), O.american_to_implied(ob)])[0]
-            rows.append({"season": r.season, "market": mkt, "p": p, "mp": nv, "win": int(win)})
+            rows.append({"season": r.season, "week": r.week, "market": mkt, "p": p, "mp": nv, "win": int(win)})
         add("moneyline", r.p_home, r.home_moneyline, r.away_moneyline, r.margin > 0, r.margin == 0)
         if not pd.isna(r.spread_line):
             d = r.margin - r.spread_line

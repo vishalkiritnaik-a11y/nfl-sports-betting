@@ -24,6 +24,16 @@ export interface Meta {
       team_opportunity_model: Record<string, number[]> };
   };
   build_seconds: number;
+  retrain?: Retrain | null;
+}
+export interface RetrainScore { n: number; log_loss: number; accuracy: number; margin_mae: number; total_mae: number }
+export interface RetrainCfg { rating: { k_mult: number; prior_regress: number }; model: { alpha: number; logit_c: number; half_life: number | null };
+  prior: RetrainScore; current: RetrainScore }
+export interface Retrain {
+  season: number; trained_through_week: number; for_week: number; generated: string; version: string; changed: boolean; rule: string;
+  incumbent: RetrainCfg; chosen: RetrainCfg; games_in_training: number; grid_top: RetrainCfg[];
+  weekly_current_season: { week: number; games: number; model_correct: number; market_correct: number; model_log_loss: number; market_log_loss: number | null }[];
+  history: { for_week: string; generated: string; version: string; changed: boolean; prior_log_loss: number; current_log_loss: number }[];
 }
 
 export interface Contribution { feature: string; label: string; value: number; points: number }

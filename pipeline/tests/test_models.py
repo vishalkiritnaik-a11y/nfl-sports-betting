@@ -266,3 +266,24 @@ def test_anchor_never_fades_model():
     from nfledge import anchor as AN
     coef = {"spread": {"c": 0.0, "a": 1.0, "b": -0.3}}
     assert abs(AN.anchored(coef, "spread", 0.6, 0.5) - 0.5) < 1e-9
+
+
+def test_last_completed_week_is_prefix():
+    import pandas as pd
+    from nfledge.retrain import last_completed_week
+    g = pd.DataFrame({"season": [2026] * 4, "week": [1, 1, 2, 3], "game_id": list("abcd"), "home_score": [1, 2, None, 3]})
+    pbp = pd.DataFrame({"game_id": list("abcd")})
+    assert last_completed_week(g, pbp, 2026) == 1          # week 2 unfinished, so week 3 doesn't count
+    assert last_completed_week(g, pd.DataFrame({"game_id": ["a"]}), 2026) is None   # pbp missing a game
+
+
+def test_recency_weighting_runs():
+    import numpy as np
+    import pandas as pd
+    from nfledge.models.game_model import MARGIN_FEATURES, TOTAL_FEATURES, GameModel
+    rng = np.random.default_rng(0)
+    cols = sorted(set(MARGIN_FEATURES) | set(TOTAL_FEATURES))
+    X = pd.DataFrame(rng.normal(size=(200, len(cols))), columns=cols)
+    X["season"] = np.repeat([2024, 2025], 100); X["week"] = 5
+    m = GameModel(half_life=2.0).fit(X, rng.normal(0, 13, 200), rng.normal(44, 13, 200))
+    assert m.predict(X.head(3)).shape[0] == 3
