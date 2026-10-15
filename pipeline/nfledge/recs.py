@@ -2,15 +2,18 @@
 
 Each side gets a 1-10 score built from five plainly stated inputs, starting at 5:
 
-  stats model   model probability vs the no-vig market, +/-1 max (edge_pp / 5)
+  stats model   model probability vs the no-vig market, +/-0.5 max (edge_pp / 10). Out of sample the
+                model has not beaten closing lines, so on its own it can't even make a Lean.
+  proven angle  a pattern that beat closing lines on games it was NOT discovered on (see wind_under_record):
+                forecast kickoff wind >= 12 mph at an open-air stadium -> Under +2 / Over -2. Re-measured
+                every build; halved when the last 3 seasons fall below break-even, zero if the long-run edge goes.
   line move     the line moved toward this side since it opened: +1 / -1
   price         market-anchored EV at the current price worse than -5c (more than the usual vig): -1
   experts       net picks from professional handicappers / betting models in the notes file, +/-1 max (needs 2+ picks)
   news          explicit, sourced adjustments in the notes file (injuries etc.), +/-1.5 max
 
 The pick is the higher-scoring side. Verdict: 7+ Bet, 6 Lean, 5 or less Pass.
-Backtests showed the game model alone has not beaten closing lines, so it is capped at +/-1:
-the model by itself can reach Lean, and a Bet needs at least one independent signal agreeing.
+A Bet needs a proven angle, or line movement plus sourced news/expert agreement.
 
 Notes live in data/notes/<game_id>.json and are written from published reporting, with a URL per item.
 """
@@ -23,6 +26,34 @@ from pathlib import Path
 from . import odds as O
 
 MARKETS = ("spread", "moneyline", "total")
+WIND_MIN = 12.0
+ANGLES: dict = {}       # filled once per build by set_angles()
+
+
+def wind_under_record(games, since: int = 2015, min_wind: float = WIND_MIN) -> dict:
+    """Unders in outdoor games with >= min_wind mph at kickoff, against the closing total.
+    The pattern was found on 1999-2014; `since` keeps the measurement on games after that."""
+    import pandas as pd
+    g = games[games.home_score.notna() & games.total_line.notna() & games.wind.notna()
+              & ~games.roof.isin(["dome", "closed"]) & (games.wind >= min_wind) & (games.season >= since)]
+    tot = g.home_score + g.away_score
+    g = g[tot != g.total_line]
+    tot = g.home_score + g.away_score
+    won = (tot < g.total_line)
+    rate = float(won.mean()) if len(g) else 0.0
+    recent = won[g.season >= g.season.max() - 2]
+    pts = 2.0 if rate >= 0.55 and len(g) >= 200 else 1.0 if rate >= 0.535 and len(g) >= 200 else 0.0
+    if len(recent) >= 60 and recent.mean() < 0.524:     # fading lately (below the -110 break-even): halve it
+        pts /= 2
+    return {"n": int(len(g)), "win_rate": rate, "roi_at_110": rate * (1 + 100 / 110) - 1, "since": since,
+            "recent_n": int(len(recent)), "recent_rate": float(recent.mean()) if len(recent) else None,
+            "min_wind": min_wind, "points": pts}
+
+
+def set_angles(games) -> dict:
+    ANGLES.clear()
+    ANGLES["wind_under"] = wind_under_record(games)
+    return dict(ANGLES)
 
 
 def load_notes(notes_dir: Path, game_id: str) -> dict | None:
@@ -68,8 +99,18 @@ def recommend(rec: dict, opening: dict | None, notes: dict | None) -> dict:
             v = vals[(mk, s)]
             parts = []   # (label, points, text)
             raw = (v["model_p"] - v["no_vig"]) * 100
-            mp = max(-1.0, min(1.0, raw / 5))
-            parts.append(("Stats model", mp, f"Model gives {v['model_p']*100:.0f}% vs the market's {v['no_vig']*100:.0f}% (no-vig)"))
+            mp = max(-0.5, min(0.5, raw / 10))
+            parts.append(("Stats model", mp, f"Model gives {v['model_p']*100:.0f}% vs the market's {v['no_vig']*100:.0f}% (no-vig). Counts little: it hasn't beaten closing lines out of sample"))
+            # proven angle: wind unders
+            wx = rec.get("weather") or {}
+            wa = ANGLES.get("wind_under")
+            wind = wx.get("wind_kickoff_mph", wx.get("wind_mph"))
+            if mk == "total" and wa and wa["points"] and wx.get("status") == "forecast" and wx.get("roof_type", "outdoor") == "outdoor" and wind is not None and wind >= wa["min_wind"]:
+                pts = wa["points"] if s == "under" else -wa["points"]
+                parts.append(("Proven angle", pts,
+                              f"Forecast wind {wind:.0f} mph at kickoff. Since {wa['since']}, outdoor games with {wa['min_wind']:.0f}+ mph wind went "
+                              f"under the closing total {wa['win_rate']*100:.1f}% of the time ({wa['n']} games, {wa['roi_at_110']*100:+.0f}% return at -110; "
+                              f"last 3 seasons {wa['recent_rate']*100:.0f}% of {wa['recent_n']})"))
             # line movement
             if opening:
                 mv, txt = 0.0, None

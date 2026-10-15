@@ -249,17 +249,42 @@ def _rec_game(model_home_cover=0.60, nv_home=0.50, ev=-0.02):
 def test_recs_model_alone_caps_at_lean():
     from nfledge import recs as RC
     r = RC.recommend(_rec_game(0.70), None, None)["markets"]["spread"]
-    assert r["side"] == "H" and r["score"] == 6 and r["verdict"] == "Lean"
+    assert r["side"] == "H" and r["score"] == 5 and r["verdict"] == "Pass"
 
 
 def test_recs_bet_needs_agreeing_signal():
     from nfledge import recs as RC
     opening = {"spread_line": 2.0}           # line moved 1 pt toward home
     r = RC.recommend(_rec_game(0.70), opening, None)["markets"]["spread"]
-    assert r["score"] == 7 and r["verdict"] == "Bet"
-    notes = {"adjust": [{"market": "all", "side": "A", "points": 1.5, "reason": "x"}]}
+    assert r["score"] == 6 and r["verdict"] == "Lean"          # model + line move only
+    notes = {"experts": [{"market": "spread", "side": "H", "source": "a"}, {"market": "spread", "side": "H", "source": "b"}]}
     r2 = RC.recommend(_rec_game(0.70), opening, notes)["markets"]["spread"]
-    assert r2["verdict"] != "Bet"
+    assert r2["verdict"] == "Bet"
+
+
+def test_wind_angle_makes_under_a_bet():
+    from nfledge import recs as RC
+    g = _rec_game()
+    g["values"] = [{"market": "total", "selection": sel, "team": None, "model_p": 0.5, "no_vig": 0.5, "odds": -110.0,
+                    "ev_per_unit": -0.045, "anchored_p": 0.5} for sel in ("Over 44", "Under 44")]
+    g["weather"] = {"status": "forecast", "wind_kickoff_mph": 16}
+    RC.ANGLES["wind_under"] = {"n": 400, "win_rate": 0.58, "roi_at_110": 0.1, "since": 2015, "recent_n": 100, "recent_rate": 0.55,
+                               "min_wind": 12.0, "points": 2.0}
+    try:
+        r = RC.recommend(g, None, None)["markets"]["total"]
+        assert r["side"] == "under" and r["verdict"] == "Bet"
+        g["weather"] = {"status": "indoor"}
+        assert RC.recommend(g, None, None)["markets"]["total"]["verdict"] == "Pass"
+    finally:
+        RC.ANGLES.clear()
+
+
+def test_clv_signs():
+    from nfledge.picks import clv
+    assert clv("spread", "BUF", 3.5, 2.5) == 1.0          # took +3.5, closed +2.5
+    assert clv("total", "under", 45, 43) == 2             # under 45, closed 43
+    assert clv("total", "over", 45, 43) == -2
+    assert round(clv("moneyline", "LA", 0.60, 0.63), 6) == 3.0
 
 
 def test_anchor_never_fades_model():

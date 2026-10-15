@@ -124,6 +124,8 @@ export default function BetSheet() {
   const settled = ledger.filter((r) => r.verdict !== "Pass" && (r.result === "won" || r.result === "lost"));
   const byV = (v: string) => { const s = settled.filter((r) => r.verdict === v); return { w: s.filter((r) => r.result === "won").length, l: s.filter((r) => r.result === "lost").length, u: s.reduce((a, r) => a + r.profit, 0) }; };
   const bet = byV("Bet"), lean = byV("Lean");
+  const clvs = ledger.filter((r) => r.verdict !== "Pass" && r.clv != null && r.result !== "pending");
+  const clvBeat = clvs.filter((r) => (r.clv as number) > 0).length, clvLost = clvs.filter((r) => (r.clv as number) < 0).length;
   const anyRecs = games.some((g) => g.recs) || ledger.some((r) => games.some((g) => g.game_id === r.game_id));
 
   return (
@@ -131,10 +133,10 @@ export default function BetSheet() {
       <div>
         <h1 className="display text-[30px] leading-tight">What to bet: {ref.season} {ref.label}</h1>
         <p className="text-muted text-sm max-w-[80ch]">
-          One Spread, Moneyline and Total pick per game, each scored out of 10. Every pick starts at 5. Points are added or taken away for
-          the stats model, line movement (where professional money went), price, published picks from betting sites, and injury news.
-          The stats model alone can't go past 6, because it hasn't beaten closing lines on its own. <b>7+ = Bet</b>, <b>6 = Lean</b>,
-          5 or lower = Pass. Tap a pick to see why.
+          One Spread, Moneyline and Total pick per game, each scored out of 10. Every pick starts at 5. The biggest weight goes to
+          <b> proven angles</b>: patterns that beat the closing line on seasons they weren't discovered on. Right now that's unders in
+          12+ mph wind. Line movement, injury news and published picks from betting sites add more. The stats model counts for little,
+          because it hasn't beaten closing lines on its own. <b>7+ = Bet</b>, <b>6 = Lean</b>, 5 or lower = Pass. Tap a pick to see why.
         </p>
       </div>
       <div className="flex flex-wrap items-center gap-4 text-sm">
@@ -142,6 +144,9 @@ export default function BetSheet() {
         <span className="text-muted">
           Track record (graded before kickoff): Bets {bet.w}-{bet.l} ({units(bet.u)}) · Leans {lean.w}-{lean.l} ({units(lean.u)})
           {settled.length === 0 && " · starts this week"}
+        </span>
+        <span className="text-muted" title="Closing-line value: did the line move toward the pick after it was flagged? Sharp bettors judge themselves on this, because over a few dozen bets it predicts long-run profit far better than win-loss does.">
+          Beat the closing line: {clvs.length ? `${clvBeat} of ${clvs.length} picks (${clvLost} worse, ${clvs.length - clvBeat - clvLost} same)` : "measuring from this week"}
         </span>
       </div>
       {unlogged > 0 && <p className="text-sm text-muted">{unlogged} finished game{unlogged > 1 ? "s" : ""} this week kicked off before this view existed (Oct 12, 2026), so {unlogged > 1 ? "they have" : "it has"} no logged pick. See the Slate and Pick history tabs for those.</p>}

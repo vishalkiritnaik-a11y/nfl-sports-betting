@@ -118,18 +118,57 @@ def td_ledger(con, usage_by_game: dict, pbp_games: set) -> list[dict]:
     return sorted(out, key=lambda d: (d["kickoff_utc"], -d["p"]))
 
 
+def _bettor_line(mk: str, side: str, home: str, row) -> float | None:
+    """The number a bettor on `side` holds at this run: spread points (more is better),
+    total (for under: higher is better, for over: lower is better, sign handled by caller), ML no-vig prob."""
+    if mk == "spread":
+        return None if row["spread_line"] is None else (-row["spread_line"] if side == home else row["spread_line"])
+    if mk == "total":
+        return row["total_line"]
+    if row["home_ml"] is None or row["away_ml"] is None:
+        return None
+    ph = O.remove_vig_proportional([O.american_to_implied(row["home_ml"]), O.american_to_implied(row["away_ml"])])[0]
+    return ph if side == home else 1 - ph
+
+
+def clv(mk: str, side: str, at_pick, at_close) -> float | None:
+    """Closing line value: positive = the pick got a better number than the closing line.
+    Spread/total in points, moneyline in percentage points of no-vig win probability."""
+    if at_pick is None or at_close is None:
+        return None
+    if mk == "spread":
+        return at_pick - at_close
+    if mk == "total":
+        return (at_pick - at_close) if side == "under" else (at_close - at_pick)
+    return (at_close - at_pick) * 100
+
+
 def rec_ledger(con) -> list[dict]:
-    """The Spread / ML / Total recommendation shown before kickoff (last pre-game run), graded."""
+    """The Spread / ML / Total recommendation shown before kickoff (last pre-game run), graded,
+    with closing-line value measured from the first run that flagged that side as a Bet or Lean."""
     out = []
     for r in DB.last_pregame_games(con):
         info = json.loads(r.get("info") or "{}")
         H, A = r["home_team"], r["away_team"]
+        runs = [dict(x) for x in con.execute(
+            "SELECT run_id, home_ml, away_ml, spread_line, total_line, info FROM game_predictions "
+            "WHERE game_id=? AND run_id < kickoff_utc ORDER BY run_id", (r["game_id"],))]
         for mk, rc in (info.get("recs") or {}).items():
             o = {"market": mk, "side": rc["side"], "line": rc["line"]}
             res = _grade(o, H, r.get("home_score"), r.get("away_score"))
             dec = O.american_to_decimal(rc["odds"])
+            first = None
+            for x in runs:
+                xr = (json.loads(x["info"] or "{}").get("recs") or {}).get(mk)
+                if xr and xr["side"] == rc["side"] and xr["verdict"] in ("Bet", "Lean"):
+                    first = x
+                    break
+            c = None
+            if first is not None and rc["verdict"] != "Pass":
+                c = clv(mk, rc["side"], _bettor_line(mk, rc["side"], H, first), _bettor_line(mk, rc["side"], H, r))
             out.append({**rc, "market": mk, "game_id": r["game_id"], "matchup": f"{A} @ {H}", "kickoff_utc": r["kickoff_utc"],
                         "logged_at": r["run_id"], "season": int(r["game_id"][:4]), "week": int(r["game_id"][5:7]), "result": res,
+                        "flagged_at": first["run_id"] if first else None, "clv": c,
                         "profit": (dec - 1) if res == "won" else -1.0 if res == "lost" else 0.0,
                         "final": None if res == "pending" else f"{A} {int(r['away_score'])}, {H} {int(r['home_score'])}"})
     return sorted(out, key=lambda d: (d["kickoff_utc"], d["game_id"], d["market"]))

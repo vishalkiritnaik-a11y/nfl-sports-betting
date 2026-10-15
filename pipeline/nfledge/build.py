@@ -243,6 +243,8 @@ def run(args):
     ANCHOR.update(AN.fit(sides[(sides.season < season) | ((sides.season == season) & (sides.week < cur_week))]))
     anchor_by_season = {S: AN.fit(sides[sides.season < S]) for S in sorted(sides.season.unique()) if (sides.season < S).sum() > 300}
     anchor_by_season[season] = dict(ANCHOR)
+    RC.set_angles(games)
+    log.info("angles: %s", RC.ANGLES)
     log.info("market anchoring: %s", {k: round(v["b"], 3) for k, v in ANCHOR.items()})
 
     # ---------------- TD data

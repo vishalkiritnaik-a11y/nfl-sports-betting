@@ -129,6 +129,7 @@ export interface RecPick {
   game_id: string; matchup: string; kickoff_utc: string; season: number; week: number; market: "spread" | "moneyline" | "total";
   side: string; label: string; line: number | null; odds: number; score: number; verdict: "Bet" | "Lean" | "Pass"; p_win: number;
   result: "won" | "lost" | "push" | "pending"; profit: number; final: string | null;
+  flagged_at?: string | null; clv?: number | null;
 }
 
 export interface Game {
