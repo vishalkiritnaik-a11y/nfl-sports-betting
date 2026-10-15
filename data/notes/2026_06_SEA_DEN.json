@@ -1,0 +1,33 @@
+{
+  "game_id": "2026_06_SEA_DEN",
+  "updated": "2026-10-15T23:10:00Z",
+  "open": {
+    "source": "Opening line Sunday night (SEA -1.5, total 41.5) and Oct 12 BetMGM moneyline, via SportsBettingDime",
+    "url": "https://www.sportsbettingdime.com/news/nfl/seahawks-vs-broncos-early-picks-line-movement-for-tnf-week-6/",
+    "home_ml": 130, "away_ml": -154, "spread_line": -1.5, "total_line": 41.5
+  },
+  "items": [
+    {"text": "Broncos ruled out All-Pro CB Patrick Surtain II (ankle) and S Talanoa Hufanga (ankle). CB Riley Moss (ribs) is active.",
+     "source": "Yahoo Sports", "url": "https://sports.yahoo.com/nfl/live/seahawks-broncos-score-live-updates-inactives-highlights-stats-where-to-watch-week-6-223000561.html"},
+    {"text": "Riley Moss active for Denver.", "source": "NBC Sports / PFT", "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/thursday-night-football-broncos-cb-riley-moss-is-active"},
+    {"text": "Jaxon Smith-Njigba (ankle, limited in practice) is not on Seattle's inactive list. Seattle's backfield is thin: Zach Charbonnet out, Jadarian Price on IR.",
+     "source": "Heavy / Yahoo Sports", "url": "https://heavy.com/sports/nfl/seattle-seahawks/broncos-inactives-thursday-night-football/"},
+    {"text": "Spread opened SEA -1.5 and reached -3 on heavy sharp money (70% of spread money on Seattle), now -2.5. Total opened 41.5, now 40.5.",
+     "source": "SportsBettingDime", "url": "https://www.sportsbettingdime.com/news/nfl/seahawks-vs-broncos-early-picks-line-movement-for-tnf-week-6/"},
+    {"text": "Sean Payton has taken over play-calling; Bo Nix has under 190 passing yards in 3 of 5 games. Seattle leads the NFL in yards allowed per play.",
+     "source": "Covers", "url": "https://www.covers.com/nfl/seahawks-vs-broncos-prediction-picks-oct-15-2026"}
+  ],
+  "experts": [
+    {"market": "spread", "side": "SEA", "source": "Covers (Joe Osborne)", "url": "https://www.covers.com/nfl/seahawks-vs-broncos-prediction-picks-oct-15-2026"},
+    {"market": "spread", "side": "SEA", "source": "SportsBettingDime", "url": "https://www.sportsbettingdime.com/news/nfl/seahawks-vs-broncos-early-picks-line-movement-for-tnf-week-6/"},
+    {"market": "spread", "side": "DEN", "source": "Athlon", "url": "https://athlonsports.com/nfl/seattle-seahawks-at-denver-broncos-nfl-prediction-picks-odds-week6-2026"},
+    {"market": "moneyline", "side": "SEA", "source": "Covers (combo leg)", "url": "https://www.covers.com/nfl/seahawks-vs-broncos-prediction-picks-oct-15-2026"},
+    {"market": "moneyline", "side": "SEA", "source": "Yahoo Sports", "url": "https://sports.yahoo.com/articles/seahawks-vs-broncos-prediction-odds-204254691.html"},
+    {"market": "moneyline", "side": "DEN", "source": "SportsBettingDime (value lean)", "url": "https://www.sportsbettingdime.com/news/nfl/seahawks-vs-broncos-early-picks-line-movement-for-tnf-week-6/"},
+    {"market": "total", "side": "under", "source": "SportsBettingDime (lean)", "url": "https://www.sportsbettingdime.com/news/nfl/seahawks-vs-broncos-early-picks-line-movement-for-tnf-week-6/"}
+  ],
+  "adjust": [
+    {"market": "all", "side": "SEA", "points": 0.75,
+     "reason": "Denver is without CB Patrick Surtain II and S Talanoa Hufanga against the NFL's receiving-yards leader; partly offset by Seattle's thin backfield. The stats model doesn't price non-QB injuries"}
+  ]
+}
