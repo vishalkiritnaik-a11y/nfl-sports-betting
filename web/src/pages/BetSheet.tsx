@@ -5,6 +5,7 @@ import { Note, TeamMark, Toggle } from "../components/ui";
 import { usePicks } from "../lib/data";
 import { kickoffLocal, pct, units } from "../lib/format";
 import { fmtAmerican } from "../lib/odds";
+import { topPicks } from "../lib/top";
 import type { Game, Rec, RecPick } from "../types";
 
 const MKT = [["spread", "Spread"], ["moneyline", "Moneyline"], ["total", "Total"]] as const;
@@ -107,6 +108,47 @@ function GameCard({ g, graded }: { g: Game; graded: RecPick[] }) {
   );
 }
 
+function TopFive({ games }: { games: Game[] }) {
+  const { search } = useLocation();
+  const top = topPicks(games, 5);
+  if (!top.length) return null;
+  const action = top.filter((t) => t.rec.verdict !== "Pass").length;
+  return (
+    <section className="panel p-4">
+      <header className="flex items-baseline gap-3 flex-wrap mb-1">
+        <h2 className="display text-xl">Top 5 this week</h2>
+        <span className="text-sm text-muted">Best pick from each upcoming game, ranked by score, then value. One per game.</span>
+      </header>
+      <ol className="grid">
+        {top.map(({ game: g, rec: r }, i) => {
+          const k = kickoffLocal(g.kickoff_utc);
+          return (
+            <li key={g.game_id} className="grid grid-cols-[24px_1fr_auto] sm:grid-cols-[24px_1fr_150px_120px_70px_60px] gap-3 items-center py-2.5 border-t border-rule">
+              <span className="tnum text-muted">{i + 1}</span>
+              <span className="min-w-0">
+                <span className="font-semibold">{r.label}</span> <span className="tnum text-muted">{fmtAmerican(r.odds)}</span>
+                <Link to={{ pathname: `/game/${g.game_id}`, search }} className="block text-xs text-muted hover:underline">
+                  {g.away.team} @ {g.home.team} · {k.day} {k.time}
+                </Link>
+              </span>
+              <span className="hidden sm:block text-sm text-muted capitalize">{r.market}</span>
+              <span className="hidden sm:block"><Score n={r.score} /></span>
+              <span className="sm:hidden tnum font-semibold text-right">{r.score}/10<span className="block"><Verdict v={r.verdict} /></span></span>
+              <span className="hidden sm:block"><Verdict v={r.verdict} /></span>
+              <span className="hidden sm:block text-right tnum text-sm text-muted">{pct(r.p_win)}</span>
+            </li>
+          );
+        })}
+      </ol>
+      {action < top.length && (
+        <p className="text-xs text-muted mt-2">
+          {action === 0 ? "None" : `Only ${action}`} of these clear the Bet/Lean bar. The rest are the best of what's left and are still rated Pass.
+        </p>
+      )}
+    </section>
+  );
+}
+
 export default function BetSheet() {
   const { week, ref } = useApp();
   const picks = usePicks();
@@ -150,6 +192,7 @@ export default function BetSheet() {
         </span>
       </div>
       {unlogged > 0 && <p className="text-sm text-muted">{unlogged} finished game{unlogged > 1 ? "s" : ""} this week kicked off before this view existed (Oct 12, 2026), so {unlogged > 1 ? "they have" : "it has"} no logged pick. See the Slate and Pick history tabs for those.</p>}
+      <TopFive games={all} />
       {!anyRecs && <Note>Picks appear for upcoming games once sportsbook lines are posted. Finished games show the pick that was logged before kickoff.</Note>}
       <div className="grid gap-4 lg:grid-cols-2">
         {shown.map((g) => <GameCard key={g.game_id} g={g} graded={ledger.filter((x) => x.game_id === g.game_id)} />)}
