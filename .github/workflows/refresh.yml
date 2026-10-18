@@ -16,7 +16,7 @@ on:
         default: false
   push:
     branches: [main]
-    paths: ["pipeline/**", "web/src/**", "web/index.html", ".github/workflows/refresh.yml"]
+    paths: ["pipeline/**", "web/src/**", "web/index.html", ".github/workflows/refresh.yml", "data/notes/**"]
 
 permissions:
   contents: write      # commit the append-only prediction log
