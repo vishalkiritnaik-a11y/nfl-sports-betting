@@ -1,6 +1,6 @@
 {
   "game_id": "2026_06_CAR_PHI",
-  "updated": "2026-10-18T01:15:00Z",
+  "updated": "2026-10-18T01:40:00Z",
   "items": [
     {
       "text": "Jalen Hurts (blood clot) is out; Tanner McKee starts (already the listed starter in the model).",
@@ -16,6 +16,11 @@
       "text": "Carolina is without RB AJ Dillon; OT Monroe Freeling is doubtful and OT Taylor Moton, G Damien Lewis and OLB Jaelan Phillips are questionable.",
       "source": "CBS Sports",
       "url": "https://www.cbssports.com/nfl/news/nfl-week-6-injury-report-lamar-jackson-jalen-hurts-caleb-williams/"
+    },
+    {
+      "text": "Philadelphia gets WR DeVonta Smith (toe) back after two missed games. The Eagles do not plan to put Jalen Hurts on IR.",
+      "source": "Sportsnaut Week 6 injury updates",
+      "url": "https://sportsnaut.com/nfl/2026-week-6-nfl-injury-report-updates"
     }
   ],
   "adjust": [

@@ -1,6 +1,6 @@
 {
   "game_id": "2026_06_NYJ_NE",
-  "updated": "2026-10-18T01:15:00Z",
+  "updated": "2026-10-18T01:40:00Z",
   "items": [
     {
       "text": "New York is without RB Breece Hall, WR Adonai Mitchell, EDGE Joseph Ossai and G Dylan Parham.",
@@ -11,6 +11,11 @@
       "text": "New England is without CBs Carlton Davis III and Karon Prunty; WR A.J. Brown was activated from IR and is questionable, RB TreVeyon Henderson questionable after full practices.",
       "source": "Yahoo Sports injury tracker",
       "url": "https://sports.yahoo.com/fantasy/live/nfl-injury-tracker-week-6-latest-news-fantasy-implications-as-caleb-williams-hamstring-questionable-lamar-jackson-ankle-ruled-out-injuries-pile-up-for-eagles-185435186.html"
+    },
+    {
+      "text": "Saturday: New England CB Christian Gonzalez is back after missing two games; A.J. Brown is expected to be activated, a game-time decision. Jets WR Omar Cooper Jr. is expected to play.",
+      "source": "Sportsnaut Week 6 injury updates",
+      "url": "https://sportsnaut.com/nfl/2026-week-6-nfl-injury-report-updates"
     }
   ],
   "adjust": []

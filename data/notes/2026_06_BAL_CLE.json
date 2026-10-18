@@ -1,6 +1,6 @@
 {
   "game_id": "2026_06_BAL_CLE",
-  "updated": "2026-10-18T01:15:00Z",
+  "updated": "2026-10-18T01:40:00Z",
   "items": [
     {
       "text": "Lamar Jackson (ankle) is out for a second straight week; Tyler Huntley starts. Model now uses Huntley (nflverse still listed Jackson).",
@@ -11,6 +11,11 @@
       "text": "Baltimore is also without C Cam Jurgens and DT Broderick Washington. Cleveland is without DTs Mike Hall Jr. and Kalia Davis, G Teven Jenkins and RB Dylan Sampson; RB Quinshon Judkins and DT Mason Graham are questionable.",
       "source": "CBS Sports",
       "url": "https://www.cbssports.com/nfl/news/nfl-week-6-injury-report-lamar-jackson-jalen-hurts-caleb-williams/"
+    },
+    {
+      "text": "Saturday: Baltimore WR Ja'Kobi Lane is expected to be activated off IR and play.",
+      "source": "Sportsnaut Week 6 injury updates",
+      "url": "https://sportsnaut.com/nfl/2026-week-6-nfl-injury-report-updates"
     }
   ],
   "adjust": [],

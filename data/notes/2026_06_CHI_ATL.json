@@ -1,6 +1,6 @@
 {
   "game_id": "2026_06_CHI_ATL",
-  "updated": "2026-10-18T01:15:00Z",
+  "updated": "2026-10-18T01:40:00Z",
   "items": [
     {
       "text": "Caleb Williams (hamstring) is questionable after a full Friday practice and is expected to start; the model assumes he plays.",
@@ -16,6 +16,11 @@
       "text": "Atlanta is without CB C.J. Henderson; DE Za'Darius Smith is questionable.",
       "source": "CBS Sports",
       "url": "https://www.cbssports.com/nfl/news/nfl-week-6-injury-report-lamar-jackson-jalen-hurts-caleb-williams/"
+    },
+    {
+      "text": "Saturday: Chicago activated CB Kyler Gordon from IR; he has not played this season.",
+      "source": "Yahoo Sports injury tracker",
+      "url": "https://sports.yahoo.com/fantasy/live/nfl-injury-tracker-week-6-latest-news-fantasy-implications-as-caleb-williams-hamstring-questionable-lamar-jackson-ankle-ruled-out-injuries-pile-up-for-eagles-185435186.html"
     }
   ],
   "adjust": [

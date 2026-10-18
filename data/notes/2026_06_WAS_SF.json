@@ -1,12 +1,24 @@
 {
   "game_id": "2026_06_WAS_SF",
-  "updated": "2026-10-18T01:15:00Z",
+  "updated": "2026-10-18T01:40:00Z",
   "items": [
     {
-      "text": "Preliminary (Monday game, report not final): Washington's QB Marcus Mariota is out with Jayden Daniels listed to start; RB Jacory Croskey-Merritt, OLB Javontae Jean-Baptiste and DE Charles Omenihu are out. San Francisco is without WR Deebo Samuel.",
-      "source": "Yahoo Sports injury tracker",
-      "url": "https://sports.yahoo.com/fantasy/live/nfl-injury-tracker-week-6-latest-news-fantasy-implications-as-caleb-williams-hamstring-questionable-lamar-jackson-ankle-ruled-out-injuries-pile-up-for-eagles-185435186.html"
+      "text": "Final report: Washington is without QB Marcus Mariota, RB Jacory Croskey-Merritt, OLB Javontae Jean-Baptiste and DE Charles Omenihu. WR Stefon Diggs, DT Javon Kinlaw and safeties Percy Butler and Tyler Owens are questionable. Terry McLaurin has no designation. Jayden Daniels starts.",
+      "source": "Commanders On SI",
+      "url": "https://www.si.com/nfl/commanders/onsi/commanders-49ers-week-6-final-injury-report"
+    },
+    {
+      "text": "San Francisco is without DE Nick Bosa, WR Deebo Samuel, S Marques Sigle and LB Garret Wallow; LB Dre Greenlaw's one-game suspension was upheld. WRs Mike Evans and Christian Kirk and DL Mykel Williams are questionable; FB Kyle Juszczyk could return.",
+      "source": "49ers Webzone",
+      "url": "https://www.49erswebzone.com/articles/204279-commanders-injury-report-juszczyk-return/"
     }
   ],
-  "adjust": []
+  "adjust": [
+    {
+      "market": "all",
+      "side": "WAS",
+      "points": 0.5,
+      "reason": "San Francisco loses Nick Bosa, Dre Greenlaw (suspended) and Deebo Samuel, more than Washington's two missing edge rushers and RB. The stats model doesn't price non-QB injuries"
+    }
+  ]
 }

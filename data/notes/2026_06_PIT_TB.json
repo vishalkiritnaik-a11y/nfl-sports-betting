@@ -1,6 +1,6 @@
 {
   "game_id": "2026_06_PIT_TB",
-  "updated": "2026-10-18T01:15:00Z",
+  "updated": "2026-10-18T01:40:00Z",
   "items": [
     {
       "text": "Baker Mayfield (thumb) is out; Jalon Daniels makes his third straight start (already the listed starter in the model).",
@@ -13,9 +13,14 @@
       "url": "https://www.cbssports.com/nfl/news/nfl-week-6-injury-report-lamar-jackson-jalen-hurts-caleb-williams/"
     },
     {
-      "text": "Pittsburgh is without WR Roman Wilson and S DeShon Elliott; CB Jalen Ramsey, WR DK Metcalf, RB Rico Dowdle and TE Pat Freiermuth are questionable.",
+      "text": "Pittsburgh is without WR Roman Wilson and S DeShon Elliott; CB Jalen Ramsey, RB Rico Dowdle and TE Pat Freiermuth are questionable.",
       "source": "CBS Sports",
       "url": "https://www.cbssports.com/nfl/news/nfl-week-6-injury-report-lamar-jackson-jalen-hurts-caleb-williams/"
+    },
+    {
+      "text": "Saturday: WR DK Metcalf (illness) is off the injury report and good to go; TE Pat Freiermuth (calf) remains questionable.",
+      "source": "Sportsnaut Week 6 injury updates",
+      "url": "https://sportsnaut.com/nfl/2026-week-6-nfl-injury-report-updates"
     }
   ],
   "adjust": [
