@@ -312,3 +312,21 @@ def test_recency_weighting_runs():
     X["season"] = np.repeat([2024, 2025], 100); X["week"] = 5
     m = GameModel(half_life=2.0).fit(X, rng.normal(0, 13, 200), rng.normal(44, 13, 200))
     assert m.predict(X.head(3)).shape[0] == 3
+
+
+def test_qb_start_override_from_notes(tmp_path):
+    import json
+    import pandas as pd
+    from nfledge import teamdata as T
+    games = pd.DataFrame([
+        {"game_id": "2026_05_BAL_ATL", "home_team": "ATL", "away_team": "BAL", "home_score": 20, "away_score": 23,
+         "home_qb_id": "Q1", "home_qb_name": "Michael Penix Jr.", "away_qb_id": "Q2", "away_qb_name": "Tyler Huntley"},
+        {"game_id": "2026_06_BAL_CLE", "home_team": "CLE", "away_team": "BAL", "home_score": None, "away_score": None,
+         "home_qb_id": "Q3", "home_qb_name": "Deshaun Watson", "away_qb_id": "Q4", "away_qb_name": "Lamar Jackson"},
+    ])
+    (tmp_path / "2026_06_BAL_CLE.json").write_text(json.dumps({"qb_start": {"BAL": "Tyler Huntley", "CLE": "Nobody"}}))
+    applied = T.apply_qb_starts(games, tmp_path)
+    row = games.set_index("game_id").loc["2026_06_BAL_CLE"]
+    assert row.away_qb_id == "Q2" and row.away_qb_name == "Tyler Huntley"
+    assert row.home_qb_id == "Q3"            # unknown name is ignored, not guessed
+    assert applied == ["2026_06_BAL_CLE: BAL Tyler Huntley"]

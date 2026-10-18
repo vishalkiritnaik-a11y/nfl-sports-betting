@@ -1,0 +1,29 @@
+{
+  "game_id": "2026_06_CHI_ATL",
+  "updated": "2026-10-18T01:15:00Z",
+  "items": [
+    {
+      "text": "Caleb Williams (hamstring) is questionable after a full Friday practice and is expected to start; the model assumes he plays.",
+      "source": "Yahoo Sports injury tracker",
+      "url": "https://sports.yahoo.com/fantasy/live/nfl-injury-tracker-week-6-latest-news-fantasy-implications-as-caleb-williams-hamstring-questionable-lamar-jackson-ankle-ruled-out-injuries-pile-up-for-eagles-185435186.html"
+    },
+    {
+      "text": "Chicago is without LBs T.J. Edwards and Keyshaun Elliott, DL Dayo Odeyingbo and RB Kyle Monangai; CB Tyrique Stevenson is questionable. Michael Penix Jr. has no designation.",
+      "source": "CBS Sports",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-6-injury-report-lamar-jackson-jalen-hurts-caleb-williams/"
+    },
+    {
+      "text": "Atlanta is without CB C.J. Henderson; DE Za'Darius Smith is questionable.",
+      "source": "CBS Sports",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-6-injury-report-lamar-jackson-jalen-hurts-caleb-williams/"
+    }
+  ],
+  "adjust": [
+    {
+      "market": "all",
+      "side": "ATL",
+      "points": 0.5,
+      "reason": "Chicago is missing both starting linebackers and a starting edge rusher, and its QB is coming off a hamstring injury. The stats model doesn't price non-QB injuries"
+    }
+  ]
+}

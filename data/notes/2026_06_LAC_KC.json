@@ -1,0 +1,24 @@
+{
+  "game_id": "2026_06_LAC_KC",
+  "updated": "2026-10-18T01:15:00Z",
+  "items": [
+    {
+      "text": "Los Angeles is without LT Joe Alt, G Kayode Awosika, WR Tre Harris, CB Donte Jackson and S Derwin James; CB Rodney Shelley is doubtful.",
+      "source": "CBS Sports",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-6-injury-report-lamar-jackson-jalen-hurts-caleb-williams/"
+    },
+    {
+      "text": "Kansas City is without WR Rashee Rice and LT Josh Simmons; CB L'Jarius Sneed is questionable.",
+      "source": "CBS Sports",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-6-injury-report-lamar-jackson-jalen-hurts-caleb-williams/"
+    }
+  ],
+  "adjust": [
+    {
+      "market": "all",
+      "side": "KC",
+      "points": 0.5,
+      "reason": "The Chargers are missing five starters including their left tackle and best defensive back; Kansas City loses its top WR and left tackle. Net edge to Kansas City. The stats model doesn't price non-QB injuries"
+    }
+  ]
+}

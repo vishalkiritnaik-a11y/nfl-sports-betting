@@ -1,0 +1,24 @@
+{
+  "game_id": "2026_06_HOU_JAX",
+  "updated": "2026-10-18T01:15:00Z",
+  "items": [
+    {
+      "text": "Houston is without RB David Montgomery, WR Tank Dell and S Jalen Pitre; LB Henry To'oTo'o and S Ja'Marcus Ingram are questionable.",
+      "source": "CBS Sports",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-6-injury-report-lamar-jackson-jalen-hurts-caleb-williams/"
+    },
+    {
+      "text": "Jacksonville is without CB Montaric Brown; RT Anton Harrison went on IR this week; CB Jaylon Jones is questionable.",
+      "source": "News4JAX",
+      "url": "https://www.news4jax.com/sports/2026/10/13/jaguars-put-anton-harrison-on-ir-ahead-of-london-game-against-texans/"
+    }
+  ],
+  "adjust": [
+    {
+      "market": "all",
+      "side": "JAX",
+      "points": 0.5,
+      "reason": "Houston is missing its lead back, a starting WR and a starting safety; Jacksonville loses its right tackle and a CB. Net edge to Jacksonville. The stats model doesn't price non-QB injuries"
+    }
+  ]
+}

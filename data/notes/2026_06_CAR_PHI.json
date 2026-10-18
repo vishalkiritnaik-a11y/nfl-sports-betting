@@ -1,0 +1,29 @@
+{
+  "game_id": "2026_06_CAR_PHI",
+  "updated": "2026-10-18T01:15:00Z",
+  "items": [
+    {
+      "text": "Jalen Hurts (blood clot) is out; Tanner McKee starts (already the listed starter in the model).",
+      "source": "Yahoo Sports injury tracker",
+      "url": "https://sports.yahoo.com/fantasy/live/nfl-injury-tracker-week-6-latest-news-fantasy-implications-as-caleb-williams-hamstring-questionable-lamar-jackson-ankle-ruled-out-injuries-pile-up-for-eagles-185435186.html"
+    },
+    {
+      "text": "Philadelphia is also without RB Saquon Barkley, RB Will Shipley, DB Michael Carter II and OLB Jalyx Hunt; OLB A.J. Epenesa is doubtful and G Landon Dickerson questionable.",
+      "source": "CBS Sports",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-6-injury-report-lamar-jackson-jalen-hurts-caleb-williams/"
+    },
+    {
+      "text": "Carolina is without RB AJ Dillon; OT Monroe Freeling is doubtful and OT Taylor Moton, G Damien Lewis and OLB Jaelan Phillips are questionable.",
+      "source": "CBS Sports",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-6-injury-report-lamar-jackson-jalen-hurts-caleb-williams/"
+    }
+  ],
+  "adjust": [
+    {
+      "market": "all",
+      "side": "CAR",
+      "points": 0.75,
+      "reason": "Philadelphia's top two running backs and two defensive starters are out on top of the QB change; Carolina's OL is banged up but mostly questionable. The stats model doesn't price non-QB injuries"
+    }
+  ]
+}

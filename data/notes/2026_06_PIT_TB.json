@@ -1,0 +1,29 @@
+{
+  "game_id": "2026_06_PIT_TB",
+  "updated": "2026-10-18T01:15:00Z",
+  "items": [
+    {
+      "text": "Baker Mayfield (thumb) is out; Jalon Daniels makes his third straight start (already the listed starter in the model).",
+      "source": "CBS Sports",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-6-injury-report-lamar-jackson-jalen-hurts-caleb-williams/"
+    },
+    {
+      "text": "Tampa Bay is also without S Antoine Winfield Jr. and WR David Sills V; CB Benjamin Morrison is doubtful.",
+      "source": "CBS Sports",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-6-injury-report-lamar-jackson-jalen-hurts-caleb-williams/"
+    },
+    {
+      "text": "Pittsburgh is without WR Roman Wilson and S DeShon Elliott; CB Jalen Ramsey, WR DK Metcalf, RB Rico Dowdle and TE Pat Freiermuth are questionable.",
+      "source": "CBS Sports",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-6-injury-report-lamar-jackson-jalen-hurts-caleb-williams/"
+    }
+  ],
+  "adjust": [
+    {
+      "market": "all",
+      "side": "PIT",
+      "points": 0.5,
+      "reason": "Tampa Bay's secondary is missing its best safety with its top rookie CB doubtful. Pittsburgh has several questionable starters, so this is kept small. The stats model doesn't price non-QB injuries"
+    }
+  ]
+}

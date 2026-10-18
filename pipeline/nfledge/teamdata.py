@@ -29,6 +29,34 @@ def current_season(games: pd.DataFrame, today: date | None = None) -> int:
     return int(min(s, games.season.max()))
 
 
+def apply_qb_starts(games: pd.DataFrame, notes_dir) -> list[str]:
+    """Override the listed starting QB for upcoming games from data/notes/<game_id>.json
+    ("qb_start": {"BAL": "Tyler Huntley"}). nflverse fills future starters from depth charts,
+    which can lag the final injury report (e.g. a ruled-out starter still listed).
+    The name is resolved to a gsis id from past starts in the schedule; unknown names are skipped."""
+    import json
+    from pathlib import Path
+    ids: dict[str, str] = {}
+    for side in ("home", "away"):
+        past = games[games.home_score.notna() & games[f"{side}_qb_id"].notna()]
+        ids.update(dict(zip(past[f"{side}_qb_name"], past[f"{side}_qb_id"])))
+    applied = []
+    for p in sorted(Path(notes_dir).glob("*.json")):
+        qs = json.loads(p.read_text()).get("qb_start") or {}
+        m = (games.game_id == p.stem) & games.home_score.isna()
+        if not qs or not m.any():
+            continue
+        for team, name in qs.items():
+            side = "home" if games.loc[m, "home_team"].iloc[0] == team else "away" if games.loc[m, "away_team"].iloc[0] == team else None
+            if side is None or name not in ids:
+                log.warning("qb_start ignored for %s: %s %s (team not in game or no prior start)", p.stem, team, name)
+                continue
+            games.loc[m, f"{side}_qb_id"] = ids[name]
+            games.loc[m, f"{side}_qb_name"] = name
+            applied.append(f"{p.stem}: {team} {name}")
+    return applied
+
+
 def load(today: date | None = None):
     games = nflverse.schedules()
     games = norm_team(games, ["home_team", "away_team"])

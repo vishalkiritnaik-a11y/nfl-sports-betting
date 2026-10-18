@@ -207,6 +207,8 @@ def run(args):
     t0 = time.time()
     run_id = NOW.strftime(ISO)
     games, pbp, season = T.load()
+    for x in T.apply_qb_starts(games, C.DB_PATH.parent / "notes"):
+        log.info("starting QB from notes: %s", x)
     games["kickoff_utc"] = [W.kickoff_utc(d, t).strftime(ISO) for d, t in zip(games.gameday, games.gametime)]
     unplayed = games[(games.season == season) & games.home_score.isna()]
     upcoming = unplayed[unplayed.kickoff_utc > (NOW - pd.Timedelta(hours=5)).strftime(ISO)]

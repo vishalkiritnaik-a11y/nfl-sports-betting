@@ -1,0 +1,24 @@
+{
+  "game_id": "2026_06_DAL_GB",
+  "updated": "2026-10-18T01:15:00Z",
+  "items": [
+    {
+      "text": "Green Bay is without DTs Javon Hargrave and Jonathan Ford and WR Skyy Moore; DT Jordon Riley is doubtful. RB Josh Jacobs is not eligible until Week 7.",
+      "source": "Yahoo Sports injury tracker",
+      "url": "https://sports.yahoo.com/fantasy/live/nfl-injury-tracker-week-6-latest-news-fantasy-implications-as-caleb-williams-hamstring-questionable-lamar-jackson-ankle-ruled-out-injuries-pile-up-for-eagles-185435186.html"
+    },
+    {
+      "text": "Dallas is without CB Cobie Durant and OT Drew Shelton; CB Joey Porter Jr. is questionable but the team expects him to play.",
+      "source": "Yahoo Sports injury tracker",
+      "url": "https://sports.yahoo.com/fantasy/live/nfl-injury-tracker-week-6-latest-news-fantasy-implications-as-caleb-williams-hamstring-questionable-lamar-jackson-ankle-ruled-out-injuries-pile-up-for-eagles-185435186.html"
+    }
+  ],
+  "adjust": [
+    {
+      "market": "all",
+      "side": "DAL",
+      "points": 0.5,
+      "reason": "Green Bay is down two starting DTs with a third doubtful; Dallas loses a CB and a tackle. Net edge to Dallas. The stats model doesn't price non-QB injuries"
+    }
+  ]
+}

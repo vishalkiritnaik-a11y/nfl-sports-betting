@@ -1,0 +1,20 @@
+{
+  "game_id": "2026_06_BAL_CLE",
+  "updated": "2026-10-18T01:15:00Z",
+  "items": [
+    {
+      "text": "Lamar Jackson (ankle) is out for a second straight week; Tyler Huntley starts. Model now uses Huntley (nflverse still listed Jackson).",
+      "source": "Yahoo Sports injury tracker",
+      "url": "https://sports.yahoo.com/fantasy/live/nfl-injury-tracker-week-6-latest-news-fantasy-implications-as-caleb-williams-hamstring-questionable-lamar-jackson-ankle-ruled-out-injuries-pile-up-for-eagles-185435186.html"
+    },
+    {
+      "text": "Baltimore is also without C Cam Jurgens and DT Broderick Washington. Cleveland is without DTs Mike Hall Jr. and Kalia Davis, G Teven Jenkins and RB Dylan Sampson; RB Quinshon Judkins and DT Mason Graham are questionable.",
+      "source": "CBS Sports",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-6-injury-report-lamar-jackson-jalen-hurts-caleb-williams/"
+    }
+  ],
+  "adjust": [],
+  "qb_start": {
+    "BAL": "Tyler Huntley"
+  }
+}

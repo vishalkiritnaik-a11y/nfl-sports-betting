@@ -1,0 +1,24 @@
+{
+  "game_id": "2026_06_ARI_LA",
+  "updated": "2026-10-18T01:15:00Z",
+  "items": [
+    {
+      "text": "Arizona is without RB Jeremiyah Love and safeties Wydett Williams Jr. and Andrew Wingard; S Budda Baker and LB Zaven Collins are questionable.",
+      "source": "Yahoo Sports injury tracker",
+      "url": "https://sports.yahoo.com/fantasy/live/nfl-injury-tracker-week-6-latest-news-fantasy-implications-as-caleb-williams-hamstring-questionable-lamar-jackson-ankle-ruled-out-injuries-pile-up-for-eagles-185435186.html"
+    },
+    {
+      "text": "Los Angeles lists CB Trent McDuffie and S Kam Curl as questionable.",
+      "source": "CBS Sports",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-6-injury-report-lamar-jackson-jalen-hurts-caleb-williams/"
+    }
+  ],
+  "adjust": [
+    {
+      "market": "all",
+      "side": "LA",
+      "points": 0.5,
+      "reason": "Arizona is missing its lead back and two safeties, with Budda Baker questionable. The stats model doesn't price non-QB injuries"
+    }
+  ]
+}
