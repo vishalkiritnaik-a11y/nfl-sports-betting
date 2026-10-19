@@ -1,16 +1,26 @@
 {
   "game_id": "2026_06_WAS_SF",
-  "updated": "2026-10-18T01:40:00Z",
+  "updated": "2026-10-19T21:00:00Z",
   "items": [
     {
-      "text": "Final report: Washington is without QB Marcus Mariota, RB Jacory Croskey-Merritt, OLB Javontae Jean-Baptiste and DE Charles Omenihu. WR Stefon Diggs, DT Javon Kinlaw and safeties Percy Butler and Tyler Owens are questionable. Terry McLaurin has no designation. Jayden Daniels starts.",
-      "source": "Commanders On SI",
-      "url": "https://www.si.com/nfl/commanders/onsi/commanders-49ers-week-6-final-injury-report"
+      "text": "Final report: Washington is without QB Marcus Mariota, RB Jacory Croskey-Merritt (groin), OLB Javontae Jean-Baptiste and DE Charles Omenihu. Jayden Daniels starts.",
+      "source": "Yahoo Sports",
+      "url": "https://sports.yahoo.com/articles/commanders-49ers-injury-report-stefon-110937599.html"
     },
     {
-      "text": "San Francisco is without DE Nick Bosa, WR Deebo Samuel, S Marques Sigle and LB Garret Wallow; LB Dre Greenlaw's one-game suspension was upheld. WRs Mike Evans and Christian Kirk and DL Mykel Williams are questionable; FB Kyle Juszczyk could return.",
-      "source": "49ers Webzone",
-      "url": "https://www.49erswebzone.com/articles/204279-commanders-injury-report-juszczyk-return/"
+      "text": "Game-time decision: WR Stefon Diggs (hamstring) is questionable after missing last week, DNP Thursday and limited Friday/Saturday; status confirmed with inactives 90 minutes before kickoff. DT Javon Kinlaw and S Percy Butler and Tyler Owens are also questionable.",
+      "source": "CBS Sports",
+      "url": "https://www.cbssports.com/nfl/news/is-stefon-diggs-playing-tonight-injury-update-commanders-vs-49ers/"
+    },
+    {
+      "text": "San Francisco is without DE Nick Bosa (calf), WR Deebo Samuel (hamstring), S Marques Sigle and LB Garret Wallow; LB Dre Greenlaw serves a one-game suspension. DL Mykel Williams and Gracen Halton are questionable.",
+      "source": "Yahoo Sports",
+      "url": "https://sports.yahoo.com/articles/commanders-49ers-injury-report-stefon-110937599.html"
+    },
+    {
+      "text": "WR Mike Evans (Achilles soreness) is questionable but Adam Schefter expects him to play; WR Christian Kirk (calf, IR return) is questionable for his 2026 debut and his activation may depend on Evans.",
+      "source": "Newsweek",
+      "url": "https://www.newsweek.com/sports/nfl/nfl-insider-gives-projected-monday-night-update-for-mike-evans-12590031"
     }
   ],
   "adjust": [
@@ -18,7 +28,7 @@
       "market": "all",
       "side": "WAS",
       "points": 0.5,
-      "reason": "San Francisco loses Nick Bosa, Dre Greenlaw (suspended) and Deebo Samuel, more than Washington's two missing edge rushers and RB. The stats model doesn't price non-QB injuries"
+      "reason": "San Francisco loses Nick Bosa, Dre Greenlaw (suspended), Deebo Samuel and two more defensive starters, more than Washington's two missing edge rushers, RB and a questionable Stefon Diggs. The stats model doesn't price non-QB injuries"
     }
   ]
 }
