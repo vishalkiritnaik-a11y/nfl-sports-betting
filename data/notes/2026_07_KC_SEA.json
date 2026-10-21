@@ -1,0 +1,20 @@
+{
+  "game_id": "2026_07_KC_SEA",
+  "updated": "2026-10-21T02:30:00Z",
+  "items": [
+    {
+      "text": "Mike Macdonald has kept Sam Darnold as the starter. The schedule data had listed Drew Lock, so the model now uses Darnold (he started Weeks 3-6).",
+      "source": "Yahoo Sports",
+      "url": "https://sports.yahoo.com/articles/seahawks-action-sam-darnold-chiefs-164804836.html"
+    },
+    {
+      "text": "Kansas City WR Rashee Rice (hamstring) has no return date.",
+      "source": "FantasyPros Week 7 injury report",
+      "url": "https://www.fantasypros.com/2026/10/fantasy-football-injury-report-updates-week-7-2026/"
+    }
+  ],
+  "adjust": [],
+  "qb_start": {
+    "SEA": "Sam Darnold"
+  }
+}

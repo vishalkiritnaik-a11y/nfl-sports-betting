@@ -209,6 +209,8 @@ def run(args):
     games, pbp, season = T.load()
     for x in T.apply_qb_starts(games, C.DB_PATH.parent / "notes"):
         log.info("starting QB from notes: %s", x)
+    for gid, m in T.flag_qb_listings(games, season).items():
+        log.warning("listed starter differs from last starter: %s %s", gid, m)
     games["kickoff_utc"] = [W.kickoff_utc(d, t).strftime(ISO) for d, t in zip(games.gameday, games.gametime)]
     unplayed = games[(games.season == season) & games.home_score.isna()]
     upcoming = unplayed[unplayed.kickoff_utc > (NOW - pd.Timedelta(hours=5)).strftime(ISO)]
@@ -515,6 +517,8 @@ def run(args):
         risks = []
         if flags["qb_uncertain"]:
             risks.append("Starting QB status is uncertain; see scenario projection")
+        for t_, (listed_, last_) in T.QB_MISMATCH.get(g.game_id, {}).items():
+            risks.append(f"{t_}: projected with {listed_}, but {last_} started last game. Check the starter before betting")
         if min(H["n_games"], A["n_games"]) < 4:
             risks.append("Early-season sample: ratings lean on last season and may be stale after roster changes")
         if mkt and mkt.get("home_no_vig") is not None and abs(p_home - mkt["home_no_vig"]) > 0.08:

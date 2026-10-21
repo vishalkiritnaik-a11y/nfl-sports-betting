@@ -1,0 +1,19 @@
+{
+  "game_id": "2026_07_LA_LV",
+  "updated": "2026-10-21T02:30:00Z",
+  "items": [
+    {
+      "text": "Rams WR Davante Adams (hamstring) is out 6-10 weeks, per Sean McVay; TE Terrance Ferguson is on IR; K Blake Grupe hurt his knee in Week 6 (imaging pending).",
+      "source": "Yahoo Sports Week 7 injury report",
+      "url": "https://sports.yahoo.com/fantasy/article/nfl-injury-report-week-7-latest-news-updates-for-davante-adams-lamar-jackson-saquon-barkley-more-players-205914895.html"
+    }
+  ],
+  "adjust": [
+    {
+      "market": "all",
+      "side": "LV",
+      "points": 0.5,
+      "reason": "The Rams lose Davante Adams for 6-10 weeks plus a starting TE, and their kicker is hurt. The stats model doesn't price non-QB injuries"
+    }
+  ]
+}

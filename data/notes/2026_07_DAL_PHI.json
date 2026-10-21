@@ -1,0 +1,20 @@
+{
+  "game_id": "2026_07_DAL_PHI",
+  "updated": "2026-10-21T02:30:00Z",
+  "items": [
+    {
+      "text": "Jalen Hurts (blood clots) is on IR and expected to miss the rest of the season; Tanner McKee starts. The schedule data still listed Hurts, so the model now uses McKee.",
+      "source": "FantasyPros Week 7 injury report",
+      "url": "https://www.fantasypros.com/2026/10/fantasy-football-injury-report-updates-week-7-2026/"
+    },
+    {
+      "text": "Philadelphia RB Saquon Barkley (hamstring) is nearing a return but not cutting yet; LB Nolan Smith Jr. is in the concussion protocol; RBs Tank Bigsby and Will Shipley are on IR.",
+      "source": "FantasyPros Week 7 injury report",
+      "url": "https://www.fantasypros.com/2026/10/fantasy-football-injury-report-updates-week-7-2026/"
+    }
+  ],
+  "adjust": [],
+  "qb_start": {
+    "PHI": "Tanner McKee"
+  }
+}

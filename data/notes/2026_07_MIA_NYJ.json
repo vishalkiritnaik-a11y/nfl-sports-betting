@@ -1,0 +1,24 @@
+{
+  "game_id": "2026_07_MIA_NYJ",
+  "updated": "2026-10-21T02:30:00Z",
+  "items": [
+    {
+      "text": "Miami RB De'Von Achane (knee) is out for the season.",
+      "source": "Yahoo Sports Week 7 injury report",
+      "url": "https://sports.yahoo.com/fantasy/article/nfl-injury-report-week-7-latest-news-updates-for-davante-adams-lamar-jackson-saquon-barkley-more-players-205914895.html"
+    },
+    {
+      "text": "New York RB Breece Hall (quad) and WR Adonai Mitchell (finger) have no update; imaging on Hall showed no structural damage.",
+      "source": "FantasyPros Week 7 injury report",
+      "url": "https://www.fantasypros.com/2026/10/fantasy-football-injury-report-updates-week-7-2026/"
+    }
+  ],
+  "adjust": [
+    {
+      "market": "all",
+      "side": "NYJ",
+      "points": 0.5,
+      "reason": "Miami loses De'Von Achane for the season; the Jets' absences are shorter-term. The stats model doesn't price non-QB injuries"
+    }
+  ]
+}

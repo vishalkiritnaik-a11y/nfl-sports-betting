@@ -29,6 +29,55 @@ def current_season(games: pd.DataFrame, today: date | None = None) -> int:
     return int(min(s, games.season.max()))
 
 
+QB_MISMATCH: dict = {}     # game_id -> {team: (listed name, last actual starter name)}, filled by flag_qb_listings
+
+
+def _qb_names(games: pd.DataFrame) -> dict:
+    names = {}
+    for side in ("home", "away"):
+        x = games[games[f"{side}_qb_id"].notna() & games[f"{side}_qb_name"].notna()]
+        names.update(dict(zip(x[f"{side}_qb_id"], x[f"{side}_qb_name"])))
+    return names
+
+
+def correct_starters(games: pd.DataFrame, pbp: pd.DataFrame) -> int:
+    """Set each completed game's starting QB to the first QB to drop back for that team in play-by-play.
+    The nflverse schedule occasionally keeps a stale starter (2026: SEA listed Drew Lock for weeks
+    Sam Darnold started), which skews the QB rating feature and the last-starter fallback."""
+    d = pbp[(pbp.qb_dropback == 1) & pbp.passer_player_id.notna()]
+    n_db = d.groupby(["game_id", "posteam", "passer_player_id"]).passer_player_id.transform("size")
+    first = d[n_db >= 5].groupby(["game_id", "posteam"], sort=False).passer_player_id.first()   # ignores trick-play passers
+    abbr = d.groupby("passer_player_id").passer_player_name.first().to_dict() if "passer_player_name" in d else {}
+    names = _qb_names(games)
+    n = 0
+    for side in ("home", "away"):
+        key = list(zip(games.game_id, games[f"{side}_team"]))
+        actual = pd.Series([first.get(k) for k in key], index=games.index)
+        fix = games.home_score.notna() & actual.notna() & (actual != games[f"{side}_qb_id"])
+        if fix.any():
+            games.loc[fix, f"{side}_qb_id"] = actual[fix]
+            games.loc[fix, f"{side}_qb_name"] = [names.get(q, abbr.get(q, q)) for q in actual[fix]]
+            n += int(fix.sum())
+    return n
+
+
+def flag_qb_listings(games: pd.DataFrame, season: int) -> dict:
+    """Upcoming games whose listed starter is not the team's last actual starter (after corrections and
+    notes overrides). Could be a real QB change, or a stale listing; either way the build flags it."""
+    QB_MISMATCH.clear()
+    done = games[(games.season == season) & games.home_score.notna()].sort_values("gameday")
+    last = {}
+    for r in done.itertuples(index=False):
+        last[r.home_team] = (r.home_qb_id, r.home_qb_name)
+        last[r.away_team] = (r.away_qb_id, r.away_qb_name)
+    for r in games[(games.season == season) & games.home_score.isna()].itertuples(index=False):
+        for side in ("home", "away"):
+            t, q, nm = getattr(r, f"{side}_team"), getattr(r, f"{side}_qb_id"), getattr(r, f"{side}_qb_name")
+            if t in last and isinstance(q, str) and q != last[t][0]:
+                QB_MISMATCH.setdefault(r.game_id, {})[t] = (nm, last[t][1])
+    return dict(QB_MISMATCH)
+
+
 def apply_qb_starts(games: pd.DataFrame, notes_dir) -> list[str]:
     """Override the listed starting QB for upcoming games from data/notes/<game_id>.json
     ("qb_start": {"BAL": "Tyler Huntley"}). nflverse fills future starters from depth charts,
@@ -66,6 +115,9 @@ def load(today: date | None = None):
         frames.append(nflverse.pbp(s, current=(s == season)))
     pbp = pd.concat(frames, ignore_index=True)
     pbp = norm_team(pbp, ["posteam", "defteam", "home_team", "away_team", "td_team"])
+    n = correct_starters(games, pbp)
+    if n:
+        log.info("corrected %d completed-game starting QBs from play-by-play", n)
     return games, pbp, season
 
 

@@ -330,3 +330,27 @@ def test_qb_start_override_from_notes(tmp_path):
     assert row.away_qb_id == "Q2" and row.away_qb_name == "Tyler Huntley"
     assert row.home_qb_id == "Q3"            # unknown name is ignored, not guessed
     assert applied == ["2026_06_BAL_CLE: BAL Tyler Huntley"]
+
+
+def test_correct_starters_and_flag_listings():
+    import pandas as pd
+    from nfledge import teamdata as T
+    games = pd.DataFrame([
+        {"game_id": "2026_05_SF_SEA", "season": 2026, "gameday": "2026-10-04", "home_team": "SEA", "away_team": "SF",
+         "home_score": 20, "away_score": 17, "home_qb_id": "LOCK", "home_qb_name": "Drew Lock", "away_qb_id": "PURDY", "away_qb_name": "Brock Purdy"},
+        {"game_id": "2026_01_NE_SEA", "season": 2026, "gameday": "2026-09-13", "home_team": "SEA", "away_team": "NE",
+         "home_score": 10, "away_score": 7, "home_qb_id": "DARN", "home_qb_name": "Sam Darnold", "away_qb_id": "MAYE", "away_qb_name": "Drake Maye"},
+        {"game_id": "2026_07_KC_SEA", "season": 2026, "gameday": "2026-10-25", "home_team": "SEA", "away_team": "KC",
+         "home_score": None, "away_score": None, "home_qb_id": "LOCK", "home_qb_name": "Drew Lock", "away_qb_id": "MAHO", "away_qb_name": "Patrick Mahomes"},
+    ])
+    pbp = pd.DataFrame([
+        {"game_id": "2026_05_SF_SEA", "posteam": "SEA", "qb_dropback": 0, "passer_player_id": None, "passer_player_name": None},
+        {"game_id": "2026_05_SF_SEA", "posteam": "SEA", "qb_dropback": 1, "passer_player_id": "WR1", "passer_player_name": "J.Trick"},
+    ] + [{"game_id": "2026_05_SF_SEA", "posteam": t, "qb_dropback": 1, "passer_player_id": q, "passer_player_name": q}
+         for t, q in [("SEA", "DARN")] * 6 + [("SEA", "LOCK")] * 6 + [("SF", "PURDY")] * 6])
+    assert T.correct_starters(games, pbp) == 1
+    g = games.set_index("game_id")
+    assert g.loc["2026_05_SF_SEA", "home_qb_id"] == "DARN" and g.loc["2026_05_SF_SEA", "home_qb_name"] == "Sam Darnold"
+    assert g.loc["2026_07_KC_SEA", "home_qb_id"] == "LOCK"          # upcoming games are never rewritten
+    m = T.flag_qb_listings(games, 2026)
+    assert m == {"2026_07_KC_SEA": {"SEA": ("Drew Lock", "Sam Darnold")}}
