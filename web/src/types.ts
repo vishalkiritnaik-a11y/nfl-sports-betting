@@ -218,3 +218,12 @@ export interface TDPick {
   result: "won" | "lost" | "void" | "pending";
 }
 export interface Picks { generated: string; game: GamePick[]; td: TDPick[]; recs?: RecPick[]; anchor?: Record<string, Record<string, { b: number; b_ci90: [number, number]; n: number }>> }
+
+export interface TeaserRate { n: number; hit: number | null }
+export interface TeaserStats {
+  generated: string; tease: number; fav_range: [number, number]; dog_range: [number, number];
+  periods: { all: { from: number; to: number }; recent: { from: number; to: number } };
+  all: { fav: TeaserRate; dog: TeaserRate; both: TeaserRate };
+  recent: { fav: TeaserRate; dog: TeaserRate; both: TeaserRate };
+  break_even: Record<string, number>;
+}

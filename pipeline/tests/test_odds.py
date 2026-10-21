@@ -90,3 +90,23 @@ def test_kelly_nonnegative():
 def test_scoring_rules():
     assert approx(o.brier([1.0, 0.0], [1, 0]), 0)
     assert approx(o.log_loss([0.5, 0.5], [1, 0]), math.log(2))
+
+
+def test_teaser_windows_and_break_even():
+    import pandas as pd
+    from nfledge import teasers as TZ
+    assert TZ.kind_for(7.5) == "fav" and TZ.kind_for(8.5) == "fav" and TZ.kind_for(9.0) is None
+    assert TZ.kind_for(-2.5) == "dog" and TZ.kind_for(-1.5) == "dog" and TZ.kind_for(-3.0) is None and TZ.kind_for(2.0) is None
+    assert abs(TZ.break_even_leg(-120) - 0.7385) < 1e-3 and abs(TZ.break_even_leg(-110) - 0.7237) < 1e-3
+    games = pd.DataFrame([
+        # home favored by 8: home teased to -2. Wins by 3 -> hit; away (+8 -> +14) not a window
+        {"season": 2025, "home_score": 24, "away_score": 21, "spread_line": 8.0},
+        # home favored by 2: away dog +2 teased to +8. Home wins by 8 -> push (excluded)
+        {"season": 2025, "home_score": 28, "away_score": 20, "spread_line": 2.0},
+        # home favored by 2: away teased to +8, home wins by 10 -> miss
+        {"season": 2026, "home_score": 30, "away_score": 20, "spread_line": 2.0},
+    ])
+    x = TZ.legs(games)
+    assert len(x) == 2 and x[x.kind == "fav"].hit.all() and not x[x.kind == "dog"].hit.any()
+    r = TZ.record(games, 2026, first_season=2016)
+    assert r["all"]["both"]["n"] == 2 and r["recent"]["dog"] == {"n": 1, "hit": 0.0}

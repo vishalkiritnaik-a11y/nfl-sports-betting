@@ -6,6 +6,9 @@ import { usePicks } from "../lib/data";
 import { kickoffLocal, pct, units } from "../lib/format";
 import { fmtAmerican } from "../lib/odds";
 import { topPicks } from "../lib/top";
+import { useTeasers } from "../lib/data";
+import { breakEvenLeg, teaserLegs, verdict } from "../lib/teasers";
+import type { TeaserStats } from "../types";
 import type { Game, Rec, RecPick } from "../types";
 
 const MKT = [["spread", "Spread"], ["moneyline", "Moneyline"], ["total", "Total"]] as const;
@@ -149,9 +152,79 @@ function TopFive({ games }: { games: Game[] }) {
   );
 }
 
+const PRICES = [-110, -120, -130, -140];
+const V_STYLE = { clears: ["Clears", "var(--pos)"], mixed: ["Mixed", "var(--market)"], below: ["Below", "var(--neg)"] } as const;
+const fmtLine = (x: number) => (x > 0 ? `+${x}` : x === 0 ? "PK" : `${x}`);
+
+function TeaserScreen({ games, s }: { games: Game[]; s: TeaserStats }) {
+  const { search } = useLocation();
+  const [price, setPrice] = useState(-120);
+  const legs = teaserLegs(games, s);
+  const be = breakEvenLeg(price);
+  const rate = (k: "fav" | "dog") => `${pct(s.recent[k].hit ?? 0)} since ${s.periods.recent.from} (n=${s.recent[k].n}) · ${pct(s.all[k].hit ?? 0)} since ${s.periods.all.from} (n=${s.all[k].n})`;
+  return (
+    <section className="panel p-4">
+      <header className="flex items-baseline gap-3 flex-wrap mb-1">
+        <h2 className="display text-xl">Teaser screen</h2>
+        <span className="text-sm text-muted">6-point, 2-team teasers whose legs cross both 3 and 7 ("Wong" teasers)</span>
+      </header>
+      <div className="flex flex-wrap items-center gap-2 text-sm my-2">
+        <span className="text-muted">Your 2-team teaser price:</span>
+        {PRICES.map((p) => (
+          <button key={p} onClick={() => setPrice(p)} aria-pressed={price === p}
+            className="px-2 py-0.5 rounded border tnum" style={{ borderColor: price === p ? "var(--fg)" : "var(--rule)", color: price === p ? "var(--fg)" : "var(--muted)" }}>{p}</button>
+        ))}
+        <span className="text-muted">→ each leg needs <b className="tnum" style={{ color: "var(--fg)" }}>{pct(be)}</b></span>
+      </div>
+      <div className="grid gap-1 text-sm mb-2">
+        {(["dog", "fav"] as const).map((k) => {
+          const [lab, col] = V_STYLE[verdict(s, k, price)];
+          return (
+            <div key={k} className="grid grid-cols-[110px_1fr_auto] gap-3">
+              <span className="text-muted">{k === "dog" ? `Underdogs +${s.dog_range[0]}–${s.dog_range[1]}` : `Favorites −${s.fav_range[0]}–${s.fav_range[1]}`}</span>
+              <span className="tnum">{rate(k)}</span>
+              <span className="font-semibold" style={{ color: col }}>{lab}</span>
+            </div>
+          );
+        })}
+      </div>
+      {legs.length === 0 ? <p className="text-sm text-muted border-t border-rule pt-2">No qualifying legs on the current lines. Lines move during the week, so check back.</p> : (
+        <ol className="grid">
+          {legs.map((l) => {
+            const k = kickoffLocal(l.game.kickoff_utc);
+            const [lab, col] = V_STYLE[verdict(s, l.kind, price)];
+            return (
+              <li key={`${l.game.game_id}-${l.team}`} className="grid grid-cols-[1fr_auto] sm:grid-cols-[1fr_90px_1fr] gap-x-3 gap-y-0.5 items-start py-2.5 border-t border-rule">
+                <span className="min-w-0">
+                  <span className="font-semibold">{l.team} {fmtLine(l.teased)}</span> <span className="text-muted text-sm">(from {fmtLine(l.line)})</span>
+                  <Link to={{ pathname: `/game/${l.game.game_id}`, search }} className="block text-xs text-muted hover:underline">
+                    {l.game.away.team} @ {l.game.home.team} · {k.day} {k.time}
+                  </Link>
+                </span>
+                <span className="text-sm font-semibold text-right sm:text-left" style={{ color: col }}>{lab}</span>
+                <span className="col-span-2 sm:col-span-1 text-xs text-muted">
+                  {l.newsPts != null && l.newsPts !== 0
+                    ? <span style={{ color: l.newsPts > 0 ? "var(--pos)" : "var(--neg)" }}>Injury news {l.newsPts > 0 ? "favors" : "hurts"} {l.team}: </span>
+                    : null}
+                  {l.newsText ?? (l.items ? `${l.items} injury item${l.items > 1 ? "s" : ""} checked, no net adjustment` : "No injury notes for this game yet")}
+                </span>
+              </li>
+            );
+          })}
+        </ol>
+      )}
+      <p className="text-xs text-muted mt-2">
+        Hit rates are measured against the closing line, with pushes excluded; you'll be betting earlier numbers. Favorite legs have collapsed lately, so pair
+        underdog legs first. A teaser only pays if both legs hit, and legs from the same game are not allowed at most books.
+      </p>
+    </section>
+  );
+}
+
 export default function BetSheet() {
   const { week, ref } = useApp();
   const picks = usePicks();
+  const teasers = useTeasers();
   const [onlyAction, setOnlyAction] = useState(false);
   const ledger = picks.data?.recs ?? [];
   const hasPick = (g: Game) => !!g.recs || ledger.some((x) => x.game_id === g.game_id);
@@ -193,6 +266,7 @@ export default function BetSheet() {
       </div>
       {unlogged > 0 && <p className="text-sm text-muted">{unlogged} finished game{unlogged > 1 ? "s" : ""} this week kicked off before this view existed (Oct 12, 2026), so {unlogged > 1 ? "they have" : "it has"} no logged pick. See the Slate and Pick history tabs for those.</p>}
       <TopFive games={all} />
+      {teasers.data && <TeaserScreen games={all} s={teasers.data} />}
       {!anyRecs && <Note>Picks appear for upcoming games once sportsbook lines are posted. Finished games show the pick that was logged before kickoff.</Note>}
       <div className="grid gap-4 lg:grid-cols-2">
         {shown.map((g) => <GameCard key={g.game_id} g={g} graded={ledger.filter((x) => x.game_id === g.game_id)} />)}

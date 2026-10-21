@@ -889,6 +889,9 @@ def run(args):
                                           "anchor": {str(k): v for k, v in anchor_by_season.items()},
                                           "td": td_ledger(db, usage_by_game, pbp_games)})
 
+    from . import teasers as TZ
+    write_json(C.OUT_DIR / "teasers.json", {"generated": run_id, **TZ.record(games[games.game_type == "REG"], season)})
+
     # ------------------------------------------------- meta
     fresh = [{"file": k, **v} for k, v in N.FRESHNESS.items()]
     meta = {
