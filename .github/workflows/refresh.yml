@@ -14,6 +14,10 @@ on:
         description: "Rebuild cached historical TD rows"
         type: boolean
         default: false
+      force_retrain:
+        description: "Re-run the weekly settings search even if this week is already done"
+        type: boolean
+        default: false
   push:
     branches: [main]
     paths: ["pipeline/**", "web/src/**", "web/index.html", ".github/workflows/refresh.yml", "data/notes/**"]
@@ -80,7 +84,7 @@ jobs:
 
       - name: Weekly retrain (only runs once a new week is complete)
         working-directory: pipeline
-        run: python -m nfledge.retrain
+        run: python -m nfledge.retrain ${{ inputs.force_retrain && '--force' || '' }}
 
       - name: Run pipeline
         working-directory: pipeline
