@@ -1,5 +1,5 @@
 {
- "last_run": "2026-10-22T00:06:26Z",
+ "last_run": "2026-10-22T15:42:26Z",
  "season": 2026,
  "week": 7,
  "trigger_slot": null,
@@ -10,66 +10,66 @@
   "2026_07_NE_CHI": {
    "status": "forecast",
    "roof_type": "outdoor",
-   "temp_f": 55.9,
+   "temp_f": 55.7,
    "wind_mph": 6.0,
-   "wind_kickoff_mph": 3.2,
-   "gust_mph": 8.9,
+   "wind_kickoff_mph": 5.2,
+   "gust_mph": 10.7,
    "precip_prob_pct": 0,
-   "lead_hours": 24.1,
+   "lead_hours": 8.5,
    "total_delta": 0.0
   },
   "2026_07_PIT_NO": {
    "status": "forecast",
    "roof_type": "outdoor",
-   "temp_f": 60.7,
-   "wind_mph": 13.6,
-   "wind_kickoff_mph": 13.6,
-   "gust_mph": 29.8,
-   "precip_prob_pct": 24,
-   "lead_hours": 85.4,
-   "total_delta": -4.08
+   "temp_f": 60.4,
+   "wind_mph": 14.7,
+   "wind_kickoff_mph": 14.7,
+   "gust_mph": 34.4,
+   "precip_prob_pct": 27,
+   "lead_hours": 69.8,
+   "total_delta": -4.64
   },
   "2026_07_SF_ATL": {
    "status": "forecast",
    "roof_type": "retractable",
-   "temp_f": 67.0,
-   "wind_mph": 10.7,
-   "wind_kickoff_mph": 10.7,
-   "gust_mph": 14.8,
+   "temp_f": 66.8,
+   "wind_mph": 11.2,
+   "wind_kickoff_mph": 11.2,
+   "gust_mph": 15.7,
    "precip_prob_pct": 0,
-   "lead_hours": 88.9
+   "lead_hours": 73.3
   },
   "2026_07_CIN_BAL": {
    "status": "forecast",
    "roof_type": "outdoor",
-   "temp_f": 62.8,
-   "wind_mph": 5.5,
-   "wind_kickoff_mph": 5.0,
-   "gust_mph": 7.6,
+   "temp_f": 62.6,
+   "wind_mph": 5.6,
+   "wind_kickoff_mph": 3.8,
+   "gust_mph": 6.5,
    "precip_prob_pct": 0,
-   "lead_hours": 88.9,
+   "lead_hours": 73.3,
    "total_delta": 0.0
   },
   "2026_07_TB_CAR": {
    "status": "forecast",
    "roof_type": "outdoor",
-   "temp_f": 64.4,
-   "wind_mph": 8.6,
-   "wind_kickoff_mph": 8.6,
-   "gust_mph": 11.0,
+   "temp_f": 64.8,
+   "wind_mph": 8.2,
+   "wind_kickoff_mph": 8.2,
+   "gust_mph": 10.5,
    "precip_prob_pct": 0,
-   "lead_hours": 88.9,
+   "lead_hours": 73.3,
    "total_delta": -0.0
   },
   "2026_07_NYG_HOU": {
    "status": "forecast",
    "roof_type": "retractable",
-   "temp_f": 77.5,
-   "wind_mph": 9.8,
-   "wind_kickoff_mph": 9.8,
-   "gust_mph": 12.3,
+   "temp_f": 78.4,
+   "wind_mph": 10.8,
+   "wind_kickoff_mph": 10.7,
+   "gust_mph": 13.4,
    "precip_prob_pct": 0,
-   "lead_hours": 88.9
+   "lead_hours": 73.3
   },
   "2026_07_IND_MIN": {
    "status": "indoor"
@@ -77,34 +77,34 @@
   "2026_07_MIA_NYJ": {
    "status": "forecast",
    "roof_type": "outdoor",
-   "temp_f": 63.5,
-   "wind_mph": 8.3,
-   "wind_kickoff_mph": 7.3,
-   "gust_mph": 10.7,
+   "temp_f": 63.3,
+   "wind_mph": 7.1,
+   "wind_kickoff_mph": 5.3,
+   "gust_mph": 9.2,
    "precip_prob_pct": 0,
-   "lead_hours": 88.9,
+   "lead_hours": 73.3,
    "total_delta": 0.0
   },
   "2026_07_CLE_TEN": {
    "status": "forecast",
    "roof_type": "outdoor",
-   "temp_f": 73.1,
-   "wind_mph": 3.2,
-   "wind_kickoff_mph": 2.1,
+   "temp_f": 72.4,
+   "wind_mph": 3.0,
+   "wind_kickoff_mph": 3.0,
    "gust_mph": 2.9,
    "precip_prob_pct": 0,
-   "lead_hours": 88.9,
+   "lead_hours": 73.3,
    "total_delta": 0.0
   },
   "2026_07_DEN_ARI": {
    "status": "forecast",
    "roof_type": "retractable",
-   "temp_f": 77.9,
-   "wind_mph": 5.3,
-   "wind_kickoff_mph": 2.2,
-   "gust_mph": 5.8,
+   "temp_f": 78.0,
+   "wind_mph": 3.7,
+   "wind_kickoff_mph": 3.2,
+   "gust_mph": 4.5,
    "precip_prob_pct": 0,
-   "lead_hours": 92.0
+   "lead_hours": 76.4
   },
   "2026_07_GB_DET": {
    "status": "indoor"
@@ -115,23 +115,23 @@
   "2026_07_KC_SEA": {
    "status": "forecast",
    "roof_type": "outdoor",
-   "temp_f": 53.5,
-   "wind_mph": 9.2,
-   "wind_kickoff_mph": 9.2,
-   "gust_mph": 17.0,
-   "precip_prob_pct": 26,
-   "lead_hours": 96.2,
+   "temp_f": 54.8,
+   "wind_mph": 7.8,
+   "wind_kickoff_mph": 7.8,
+   "gust_mph": 13.6,
+   "precip_prob_pct": 31,
+   "lead_hours": 80.6,
    "total_delta": 0.0
   },
   "2026_07_DAL_PHI": {
    "status": "forecast",
    "roof_type": "outdoor",
-   "temp_f": 61.2,
+   "temp_f": 61.1,
    "wind_mph": 4.7,
    "wind_kickoff_mph": 4.7,
-   "gust_mph": 14.3,
+   "gust_mph": 13.6,
    "precip_prob_pct": 0,
-   "lead_hours": 120.1,
+   "lead_hours": 104.5,
    "total_delta": 0.0
   }
  }
