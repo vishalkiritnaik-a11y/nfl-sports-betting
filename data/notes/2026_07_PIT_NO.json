@@ -1,16 +1,21 @@
 {
   "game_id": "2026_07_PIT_NO",
-  "updated": "2026-10-21T02:30:00Z",
+  "updated": "2026-10-22T21:30:00Z",
   "items": [
     {
-      "text": "New Orleans RB Travis Etienne Jr. and WR Jordyn Tyson (hamstrings) are on IR. Pittsburgh WRs Michael Pittman Jr. and Roman Wilson are on IR.",
-      "source": "Yahoo Sports Week 7 injury report",
-      "url": "https://sports.yahoo.com/fantasy/article/nfl-injury-report-week-7-latest-news-updates-for-davante-adams-lamar-jackson-saquon-barkley-more-players-205914895.html"
+      "text": "Pittsburgh ruled out CB Brandin Echols (hamstring) and WR Ben Skowronek (calf); DT Sebastian Joseph-Day (triceps) went to IR Thursday. CB Jalen Ramsey (wrist) went from no practice Wednesday to limited Thursday; T.J. Watt limited Thursday, Alex Highsmith and RB Rico Dowdle limited both days. Aaron Rodgers is not on the report.",
+      "source": "Yahoo / Steelers Wednesday-Thursday reports",
+      "url": "https://sports.yahoo.com/articles/steelers-vs-saints-week-7-191457635.html"
     },
     {
-      "text": "Early-week (Tuesday): official practice reports start Wednesday; refreshed Thursday and Saturday.",
-      "source": "FantasyPros Week 7 injury report",
-      "url": "https://www.fantasypros.com/2026/10/fantasy-football-injury-report-updates-week-7-2026/"
+      "text": "New Orleans G Cesar Ruiz (knee) did not practice Wednesday and is unlikely to play; Alvin Kamara (back) was limited. Tyler Shough practiced fully while playing through broken bones in his non-throwing hand. WR Jordyn Tyson and RB Travis Etienne Jr. are on IR. Game is in Paris (9:30am ET).",
+      "source": "Steelers Depot (Saints Wednesday report)",
+      "url": "https://steelersdepot.com/2026/10/saints-week-7-wednesday-injury-report-qb-tyler-shough-practices-in-full-two-others-dnp/"
+    },
+    {
+      "text": "Pittsburgh WRs Michael Pittman Jr. and Roman Wilson are on IR.",
+      "source": "Yahoo Sports Week 7 injury report",
+      "url": "https://sports.yahoo.com/fantasy/article/nfl-injury-report-week-7-latest-news-updates-for-davante-adams-lamar-jackson-saquon-barkley-more-players-205914895.html"
     }
   ],
   "adjust": []

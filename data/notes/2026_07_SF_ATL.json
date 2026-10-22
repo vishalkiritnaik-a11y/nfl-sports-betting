@@ -1,17 +1,29 @@
 {
   "game_id": "2026_07_SF_ATL",
-  "updated": "2026-10-21T02:30:00Z",
+  "updated": "2026-10-22T21:30:00Z",
   "items": [
     {
-      "text": "San Francisco WR Deebo Samuel (hamstring) is expected to miss multiple weeks and WR Ricky Pearsall is out for the season; WR Mike Evans (ribs) has no update. DE Nick Bosa (calf) is trending toward a return.",
-      "source": "FantasyPros Week 7 injury report",
-      "url": "https://www.fantasypros.com/2026/10/fantasy-football-injury-report-updates-week-7-2026/"
+      "text": "San Francisco WR Mike Evans (Achilles tendinitis, ribs) did not practice Wednesday and Kyle Shanahan would not commit to him playing.",
+      "source": "Sactown Sports",
+      "url": "https://sactownsports.com/nfl/san-francisco-49ers/shanahan-49ers-falcons"
     },
     {
-      "text": "Atlanta LB Divine Deablo (arm) left Week 6 and is being monitored.",
-      "source": "FantasyPros Week 7 injury report",
-      "url": "https://www.fantasypros.com/2026/10/fantasy-football-injury-report-updates-week-7-2026/"
+      "text": "49ers WR Deebo Samuel (hamstring) is likely to miss Sunday and DE Nick Bosa (calf) did not practice Wednesday; WR Ricky Pearsall is out for the season. Also out of Wednesday practice: CB Upton Stout, S Marques Sigle, DE Mykel Williams, LB Garret Wallow.",
+      "source": "Yahoo / 49ers Webzone",
+      "url": "https://sports.yahoo.com/articles/san-francisco-49ers-announce-nick-231822652.html"
+    },
+    {
+      "text": "Atlanta CB Billy Bowman and LB Divine Deablo did not practice Wednesday; CB A.J. Terrell returned from IR (limited).",
+      "source": "Yahoo (Falcons injury report)",
+      "url": "https://sports.yahoo.com/articles/falcons-vs-49ers-injury-report-105504370.html"
     }
   ],
-  "adjust": []
+  "adjust": [
+    {
+      "market": "all",
+      "side": "ATL",
+      "points": 0.5,
+      "reason": "San Francisco is likely without Deebo Samuel, Ricky Pearsall and Nick Bosa, Mike Evans is in doubt, and several defensive starters missed practice. The stats model doesn't price non-QB injuries"
+    }
+  ]
 }

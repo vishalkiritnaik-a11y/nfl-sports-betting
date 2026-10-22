@@ -1,16 +1,16 @@
 {
   "game_id": "2026_07_NE_CHI",
-  "updated": "2026-10-21T02:30:00Z",
+  "updated": "2026-10-22T21:30:00Z",
   "items": [
     {
-      "text": "Tuesday report: New England G Alijah Vera-Tucker and G Ben Brown did not practice; Mike Vrabel said both will 'probably not' play. WR A.J. Brown, OT Morgan Moses and CBs Carlton Davis III and Karon Prunty were limited. Drake Maye full.",
-      "source": "Yahoo / Pats Pulpit Tuesday report",
-      "url": "https://sports.yahoo.com/articles/patriots-vs-bears-tuesday-injury-222804740.html"
+      "text": "Final report: New England ruled out G Alijah Vera-Tucker (hamstring), G Ben Brown (knee), CB Carlton Davis III (neck), CB Karon Prunty (hamstring) and CB Channing Canada (hamstring). RT Morgan Moses (foot), S Kevin Byard III (chest), S Craig Woodson (shoulder) and LB Christian Elliss (chest) are questionable. Drake Maye is not on the report.",
+      "source": "Patriots.com injury report analysis",
+      "url": "https://www.patriots.com/news/injury-report-analysis-patriots-rule-out-five-players-for-thursday-night-football-vs-the-bears"
     },
     {
-      "text": "Chicago: RB Kyle Monangai, LB T.J. Edwards and LB Jack Sanborn (concussion) did not practice; G Jonah Jackson limited. Caleb Williams is not on the report.",
-      "source": "Yahoo / Pats Pulpit Tuesday report",
-      "url": "https://sports.yahoo.com/articles/patriots-vs-bears-tuesday-injury-222804740.html"
+      "text": "Final report: Chicago ruled out RB Kyle Monangai (thumb/toe) and LB Jack Sanborn (concussion); LB T.J. Edwards (hamstring) is doubtful and CB Tyrique Stevenson (hip) questionable. Caleb Williams is not on the report.",
+      "source": "Heavy",
+      "url": "https://heavy.com/sports/nfl/new-england-patriots/bears-injury-report-week-7-out-questionable/"
     },
     {
       "text": "New England WR Romeo Doubs (shoulder) is on IR.",
@@ -18,5 +18,12 @@
       "url": "https://sports.yahoo.com/fantasy/article/nfl-injury-report-week-7-latest-news-updates-for-davante-adams-lamar-jackson-saquon-barkley-more-players-205914895.html"
     }
   ],
-  "adjust": []
+  "adjust": [
+    {
+      "market": "all",
+      "side": "CHI",
+      "points": 0.5,
+      "reason": "New England is without both starting guards and three cornerbacks including Carlton Davis, with both starting safeties questionable; Chicago's losses (Monangai, two linebackers) are smaller. The stats model doesn't price non-QB injuries"
+    }
+  ]
 }

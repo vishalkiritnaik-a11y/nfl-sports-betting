@@ -1,16 +1,21 @@
 {
   "game_id": "2026_07_DAL_PHI",
-  "updated": "2026-10-21T02:30:00Z",
+  "updated": "2026-10-22T21:30:00Z",
   "items": [
     {
-      "text": "Jalen Hurts (blood clots) is on IR and expected to miss the rest of the season; Tanner McKee starts. The schedule data still listed Hurts, so the model now uses McKee.",
-      "source": "FantasyPros Week 7 injury report",
-      "url": "https://www.fantasypros.com/2026/10/fantasy-football-injury-report-updates-week-7-2026/"
+      "text": "Jalen Hurts (blood clots) is on IR and out for the season or close to it; Tanner McKee starts. The schedule data still listed Hurts, so the model uses McKee.",
+      "source": "Philadelphia Inquirer",
+      "url": "https://www.inquirer.com/eagles/cowboys-nfl-week-7-tanner-mckee-dak-prescott-20261022.html"
     },
     {
-      "text": "Philadelphia RB Saquon Barkley (hamstring) is nearing a return but not cutting yet; LB Nolan Smith Jr. is in the concussion protocol; RBs Tank Bigsby and Will Shipley are on IR.",
-      "source": "FantasyPros Week 7 injury report",
-      "url": "https://www.fantasypros.com/2026/10/fantasy-football-injury-report-updates-week-7-2026/"
+      "text": "Saquon Barkley (hamstring) returned to practice Thursday; WR DeVonta Smith (hamstring), TE Dallas Goedert and OLB Nolan Smith Jr. (concussion) were not seen. Official Eagles report pending; refresh Saturday/Monday.",
+      "source": "NBC Sports Philadelphia",
+      "url": "https://nbcsportsphiladelphia.com/nfl/philadelphia-eagles/eagles-injury-update-saquon-barkley-returns-but-other-key-eagles-missing/760564"
+    },
+    {
+      "text": "Dallas KR/WR KaVontae Turpin (ribs) is unlikely to play and LB Dee Winters (Achilles) is likely out; LB DeMarvion Overshown and CB Cobie Durant are trending toward returning.",
+      "source": "Yardbarker",
+      "url": "https://www.yardbarker.com/nfl/articles/cowboys_injury_updates_turpin_winters_likely_out_overshown_durant_trending_toward_eagles_game/s1_17810_44453928"
     }
   ],
   "adjust": [],

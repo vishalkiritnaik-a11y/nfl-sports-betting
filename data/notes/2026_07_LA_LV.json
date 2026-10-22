@@ -1,11 +1,21 @@
 {
   "game_id": "2026_07_LA_LV",
-  "updated": "2026-10-21T02:30:00Z",
+  "updated": "2026-10-22T21:30:00Z",
   "items": [
     {
-      "text": "Rams WR Davante Adams (hamstring) is out 6-10 weeks, per Sean McVay; TE Terrance Ferguson is on IR; K Blake Grupe hurt his knee in Week 6 (imaging pending).",
-      "source": "Yahoo Sports Week 7 injury report",
-      "url": "https://sports.yahoo.com/fantasy/article/nfl-injury-report-week-7-latest-news-updates-for-davante-adams-lamar-jackson-saquon-barkley-more-players-205914895.html"
+      "text": "Rams WR Davante Adams is out 6-10 weeks after hamstring surgery and K Blake Grupe is on IR (torn ACL); TE Terrance Ferguson is on IR.",
+      "source": "The Rx",
+      "url": "https://www.therx.com/nfl/rams-lose-davante-adams-6-10-weeks-to-knee-surgery-place-kicker-blake-grupe-on-injured-reserve/53157/"
+    },
+    {
+      "text": "Rams DL Kobie Turner went to IR; CB Trent McDuffie (groin) and LB Nate Landman (concussion) did not practice Wednesday.",
+      "source": "Yahoo (Rams injury report)",
+      "url": "https://sports.yahoo.com/articles/rams-week-7-injury-report-010002876.html"
+    },
+    {
+      "text": "Raiders TE Brock Bowers (hamstring/calf) and LT Kolton Miller (shoulder) were limited Wednesday; Kirk Cousins starts.",
+      "source": "Raiders.com",
+      "url": "https://www.raiders.com/news/las-vegas-raiders-los-angeles-rams-week-7-injury-report-2026"
     }
   ],
   "adjust": [
@@ -13,7 +23,7 @@
       "market": "all",
       "side": "LV",
       "points": 0.5,
-      "reason": "The Rams lose Davante Adams for 6-10 weeks plus a starting TE, and their kicker is hurt. The stats model doesn't price non-QB injuries"
+      "reason": "The Rams are without Davante Adams, Kobie Turner and their kicker, and McDuffie and Landman missed practice. The stats model doesn't price non-QB injuries"
     }
   ]
 }

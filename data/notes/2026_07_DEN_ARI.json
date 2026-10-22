@@ -1,12 +1,29 @@
 {
   "game_id": "2026_07_DEN_ARI",
-  "updated": "2026-10-21T02:30:00Z",
+  "updated": "2026-10-22T21:30:00Z",
   "items": [
     {
-      "text": "Arizona RB Jeremiyah Love (ankle) is progressing and could play. Denver RB Jonah Coleman and WR Pat Bryant are on IR.",
-      "source": "FantasyPros Week 7 injury report",
-      "url": "https://www.fantasypros.com/2026/10/fantasy-football-injury-report-updates-week-7-2026/"
+      "text": "Arizona RB Jeremiyah Love (ankle) is not expected to play.",
+      "source": "NBC Sports (Zenitz)",
+      "url": "https://www.nbcsports.com/fantasy/football/player-news/2026-10-22/jeremiyah-love-ankle-not-expected-to-play-vs-den"
+    },
+    {
+      "text": "Arizona S Budda Baker, DL Walter Nolen III, CB Garrett Williams and S Andrew Wingard did not practice Wednesday; RB James Conner and OT Paris Johnson are on IR. Jacoby Brissett starts.",
+      "source": "azcardinals.com",
+      "url": "https://www.azcardinals.com/news/injury-report-week-7-vs-broncos"
+    },
+    {
+      "text": "Denver S Talanoa Hufanga (ankle) and OLB Jonah Elliss did not practice Wednesday; CB Pat Surtain II (ankle) returned limited and RB Jonah Coleman returned from IR. WR Pat Bryant is on IR.",
+      "source": "Broncos.com",
+      "url": "https://www.denverbroncos.com/news/injuryreport/injury-report-cb-pat-surtain-ii-returns-to-practice-ahead-of-broncos-week-7-game-vs-cardinals"
     }
   ],
-  "adjust": []
+  "adjust": [
+    {
+      "market": "all",
+      "side": "DEN",
+      "points": 0.5,
+      "reason": "Arizona is likely without Jeremiyah Love and missed Budda Baker, Walter Nolen and Garrett Williams at practice, with James Conner and Paris Johnson on IR. The stats model doesn't price non-QB injuries"
+    }
+  ]
 }

@@ -1,12 +1,24 @@
 {
   "game_id": "2026_07_CLE_TEN",
-  "updated": "2026-10-21T02:30:00Z",
+  "updated": "2026-10-22T21:30:00Z",
   "items": [
     {
-      "text": "Cleveland RB Quinshon Judkins (ankle) is in a protective boot with no timeline; RB Dylan Sampson is on IR.",
-      "source": "FantasyPros Week 7 injury report",
-      "url": "https://www.fantasypros.com/2026/10/fantasy-football-injury-report-updates-week-7-2026/"
+      "text": "Cleveland S Grant Delpit (concussion), C Elgton Jenkins (knee), G Teven Jenkins (back), LB Carson Schwesinger (ankle) and DTs Mike Hall Jr. and Kalia Davis did not practice Wednesday. RBs Quinshon Judkins and Dylan Sampson were limited and Todd Monken is optimistic both play. Deshaun Watson is not on the report.",
+      "source": "Yahoo (Browns Wednesday report)",
+      "url": "https://sports.yahoo.com/articles/wednesday-injury-report-browns-week-095639521.html"
+    },
+    {
+      "text": "Tennessee WR Calvin Ridley (hip) and S Tony Adams were limited Wednesday; Cam Ward is not on the report.",
+      "source": "Titans.com",
+      "url": "https://www.tennesseetitans.com/news/week-7-injury-report-titans-vs-browns"
     }
   ],
-  "adjust": []
+  "adjust": [
+    {
+      "market": "all",
+      "side": "TEN",
+      "points": 0.5,
+      "reason": "Cleveland missed two interior linemen, a starting safety, a starting linebacker and two defensive tackles at Wednesday practice while Tennessee is mostly healthy. The stats model doesn't price non-QB injuries"
+    }
+  ]
 }

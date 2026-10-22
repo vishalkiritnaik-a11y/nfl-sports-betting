@@ -1,16 +1,21 @@
 {
   "game_id": "2026_07_TB_CAR",
-  "updated": "2026-10-21T02:30:00Z",
+  "updated": "2026-10-22T21:30:00Z",
   "items": [
     {
-      "text": "Baker Mayfield (thumb) could return; the model projects Jalon Daniels and shows a Mayfield scenario. Tampa Bay WR Jalen McMillan is on IR.",
-      "source": "Yahoo Sports Week 7 injury report",
-      "url": "https://sports.yahoo.com/fantasy/article/nfl-injury-report-week-7-latest-news-updates-for-davante-adams-lamar-jackson-saquon-barkley-more-players-205914895.html"
+      "text": "Baker Mayfield (thumb) practiced fully Wednesday and Thursday; Todd Bowles will decide Friday between Mayfield and Jalon Daniels. The model projects Daniels and shows a Mayfield scenario.",
+      "source": "Buccaneers.com injury report",
+      "url": "https://www.buccaneers.com/news/buccaneers-panthers-injury-report-oct-22-week-7-2026"
     },
     {
-      "text": "Carolina RB Jonathon Brooks (core muscle) is on IR.",
-      "source": "Yahoo Sports Week 7 injury report",
-      "url": "https://sports.yahoo.com/fantasy/article/nfl-injury-report-week-7-latest-news-updates-for-davante-adams-lamar-jackson-saquon-barkley-more-players-205914895.html"
+      "text": "Tampa Bay WR Emeka Egbuka (concussion/foot), RT Luke Goedeke (calf) and LB Christian Rozeboom (finger) did not practice Wednesday or Thursday; S Antoine Winfield Jr. (rib) limited. WR Jalen McMillan is on IR.",
+      "source": "Pewter Report",
+      "url": "https://www.pewterreport.com/bucs-injury-report-is-baker-mayfield-back/"
+    },
+    {
+      "text": "Carolina OLBs Jaelan Phillips (hamstring) and Thomas Incoom (calf) did not practice Wednesday or Thursday; Bryce Young (knee) full both days. RB Jonathon Brooks is on IR.",
+      "source": "Buccaneers.com injury report",
+      "url": "https://www.buccaneers.com/news/buccaneers-panthers-injury-report-oct-22-week-7-2026"
     }
   ],
   "adjust": []

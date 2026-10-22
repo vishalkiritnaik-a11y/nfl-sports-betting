@@ -1,24 +1,17 @@
 {
   "game_id": "2026_07_MIA_NYJ",
-  "updated": "2026-10-21T02:30:00Z",
+  "updated": "2026-10-22T21:30:00Z",
   "items": [
     {
-      "text": "Miami RB De'Von Achane (knee) is out for the season.",
-      "source": "Yahoo Sports Week 7 injury report",
-      "url": "https://sports.yahoo.com/fantasy/article/nfl-injury-report-week-7-latest-news-updates-for-davante-adams-lamar-jackson-saquon-barkley-more-players-205914895.html"
+      "text": "Jets RB Breece Hall (quad) was upgraded to limited Thursday; WR Adonai Mitchell and G Dylan Parham limited both days; LB Kiko Mauigoa and EDGE Joseph Ossai did not practice Wednesday.",
+      "source": "The Jet Press",
+      "url": "https://thejetpress.com/breece-hall-trending-right-direction-after-jets-thursday-injury-report-01m5ja5sy613"
     },
     {
-      "text": "New York RB Breece Hall (quad) and WR Adonai Mitchell (finger) have no update; imaging on Hall showed no structural damage.",
-      "source": "FantasyPros Week 7 injury report",
-      "url": "https://www.fantasypros.com/2026/10/fantasy-football-injury-report-updates-week-7-2026/"
+      "text": "Miami QB Malik Willis (thumb) practiced fully Wednesday; CB Reese Taylor (quad) did not practice. RB De'Von Achane is out for the season (ACL).",
+      "source": "NBC Sports",
+      "url": "https://www.nbcsports.com/fantasy/football/player-news/2026-10-21/malik-willis-right-thumb-fp-receives-treatment"
     }
   ],
-  "adjust": [
-    {
-      "market": "all",
-      "side": "NYJ",
-      "points": 0.5,
-      "reason": "Miami loses De'Von Achane for the season; the Jets' absences are shorter-term. The stats model doesn't price non-QB injuries"
-    }
-  ]
+  "adjust": []
 }

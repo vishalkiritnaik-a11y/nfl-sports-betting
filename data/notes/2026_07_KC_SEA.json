@@ -1,19 +1,36 @@
 {
   "game_id": "2026_07_KC_SEA",
-  "updated": "2026-10-21T02:30:00Z",
+  "updated": "2026-10-22T21:30:00Z",
   "items": [
     {
-      "text": "Mike Macdonald has kept Sam Darnold as the starter. The schedule data had listed Drew Lock, so the model now uses Darnold (he started Weeks 3-6).",
-      "source": "Yahoo Sports",
-      "url": "https://sports.yahoo.com/articles/seahawks-action-sam-darnold-chiefs-164804836.html"
+      "text": "Seattle is sticking with Sam Darnold (not on the report); Drew Lock (elbow) was limited. The schedule data lists Lock, so the model uses Darnold.",
+      "source": "Seahawks.com injury report",
+      "url": "https://www.seahawks.com/news/2026-week-7-injury-report-chiefs-at-seahawks"
     },
     {
-      "text": "Kansas City WR Rashee Rice (hamstring) has no return date.",
-      "source": "FantasyPros Week 7 injury report",
-      "url": "https://www.fantasypros.com/2026/10/fantasy-football-injury-report-updates-week-7-2026/"
+      "text": "Kansas City LT Josh Simmons went to IR Thursday (back).",
+      "source": "The Big Lead",
+      "url": "https://www.thebiglead.com/chiefs-lose-josh-simmons-ir-week-7-matchup-seahawks/"
+    },
+    {
+      "text": "Chiefs WR Rashee Rice (hamstring) and RT Jaylon Moore (concussion) did not practice Wednesday; Travis Kelce (ankle) and CB L'Jarius Sneed limited; Patrick Mahomes full.",
+      "source": "Chiefs.com",
+      "url": "https://www.chiefs.com/news/week-7-injury-report-chiefs-vs-seahawks-2026"
+    },
+    {
+      "text": "Seattle LBs Drake Thomas and Chazz Surratt did not practice Wednesday; RB Zach Charbonnet was activated and practiced fully.",
+      "source": "Seahawks.com injury report",
+      "url": "https://www.seahawks.com/news/2026-week-7-injury-report-chiefs-at-seahawks"
     }
   ],
-  "adjust": [],
+  "adjust": [
+    {
+      "market": "all",
+      "side": "SEA",
+      "points": 0.5,
+      "reason": "Kansas City may be without both starting tackles plus Rashee Rice, while Seattle's absences are mostly linebackers. The stats model doesn't price non-QB injuries"
+    }
+  ],
   "qb_start": {
     "SEA": "Sam Darnold"
   }
