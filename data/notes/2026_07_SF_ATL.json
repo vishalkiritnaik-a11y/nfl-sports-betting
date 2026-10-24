@@ -1,21 +1,16 @@
 {
   "game_id": "2026_07_SF_ATL",
-  "updated": "2026-10-22T21:30:00Z",
+  "updated": "2026-10-24T20:56:00Z",
   "items": [
     {
-      "text": "San Francisco WR Mike Evans (Achilles tendinitis, ribs) did not practice Wednesday and Kyle Shanahan would not commit to him playing.",
-      "source": "Sactown Sports",
-      "url": "https://sactownsports.com/nfl/san-francisco-49ers/shanahan-49ers-falcons"
+      "text": "Final report: San Francisco ruled out WR Mike Evans (ribs/Achilles), WR Deebo Samuel (hamstring), DE Nick Bosa (knee/calf), LBs Luke Gifford and Garret Wallow and S Marques Sigle; WR Christian Kirk, CB Upton Stout and S Siran Neal are questionable. WR Ricky Pearsall is out for the season.",
+      "source": "CBS Sports Week 7 injury report",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-7-injury-report-baker-mayfield-lamar-jackson-questionable/"
     },
     {
-      "text": "49ers WR Deebo Samuel (hamstring) is likely to miss Sunday and DE Nick Bosa (calf) did not practice Wednesday; WR Ricky Pearsall is out for the season. Also out of Wednesday practice: CB Upton Stout, S Marques Sigle, DE Mykel Williams, LB Garret Wallow.",
-      "source": "Yahoo / 49ers Webzone",
-      "url": "https://sports.yahoo.com/articles/san-francisco-49ers-announce-nick-231822652.html"
-    },
-    {
-      "text": "Atlanta CB Billy Bowman and LB Divine Deablo did not practice Wednesday; CB A.J. Terrell returned from IR (limited).",
-      "source": "Yahoo (Falcons injury report)",
-      "url": "https://sports.yahoo.com/articles/falcons-vs-49ers-injury-report-105504370.html"
+      "text": "Final report: Atlanta ruled out RB Brian Robinson (hamstring), OT Michael Jerrell (bicep), LB Divine Deablo (forearm) and DB Billy Bowman Jr. (hamstring); questionable include CBs A.J. Terrell (groin, back from IR), Avieon Terrell and C.J. Henderson, DEs Za'Darius Smith and Samson Ebukam and DT Gervon Dexter.",
+      "source": "CBS Sports Week 7 injury report",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-7-injury-report-baker-mayfield-lamar-jackson-questionable/"
     }
   ],
   "adjust": [
@@ -23,7 +18,7 @@
       "market": "all",
       "side": "ATL",
       "points": 0.5,
-      "reason": "San Francisco is likely without Deebo Samuel, Ricky Pearsall and Nick Bosa, Mike Evans is in doubt, and several defensive starters missed practice. The stats model doesn't price non-QB injuries"
+      "reason": "San Francisco is without its top receivers Mike Evans and Deebo Samuel (Pearsall already lost) plus Nick Bosa and three other defenders; Atlanta's absences (Robinson, Deablo, Bowman, a backup tackle) are smaller, though several Falcons defenders are questionable. The stats model doesn't price non-QB injuries"
     }
   ]
 }

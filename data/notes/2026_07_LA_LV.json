@@ -1,21 +1,16 @@
 {
   "game_id": "2026_07_LA_LV",
-  "updated": "2026-10-22T21:30:00Z",
+  "updated": "2026-10-24T20:56:00Z",
   "items": [
     {
-      "text": "Rams WR Davante Adams is out 6-10 weeks after hamstring surgery and K Blake Grupe is on IR (torn ACL); TE Terrance Ferguson is on IR.",
-      "source": "The Rx",
-      "url": "https://www.therx.com/nfl/rams-lose-davante-adams-6-10-weeks-to-knee-surgery-place-kicker-blake-grupe-on-injured-reserve/53157/"
+      "text": "Final report: Rams ruled out LB Nate Landman (concussion); WR Puka Nacua (calf, sat out Friday) and CB Trent McDuffie (groin) are questionable. WR Davante Adams (hamstring surgery), K Blake Grupe, DL Kobie Turner and TE Terrance Ferguson are on IR.",
+      "source": "CBS Sports Week 7 injury report",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-7-injury-report-baker-mayfield-lamar-jackson-questionable/"
     },
     {
-      "text": "Rams DL Kobie Turner went to IR; CB Trent McDuffie (groin) and LB Nate Landman (concussion) did not practice Wednesday.",
-      "source": "Yahoo (Rams injury report)",
-      "url": "https://sports.yahoo.com/articles/rams-week-7-injury-report-010002876.html"
-    },
-    {
-      "text": "Raiders TE Brock Bowers (hamstring/calf) and LT Kolton Miller (shoulder) were limited Wednesday; Kirk Cousins starts.",
-      "source": "Raiders.com",
-      "url": "https://www.raiders.com/news/las-vegas-raiders-los-angeles-rams-week-7-injury-report-2026"
+      "text": "Final report: Raiders ruled out WR Dont'e Thornton Jr. (hamstring) and TE Carter Runyon (foot); RB Mike Washington Jr. is questionable. Brock Bowers and Kolton Miller have no designation; Kirk Cousins starts.",
+      "source": "CBS Sports Week 7 injury report",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-7-injury-report-baker-mayfield-lamar-jackson-questionable/"
     }
   ],
   "adjust": [
@@ -23,7 +18,7 @@
       "market": "all",
       "side": "LV",
       "points": 0.5,
-      "reason": "The Rams are without Davante Adams, Kobie Turner and their kicker, and McDuffie and Landman missed practice. The stats model doesn't price non-QB injuries"
+      "reason": "The Rams are without Davante Adams, Kobie Turner and Nate Landman with Puka Nacua and Trent McDuffie questionable, against smaller Raiders absences. The stats model doesn't price non-QB injuries"
     }
   ]
 }

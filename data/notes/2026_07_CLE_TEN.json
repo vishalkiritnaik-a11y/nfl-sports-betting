@@ -1,16 +1,16 @@
 {
   "game_id": "2026_07_CLE_TEN",
-  "updated": "2026-10-22T21:30:00Z",
+  "updated": "2026-10-24T20:56:00Z",
   "items": [
     {
-      "text": "Cleveland S Grant Delpit (concussion), C Elgton Jenkins (knee), G Teven Jenkins (back), LB Carson Schwesinger (ankle) and DTs Mike Hall Jr. and Kalia Davis did not practice Wednesday. RBs Quinshon Judkins and Dylan Sampson were limited and Todd Monken is optimistic both play. Deshaun Watson is not on the report.",
-      "source": "Yahoo (Browns Wednesday report)",
-      "url": "https://sports.yahoo.com/articles/wednesday-injury-report-browns-week-095639521.html"
+      "text": "Final report: Cleveland ruled out G Teven Jenkins (back), DTs Mike Hall Jr. (ankle) and Kalia Davis (quad) and backup QB Dillon Gabriel (back); CB Denzel Ward (hand), S Grant Delpit (concussion/shoulder), LB Quincy Williams and RB Dylan Sampson are questionable. Deshaun Watson starts.",
+      "source": "CBS Sports Week 7 injury report",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-7-injury-report-baker-mayfield-lamar-jackson-questionable/"
     },
     {
-      "text": "Tennessee WR Calvin Ridley (hip) and S Tony Adams were limited Wednesday; Cam Ward is not on the report.",
-      "source": "Titans.com",
-      "url": "https://www.tennesseetitans.com/news/week-7-injury-report-titans-vs-browns"
+      "text": "Final report: Tennessee has no one ruled out; WR Calvin Ridley (hip), RB Tyjae Spears, LB Dorian Mausi and S Tony Adams and Kevin Winston Jr. are questionable. Cam Ward starts.",
+      "source": "CBS Sports Week 7 injury report",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-7-injury-report-baker-mayfield-lamar-jackson-questionable/"
     }
   ],
   "adjust": [
@@ -18,7 +18,7 @@
       "market": "all",
       "side": "TEN",
       "points": 0.5,
-      "reason": "Cleveland missed two interior linemen, a starting safety, a starting linebacker and two defensive tackles at Wednesday practice while Tennessee is mostly healthy. The stats model doesn't price non-QB injuries"
+      "reason": "Cleveland is without a starting guard and two interior defensive linemen with Denzel Ward and Grant Delpit questionable, while Tennessee has no one ruled out. The stats model doesn't price non-QB injuries"
     }
   ]
 }

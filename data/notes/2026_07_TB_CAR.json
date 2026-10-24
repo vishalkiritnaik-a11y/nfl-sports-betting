@@ -1,22 +1,32 @@
 {
   "game_id": "2026_07_TB_CAR",
-  "updated": "2026-10-22T21:30:00Z",
+  "updated": "2026-10-24T20:56:00Z",
   "items": [
     {
-      "text": "Baker Mayfield (thumb) practiced fully Wednesday and Thursday; Todd Bowles will decide Friday between Mayfield and Jalon Daniels. The model projects Daniels and shows a Mayfield scenario.",
-      "source": "Buccaneers.com injury report",
-      "url": "https://www.buccaneers.com/news/buccaneers-panthers-injury-report-oct-22-week-7-2026"
+      "text": "Baker Mayfield (right thumb) will start, Todd Bowles said Friday, after missing three games; he is listed questionable but practiced fully all week. The schedule data lists Jalon Daniels, so the model uses Mayfield.",
+      "source": "NFL.com",
+      "url": "https://www.nfl.com/news/buccaneers-baker-mayfield-thumb-will-start-sunday-vs-panthers-three-game-absence"
     },
     {
-      "text": "Tampa Bay WR Emeka Egbuka (concussion/foot), RT Luke Goedeke (calf) and LB Christian Rozeboom (finger) did not practice Wednesday or Thursday; S Antoine Winfield Jr. (rib) limited. WR Jalen McMillan is on IR.",
-      "source": "Pewter Report",
-      "url": "https://www.pewterreport.com/bucs-injury-report-is-baker-mayfield-back/"
+      "text": "Final report: Tampa Bay ruled out WR Emeka Egbuka (concussion/foot), RT Luke Goedeke (calf) and S Antoine Winfield Jr. (rib); WR Jalen McMillan is on IR.",
+      "source": "CBS Sports Week 7 injury report",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-7-injury-report-baker-mayfield-lamar-jackson-questionable/"
     },
     {
-      "text": "Carolina OLBs Jaelan Phillips (hamstring) and Thomas Incoom (calf) did not practice Wednesday or Thursday; Bryce Young (knee) full both days. RB Jonathon Brooks is on IR.",
-      "source": "Buccaneers.com injury report",
-      "url": "https://www.buccaneers.com/news/buccaneers-panthers-injury-report-oct-22-week-7-2026"
+      "text": "Final report: Carolina ruled out OLBs Jaelan Phillips (hamstring) and Thomas Incoom (calf); OT Monroe Freeling (knee) and LB Bam Martin-Scott (hamstring) are questionable. Bryce Young has no designation; RB Jonathon Brooks is on IR.",
+      "source": "CBS Sports Week 7 injury report",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-7-injury-report-baker-mayfield-lamar-jackson-questionable/"
     }
   ],
-  "adjust": []
+  "adjust": [
+    {
+      "market": "all",
+      "side": "CAR",
+      "points": 0.5,
+      "reason": "Tampa Bay is without its top receiver Emeka Egbuka, right tackle Luke Goedeke and safety Antoine Winfield Jr., which outweighs Carolina losing two edge rushers. The stats model doesn't price non-QB injuries"
+    }
+  ],
+  "qb_start": {
+    "TB": "Baker Mayfield"
+  }
 }

@@ -1,16 +1,16 @@
 {
   "game_id": "2026_07_IND_MIN",
-  "updated": "2026-10-22T21:30:00Z",
+  "updated": "2026-10-24T20:56:00Z",
   "items": [
     {
-      "text": "Indianapolis CB Sauce Gardner (calf), TE Tyler Warren (groin), CB Justin Walley (knee), G Matt Goncalves (ankle) and TE Drew Ogletree did not practice Wednesday. WR Alec Pierce is on IR.",
-      "source": "Vikings.com (Colts injury report)",
-      "url": "https://www.vikings.com/news/colts-injury-report-week-7-2026-nfl-season"
+      "text": "Final report: Indianapolis ruled out CB Sauce Gardner (calf), TE Tyler Warren (groin) and WR Anthony Gould (concussion); LB CJ Allen (ankle) is questionable per CBS (Yahoo lists him out), with LB Bryce Boettcher, CB Justin Walley and P Rigoberto Sanchez also questionable. WR Alec Pierce is on IR.",
+      "source": "CBS Sports Week 7 injury report",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-7-injury-report-baker-mayfield-lamar-jackson-questionable/"
     },
     {
-      "text": "Minnesota (off a Week 6 bye): Justin Jefferson (ankle) and RT Brian O'Neill limited Wednesday; Jordan Addison, T.J. Hockenson and Christian Darrisaw full, and RB Jordan Mason was designated to return from IR. Kyler Murray is healthy.",
-      "source": "Vikings.com",
-      "url": "https://www.vikings.com/news/colts-injury-report-week-7-2026-nfl-season"
+      "text": "Final report: Minnesota lists only RB Jordan Mason (thumb) as questionable; Justin Jefferson and Kyler Murray have no designation.",
+      "source": "CBS Sports Week 7 injury report",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-7-injury-report-baker-mayfield-lamar-jackson-questionable/"
     }
   ],
   "adjust": [
@@ -18,7 +18,7 @@
       "market": "all",
       "side": "MIN",
       "points": 0.5,
-      "reason": "Indianapolis may be without both starting cornerbacks, a starting guard and its top tight ends while Minnesota is getting healthy off its bye. The stats model doesn't price non-QB injuries"
+      "reason": "Indianapolis is without CB Sauce Gardner and TE Tyler Warren (WR Alec Pierce already on IR) while Minnesota is essentially healthy. The stats model doesn't price non-QB injuries"
     }
   ]
 }

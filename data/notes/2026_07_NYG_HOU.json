@@ -1,29 +1,22 @@
 {
   "game_id": "2026_07_NYG_HOU",
-  "updated": "2026-10-22T21:30:00Z",
+  "updated": "2026-10-24T20:56:00Z",
   "items": [
     {
-      "text": "John Harbaugh named J.J. McCarthy the starter over Jameis Winston; Jaxson Dart is on IR.",
-      "source": "Giants.com",
-      "url": "https://www.giants.com/news/j-j-mccarthy-to-start-quarterback-new-york-giants-week-7-houston-texans-john-harbaugh-jameis-winston"
+      "text": "J.J. McCarthy starts for New York; Jaxson Dart is on IR.",
+      "source": "Yahoo Sports Week 7 injury tracker",
+      "url": "https://sports.yahoo.com/fantasy/live/nfl-injury-tracker-week-7-latest-news-fantasy-implications-as-saquon-barkley-hamstring-back-at-practice-lamar-jackson-ankle-puka-nacua-calf-questionable-193729208.html"
     },
     {
-      "text": "Giants LB Tremaine Edmunds (shoulder) and CB Greg Newsome II (concussion) did not practice Wednesday or Thursday; LT Andrew Thomas, RT Jermaine Eluemunor and S Jevon Holland were upgraded to limited Thursday.",
-      "source": "Giants.com injury report",
-      "url": "https://www.giants.com/news/giants-vs-texans-week-7-injury-report-tremaine-edmunds-jevon-holland-jermaine-eluemunor-andrew-thomas"
+      "text": "Final report: Giants ruled out LB Tremaine Edmunds (shoulder/chest, reportedly out for the season) and CB Greg Newsome II (concussion); TE Theo Johnson (neck) is doubtful. S Jevon Holland (concussion) is questionable per CBS (Yahoo lists him out); OTs Jermaine Eluemunor and Marcus Mbow, CB Paulson Adebo and S Tyler Nubin are questionable.",
+      "source": "CBS Sports Week 7 injury report",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-7-injury-report-baker-mayfield-lamar-jackson-questionable/"
     },
     {
-      "text": "Houston RB David Montgomery (groin), S Reed Blankenship (concussion), S Jalen Pitre (shoulder) and OT Blake Fisher (thumb) did not practice Wednesday or Thursday; TE Dalton Schultz and LB Azeez Al-Shaair limited Thursday. WR Jayden Higgins is out for the season; C.J. Stroud is not on the report.",
-      "source": "Giants.com injury report",
-      "url": "https://www.giants.com/news/giants-vs-texans-week-7-injury-report-tremaine-edmunds-jevon-holland-jermaine-eluemunor-andrew-thomas"
+      "text": "Final report: Houston ruled out RB David Montgomery (groin), OT Blake Fisher (thumb) and both safeties Reed Blankenship (concussion/hand) and Jalen Pitre (shoulder); WR Tank Dell (knee) is questionable and set to return. C.J. Stroud starts.",
+      "source": "CBS Sports Week 7 injury report",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-7-injury-report-baker-mayfield-lamar-jackson-questionable/"
     }
   ],
-  "adjust": [
-    {
-      "market": "all",
-      "side": "NYG",
-      "points": 0.5,
-      "reason": "Houston has missed both starting safeties, RB David Montgomery and a starting tackle at practice all week while the Giants' linemen are trending back. The stats model doesn't price non-QB injuries"
-    }
-  ]
+  "adjust": []
 }
