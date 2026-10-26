@@ -1,21 +1,26 @@
 {
   "game_id": "2026_07_DAL_PHI",
-  "updated": "2026-10-24T20:56:00Z",
+  "updated": "2026-10-26T21:05:00Z",
   "items": [
     {
-      "text": "Jalen Hurts (blood clots) is on IR; Tanner McKee starts. The schedule data still lists Hurts, so the model uses McKee.",
-      "source": "Yahoo Sports Week 7 injury tracker",
-      "url": "https://sports.yahoo.com/fantasy/live/nfl-injury-tracker-week-7-latest-news-fantasy-implications-as-saquon-barkley-hamstring-back-at-practice-lamar-jackson-ankle-puka-nacua-calf-questionable-193729208.html"
+      "text": "Jalen Hurts (blood clots) is on IR; Tanner McKee starts (he threw every Eagles pass in Week 6). The schedule data still lists Hurts, so the model uses McKee.",
+      "source": "SI",
+      "url": "https://www.si.com/betting/saquon-barkley-injury-update-betting-impact-for-cowboys-vs-eagles-in-nfl-week-7-2026"
     },
     {
-      "text": "Saturday report for Monday: Philadelphia ruled out WR DeVonta Smith (hamstring), WR Dontayvion Wicks (ankle), OLB Nolan Smith (concussion) and DB Michael Carter (abdomen); RB Saquon Barkley (hamstring), EDGEs Jonathan Greenard and Jalyx Hunt, G Landon Dickerson, CB Jakorian Bennett and TEs Grant Calcaterra and Eli Stowers are questionable.",
-      "source": "CBS Sports Week 7 injury report",
-      "url": "https://www.cbssports.com/nfl/news/nfl-week-7-injury-report-baker-mayfield-lamar-jackson-questionable/"
+      "text": "Philadelphia final report: WR DeVonta Smith (hamstring), WR Dontayvion Wicks (ankle), OLB Nolan Smith (concussion) and DB Michael Carter (abdomen) are out. RB Saquon Barkley (hamstring) is questionable after a full Saturday practice; Ian Rapoport expects him to play. OLB Jonathan Greenard (ankle) is a true game-time decision, and OLB Jalyx Hunt (knee/ankle) is questionable.",
+      "source": "Philadelphia Eagles injury report",
+      "url": "https://www.philadelphiaeagles.com/news/cowboys-vs-eagles-injury-report-2026-nfl-week-7-saquon-barkley-jalyx-hunt"
     },
     {
-      "text": "Saturday report for Monday: Dallas ruled out OT Drew Shelton (hamstring), WR/KR KaVontae Turpin (ribs) and LB Dee Winters (calf); OLB Marist Liufau and S P.J. Locke are questionable. Dak Prescott starts.",
-      "source": "CBS Sports Week 7 injury report",
-      "url": "https://www.cbssports.com/nfl/news/nfl-week-7-injury-report-baker-mayfield-lamar-jackson-questionable/"
+      "text": "Monday: Philadelphia activated G Landon Dickerson and TEs Eli Stowers and Grant Calcaterra off IR and elevated RB Elijah Mitchell and OLB Keyshawn James-Newby. CB Jakorian Bennett was not activated, so he won't play.",
+      "source": "NBC Sports Philadelphia",
+      "url": "https://nbcsportsphiladelphia.com/nfl/philadelphia-eagles/eagles-activate-landon-dickerson-eli-stowers-for-cowboys-game/761696"
+    },
+    {
+      "text": "Dallas final report: OT Drew Shelton (hamstring), WR/KR KaVontae Turpin (ribs) and LB Dee Winters (calf) are out. OLB Marist Liufau and S P.J. Locke are questionable and must be activated off IR. CB Cobie Durant and LB DeMarvion Overshown (pitch count) are trending toward playing. Dak Prescott starts.",
+      "source": "Philadelphia Eagles injury report",
+      "url": "https://www.philadelphiaeagles.com/news/cowboys-vs-eagles-injury-report-2026-nfl-week-7-saquon-barkley-jalyx-hunt"
     }
   ],
   "adjust": [
@@ -23,7 +28,7 @@
       "market": "all",
       "side": "DAL",
       "points": 0.5,
-      "reason": "Philadelphia is without DeVonta Smith, Dontayvion Wicks and Nolan Smith with Barkley, Greenard and Dickerson all questionable, more than Dallas's losses. The stats model doesn't price non-QB injuries"
+      "reason": "Philadelphia is without both DeVonta Smith and Dontayvion Wicks plus Nolan Smith, with Greenard a game-time decision, which outweighs Dallas losing Drew Shelton, Turpin and Winters even with Dickerson back. The stats model doesn't price non-QB injuries"
     }
   ],
   "qb_start": {
