@@ -1,5 +1,5 @@
 {
- "last_run": "2026-10-27T16:11:42Z",
+ "last_run": "2026-10-27T16:59:04Z",
  "season": 2026,
  "week": 8,
  "trigger_slot": null,
@@ -18,7 +18,7 @@
    "wind_kickoff_mph": 8.5,
    "gust_mph": 20.1,
    "precip_prob_pct": 0,
-   "lead_hours": 56.1,
+   "lead_hours": 55.3,
    "total_delta": 0.0
   },
   "2026_08_BAL_BUF": {
@@ -29,7 +29,7 @@
    "wind_kickoff_mph": 5.7,
    "gust_mph": 9.6,
    "precip_prob_pct": 10,
-   "lead_hours": 121.8,
+   "lead_hours": 121.0,
    "total_delta": 0.0
   },
   "2026_08_TEN_CIN": {
@@ -40,7 +40,7 @@
    "wind_kickoff_mph": 9.3,
    "gust_mph": 32.4,
    "precip_prob_pct": 45,
-   "lead_hours": 121.8,
+   "lead_hours": 121.0,
    "total_delta": 0.0
   },
   "2026_08_ARI_DAL": {
@@ -51,7 +51,7 @@
    "wind_kickoff_mph": 1.6,
    "gust_mph": 4.3,
    "precip_prob_pct": 5,
-   "lead_hours": 121.8
+   "lead_hours": 121.0
   },
   "2026_08_MIN_DET": {
    "status": "indoor"
@@ -64,7 +64,7 @@
    "wind_kickoff_mph": 11.1,
    "gust_mph": 20.6,
    "precip_prob_pct": 50,
-   "lead_hours": 121.8,
+   "lead_hours": 121.0,
    "total_delta": -0.56
   },
   "2026_08_LV_NYJ": {
@@ -75,7 +75,7 @@
    "wind_kickoff_mph": 7.5,
    "gust_mph": 10.1,
    "precip_prob_pct": 3,
-   "lead_hours": 121.8,
+   "lead_hours": 121.0,
    "total_delta": 0.0
   },
   "2026_08_CLE_PIT": {
@@ -86,7 +86,7 @@
    "wind_kickoff_mph": 2.3,
    "gust_mph": 10.3,
    "precip_prob_pct": 29,
-   "lead_hours": 121.8,
+   "lead_hours": 121.0,
    "total_delta": 0.0
   },
   "2026_08_ATL_TB": {
@@ -97,7 +97,7 @@
    "wind_kickoff_mph": 10.1,
    "gust_mph": 13.0,
    "precip_prob_pct": 50,
-   "lead_hours": 121.8,
+   "lead_hours": 121.0,
    "total_delta": -0.05
   },
   "2026_08_LAC_LA": {
@@ -111,7 +111,7 @@
    "wind_kickoff_mph": 1.9,
    "gust_mph": 11.4,
    "precip_prob_pct": 8,
-   "lead_hours": 125.2,
+   "lead_hours": 124.4,
    "total_delta": 0.0
   },
   "2026_08_NE_MIA": {
@@ -122,7 +122,7 @@
    "wind_kickoff_mph": 11.3,
    "gust_mph": 10.1,
    "precip_prob_pct": 44,
-   "lead_hours": 125.2,
+   "lead_hours": 124.4,
    "total_delta": -0.66
   },
   "2026_08_PHI_WAS": {
@@ -133,7 +133,7 @@
    "wind_kickoff_mph": 6.5,
    "gust_mph": 21.5,
    "precip_prob_pct": 27,
-   "lead_hours": 129.1,
+   "lead_hours": 128.3,
    "total_delta": 0.0
   },
   "2026_08_CHI_SEA": {
@@ -144,7 +144,7 @@
    "wind_kickoff_mph": 6.9,
    "gust_mph": 13.2,
    "precip_prob_pct": 4,
-   "lead_hours": 153.1,
+   "lead_hours": 152.3,
    "total_delta": 0.0
   }
  }
