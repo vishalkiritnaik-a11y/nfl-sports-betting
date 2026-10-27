@@ -2,9 +2,9 @@
  "version": "game-v1.0",
  "trained_through": {
   "season": 2026,
-  "week": 6
+  "week": 7
  },
- "updated": "2026-10-21T02:35:44Z",
+ "updated": "2026-10-27T16:11:41Z",
  "rating": {
   "k_mult": 1.0,
   "prior_regress": 0.5
@@ -65,6 +65,23 @@
    },
    "prior_log_loss": 0.6308680456609341,
    "current_log_loss": 0.6674691026596797
+  },
+  {
+   "for_week": "2026_08",
+   "generated": "2026-10-27T16:11:41Z",
+   "version": "game-v1.0",
+   "changed": false,
+   "rating": {
+    "k_mult": 1.0,
+    "prior_regress": 0.5
+   },
+   "model": {
+    "alpha": 25.0,
+    "logit_c": 0.05,
+    "half_life": null
+   },
+   "prior_log_loss": 0.630868045660934,
+   "current_log_loss": 0.6722908286288768
   }
  ]
 }
