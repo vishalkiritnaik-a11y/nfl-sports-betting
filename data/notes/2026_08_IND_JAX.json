@@ -1,0 +1,24 @@
+{
+  "game_id": "2026_08_IND_JAX",
+  "updated": "2026-10-27T21:10:00Z",
+  "items": [
+    {
+      "text": "Indianapolis: TE Tyler Warren (groin) has missed two games and his practice status is unknown; WR Alec Pierce is on IR (heel surgery). CB Sauce Gardner (calf) missed Week 7 and CBs Justin Walley (knee) and Cam Taylor-Britt (groin) left the Vikings game, leaving three of the top four corners hurt. DE Arden Key is on IR.",
+      "source": "Yahoo Sports (IndyStar)",
+      "url": "https://sports.yahoo.com/articles/colts-coach-shane-steichen-provides-205308505.html"
+    },
+    {
+      "text": "Jacksonville (off a bye): LT Anton Harrison (IR) has a torn ACL and is out for the season; Walker Little starts at left tackle. CB Montaric Brown (hamstring) and S Antonio Johnson (ankle) return to practice, status TBD.",
+      "source": "Jaguars.com",
+      "url": "https://www.jaguars.com/news/monday-insider-excited-about-getting-back-in-the-building"
+    }
+  ],
+  "adjust": [
+    {
+      "market": "all",
+      "side": "JAX",
+      "points": 0.5,
+      "reason": "Indianapolis has three of its top four cornerbacks hurt plus TE Tyler Warren and WR Alec Pierce out, which outweighs Jacksonville losing LT Anton Harrison. The stats model doesn't price non-QB injuries"
+    }
+  ]
+}

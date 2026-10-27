@@ -1,0 +1,32 @@
+{
+  "game_id": "2026_08_PHI_WAS",
+  "updated": "2026-10-27T21:10:00Z",
+  "items": [
+    {
+      "text": "Jalen Hurts (blood clots) is on IR and Tanner McKee has started since; the schedule data lists Hurts, so the model uses McKee.",
+      "source": "CBS Sports",
+      "url": "https://www.cbssports.com/fantasy/football/news/eagles-tanner-mckee-filling-in-as-starter-with-hurts-on-ir/"
+    },
+    {
+      "text": "Saquon Barkley re-tweaked his hamstring and hurt his back Monday and was pulled; he says he doesn't expect to miss time (status uncertain). WR Britain Covey (knee), RB Dameon Pierce and DT Moro Ojomo also left. WRs DeVonta Smith (hamstring) and Dontayvion Wicks (ankle), EDGE Nolan Smith (concussion) and CB Michael Carter II were inactive in Week 7.",
+      "source": "Philadelphia Inquirer",
+      "url": "https://www.inquirer.com/eagles/live/eagles-score-news-injury-report-saquon-barkley-next-game-schedule-20261027.html"
+    },
+    {
+      "text": "Washington (off a bye): WR Terry McLaurin (torn patellar tendon) is out for the season. QB Marcus Mariota, DL Charles Omenihu and WR Treylon Burks are expected back at practice; Jayden Daniels starts.",
+      "source": "SI (Commanders On SI)",
+      "url": "https://www.si.com/nfl/commanders/onsi/commanders-injury-update-mariota-omenihu-burks-kinlaw"
+    }
+  ],
+  "adjust": [
+    {
+      "market": "all",
+      "side": "WAS",
+      "points": 0.5,
+      "reason": "Philadelphia may again be without DeVonta Smith, Dontayvion Wicks and Nolan Smith with Saquon Barkley banged up, while Washington's main loss is Terry McLaurin. The stats model doesn't price non-QB injuries"
+    }
+  ],
+  "qb_start": {
+    "PHI": "Tanner McKee"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "game_id": "2026_08_BAL_BUF",
+  "updated": "2026-10-27T21:10:00Z",
+  "items": [
+    {
+      "text": "Lamar Jackson (high-ankle sprain) has missed three straight games. Rapoport says he is likely to return and CBS's Tracy Wolfson reported he will play in Week 8; coach Jesse Minter said 'we'll know a lot more on Wednesday.' The schedule data lists Tyler Huntley, so the model uses Jackson; revisit if he doesn't practice.",
+      "source": "CBS Sports",
+      "url": "https://www.cbssports.com/fantasy/football/news/ravens-lamar-jackson-expected-back-for-week-8/"
+    },
+    {
+      "text": "Baltimore: OLB Tavius Robinson (pectoral) is out for the season; DL Broderick Washington Jr. (ankle) has missed two games; centers Ethan Pocic and Jovaughn Gwyn are on IR. Rookie RG Vega Ioane (knee) left Week 7 early, and G Andrew Vorhees (foot) and S Jaylinn Hawkins (knee) missed the game.",
+      "source": "Yahoo Sports",
+      "url": "https://sports.yahoo.com/articles/bills-vs-ravens-injury-buffalo-184729406.html"
+    },
+    {
+      "text": "Buffalo (off a bye): WR DJ Moore (shoulder) and DT Ed Oliver (knee) could return after the bye per Joe Brady; TE Dalton Kincaid (ribs) is questionable. S C.J. Gardner-Johnson is suspended for this game.",
+      "source": "Yahoo Sports",
+      "url": "https://sports.yahoo.com/articles/bills-joe-brady-announces-dj-175021480.html"
+    }
+  ],
+  "adjust": [],
+  "qb_start": {
+    "BAL": "Lamar Jackson"
+  }
+}
