@@ -1,31 +1,31 @@
 {
   "game_id": "2026_08_CAR_GB",
-  "updated": "2026-10-27T21:10:00Z",
+  "updated": "2026-10-29T21:00:00Z",
   "items": [
     {
-      "text": "Monday estimated report (no practice): Carolina listed DT Bobby Brown III (hand), CB Akayleb Evans (triceps/knee), G Damien Lewis (knee), OLB Jaelan Phillips (hamstring) and OL Torricelli Simpkins III (ankle) as DNP; WR Jalen Coker (shoulder) limited. PFT counts four starters among the DNPs. Bryce Young (knee) was a full participant.",
-      "source": "NBC Sports PFT",
-      "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/panthers-estimate-four-starters-out-of-practice-including-olb-jaelan-phillips"
+      "text": "Final report: Carolina ruled out OLB Jaelan Phillips (hamstring), LG Damien Lewis (knee), CB Akayleb Evans (triceps/knee) and OL Torricelli Simpkins III (ankle); DT Bobby Brown III (hand) is questionable. The team says it has seven healthy offensive linemen and two healthy cornerbacks. Bryce Young (ankle) has no designation.",
+      "source": "Panthers.com",
+      "url": "https://www.panthers.com/news/week-8-wednesday-injury-report-four-ruled-out-for-packers-game"
     },
     {
-      "text": "Carolina placed RT Taylor Moton (fractured fibula) on IR; Monroe Freeling moves to right tackle. LT Ikem Ekwonu is already out for the season.",
+      "text": "Carolina is also without RT Taylor Moton (fibula, IR), LT Ikem Ekwonu (season) and CB Jaycee Horn (torn quad, headed to IR).",
       "source": "NBC Sports PFT",
       "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/panthers-put-taylor-moton-on-injured-reserve"
     },
     {
-      "text": "Carolina CB Jaycee Horn tore a quad and is out indefinitely; Ian Rapoport reports he is headed to IR, possibly for the season.",
-      "source": "Heavy",
-      "url": "https://heavy.com/sports/nfl/carolina-panthers/bad-news-ahead-of-thursday-night/"
+      "text": "Final report: Green Bay ruled out LB Zaire Franklin (shin), RG Travis Glover (knee) and C Sean Rhyan (ankle); WR Matthew Golden (shoulder/foot), DT Devonte Wyatt (ankle), DT Anthony Campbell (ankle) and Edge Brenton Cox (quad) are questionable. Kevin Zeitler or Mekhi Becton at RG, John Williams likely at C.",
+      "source": "SI (Packer Central)",
+      "url": "https://www.si.com/nfl/packers/onsi/packers-panthers-final-injury-report-is-it-finally-kevin-zeitler-s-time"
     },
     {
-      "text": "Monday estimated report: Green Bay listed DT Anthony Campbell (ankle), LB Zaire Franklin (shin), G/T Travis Glover (knee), WR Matthew Golden (shoulder/foot), C Sean Rhyan (ankle) and DT Devonte Wyatt (ankle) as DNP; G Aaron Banks (knee/toe) limited. G Jacob Monk went on IR. Jordan Love and Christian Watson are off the report.",
+      "text": "Thursday: CB Keisean Nixon (shoulder) was added to the report as questionable.",
       "source": "Packers.com",
-      "url": "https://www.packers.com/news/packers-panthers-injury-report-oct-26-2026"
+      "url": "https://www.packers.com/news/packers-announce-injury-update-oct-29-2026"
     },
     {
-      "text": "Rapoport: Rhyan likely has a high-ankle sprain (a month or more); Franklin has a hairline leg fracture but isn't expected to go on IR. Edge Micah Parsons (knee) is not expected to play Thursday.",
-      "source": "Yahoo Sports",
-      "url": "https://sports.yahoo.com/articles/matthew-golden-injury-more-packers-215039941.html"
+      "text": "Edge Micah Parsons is on reserve/PUP and will not play; a return is targeted for weeks later. Golden is a game-time call after limited Wednesday work.",
+      "source": "Lombardi Ave",
+      "url": "https://lombardiave.com/packers-week-8-injury-updates-matthew-golden-uncertainty-micah-parsons-update"
     }
   ],
   "adjust": [
@@ -33,7 +33,7 @@
       "market": "all",
       "side": "GB",
       "points": 0.5,
-      "reason": "Carolina may be without four defensive starters (Phillips, Brown, Evans, Lewis) plus RT Moton and CB Jaycee Horn on a short week, which outweighs Green Bay's interior line and linebacker absences. The stats model doesn't price non-QB injuries"
+      "reason": "Carolina is down to two healthy cornerbacks without Horn and Evans and is missing OLB Phillips, LG Lewis and RT Moton, which outweighs Green Bay's two interior-line starters and LB Franklin. The stats model doesn't price non-QB injuries"
     }
   ]
 }

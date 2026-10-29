@@ -1,21 +1,21 @@
 {
   "game_id": "2026_08_PHI_WAS",
-  "updated": "2026-10-27T21:10:00Z",
+  "updated": "2026-10-29T21:00:00Z",
   "items": [
     {
       "text": "Jalen Hurts (blood clots) is on IR and Tanner McKee has started since; the schedule data lists Hurts, so the model uses McKee.",
       "source": "CBS Sports",
-      "url": "https://www.cbssports.com/fantasy/football/news/eagles-tanner-mckee-filling-in-as-starter-with-hurts-on-ir/"
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-8-injury-report-lamar-jackson-kerby-joseph-updates/"
     },
     {
-      "text": "Saquon Barkley re-tweaked his hamstring and hurt his back Monday and was pulled; he says he doesn't expect to miss time (status uncertain). WR Britain Covey (knee), RB Dameon Pierce and DT Moro Ojomo also left. WRs DeVonta Smith (hamstring) and Dontayvion Wicks (ankle), EDGE Nolan Smith (concussion) and CB Michael Carter II were inactive in Week 7.",
-      "source": "Philadelphia Inquirer",
-      "url": "https://www.inquirer.com/eagles/live/eagles-score-news-injury-report-saquon-barkley-next-game-schedule-20261027.html"
+      "text": "Philadelphia (Wednesday estimate): RB Saquon Barkley (hamstring/back), WR DeVonta Smith (hamstring), WR Dontayvion Wicks (ankle), WR Britain Covey (knee), CB Jonathan Jones (hamstring) and LB Jihaad Campbell (hamstring/quad) did not participate; EDGE Nolan Smith (concussion), EDGE Jonathan Greenard (ankle), DB Michael Carter II and DT Moro Ojomo were limited.",
+      "source": "PhiladelphiaEagles.com",
+      "url": "https://www.philadelphiaeagles.com/news/eagles-at-commanders-injury-report-2026-nfl-week-8-sunday-night-football-saquon-barkley-devonta-smith"
     },
     {
-      "text": "Washington (off a bye): WR Terry McLaurin (torn patellar tendon) is out for the season. QB Marcus Mariota, DL Charles Omenihu and WR Treylon Burks are expected back at practice; Jayden Daniels starts.",
-      "source": "SI (Commanders On SI)",
-      "url": "https://www.si.com/nfl/commanders/onsi/commanders-injury-update-mariota-omenihu-burks-kinlaw"
+      "text": "Washington (Wednesday): WR Stefon Diggs (hand/hamstring/rest), DT Javon Kinlaw (knee, Dan Quinn says likely out) and TE John Bates (shoulder) did not practice; WR Treylon Burks and DE Charles Omenihu were limited. Jayden Daniels (elbow) was full and starts. WR Terry McLaurin is out for the season.",
+      "source": "PhiladelphiaEagles.com",
+      "url": "https://www.philadelphiaeagles.com/news/eagles-at-commanders-injury-report-2026-nfl-week-8-sunday-night-football-saquon-barkley-devonta-smith"
     }
   ],
   "adjust": [
@@ -23,7 +23,7 @@
       "market": "all",
       "side": "WAS",
       "points": 0.5,
-      "reason": "Philadelphia may again be without DeVonta Smith, Dontayvion Wicks and Nolan Smith with Saquon Barkley banged up, while Washington's main loss is Terry McLaurin. The stats model doesn't price non-QB injuries"
+      "reason": "Philadelphia may be without Saquon Barkley, DeVonta Smith, Dontayvion Wicks and LB Jihaad Campbell, while Washington's main losses are Terry McLaurin and DT Javon Kinlaw. The stats model doesn't price non-QB injuries"
     }
   ],
   "qb_start": {

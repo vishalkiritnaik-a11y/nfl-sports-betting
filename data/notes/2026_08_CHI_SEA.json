@@ -1,16 +1,26 @@
 {
   "game_id": "2026_08_CHI_SEA",
-  "updated": "2026-10-27T21:10:00Z",
+  "updated": "2026-10-29T21:00:00Z",
   "items": [
     {
-      "text": "Chicago TE Cole Kmet (knee) goes on IR for the season. At Tuesday's practice RB Kyle Monangai (toe), CB Malik Muhammad (toe) and CB Tyrique Stevenson (hip) did not practice; LB T.J. Edwards (hamstring) returned.",
+      "text": "Chicago acquired All-Pro DT Jeffery Simmons from Tennessee on Thursday for two first-round picks.",
+      "source": "NFL.com",
+      "url": "https://www.nfl.com/news/jeffery-simmons-bears-titans-trade"
+    },
+    {
+      "text": "Chicago: RB Kyle Monangai (turf toe/thumb), CB Malik Muhammad (toe) and CB Tyrique Stevenson (hip) missed early-week practice; Ben Johnson called Monangai week-to-week. TE Cole Kmet is on season-ending IR.",
       "source": "A to Z Sports",
       "url": "https://atozsports.com/nfl/chicago-bears-news/bears-injury-news-week-8-seahawks-kyle-monangai-malik-muhammad"
     },
     {
-      "text": "Seattle LT Charles Cross has a high-ankle sprain (hoped 1-2 weeks per Rapoport); Josh Jones would start. WR Rashid Shaheed (knee) missed the second half vs KC with 'positive' early returns. RB Zach Charbonnet could debut.",
-      "source": "Yahoo Sports",
-      "url": "https://sports.yahoo.com/articles/seahawks-avoid-worst-case-scenario-182805016.html"
+      "text": "Seattle acquired LG Quenton Nelson from Indianapolis on Oct. 27.",
+      "source": "AP (News4Jax)",
+      "url": "https://www.news4jax.com/sports/2026/10/27/colts-trade-all-pro-guard-quenton-nelson-to-seahawks-ap-source-says/"
+    },
+    {
+      "text": "Seattle LT Charles Cross (high-ankle sprain) is expected to miss the game; Josh Jones starts. WR Rashid Shaheed (knee) had 'positive' early returns; RBs Zach Charbonnet and Jadarian Price (IR) are practicing, status TBD. First official report for the Monday game is due Thursday.",
+      "source": "Seattle Sports (MyNorthwest)",
+      "url": "https://sports.mynorthwest.com/nfl/seattle-seahawks/seattle-seahawks-injury-updates-shaheed-cross-charbonnet-price"
     }
   ],
   "adjust": []

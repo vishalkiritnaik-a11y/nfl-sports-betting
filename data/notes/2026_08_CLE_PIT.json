@@ -1,21 +1,21 @@
 {
   "game_id": "2026_08_CLE_PIT",
-  "updated": "2026-10-27T21:10:00Z",
+  "updated": "2026-10-29T21:00:00Z",
   "items": [
     {
-      "text": "Cleveland activated QB Dillon Gabriel (back) from IR and now carries four QBs; Deshaun Watson has started all seven games and is expected to remain the starter.",
+      "text": "Deshaun Watson has started all seven games and remains the Browns' starter.",
       "source": "ESPN",
       "url": "https://www.espn.com/nfl/story/_/id/50290389/browns-activate-gabriel-ir-now-4-qbs-roster"
     },
     {
-      "text": "Cleveland DT Mason Graham briefly limped off in Week 7 but returned; DL Mike Hall Jr. (ankle) missed the game.",
-      "source": "Yahoo Sports (Heavy)",
-      "url": "https://sports.yahoo.com/articles/browns-mason-graham-injury-scare-220958017.html"
+      "text": "Cleveland (Wednesday): EDGE Jared Verse (knee), C Elgton Jenkins (knee) and OT Tytus Howard (concussion) did not practice; LB Carson Schwesinger (ankle), DT Mason Graham (ankle), DT Mike Hall Jr. (ankle), RB Dylan Sampson (knee) and S Grant Delpit (neck) were limited.",
+      "source": "CBS Sports (Wednesday practice report)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-8-injury-report-lamar-jackson-kerby-joseph-updates/"
     },
     {
-      "text": "Pittsburgh: EDGE T.J. Watt was dinged but returned in Week 7; WR Ben Skowronek (calf) and CB Brandin Echols (hamstring) were out; DL Sebastian Joseph-Day went on IR (triceps). WR Michael Pittman Jr. (foot) remains on IR.",
-      "source": "Steelers Depot",
-      "url": "https://steelersdepot.com/2026/10/injury-recap-steelers-have-good-news-on-health-front-after-saints-win/"
+      "text": "Pittsburgh (Wednesday): CB Jalen Ramsey (wrist), CB Brandin Echols (hamstring) and DB Doneiko Slaughter (hamstring) did not practice (Watt, Heyward, Washington rested); EDGE Alex Highsmith (groin) and WR Ben Skowronek (calf) were limited. WR Michael Pittman Jr. is on IR.",
+      "source": "CBS Sports (Wednesday practice report)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-8-injury-report-lamar-jackson-kerby-joseph-updates/"
     }
   ],
   "adjust": []

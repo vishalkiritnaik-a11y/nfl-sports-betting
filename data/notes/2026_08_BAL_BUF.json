@@ -1,21 +1,21 @@
 {
   "game_id": "2026_08_BAL_BUF",
-  "updated": "2026-10-27T21:10:00Z",
+  "updated": "2026-10-29T21:00:00Z",
   "items": [
     {
-      "text": "Lamar Jackson (high-ankle sprain) has missed three straight games. Rapoport says he is likely to return and CBS's Tracy Wolfson reported he will play in Week 8; coach Jesse Minter said 'we'll know a lot more on Wednesday.' The schedule data lists Tyler Huntley, so the model uses Jackson; revisit if he doesn't practice.",
-      "source": "CBS Sports",
-      "url": "https://www.cbssports.com/fantasy/football/news/ravens-lamar-jackson-expected-back-for-week-8/"
+      "text": "Lamar Jackson (ankle) was a full participant Wednesday, his first full practice since the injury, and practiced again Thursday; Rapoport says he is expected to play. The schedule data lists Tyler Huntley, so the model uses Jackson.",
+      "source": "ESPN",
+      "url": "https://espn.com/nfl/story/_/id/50311435/ravens-list-lamar-jackson-full-participant-practice"
     },
     {
-      "text": "Baltimore: OLB Tavius Robinson (pectoral) is out for the season; DL Broderick Washington Jr. (ankle) has missed two games; centers Ethan Pocic and Jovaughn Gwyn are on IR. Rookie RG Vega Ioane (knee) left Week 7 early, and G Andrew Vorhees (foot) and S Jaylinn Hawkins (knee) missed the game.",
+      "text": "Baltimore: S Kyle Hamilton and LB Roquan Smith (knees) returned to practice Thursday after sitting Wednesday; rookie RG Vega Ioane (MCL sprain) also returned but his availability is uncertain. S Jaylinn Hawkins (knee) did not practice Wednesday; LT Ronnie Stanley and G John Simpson were limited. OLB Tavius Robinson is out for the season. Final designations Friday.",
       "source": "Yahoo Sports",
-      "url": "https://sports.yahoo.com/articles/bills-vs-ravens-injury-buffalo-184729406.html"
+      "url": "https://sports.yahoo.com/articles/lamar-jackson-kyle-hamilton-roquan-170820927.html"
     },
     {
-      "text": "Buffalo (off a bye): WR DJ Moore (shoulder) and DT Ed Oliver (knee) could return after the bye per Joe Brady; TE Dalton Kincaid (ribs) is questionable. S C.J. Gardner-Johnson is suspended for this game.",
-      "source": "Yahoo Sports",
-      "url": "https://sports.yahoo.com/articles/bills-joe-brady-announces-dj-175021480.html"
+      "text": "Buffalo (Wednesday): RT Spencer Brown (back) did not practice; WR DJ Moore (shoulder), DT Ed Oliver (knee), TE Dalton Kincaid (chest), OLB Bradley Chubb (chest/thumb) and CB Dee Alford (ankle) were limited. S C.J. Gardner-Johnson is suspended for this game.",
+      "source": "CBS Sports (Wednesday practice report)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-8-injury-report-lamar-jackson-kerby-joseph-updates/"
     }
   ],
   "adjust": [],

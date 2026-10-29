@@ -1,21 +1,16 @@
 {
   "game_id": "2026_08_LAC_LA",
-  "updated": "2026-10-27T21:10:00Z",
+  "updated": "2026-10-29T21:00:00Z",
   "items": [
     {
-      "text": "Chargers (off a bye): WR Ladd McConkey (concussion, still in protocol), RT Joe Alt (neck), CB Donte Jackson and CB Rodney Shelley (hamstrings) were back on the field Monday; S Derwin James and WR Tre' Harris (hamstrings) were on the side field. LT Rashawn Slater is on IR.",
-      "source": "Athlon Sports",
-      "url": "https://athlonsports.com/nfl/los-angeles-chargers/three-key-chargers-players-returned-practice-monday"
+      "text": "Chargers (Wednesday): S Derwin James (hamstring), G Kayode Awosika (fibula), CB Deane Leonard (concussion) and WR Brenen Thompson (quad/hamstring) did not practice; WR Tre Harris and CBs Donte Jackson and Rodney Shelley (hamstrings) were limited. WR Ladd McConkey (concussion) was full. LT Rashawn Slater is on IR.",
+      "source": "CBS Sports (Wednesday practice report)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-8-injury-report-lamar-jackson-kerby-joseph-updates/"
     },
     {
-      "text": "Rams WR Davante Adams (ruptured hamstring) is on IR, out 6-10 weeks. DT Poona Ford is out for the season and DT Kobie Turner at least three more games; CB Trent McDuffie (groin) could return soon.",
-      "source": "Yahoo Sports",
-      "url": "https://sports.yahoo.com/articles/rams-showcase-potential-revive-season-235455300.html"
-    },
-    {
-      "text": "Rams EDGE Myles Garrett (knee, IR) is likely to practice and could play against the Chargers, per Rapoport; Sean McVay is 'not sure yet.'",
-      "source": "SI (Rams On SI)",
-      "url": "https://www.si.com/nfl/rams/onsi/rams-myles-garrett-injury-update-return-practice-week-8"
+      "text": "Rams: Myles Garrett (knee) and TE Terrance Ferguson stay on IR (no practice window this week), so Garrett will not play. WR Davante Adams (hamstring) is on IR; CB Trent McDuffie (groin) was limited; LB Nate Landman cleared concussion protocol. DTs Poona Ford (season) and Kobie Turner remain out.",
+      "source": "TheRams.com",
+      "url": "https://www.therams.com/news/rams-injury-updates-will-not-open-21-day-practice-windows-myles-garrett-terrance-ferguson-week-8-2026-chargers-trent-mcduffie-nate-landman-davante-adams"
     }
   ],
   "adjust": []

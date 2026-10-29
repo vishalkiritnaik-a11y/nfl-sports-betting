@@ -1,22 +1,34 @@
 {
   "game_id": "2026_08_TEN_CIN",
-  "updated": "2026-10-27T21:10:00Z",
+  "updated": "2026-10-29T21:00:00Z",
   "items": [
     {
-      "text": "Cincinnati placed TE Erick All Jr. on IR with a believed torn ACL; TE Tanner Hudson is already out for the season.",
-      "source": "Yardbarker",
-      "url": "https://www.yardbarker.com/nfl/articles/bengals_place_te_erick_all_on_ir_with_torn_acl_among_four_moves/s1_17039_44480710"
+      "text": "Tennessee traded All-Pro DT Jeffery Simmons to Chicago on Thursday for two first-round picks; he will not play for the Titans.",
+      "source": "NFL.com",
+      "url": "https://www.nfl.com/news/jeffery-simmons-bears-titans-trade"
     },
     {
-      "text": "Cincinnati S Kyle Dugger re-aggravated his quad and has been ruled out for Sunday. S Bryan Cook was also hurt in the second half against Baltimore (no status).",
+      "text": "Tennessee (Wednesday): WR Carnell Tate (shoulder), RB Tyjae Spears (knee), DL John Franklin-Myers (groin) and P Tommy Townsend (knee) did not practice; WR Calvin Ridley (hip) was limited.",
+      "source": "CBS Sports (Wednesday practice report)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-8-injury-report-lamar-jackson-kerby-joseph-updates/"
+    },
+    {
+      "text": "Cincinnati WR Ja'Marr Chase (ankle/rest) sat Wednesday but was in uniform Thursday; Rapoport says the ankle is not significant and he is expected to play.",
+      "source": "RotoWire",
+      "url": "https://www.rotowire.com/football/headlines/jamarr-chase-injury-in-uniform-thursday-644923"
+    },
+    {
+      "text": "Cincinnati S Kyle Dugger (quad) is ruled out; TE Erick All Jr. (ACL, IR) and TE Tanner Hudson are out for the season. S Jordan Battle (hamstring) was limited Wednesday.",
       "source": "Bengals.com",
       "url": "https://bengals.com/news/quick-hits-bengals-riding-uncommon-play-of-joe-burrow-amarius-mims-ja-marr-chase"
-    },
-    {
-      "text": "Tennessee WR Calvin Ridley (hip) and RB Tyjae Spears (knee) were inactive in Week 7; no Week 8 status yet. P Tommy Townsend (knee) was hurt in Week 7.",
-      "source": "Titans.com",
-      "url": "https://www.tennesseetitans.com/news/hot-topics-from-titans-hc-robert-saleh-s-zoom-call-on-monday-x8470"
     }
   ],
-  "adjust": []
+  "adjust": [
+    {
+      "market": "all",
+      "side": "CIN",
+      "points": 0.5,
+      "reason": "Tennessee just traded DT Jeffery Simmons and may also be without WR Carnell Tate, RB Tyjae Spears and DL John Franklin-Myers, while Cincinnati's main absence is S Kyle Dugger. The stats model doesn't price non-QB injuries"
+    }
+  ]
 }

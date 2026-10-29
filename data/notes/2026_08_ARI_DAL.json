@@ -1,21 +1,16 @@
 {
   "game_id": "2026_08_ARI_DAL",
-  "updated": "2026-10-27T21:10:00Z",
+  "updated": "2026-10-29T21:00:00Z",
   "items": [
     {
-      "text": "Arizona RB Jeremiyah Love (ankle) has missed two games; Mike LaFleur says he returns to practice Wednesday, Week 8 status undecided. Jacoby Brissett starts.",
-      "source": "NBC Sports",
-      "url": "https://www.nbcsports.com/fantasy/football/player-news/2026-10-26/jeremiyah-love-ankle-to-practice-wednesday"
+      "text": "Arizona RB Jeremiyah Love (ankle), out the last two games, was set to practice in a limited role Wednesday; status TBD. TE Tip Reiman (ankle) is out and RB James Conner is on IR. Jacoby Brissett starts.",
+      "source": "ESPN injuries",
+      "url": "https://www.espn.com/nfl/injuries"
     },
     {
-      "text": "Arizona's Week 7 inactives included DT Walter Nolen III, S Andrew Wingard, G Jon Gaines II and CB Max Melton; no Week 8 designations yet.",
-      "source": "SI (Cardinals On SI)",
-      "url": "https://www.si.com/nfl/cardinals/onsi/arizona-cardinals-denver-broncos-inactives-budda-baker-pat-surtain-ii-final-status-revealed"
-    },
-    {
-      "text": "Dallas (short week after Monday night): WR/KR KaVontae Turpin (ribs), LB Dee Winters and OT Drew Shelton were inactive in Week 7; LB Marist Liufau and S P.J. Locke are designated to return from IR. No new injuries from the Eagles game were reported.",
-      "source": "DallasCowboys.com",
-      "url": "https://www.dallascowboys.com/news/updates-october-2026"
+      "text": "Dallas (Wednesday walkthrough, estimated): WR KaVontae Turpin (ribs) and LB Dee Winters (calf) did not practice; WR George Pickens (shoulder/hamstring), DT Quinnen Williams (hamstring) and S Caleb Downs (ankle) were limited.",
+      "source": "CBS Sports (Wednesday practice report)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-8-injury-report-lamar-jackson-kerby-joseph-updates/"
     }
   ],
   "adjust": []

@@ -1,16 +1,21 @@
 {
   "game_id": "2026_08_NE_MIA",
-  "updated": "2026-10-27T21:10:00Z",
+  "updated": "2026-10-29T21:00:00Z",
   "items": [
     {
-      "text": "New England G Alijah Vera-Tucker (hamstring) is on IR (not season-ending). Mike Vrabel reported no major new injuries from Week 7; C Ben Brown (knee) is back practicing and S Kevin Byard played 94% of snaps.",
-      "source": "Yahoo Sports",
-      "url": "https://sports.yahoo.com/articles/patriots-injury-analysis-pats-much-100000707.html"
+      "text": "New England (Wednesday): no one missed practice; WR A.J. Brown (ankle/knee), C Ben Brown (knee), OT Morgan Moses (foot) and DT DaQuan Jones were limited. G Alijah Vera-Tucker is on IR.",
+      "source": "CBS Sports (Wednesday practice report)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-8-injury-report-lamar-jackson-kerby-joseph-updates/"
     },
     {
-      "text": "Miami RB Jaylen Wright (quad) left Week 7 and did not return (Ollie Gordon takes over); De'Von Achane is out for the season. S Dante Trader Jr. (shoulder) was hurt in the win over the Jets. Malik Willis starts.",
-      "source": "Heavy",
-      "url": "https://heavy.com/sports/nfl/miami-dolphins/running-back-suffers-injury-win-jets/"
+      "text": "New England RB TreVeyon Henderson missed Thursday's practice with an undisclosed issue (possibly his Week 5 ankle).",
+      "source": "RotoWire",
+      "url": "https://www.rotowire.com/football/headlines/treveyon-henderson-injury-missing-from-practice-thursday-644931"
+    },
+    {
+      "text": "Miami (Wednesday): CB JuJu Brents (neck/concussion) and OL Kadyn Proctor (concussion) did not practice; WR Malik Washington (knee), S Michael Taaffee (neck/foot) and TE Greg Dulcich (ankle) were limited. RB De'Von Achane is out for the season. Malik Willis starts.",
+      "source": "CBS Sports (Wednesday practice report)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-8-injury-report-lamar-jackson-kerby-joseph-updates/"
     }
   ],
   "adjust": []

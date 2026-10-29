@@ -1,21 +1,21 @@
 {
   "game_id": "2026_08_LV_NYJ",
-  "updated": "2026-10-27T21:10:00Z",
+  "updated": "2026-10-29T21:00:00Z",
   "items": [
     {
-      "text": "Kirk Cousins remains the Raiders' starter; Klint Kubiak says Fernando Mendoza will play 'at some point. It's not going to be this week.'",
+      "text": "Kirk Cousins remains the Raiders' starter; Fernando Mendoza will not play this week.",
       "source": "ESPN",
       "url": "https://www.espn.com/nfl/story/_/id/50289866/kirk-cousins-remain-raiders-starting-qb-klint-kubiak-says"
     },
     {
-      "text": "Las Vegas WR Jack Bech (forearm) was designated to return from IR; Week 9 looks more realistic than Week 8.",
-      "source": "Yardbarker",
-      "url": "https://www.yardbarker.com/nfl/articles/las_vegas_raiders_get_big_injury_news_on_monday/s1_17355_44477365"
+      "text": "Las Vegas (Wednesday): EDGE Patrick Johnson (stinger) did not practice; TE Brock Bowers (calf), LB Quay Walker (chest), OT DJ Glaze (ankle) and DT Foley Fatukasi (shoulder) were limited. WR Jack Bech (IR) is more likely for Week 9.",
+      "source": "CBS Sports (Wednesday practice report)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-8-injury-report-lamar-jackson-kerby-joseph-updates/"
     },
     {
-      "text": "New York DT T'Vondre Sweat hurt his knee in Week 7 and 'is going to be down for a while' per ESPN's Rich Cimini; DL David Onyemata is on IR. RB Breece Hall (quad) has missed four games and Week 8 is a possible return.",
-      "source": "Heavy",
-      "url": "https://heavy.com/sports/nfl/new-york-jets/amari-mcneill-tvondre-sweat-chiefs-move"
+      "text": "New York (Wednesday): EDGE David Bailey (groin), EDGE Joseph Ossai (ankle), OL Max Mitchell (concussion) and DT T'Vondre Sweat (knee, expected to miss a while) did not practice; RB Breece Hall (quad), RB Braelon Allen (ankle) and OL Dylan Parham (knee) were limited. Watch Friday's report for the pass rushers.",
+      "source": "CBS Sports (Wednesday practice report)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-8-injury-report-lamar-jackson-kerby-joseph-updates/"
     }
   ],
   "adjust": []
