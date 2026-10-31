@@ -1,22 +1,24 @@
 {
   "game_id": "2026_08_LV_NYJ",
-  "updated": "2026-10-29T21:00:00Z",
+  "updated": "2026-10-31T21:00:00Z",
   "items": [
     {
-      "text": "Kirk Cousins remains the Raiders' starter; Fernando Mendoza will not play this week.",
-      "source": "ESPN",
-      "url": "https://www.espn.com/nfl/story/_/id/50289866/kirk-cousins-remain-raiders-starting-qb-klint-kubiak-says"
+      "text": "Las Vegas (final report): OUT: DE Patrick Johnson (stinger), TE Carter Runyon (foot). QUESTIONABLE: C/G Jackson Powers-Johnson (back/illness), WR Jack Bech (activated from IR). TE Brock Bowers, LB Quay Walker and T DJ Glaze practiced fully Friday and have no designation.",
+      "source": "Raiders.com",
+      "url": "https://www.raiders.com/news/las-vegas-raiders-new-york-jets-week-8-injury-report"
     },
     {
-      "text": "Las Vegas (Wednesday): EDGE Patrick Johnson (stinger) did not practice; TE Brock Bowers (calf), LB Quay Walker (chest), OT DJ Glaze (ankle) and DT Foley Fatukasi (shoulder) were limited. WR Jack Bech (IR) is more likely for Week 9.",
-      "source": "CBS Sports (Wednesday practice report)",
-      "url": "https://www.cbssports.com/nfl/news/nfl-week-8-injury-report-lamar-jackson-kerby-joseph-updates/"
-    },
-    {
-      "text": "New York (Wednesday): EDGE David Bailey (groin), EDGE Joseph Ossai (ankle), OL Max Mitchell (concussion) and DT T'Vondre Sweat (knee, expected to miss a while) did not practice; RB Breece Hall (quad), RB Braelon Allen (ankle) and OL Dylan Parham (knee) were limited. Watch Friday's report for the pass rushers.",
-      "source": "CBS Sports (Wednesday practice report)",
-      "url": "https://www.cbssports.com/nfl/news/nfl-week-8-injury-report-lamar-jackson-kerby-joseph-updates/"
+      "text": "New York (final report): OUT: EDGE Joseph Ossai (ankle), OL Max Mitchell (concussion), DT T'Vondre Sweat (knee, placed on IR Saturday). DOUBTFUL: EDGE David Bailey (groin, no practice all week). QUESTIONABLE: RB Breece Hall (quad), OL Dylan Parham (knee).",
+      "source": "CBS Sports (final Week 8 report)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-8-injury-report-lamar-jackson-aj-brown-emeka-egbuka-more/"
     }
   ],
-  "adjust": []
+  "adjust": [
+    {
+      "market": "all",
+      "side": "LV",
+      "points": 0.5,
+      "reason": "The Jets are without EDGE Joseph Ossai, DT T'Vondre Sweat and OL Max Mitchell with EDGE David Bailey doubtful and Breece Hall questionable, while the Raiders lose only DE Patrick Johnson. The stats model doesn't price non-QB injuries"
+    }
+  ]
 }

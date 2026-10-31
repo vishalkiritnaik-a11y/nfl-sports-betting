@@ -1,27 +1,34 @@
 {
   "game_id": "2026_08_CHI_SEA",
-  "updated": "2026-10-29T21:00:00Z",
+  "updated": "2026-10-31T21:00:00Z",
   "items": [
     {
-      "text": "Chicago acquired All-Pro DT Jeffery Simmons from Tennessee on Thursday for two first-round picks.",
-      "source": "NFL.com",
-      "url": "https://www.nfl.com/news/jeffery-simmons-bears-titans-trade"
+      "text": "Chicago acquired DT Jeffery Simmons from Tennessee; GM Ryan Poles expects him to debut Monday.",
+      "source": "Chicago Sun-Times",
+      "url": "https://chicago.suntimes.com/bears/2026/10/30/new-bears-dt-jeffery-simmons-expected-to-play-monday-vs-seahawks"
     },
     {
-      "text": "Chicago: RB Kyle Monangai (turf toe/thumb), CB Malik Muhammad (toe) and CB Tyrique Stevenson (hip) missed early-week practice; Ben Johnson called Monangai week-to-week. TE Cole Kmet is on season-ending IR.",
-      "source": "A to Z Sports",
-      "url": "https://atozsports.com/nfl/chicago-bears-news/bears-injury-news-week-8-seahawks-kyle-monangai-malik-muhammad"
+      "text": "Chicago (final report, Saturday): OUT: RB Kyle Monangai (toe/thumb). QUESTIONABLE: CB Malik Muhammad (toe), LB D'Marco Jackson (ankle). TE Colston Loveland and LB T.J. Edwards have no designation. TE Cole Kmet is on season-ending IR.",
+      "source": "Shaw Local / Yahoo Sports",
+      "url": "https://www.shawlocal.com/bears/2026/10/31/chicago-bears-injury-report-kyle-monangai-ruled-out-against-seahawks/"
     },
     {
-      "text": "Seattle acquired LG Quenton Nelson from Indianapolis on Oct. 27.",
-      "source": "AP (News4Jax)",
-      "url": "https://www.news4jax.com/sports/2026/10/27/colts-trade-all-pro-guard-quenton-nelson-to-seahawks-ap-source-says/"
-    },
-    {
-      "text": "Seattle LT Charles Cross (high-ankle sprain) is expected to miss the game; Josh Jones starts. WR Rashid Shaheed (knee) had 'positive' early returns; RBs Zach Charbonnet and Jadarian Price (IR) are practicing, status TBD. First official report for the Monday game is due Thursday.",
+      "text": "Seattle (Friday practice): LT Charles Cross (ankle) and LB Uchenna Nwosu (ankle) are ruled out, so Josh Jones starts at LT. WR Rashid Shaheed (knee) missed Thursday and Friday and is likely out. RB Jadarian Price was full and 'realistic' to be activated; RB Zach Charbonnet dropped to limited; DT Byron Murphy II (back) was added as limited. New LG Quenton Nelson practiced fully. Official designations due Saturday.",
       "source": "Seattle Sports (MyNorthwest)",
-      "url": "https://sports.mynorthwest.com/nfl/seattle-seahawks/seattle-seahawks-injury-updates-shaheed-cross-charbonnet-price"
+      "url": "https://sports.mynorthwest.com/nfl/seattle-seahawks/seattle-seahawks-injury-report-price-charbonnet-trending-opposite-directions"
+    },
+    {
+      "text": "Seattle full Thu/Fri participation report.",
+      "source": "Seahawks.com",
+      "url": "https://www.seahawks.com/news/week-8-injury-report-bears-at-seahawks"
     }
   ],
-  "adjust": []
+  "adjust": [
+    {
+      "market": "all",
+      "side": "CHI",
+      "points": 0.5,
+      "reason": "Seattle is without LT Charles Cross and LB Uchenna Nwosu and likely WR Rashid Shaheed, while Chicago's main absence is RB Kyle Monangai and it adds DT Jeffery Simmons. The stats model doesn't price non-QB injuries"
+    }
+  ]
 }

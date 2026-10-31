@@ -1,16 +1,16 @@
 {
   "game_id": "2026_08_KC_DEN",
-  "updated": "2026-10-29T21:00:00Z",
+  "updated": "2026-10-31T21:00:00Z",
   "items": [
     {
-      "text": "Kansas City (Wednesday): Patrick Mahomes (knee) was full; CB L'Jarius Sneed (personal/knee) did not practice; WR Rashee Rice (hamstring/knee) and LB Nick Bolton (neck) were limited. LT Josh Simmons is on IR.",
-      "source": "CBS Sports (Wednesday practice report)",
-      "url": "https://www.cbssports.com/nfl/news/nfl-week-8-injury-report-lamar-jackson-kerby-joseph-updates/"
+      "text": "Kansas City (final report): OUT: DT Omarr Norman-Lott (knee). QUESTIONABLE: CB L'Jarius Sneed (knee), CB Mansoor Delane (shoulder, no practice), DE R. Mason Thomas (personal). WR Rashee Rice is off the report and returns; Patrick Mahomes (knee) was full with no designation.",
+      "source": "Chiefs.com",
+      "url": "https://www.chiefs.com/news/week-8-injury-report-chiefs-vs-broncos-2026"
     },
     {
-      "text": "Denver (Wednesday): WR Jaylen Waddle (chest), DL Zach Allen (hamstring) and S Talanoa Hufanga (ankle) did not practice; CB Pat Surtain II (ankle) was a full participant; OT Garett Bolles (hip) and WR Marvin Mims Jr. (ankle) were limited. Waddle is TBD, expected questionable.",
-      "source": "CBS Sports (Wednesday practice report)",
-      "url": "https://www.cbssports.com/nfl/news/nfl-week-8-injury-report-lamar-jackson-kerby-joseph-updates/"
+      "text": "Denver (final report): OUT: RB RJ Harvey (knee), S Talanoa Hufanga (ankle). QUESTIONABLE: WR Jaylen Waddle (chest), DL Zach Allen (hamstring), LT Garett Bolles (hip), S Brandon Jones (hamstring). Pat Surtain II was full.",
+      "source": "CBS Sports (final Week 8 report)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-8-injury-report-lamar-jackson-aj-brown-emeka-egbuka-more/"
     }
   ],
   "adjust": []

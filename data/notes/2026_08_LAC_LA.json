@@ -1,16 +1,16 @@
 {
   "game_id": "2026_08_LAC_LA",
-  "updated": "2026-10-29T21:00:00Z",
+  "updated": "2026-10-31T21:00:00Z",
   "items": [
     {
-      "text": "Chargers (Wednesday): S Derwin James (hamstring), G Kayode Awosika (fibula), CB Deane Leonard (concussion) and WR Brenen Thompson (quad/hamstring) did not practice; WR Tre Harris and CBs Donte Jackson and Rodney Shelley (hamstrings) were limited. WR Ladd McConkey (concussion) was full. LT Rashawn Slater is on IR.",
-      "source": "CBS Sports (Wednesday practice report)",
-      "url": "https://www.cbssports.com/nfl/news/nfl-week-8-injury-report-lamar-jackson-kerby-joseph-updates/"
+      "text": "Chargers (final report): OUT: S Derwin James (hamstring), G Kayode Awosika (fibula), DB Deane Leonard (concussion), WR Brenen Thompson. QUESTIONABLE: CBs Donte Jackson and Rodney Shelley (hamstrings). LT Rashawn Slater is on IR. Justin Herbert is coming off the Week 7 bye and is not on the report.",
+      "source": "CBS Sports (final Week 8 report)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-8-injury-report-lamar-jackson-aj-brown-emeka-egbuka-more/"
     },
     {
-      "text": "Rams: Myles Garrett (knee) and TE Terrance Ferguson stay on IR (no practice window this week), so Garrett will not play. WR Davante Adams (hamstring) is on IR; CB Trent McDuffie (groin) was limited; LB Nate Landman cleared concussion protocol. DTs Poona Ford (season) and Kobie Turner remain out.",
-      "source": "TheRams.com",
-      "url": "https://www.therams.com/news/rams-injury-updates-will-not-open-21-day-practice-windows-myles-garrett-terrance-ferguson-week-8-2026-chargers-trent-mcduffie-nate-landman-davante-adams"
+      "text": "Rams (final report): DOUBTFUL: LS Joe Cardona (ankle). QUESTIONABLE: C Coleman Shelton (hip), TE Colby Parkinson (rib), CB Trent McDuffie (groin), WR Jordan Whittington. Myles Garrett, Kobie Turner, Poona Ford and Davante Adams are on IR.",
+      "source": "NFL.com Friday roundup",
+      "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-oct-30"
     }
   ],
   "adjust": []

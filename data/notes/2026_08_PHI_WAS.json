@@ -1,21 +1,21 @@
 {
   "game_id": "2026_08_PHI_WAS",
-  "updated": "2026-10-29T21:00:00Z",
+  "updated": "2026-10-31T21:00:00Z",
   "items": [
     {
-      "text": "Jalen Hurts (blood clots) is on IR and Tanner McKee has started since; the schedule data lists Hurts, so the model uses McKee.",
-      "source": "CBS Sports",
-      "url": "https://www.cbssports.com/nfl/news/nfl-week-8-injury-report-lamar-jackson-kerby-joseph-updates/"
+      "text": "Jalen Hurts (calf blood clot) went on IR Oct. 17 and can return no earlier than Week 11; Tanner McKee starts. The schedule data lists Hurts, so the model uses McKee.",
+      "source": "NBC Sports Philadelphia",
+      "url": "https://www.nbcsportsphiladelphia.com/nfl/philadelphia-eagles/eagles-place-jalen-hurts-on-injured-reserve-with-blood-clot/759308/"
     },
     {
-      "text": "Philadelphia (Wednesday estimate): RB Saquon Barkley (hamstring/back), WR DeVonta Smith (hamstring), WR Dontayvion Wicks (ankle), WR Britain Covey (knee), CB Jonathan Jones (hamstring) and LB Jihaad Campbell (hamstring/quad) did not participate; EDGE Nolan Smith (concussion), EDGE Jonathan Greenard (ankle), DB Michael Carter II and DT Moro Ojomo were limited.",
-      "source": "PhiladelphiaEagles.com",
-      "url": "https://www.philadelphiaeagles.com/news/eagles-at-commanders-injury-report-2026-nfl-week-8-sunday-night-football-saquon-barkley-devonta-smith"
+      "text": "Philadelphia (final report): OUT: WR DeVonta Smith (hamstring), WR Dontayvion Wicks (ankle), WR Britain Covey (knee), LB Jihaad Campbell (hamstring/quad), CB Jonathan Jones (hamstring). QUESTIONABLE: CB Jakorian Bennett. RB Saquon Barkley is off the report and plays.",
+      "source": "CBS Sports (final Week 8 report)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-8-injury-report-lamar-jackson-aj-brown-emeka-egbuka-more/"
     },
     {
-      "text": "Washington (Wednesday): WR Stefon Diggs (hand/hamstring/rest), DT Javon Kinlaw (knee, Dan Quinn says likely out) and TE John Bates (shoulder) did not practice; WR Treylon Burks and DE Charles Omenihu were limited. Jayden Daniels (elbow) was full and starts. WR Terry McLaurin is out for the season.",
-      "source": "PhiladelphiaEagles.com",
-      "url": "https://www.philadelphiaeagles.com/news/eagles-at-commanders-injury-report-2026-nfl-week-8-sunday-night-football-saquon-barkley-devonta-smith"
+      "text": "Washington: DT Daron Payne broke his left foot in Friday practice and is out for the season. DT Javon Kinlaw (knee) is OUT. QUESTIONABLE: WR Treylon Burks, TE John Bates, DT Jer'Zhan Newton; C Nick Allegretti (back) is a game-time decision. Stefon Diggs is cleared; Terry McLaurin is on season-ending IR.",
+      "source": "Yahoo Sports",
+      "url": "https://sports.yahoo.com/nfl/article/commanders-defensive-tackle-daron-payne-reportedly-suffers-jones-fracture-in-left-foot-ending-his-2026-season-183838947.html"
     }
   ],
   "adjust": [
@@ -23,7 +23,7 @@
       "market": "all",
       "side": "WAS",
       "points": 0.5,
-      "reason": "Philadelphia may be without Saquon Barkley, DeVonta Smith, Dontayvion Wicks and LB Jihaad Campbell, while Washington's main losses are Terry McLaurin and DT Javon Kinlaw. The stats model doesn't price non-QB injuries"
+      "reason": "Philadelphia is without WRs DeVonta Smith and Dontayvion Wicks, LB Jihaad Campbell and CB Jonathan Jones, which outweighs Washington's loss of DTs Daron Payne and Javon Kinlaw. The stats model doesn't price non-QB injuries"
     }
   ],
   "qb_start": {

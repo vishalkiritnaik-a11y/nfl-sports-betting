@@ -1,16 +1,16 @@
 {
   "game_id": "2026_08_ATL_TB",
-  "updated": "2026-10-29T21:00:00Z",
+  "updated": "2026-10-31T21:00:00Z",
   "items": [
     {
-      "text": "Tampa Bay (Wednesday): Baker Mayfield (thumb) and S Antoine Winfield Jr. (rib) practiced fully; RT Luke Goedeke (calf), RB Kenny Gainwell (hip) and LB Josiah Trotter (illness) did not practice; WR Emeka Egbuka (concussion/foot) was limited in a non-contact jersey. Ben Chukwuma starts at RT.",
-      "source": "CBS Sports (Wednesday practice report)",
-      "url": "https://www.cbssports.com/nfl/news/nfl-week-8-injury-report-lamar-jackson-kerby-joseph-updates/"
+      "text": "Tampa Bay (final report): OUT: WR Emeka Egbuka (foot). QUESTIONABLE: RT Luke Goedeke (calf), RB Kenny Gainwell (hip). Baker Mayfield (right thumb) practiced fully all week, without his protective glove Friday, and has no designation.",
+      "source": "Buccaneers.com",
+      "url": "https://www.buccaneers.com/news/buccaneers-falcons-injury-report-oct-30-week-8"
     },
     {
-      "text": "Atlanta (Wednesday): RB Brian Robinson Jr. (hamstring), LB Divine Deablo (forearm) and CB Billy Bowman Jr. (hamstring) did not practice again; OT Jawaan Taylor (hamstring), WR Olamide Zaccheaus (shoulder) and EDGE Samson Ebukam (hamstring) were limited.",
-      "source": "CBS Sports (Wednesday practice report)",
-      "url": "https://www.cbssports.com/nfl/news/nfl-week-8-injury-report-lamar-jackson-kerby-joseph-updates/"
+      "text": "Atlanta (Saturday update): OUT: RB Brian Robinson Jr. (hamstring), LB Divine Deablo (forearm) and DB Billy Bowman Jr. (hamstring). QUESTIONABLE: DE Samson Ebukam, WR Olamide Zaccheaus, CB Avieon Terrell (illness), LB Charles Snowden. G Chris Lindstrom missed Friday (personal) with no designation. DE James Pearce Jr. serves the last game of his suspension.",
+      "source": "AtlantaFalcons.com",
+      "url": "https://www.atlantafalcons.com/news/downgrade-divine-deablo-billy-bowman-out-vs-bucs"
     }
   ],
   "adjust": []

@@ -1,25 +1,22 @@
 {
   "game_id": "2026_08_BAL_BUF",
-  "updated": "2026-10-29T21:00:00Z",
+  "updated": "2026-10-31T21:00:00Z",
   "items": [
     {
-      "text": "Lamar Jackson (ankle) was a full participant Wednesday, his first full practice since the injury, and practiced again Thursday; Rapoport says he is expected to play. The schedule data lists Tyler Huntley, so the model uses Jackson.",
-      "source": "ESPN",
-      "url": "https://espn.com/nfl/story/_/id/50311435/ravens-list-lamar-jackson-full-participant-practice"
+      "text": "Baltimore (final report): Lamar Jackson (ankle) has no injury designation and is set to play; Tyler Huntley returns to backup. OUT: RG Vega Ioane (knee) and S Jaylinn Hawkins (knee). QUESTIONABLE: CB T.J. Tampa and RB Adam Randall (IR return windows, need activation).",
+      "source": "BaltimoreRavens.com",
+      "url": "https://www.baltimoreravens.com/news/lamar-jackson-ravens-bills-set-to-play-2026"
     },
     {
-      "text": "Baltimore: S Kyle Hamilton and LB Roquan Smith (knees) returned to practice Thursday after sitting Wednesday; rookie RG Vega Ioane (MCL sprain) also returned but his availability is uncertain. S Jaylinn Hawkins (knee) did not practice Wednesday; LT Ronnie Stanley and G John Simpson were limited. OLB Tavius Robinson is out for the season. Final designations Friday.",
+      "text": "Baltimore S Kyle Hamilton and LB Roquan Smith carry no designation and are expected to play.",
       "source": "Yahoo Sports",
-      "url": "https://sports.yahoo.com/articles/lamar-jackson-kyle-hamilton-roquan-170820927.html"
+      "url": "https://sports.yahoo.com/articles/week-8-injury-report-lamar-194753628.html"
     },
     {
-      "text": "Buffalo (Wednesday): RT Spencer Brown (back) did not practice; WR DJ Moore (shoulder), DT Ed Oliver (knee), TE Dalton Kincaid (chest), OLB Bradley Chubb (chest/thumb) and CB Dee Alford (ankle) were limited. S C.J. Gardner-Johnson is suspended for this game.",
-      "source": "CBS Sports (Wednesday practice report)",
-      "url": "https://www.cbssports.com/nfl/news/nfl-week-8-injury-report-lamar-jackson-kerby-joseph-updates/"
+      "text": "Buffalo (final report): S C.J. Gardner-Johnson is suspended (Damar Hamlin starts). QUESTIONABLE: WR DJ Moore (shoulder, out since Week 4), RT Spencer Brown (back, no practice all week), TE Dalton Kincaid (chest), nickel CB Dee Alford (ankle, DNP Thu/Fri), LB TJ Parker, DT Greg Gaines. Ed Oliver and Bradley Chubb practiced fully Friday.",
+      "source": "ESPN / Yahoo Sports",
+      "url": "https://www.espn.com/nfl/story/_/id/50329615/bills-making-contingencies-hurt-starters-available"
     }
   ],
-  "adjust": [],
-  "qb_start": {
-    "BAL": "Lamar Jackson"
-  }
+  "adjust": []
 }

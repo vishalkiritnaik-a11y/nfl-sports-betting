@@ -1,22 +1,29 @@
 {
   "game_id": "2026_08_NE_MIA",
-  "updated": "2026-10-29T21:00:00Z",
+  "updated": "2026-10-31T21:00:00Z",
   "items": [
     {
-      "text": "New England (Wednesday): no one missed practice; WR A.J. Brown (ankle/knee), C Ben Brown (knee), OT Morgan Moses (foot) and DT DaQuan Jones were limited. G Alijah Vera-Tucker is on IR.",
-      "source": "CBS Sports (Wednesday practice report)",
-      "url": "https://www.cbssports.com/nfl/news/nfl-week-8-injury-report-lamar-jackson-kerby-joseph-updates/"
+      "text": "New England downgraded WR A.J. Brown (knee/ankle) and RB TreVeyon Henderson (illness) to OUT on Saturday.",
+      "source": "TSN",
+      "url": "https://www.tsn.ca/nfl/article/patriots-rule-out-wr-brown-rb-henderson-vs-dolphins-n1-50337296/"
     },
     {
-      "text": "New England RB TreVeyon Henderson missed Thursday's practice with an undisclosed issue (possibly his Week 5 ankle).",
-      "source": "RotoWire",
-      "url": "https://www.rotowire.com/football/headlines/treveyon-henderson-injury-missing-from-practice-thursday-644931"
+      "text": "New England (final report): QUESTIONABLE: LB Christian Elliss (chest), CB Carlton Davis III (neck). G Alijah Vera-Tucker is on IR.",
+      "source": "NFL.com Friday roundup",
+      "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-oct-30"
     },
     {
-      "text": "Miami (Wednesday): CB JuJu Brents (neck/concussion) and OL Kadyn Proctor (concussion) did not practice; WR Malik Washington (knee), S Michael Taaffee (neck/foot) and TE Greg Dulcich (ankle) were limited. RB De'Von Achane is out for the season. Malik Willis starts.",
-      "source": "CBS Sports (Wednesday practice report)",
-      "url": "https://www.cbssports.com/nfl/news/nfl-week-8-injury-report-lamar-jackson-kerby-joseph-updates/"
+      "text": "Miami (final report): OUT: OL Kadyn Proctor (concussion). QUESTIONABLE: CBs JuJu Brents and Reese Taylor (both full Friday). De'Von Achane is out for the season. Malik Willis starts.",
+      "source": "CBS Sports (final Week 8 report)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-8-injury-report-lamar-jackson-aj-brown-emeka-egbuka-more/"
     }
   ],
-  "adjust": []
+  "adjust": [
+    {
+      "market": "all",
+      "side": "MIA",
+      "points": 0.5,
+      "reason": "New England is without WR1 A.J. Brown and RB TreVeyon Henderson with two defensive starters questionable, while Miami's only new absence is OL Kadyn Proctor. The stats model doesn't price non-QB injuries"
+    }
+  ]
 }

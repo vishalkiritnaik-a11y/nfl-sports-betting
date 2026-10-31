@@ -1,26 +1,21 @@
 {
   "game_id": "2026_08_TEN_CIN",
-  "updated": "2026-10-29T21:00:00Z",
+  "updated": "2026-10-31T21:00:00Z",
   "items": [
     {
-      "text": "Tennessee traded All-Pro DT Jeffery Simmons to Chicago on Thursday for two first-round picks; he will not play for the Titans.",
+      "text": "Tennessee traded All-Pro DT Jeffery Simmons to Chicago; he will not play for the Titans.",
       "source": "NFL.com",
       "url": "https://www.nfl.com/news/jeffery-simmons-bears-titans-trade"
     },
     {
-      "text": "Tennessee (Wednesday): WR Carnell Tate (shoulder), RB Tyjae Spears (knee), DL John Franklin-Myers (groin) and P Tommy Townsend (knee) did not practice; WR Calvin Ridley (hip) was limited.",
-      "source": "CBS Sports (Wednesday practice report)",
-      "url": "https://www.cbssports.com/nfl/news/nfl-week-8-injury-report-lamar-jackson-kerby-joseph-updates/"
+      "text": "Tennessee (final report): OUT: RB Tyjae Spears (knee), WR Carnell Tate (shoulder), P Tommy Townsend (knee). QUESTIONABLE: DL John Franklin-Myers (groin), CB Jaylon Jones, LB Dorian Mausi, WR Calvin Ridley (hip, full Friday). Cam Ward is not on the report.",
+      "source": "TennesseeTitans.com",
+      "url": "https://www.tennesseetitans.com/news/week-8-injury-report-titans-at-bengals"
     },
     {
-      "text": "Cincinnati WR Ja'Marr Chase (ankle/rest) sat Wednesday but was in uniform Thursday; Rapoport says the ankle is not significant and he is expected to play.",
-      "source": "RotoWire",
-      "url": "https://www.rotowire.com/football/headlines/jamarr-chase-injury-in-uniform-thursday-644923"
-    },
-    {
-      "text": "Cincinnati S Kyle Dugger (quad) is ruled out; TE Erick All Jr. (ACL, IR) and TE Tanner Hudson are out for the season. S Jordan Battle (hamstring) was limited Wednesday.",
-      "source": "Bengals.com",
-      "url": "https://bengals.com/news/quick-hits-bengals-riding-uncommon-play-of-joe-burrow-amarius-mims-ja-marr-chase"
+      "text": "Cincinnati (final report): OUT: S Kyle Dugger (quad). QUESTIONABLE: LB Joe Giles-Harris (calf). Ja'Marr Chase and S Jordan Battle have no designation; DLs Dexter Lawrence, Jonathan Allen and B.J. Hill sat Friday but carry no designation. TEs Erick All Jr. and Tanner Hudson and WR Andrei Iosivas are on IR.",
+      "source": "CBS Sports (final Week 8 report)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-8-injury-report-lamar-jackson-aj-brown-emeka-egbuka-more/"
     }
   ],
   "adjust": [
@@ -28,7 +23,7 @@
       "market": "all",
       "side": "CIN",
       "points": 0.5,
-      "reason": "Tennessee just traded DT Jeffery Simmons and may also be without WR Carnell Tate, RB Tyjae Spears and DL John Franklin-Myers, while Cincinnati's main absence is S Kyle Dugger. The stats model doesn't price non-QB injuries"
+      "reason": "Tennessee is without traded DT Jeffery Simmons, WR Carnell Tate and RB Tyjae Spears with DL Franklin-Myers questionable, while Cincinnati's main absence is S Kyle Dugger. The stats model doesn't price non-QB injuries"
     }
   ]
 }

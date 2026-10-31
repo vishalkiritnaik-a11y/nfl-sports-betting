@@ -1,29 +1,29 @@
 {
   "game_id": "2026_08_IND_JAX",
-  "updated": "2026-10-29T21:00:00Z",
+  "updated": "2026-10-31T21:00:00Z",
   "items": [
     {
-      "text": "Indianapolis traded LG Quenton Nelson to Seattle and DT DeForest Buckner to San Francisco on Oct. 27; neither plays for the Colts on Sunday.",
+      "text": "Indianapolis traded LG Quenton Nelson to Seattle and DT DeForest Buckner this week; CB Cam Taylor-Britt and WR Alec Pierce are on IR.",
       "source": "AP (News4Jax)",
       "url": "https://www.news4jax.com/sports/2026/10/27/colts-trade-all-pro-guard-quenton-nelson-to-seahawks-ap-source-says/"
     },
     {
-      "text": "Indianapolis (Wednesday walkthrough, estimated): CB Justin Walley (knee) and LB Bryce Boettcher (groin) did not practice; CB Sauce Gardner (calf), G Matt Goncalves (ankle) and TE Tyler Warren (groin) were limited. CB Cam Taylor-Britt (groin) and WR Alec Pierce (heel) are on IR.",
-      "source": "CBS Sports (Wednesday practice report)",
-      "url": "https://www.cbssports.com/nfl/news/nfl-week-8-injury-report-lamar-jackson-kerby-joseph-updates/"
+      "text": "Indianapolis (final report): OUT: WR Anthony Gould (concussion), CB Justin Walley (knee). QUESTIONABLE: LB Bryce Boettcher (groin, no practice all week), TE Drew Ogletree (knee). Steichen says CB Sauce Gardner (calf) and TE Tyler Warren (groin) are good to go.",
+      "source": "Colts.com",
+      "url": "https://colts.com/news/colts-rule-out-wr-anthony-gould-cb-justin-walley-for-week-8-against-jaguars"
     },
     {
-      "text": "Jacksonville (Wednesday): S Antonio Johnson (ankle) did not practice; WR Jakobi Meyers (hamstring), LB Jahlani Tavai (hamstring) and DT Ruke Orhorhoro (ankle) were limited. LT Anton Harrison (torn ACL) is out for the season.",
-      "source": "CBS Sports (Wednesday practice report)",
-      "url": "https://www.cbssports.com/nfl/news/nfl-week-8-injury-report-lamar-jackson-kerby-joseph-updates/"
+      "text": "Jacksonville (final report): OUT: S Antonio Johnson (ankle). QUESTIONABLE: WR Jakobi Meyers (hamstring/ankle). Josh Hines-Allen, Brenton Strange and Trevor Lawrence have no designation. LT Anton Harrison is out for the season (ACL).",
+      "source": "Jaguars.com",
+      "url": "https://www.jaguars.com/news/friday-quick-hits-johnson-ruled-out-for-sunday"
     }
   ],
   "adjust": [
     {
       "market": "all",
       "side": "JAX",
-      "points": 0.75,
-      "reason": "Indianapolis just traded Quenton Nelson and DeForest Buckner and has three of its top four cornerbacks hurt plus TE Tyler Warren limited, against Jacksonville's loss of LT Anton Harrison. The stats model doesn't price non-QB injuries"
+      "points": 0.5,
+      "reason": "Indianapolis just traded Quenton Nelson and DeForest Buckner and is missing CBs Walley and Taylor-Britt and WR Pierce, against Jacksonville's losses of LT Anton Harrison and S Antonio Johnson. The stats model doesn't price non-QB injuries"
     }
   ]
 }

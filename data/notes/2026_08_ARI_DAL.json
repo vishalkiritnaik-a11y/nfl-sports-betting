@@ -1,16 +1,16 @@
 {
   "game_id": "2026_08_ARI_DAL",
-  "updated": "2026-10-29T21:00:00Z",
+  "updated": "2026-10-31T21:00:00Z",
   "items": [
     {
-      "text": "Arizona RB Jeremiyah Love (ankle), out the last two games, was set to practice in a limited role Wednesday; status TBD. TE Tip Reiman (ankle) is out and RB James Conner is on IR. Jacoby Brissett starts.",
-      "source": "ESPN injuries",
-      "url": "https://www.espn.com/nfl/injuries"
+      "text": "Arizona (final report): OUT: RG Jon Gaines II (ankle), DL Walter Nolen III (ankle). QUESTIONABLE: OL Hjalte Froholdt (knee, DNP Friday), CB Max Melton, S Andrew Wingard. RB Jeremiyah Love (ankle) practiced fully and has no designation.",
+      "source": "AZCardinals.com",
+      "url": "https://www.azcardinals.com/news/injury-report-week-8-vs-cowboys"
     },
     {
-      "text": "Dallas (Wednesday walkthrough, estimated): WR KaVontae Turpin (ribs) and LB Dee Winters (calf) did not practice; WR George Pickens (shoulder/hamstring), DT Quinnen Williams (hamstring) and S Caleb Downs (ankle) were limited.",
-      "source": "CBS Sports (Wednesday practice report)",
-      "url": "https://www.cbssports.com/nfl/news/nfl-week-8-injury-report-lamar-jackson-kerby-joseph-updates/"
+      "text": "Dallas (final report): OUT: WR KaVontae Turpin (ribs), LB Dee Winters (calf). QUESTIONABLE: WR George Pickens (shoulder/hamstring), DT Kenny Clark (back), DT Jonathan Bullard, OLB Marist Liufau, S P.J. Locke, TE Luke Schoonmaker (DNP Thu/Fri). Quinnen Williams and Caleb Downs have no designation.",
+      "source": "CBS Sports (final Week 8 report)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-8-injury-report-lamar-jackson-aj-brown-emeka-egbuka-more/"
     }
   ],
   "adjust": []
