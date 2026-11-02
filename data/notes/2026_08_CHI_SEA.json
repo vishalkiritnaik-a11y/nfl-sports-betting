@@ -1,6 +1,6 @@
 {
   "game_id": "2026_08_CHI_SEA",
-  "updated": "2026-10-31T21:00:00Z",
+  "updated": "2026-11-02T22:00:00Z",
   "items": [
     {
       "text": "Chicago acquired DT Jeffery Simmons from Tennessee; GM Ryan Poles expects him to debut Monday.",
@@ -8,19 +8,19 @@
       "url": "https://chicago.suntimes.com/bears/2026/10/30/new-bears-dt-jeffery-simmons-expected-to-play-monday-vs-seahawks"
     },
     {
-      "text": "Chicago (final report, Saturday): OUT: RB Kyle Monangai (toe/thumb). QUESTIONABLE: CB Malik Muhammad (toe), LB D'Marco Jackson (ankle). TE Colston Loveland and LB T.J. Edwards have no designation. TE Cole Kmet is on season-ending IR.",
-      "source": "Shaw Local / Yahoo Sports",
-      "url": "https://www.shawlocal.com/bears/2026/10/31/chicago-bears-injury-report-kyle-monangai-ruled-out-against-seahawks/"
+      "text": "Chicago (final report): OUT: RB Kyle Monangai (thumb/toe). QUESTIONABLE: CB Malik Muhammad (toe), LB D'Marco Jackson (ankle). TE Colston Loveland and LB T.J. Edwards have no designation. TE Cole Kmet is on season-ending IR.",
+      "source": "Sports Betting Dime (final reports, Nov 2)",
+      "url": "https://www.sportsbettingdime.com/news/nfl/final-bears-vs-seahawks-injury-reports-updates-on-monangai-charbonnet-shaheed-loveland-more/"
     },
     {
-      "text": "Seattle (Friday practice): LT Charles Cross (ankle) and LB Uchenna Nwosu (ankle) are ruled out, so Josh Jones starts at LT. WR Rashid Shaheed (knee) missed Thursday and Friday and is likely out. RB Jadarian Price was full and 'realistic' to be activated; RB Zach Charbonnet dropped to limited; DT Byron Murphy II (back) was added as limited. New LG Quenton Nelson practiced fully. Official designations due Saturday.",
+      "text": "Seattle (final report): OUT: LT Charles Cross (ankle; Josh Jones starts), WR Rashid Shaheed (knee), RB Velus Jones Jr. (hamstring). DOUBTFUL: EDGE Uchenna Nwosu (ankle). QUESTIONABLE: backup QB Drew Lock (elbow), G Anthony Bradford (knee), NT Brandon Pili (back), LB Patrick O'Connell (toe). DL Leonard Williams (Achilles) and DT Byron Murphy II (back) have no designation.",
       "source": "Seattle Sports (MyNorthwest)",
-      "url": "https://sports.mynorthwest.com/nfl/seattle-seahawks/seattle-seahawks-injury-report-price-charbonnet-trending-opposite-directions"
+      "url": "https://sports.mynorthwest.com/nfl/seattle-seahawks/seattle-seahawks-injury-report-zach-charbonnet-season-debut-bears"
     },
     {
-      "text": "Seattle full Thu/Fri participation report.",
-      "source": "Seahawks.com",
-      "url": "https://www.seahawks.com/news/week-8-injury-report-bears-at-seahawks"
+      "text": "Seattle game day: rookie RB Jadarian Price activated from IR and RB Zach Charbonnet (ACL) set for his season debut; RB Robert Henry Jr. released, WR Montorie Foster Jr. and T Bobby Hart elevated. Official inactives not yet posted at time of writing (due ~90 min before kickoff).",
+      "source": "Heavy.com",
+      "url": "https://heavy.com/sports/nfl/seattle-seahawks/jadarian-price-playing-today-seahawks-bears-game-injury-update"
     }
   ],
   "adjust": [
@@ -28,7 +28,7 @@
       "market": "all",
       "side": "CHI",
       "points": 0.5,
-      "reason": "Seattle is without LT Charles Cross and LB Uchenna Nwosu and likely WR Rashid Shaheed, while Chicago's main absence is RB Kyle Monangai and it adds DT Jeffery Simmons. The stats model doesn't price non-QB injuries"
+      "reason": "Seattle is without LT Charles Cross, WR Rashid Shaheed and likely EDGE Uchenna Nwosu, while Chicago's main absence is RB Kyle Monangai and it adds DT Jeffery Simmons (Seattle's RB returns partly offset). The stats model doesn't price non-QB injuries"
     }
   ]
 }
