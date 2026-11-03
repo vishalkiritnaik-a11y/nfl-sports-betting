@@ -1,0 +1,25 @@
+{
+  "game_id": "2026_09_JAX_BAL",
+  "updated": "2026-11-03T22:00:00Z",
+  "items": [
+    {
+      "text": "Baltimore QB: Lamar Jackson (right thumb, surgery) is out and headed to IR for at least four weeks; Tyler Huntley (turf toe) is an IR candidate and likely out. Undrafted rookie Joe Fagnano (limited Monday, ankle) will start Thursday per HC Jesse Minter; Kedon Slovis signed to the 53 and Austin Reed to the practice squad.",
+      "source": "CBS Sports (Nov 3)",
+      "url": "https://www.cbssports.com/nfl/news/ravens-starting-qb-joe-fagnano-jaguars-lamar-jackson-tyler-huntley-injured/"
+    },
+    {
+      "text": "Baltimore (early week, TBD): LB Roquan Smith (foot), S Jaylinn Hawkins (knee), G Vega Ioane (MCL), RB Justice Hill (groin). Limited: DE Trey Hendrickson, RT Roger Rosengarten, G John Simpson, DT John Jenkins. K Tyler Loop (groin) expected to go on IR. C Ethan Pocic and G Jovaughn Gwyn on IR.",
+      "source": "DraftKings Network (Week 9 injury report, Nov 3)",
+      "url": "https://dknetwork.draftkings.com/2026/11/03/nfl-injury-report-week-9/"
+    },
+    {
+      "text": "Jacksonville (short week, TBD): RB Bhayshul Tuten (ankle/foot, DNP Monday), RB Chris Rodriguez Jr. (hand), WR Jakobi Meyers (hamstring), DE Travon Walker (ribs), G Ezra Cleveland (knee), S Antonio Johnson (ankle). DT DaVon Hamilton (quad) feared out for the season; LT Anton Harrison and S Eric Murray out for the season. Trevor Lawrence healthy (sat late in 42-7 Week 8 rout).",
+      "source": "DraftKings Network (Week 9 injury report, Nov 3)",
+      "url": "https://dknetwork.draftkings.com/2026/11/03/nfl-injury-report-week-9/"
+    }
+  ],
+  "adjust": [],
+  "qb_start": {
+    "BAL": "Joe Fagnano"
+  }
+}
