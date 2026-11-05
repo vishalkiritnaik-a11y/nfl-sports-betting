@@ -1,16 +1,16 @@
 {
   "game_id": "2026_09_DEN_CAR",
-  "updated": "2026-11-03T22:00:00Z",
+  "updated": "2026-11-05T22:15:00Z",
   "items": [
     {
-      "text": "Denver (TBD): S Talanoa Hufanga (ankle, expected to miss multiple weeks), S Brandon Jones (hamstring). On IR: RB RJ Harvey (Week 13), RB Tyler Badie, OLB Jonah Elliss; WR Pat Bryant eligible Week 9. Bo Nix is the starter (no QB acquisition planned).",
-      "source": "DraftKings Network (Week 9 injury report, Nov 3)",
-      "url": "https://dknetwork.draftkings.com/2026/11/03/nfl-injury-report-week-9/"
+      "text": "Denver: DNP - S Talanoa Hufanga (ankle, expected to miss multiple weeks), S Brandon Jones (hamstring), CB Kris Abrams-Draine (ankle), DL Eyioma Uwazurike (shoulder). WR Pat Bryant activated from IR (full). Bo Nix starts.",
+      "source": "CBS Sports (Week 9 injury report, Nov 4)",
+      "url": "https://cbssports.com/nfl/news/nfl-week-9-injury-report-micah-parsons-jaylen-watson-rams"
     },
     {
-      "text": "Carolina (TBD): LB Jaelan Phillips (hamstring), CB Will Lee III (hamstring), G Damien Lewis (knee), C Corey Bullock (quad); G Torricelli Simpkins III and DT Bobby Brown III missed Week 8. On IR: OT Taylor Moton (season), OT Ikem Ekwonu (PUP), CB Jaycee Horn, CB Mike Jackson, WR Xavier Legette. Brady Christensen's IR practice window opened.",
-      "source": "DraftKings Network (Week 9 injury report, Nov 3)",
-      "url": "https://dknetwork.draftkings.com/2026/11/03/nfl-injury-report-week-9/"
+      "text": "Carolina: DNP - LB Jaelan Phillips (hamstring), CB Will Lee III (hamstring), G Damien Lewis (knee), LB Bobby Okereke (foot); limited - C Corey Bullock, G Torricelli Simpkins III. QB Bryce Young (ankle) full. On IR: OT Taylor Moton, OT Ikem Ekwonu, CB Jaycee Horn, CB Mike Jackson, WR Xavier Legette.",
+      "source": "NFL.com official injury report (Week 9, Nov 5)",
+      "url": "https://www.nfl.com/injuries/"
     }
   ],
   "adjust": []

@@ -1,17 +1,24 @@
 {
   "game_id": "2026_09_LV_SF",
-  "updated": "2026-11-03T22:00:00Z",
+  "updated": "2026-11-05T22:15:00Z",
   "items": [
     {
-      "text": "Las Vegas (TBD): CB Darien Porter (groin). On IR: DE Patrick Johnson, TE Carter Runyon.",
-      "source": "DraftKings Network (Week 9 injury report, Nov 3)",
-      "url": "https://dknetwork.draftkings.com/2026/11/03/nfl-injury-report-week-9/"
+      "text": "San Francisco: GM John Lynch says WR Mike Evans (Achilles) and WR Deebo Samuel Sr. (hamstring) are unlikely to play Sunday (both sat last week too). Also DNP - RB Christian McCaffrey (hamstring), LT Trent Williams, S Siran Neal; limited - DE Nick Bosa (knee/calf), WR Christian Kirk, CB Upton Stout, CB Nate Hobbs, WR Demarcus Robinson. WR Ricky Pearsall out for season.",
+      "source": "NFL.com news roundup (Nov 5)",
+      "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-thursday-nov-5"
     },
     {
-      "text": "San Francisco (TBD): RB Christian McCaffrey (mild hamstring), WR Mike Evans (Achilles tendinitis) and WR Deebo Samuel Sr. (hamstring) eyeing Sunday returns, DE Nick Bosa (knee/calf, missed five games), CB Upton Stout (AC joint). WR Demarcus Robinson eyeing return from IR; WR Ricky Pearsall out for season; DT DeForest Buckner acquired from IND.",
-      "source": "DraftKings Network (Week 9 injury report, Nov 3)",
-      "url": "https://dknetwork.draftkings.com/2026/11/03/nfl-injury-report-week-9/"
+      "text": "Las Vegas: CB Darien Porter (groin) DNP; limited - DT Thomas Booker, DT Foley Fatukasi, TE Ian Thomas. Kirk Cousins starts.",
+      "source": "NFL.com official injury report (Week 9, Nov 5)",
+      "url": "https://www.nfl.com/injuries/"
     }
   ],
-  "adjust": []
+  "adjust": [
+    {
+      "market": "all",
+      "side": "LV",
+      "points": 0.5,
+      "reason": "San Francisco is expected to be without WRs Mike Evans and Deebo Samuel again, with Christian McCaffrey and Trent Williams also missing practice. The stats model doesn't price non-QB injuries"
+    }
+  ]
 }

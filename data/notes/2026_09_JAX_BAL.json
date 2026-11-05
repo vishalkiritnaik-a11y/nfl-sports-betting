@@ -1,21 +1,16 @@
 {
   "game_id": "2026_09_JAX_BAL",
-  "updated": "2026-11-03T22:00:00Z",
+  "updated": "2026-11-05T22:15:00Z",
   "items": [
     {
-      "text": "Baltimore QB: Lamar Jackson (right thumb, surgery) is out and headed to IR for at least four weeks; Tyler Huntley (turf toe) is an IR candidate and likely out. Undrafted rookie Joe Fagnano (limited Monday, ankle) will start Thursday per HC Jesse Minter; Kedon Slovis signed to the 53 and Austin Reed to the practice squad.",
-      "source": "CBS Sports (Nov 3)",
-      "url": "https://www.cbssports.com/nfl/news/ravens-starting-qb-joe-fagnano-jaguars-lamar-jackson-tyler-huntley-injured/"
+      "text": "Baltimore FINAL: QB Lamar Jackson (thumb, placed on IR) OUT; QB Tyler Huntley (turf toe, season) OUT; S Jaylinn Hawkins (knee) OUT. Questionable: CB Nate Wiggins (stinger/illness, DNP all week), RB Adam Randall (neck, full). Undrafted rookie Joe Fagnano starts, Kedon Slovis backup. LB Roquan Smith and DE Trey Hendrickson not on the final report. K Tyler Loop DNP.",
+      "source": "Athlon Sports final injury report (Nov 5)",
+      "url": "https://athlonsports.com/nfl/trending/final-injury-report-for-jaguars-ravens-will-lamar-jackson-bhayshul-tuten-play"
     },
     {
-      "text": "Baltimore (early week, TBD): LB Roquan Smith (foot), S Jaylinn Hawkins (knee), G Vega Ioane (MCL), RB Justice Hill (groin). Limited: DE Trey Hendrickson, RT Roger Rosengarten, G John Simpson, DT John Jenkins. K Tyler Loop (groin) expected to go on IR. C Ethan Pocic and G Jovaughn Gwyn on IR.",
-      "source": "DraftKings Network (Week 9 injury report, Nov 3)",
-      "url": "https://dknetwork.draftkings.com/2026/11/03/nfl-injury-report-week-9/"
-    },
-    {
-      "text": "Jacksonville (short week, TBD): RB Bhayshul Tuten (ankle/foot, DNP Monday), RB Chris Rodriguez Jr. (hand), WR Jakobi Meyers (hamstring), DE Travon Walker (ribs), G Ezra Cleveland (knee), S Antonio Johnson (ankle). DT DaVon Hamilton (quad) feared out for the season; LT Anton Harrison and S Eric Murray out for the season. Trevor Lawrence healthy (sat late in 42-7 Week 8 rout).",
-      "source": "DraftKings Network (Week 9 injury report, Nov 3)",
-      "url": "https://dknetwork.draftkings.com/2026/11/03/nfl-injury-report-week-9/"
+      "text": "Jacksonville FINAL: RB Bhayshul Tuten (ankle/foot, DNP all week) questionable - game-time decision, Chris Rodriguez Jr. would start; DE Travon Walker (ribs, limited) questionable. No Jaguars out/doubtful. WR Jakobi Meyers, G Ezra Cleveland, S Antonio Johnson limited but no game status. Trevor Lawrence starts.",
+      "source": "NFL.com official injury report (Week 9, Nov 5)",
+      "url": "https://www.nfl.com/injuries/"
     }
   ],
   "adjust": [],

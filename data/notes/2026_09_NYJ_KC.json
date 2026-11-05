@@ -1,16 +1,16 @@
 {
   "game_id": "2026_09_NYJ_KC",
-  "updated": "2026-11-03T22:00:00Z",
+  "updated": "2026-11-05T22:15:00Z",
   "items": [
     {
-      "text": "New York Jets (TBD): RB Breece Hall (quad), DE Joseph Ossai (ankle), LB David Bailey (groin), OT Max Mitchell (concussion); RB Braelon Allen (ankle) left briefly in Week 8. DT T'Vondre Sweat (IR, Week 12), WR Arian Smith (ACL) and DT David Onyemata out.",
-      "source": "DraftKings Network (Week 9 injury report, Nov 3)",
-      "url": "https://dknetwork.draftkings.com/2026/11/03/nfl-injury-report-week-9/"
+      "text": "New York Jets: WR Garrett Wilson in concussion protocol (DNP); DNP - LB Demario Davis, DT Harrison Phillips; limited - RB Breece Hall (quad, could return), DE David Bailey (groin), DE Joseph Ossai (ankle), TE Mason Taylor. DT T'Vondre Sweat (IR), WR Arian Smith (ACL) out.",
+      "source": "CBS Sports (Week 9 injury report, Nov 4)",
+      "url": "https://cbssports.com/nfl/news/nfl-week-9-injury-report-micah-parsons-jaylen-watson-rams"
     },
     {
-      "text": "Kansas City (TBD): CB Mansoor Delane (shoulder), DT Peter Woods (neck). On IR: CB L'Jarius Sneed (Week 12), OT Josh Simmons (Week 11), DT Omarr Norman-Lott, WR Tyquan Thornton.",
-      "source": "DraftKings Network (Week 9 injury report, Nov 3)",
-      "url": "https://dknetwork.draftkings.com/2026/11/03/nfl-injury-report-week-9/"
+      "text": "Kansas City: DT Peter Woods (neck) DNP; limited - TE Travis Kelce (ankle), WR Rashee Rice (hamstring/knee), CB Mansoor Delane, DT Omarr Norman-Lott. QB Patrick Mahomes (knee) full. On IR: CB L'Jarius Sneed, OT Josh Simmons.",
+      "source": "A to Z Sports, Chiefs Thursday injury report",
+      "url": "https://atozsports.com/nfl/kansas-city-chiefs-news/chiefs-thursday-injury-report-week-9-jets/"
     }
   ],
   "adjust": []

@@ -1,16 +1,16 @@
 {
   "game_id": "2026_09_DAL_IND",
-  "updated": "2026-11-03T22:00:00Z",
+  "updated": "2026-11-05T22:15:00Z",
   "items": [
     {
-      "text": "Dallas (TBD): S Caleb Downs and S P.J. Locke (both concussion protocol), TE Jake Ferguson (low ankle sprain), LB Malachi Lawrence (ankle, could miss time), LB Dee Winters (calf), WR KaVontae Turpin (ribs). LB Marist Liufau and DT Jonathan Bullard on IR (21-day windows); S Jalen Thompson on IR.",
-      "source": "DraftKings Network (Week 9 injury report, Nov 3)",
-      "url": "https://dknetwork.draftkings.com/2026/11/03/nfl-injury-report-week-9/"
+      "text": "Dallas: DNP - S Caleb Downs (concussion/ankle), S P.J. Locke (concussion), TE Jake Ferguson (ankle), WR KaVontae Turpin (ribs); limited - WR George Pickens, G Tyler Smith (ankle), LB Dee Winters (calf), TE Luke Schoonmaker. Edge Malachi Lawrence (ankle) out multiple weeks, IR considered. LB Marist Liufau, DT Jonathan Bullard, S Jalen Thompson on IR.",
+      "source": "CBS Sports (Week 9 injury report, Nov 4)",
+      "url": "https://cbssports.com/nfl/news/nfl-week-9-injury-report-micah-parsons-jaylen-watson-rams"
     },
     {
-      "text": "Indianapolis: Daniel Jones remains the starter, Anthony Richardson QB2. CB Justin Walley (knee) TBD; CB Cam Taylor-Britt, WR Alec Pierce, DE Micheal Clemons on IR (DE Arden Key eligible Week 9). Colts traded LG Quenton Nelson (SEA) and DT DeForest Buckner (SF) last week.",
-      "source": "Yahoo Sports NFL news live updates (Nov 2-3)",
-      "url": "https://sports.yahoo.com/nfl/live/nfl-news-injury-updates-trade-deadline-rumors-133115104.html"
+      "text": "Indianapolis: DNP - CB Justin Walley (knee), LB Akeem Davis-Gaither (knee), TE Andrew Ogletree (knee), WR Keenan Allen and CB Charvarius Ward (rest); RB Jonathan Taylor limited (rest). Daniel Jones starts. CB Cam Taylor-Britt, WR Alec Pierce on IR.",
+      "source": "NFL.com official injury report (Week 9, Nov 5)",
+      "url": "https://www.nfl.com/injuries/"
     }
   ],
   "adjust": []

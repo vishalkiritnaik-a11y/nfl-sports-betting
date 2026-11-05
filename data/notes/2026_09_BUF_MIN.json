@@ -1,17 +1,25 @@
 {
   "game_id": "2026_09_BUF_MIN",
-  "updated": "2026-11-03T22:00:00Z",
+  "updated": "2026-11-05T22:15:00Z",
   "items": [
     {
-      "text": "Buffalo (TBD): WR DJ Moore (knee/AC joint), WR Joshua Palmer (hamstring), RT Spencer Brown (back). S C.J. Gardner-Johnson suspended; WR Tyrell Shavers (ACL, PUP).",
+      "text": "Minnesota QB: Kyler Murray (hamstring) will not play Monday and is week-to-week; Carson Wentz starts, Max Brosmer backup (per HC Kevin O'Connell, Thursday).",
+      "source": "NFL.com (Nov 5)",
+      "url": "https://www.nfl.com/news/vikings-to-start-carson-wentz-vs-bills-kyler-murray-hamstring"
+    },
+    {
+      "text": "Minnesota (TBD, first report Thursday): LT Christian Darrisaw (shoulder), S Theo Jackson (quad). G Donovan Jackson (meniscus) out for regular season; TE Josh Oliver (season), C Nick Samac on IR.",
       "source": "DraftKings Network (Week 9 injury report, Nov 3)",
       "url": "https://dknetwork.draftkings.com/2026/11/03/nfl-injury-report-week-9/"
     },
     {
-      "text": "Minnesota: QB Kyler Murray has hamstring soreness; Kevin O'Connell said 'I don't think we're there yet' on whether it affects Monday's game - monitor. TBD: LT Christian Darrisaw (shoulder), S Theo Jackson (quad). G Donovan Jackson (meniscus) out for the regular season; TE Josh Oliver (season), C Nick Samac on IR.",
-      "source": "Yahoo Sports NFL news live updates (Nov 2-3)",
-      "url": "https://sports.yahoo.com/nfl/live/nfl-news-injury-updates-trade-deadline-rumors-133115104.html"
+      "text": "Buffalo (TBD): WR DJ Moore (knee/AC joint), WR Joshua Palmer (hamstring), RT Spencer Brown (back). S C.J. Gardner-Johnson suspended; WR Tyrell Shavers (ACL, PUP).",
+      "source": "DraftKings Network (Week 9 injury report, Nov 3)",
+      "url": "https://dknetwork.draftkings.com/2026/11/03/nfl-injury-report-week-9/"
     }
   ],
-  "adjust": []
+  "adjust": [],
+  "qb_start": {
+    "MIN": "Carson Wentz"
+  }
 }

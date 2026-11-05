@@ -1,16 +1,16 @@
 {
   "game_id": "2026_09_CLE_NO",
-  "updated": "2026-11-03T22:00:00Z",
+  "updated": "2026-11-05T22:15:00Z",
   "items": [
     {
-      "text": "Cleveland: no notable new injuries. On IR: G Teven Jenkins, RB Raheim Sanders, LB Jeremiah Owusu-Koramoah; DT Kalia Davis out for season.",
-      "source": "DraftKings Network (Week 9 injury report, Nov 3)",
-      "url": "https://dknetwork.draftkings.com/2026/11/03/nfl-injury-report-week-9/"
+      "text": "Cleveland QB: Deshaun Watson entered the concussion protocol (DNP) and Shedeur Sanders is expected to start (schedule already lists Sanders). Also DNP - LB Quincy Williams (hamstring), OT Austin Barber (calf), DT Maliek Collins (elbow); limited - WR Denzel Boston, CB Myles Harden, C Elgton Jenkins, LB Carson Schwesinger, DE Jared Verse.",
+      "source": "NFL.com: Watson enters concussion protocol",
+      "url": "https://www.nfl.com/news/deshaun-watson-concussion-protocol-browns-week-9-shedeur-sanders"
     },
     {
-      "text": "New Orleans (TBD): RB CJ Donaldson (shoulder), S Justin Reid (concussion), G Cesar Ruiz (knee). OT Kelvin Banks Jr. (ankle surgery) out indefinitely; WR Jordyn Tyson on IR; RB Travis Etienne Jr. eligible to return from IR.",
-      "source": "DraftKings Network (Week 9 injury report, Nov 3)",
-      "url": "https://dknetwork.draftkings.com/2026/11/03/nfl-injury-report-week-9/"
+      "text": "New Orleans: RB Alvin Kamara DNP (rest); limited - OT Kelvin Banks Jr. (ankle), RB CJ Donaldson (shoulder/concussion), CB Martin Emerson (shin), OT Asim Richards, WR Jordyn Tyson (hamstring, returning from IR). S Justin Reid and G Cesar Ruiz full. Tyler Shough starts.",
+      "source": "CBS Sports (Week 9 injury report, Nov 4)",
+      "url": "https://cbssports.com/nfl/news/nfl-week-9-injury-report-micah-parsons-jaylen-watson-rams"
     }
   ],
   "adjust": []
