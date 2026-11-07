@@ -1,21 +1,21 @@
 {
   "game_id": "2026_09_BUF_MIN",
-  "updated": "2026-11-05T22:15:00Z",
+  "updated": "2026-11-07T20:00:00Z",
   "items": [
     {
-      "text": "Minnesota QB: Kyler Murray (hamstring) will not play Monday and is week-to-week; Carson Wentz starts, Max Brosmer backup (per HC Kevin O'Connell, Thursday).",
-      "source": "NFL.com (Nov 5)",
-      "url": "https://www.nfl.com/news/vikings-to-start-carson-wentz-vs-bills-kyler-murray-hamstring"
+      "text": "Minnesota QB: Kyler Murray (hamstring) OUT, week-to-week; Carson Wentz starts, Max Brosmer backup.",
+      "source": "Vikings.com (Nov 6 injury report)",
+      "url": "https://www.vikings.com/news/bills-injury-report-week-9-2026-nfl-season"
     },
     {
-      "text": "Minnesota (TBD, first report Thursday): LT Christian Darrisaw (shoulder), S Theo Jackson (quad). G Donovan Jackson (meniscus) out for regular season; TE Josh Oliver (season), C Nick Samac on IR.",
-      "source": "DraftKings Network (Week 9 injury report, Nov 3)",
-      "url": "https://dknetwork.draftkings.com/2026/11/03/nfl-injury-report-week-9/"
+      "text": "Minnesota (statuses): OUT - WR Jauan Jennings (calf), RB Demond Claiborne (knee). Questionable - S Theo Jackson (quad), S Jay Ward (knee). LT Christian Darrisaw (shoulder), OLB Andrew Van Ginkel, CB Isaiah Rodgers no designation.",
+      "source": "A to Z Sports (Vikings final injury report)",
+      "url": "https://atozsports.com/nfl/minnesota-vikings-news/vikings-final-injury-report-vs-bills-christian-darrisaw-jauan-jennings-demond-claiborne/"
     },
     {
-      "text": "Buffalo (TBD): WR DJ Moore (knee/AC joint), WR Joshua Palmer (hamstring), RT Spencer Brown (back). S C.J. Gardner-Johnson suspended; WR Tyrell Shavers (ACL, PUP).",
-      "source": "DraftKings Network (Week 9 injury report, Nov 3)",
-      "url": "https://dknetwork.draftkings.com/2026/11/03/nfl-injury-report-week-9/"
+      "text": "Buffalo (preliminary): WR Joshua Palmer (hamstring) OUT. Questionable - LT Dion Dawkins (rib), OL Alec Anderson (ankle), DL Greg Gaines (calf), DB Jordan Hancock (hamstring), WR Tyrell Shavers (knee). WR DJ Moore and RT Spencer Brown limited Friday, no designation; WR Khalil Shakir missed Friday (personal). S C.J. Gardner-Johnson suspended. Josh Allen starts.",
+      "source": "A to Z Sports (Vikings final injury report)",
+      "url": "https://atozsports.com/nfl/minnesota-vikings-news/vikings-final-injury-report-vs-bills-christian-darrisaw-jauan-jennings-demond-claiborne/"
     }
   ],
   "adjust": [],

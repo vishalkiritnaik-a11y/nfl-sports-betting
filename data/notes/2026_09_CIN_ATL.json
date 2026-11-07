@@ -1,16 +1,16 @@
 {
   "game_id": "2026_09_CIN_ATL",
-  "updated": "2026-11-05T22:15:00Z",
+  "updated": "2026-11-07T20:00:00Z",
   "items": [
     {
-      "text": "Cincinnati (Madrid game): DNP Wed/Thu - CB DJ Turner II (heel; full participant per Thursday reports), S Kyle Dugger (quad), DE Cedric Johnson (ankle/foot), DT Jonathan Allen (rest); S Jordan Battle (hamstring) limited. DE Cashius Howell on IR; TE Erick All Jr. out for season.",
-      "source": "CBS Sports (Week 9 injury report, Nov 4)",
-      "url": "https://cbssports.com/nfl/news/nfl-week-9-injury-report-micah-parsons-jaylen-watson-rams"
+      "text": "Cincinnati FINAL (Madrid): S Kyle Dugger (quad) OUT; DE Cedric Johnson (ankle/foot) questionable. CB DJ Turner II and S Jordan Battle no designation. Joe Burrow starts.",
+      "source": "NFL.com (Week 9 injury report, all games)",
+      "url": "https://fantasy-www.nfl.com/news/nfl-week-9-injury-report-2026-season"
     },
     {
-      "text": "Atlanta: WR Zachariah Branch (hamstring) DNP; limited - RB Brian Robinson Jr. (hamstring), LB Divine Deablo (forearm), LB Yasir Abdullah (hamstring). S Billy Bowman Jr. full. DT Da'Shawn Hand on IR. Michael Penix Jr. starts.",
-      "source": "NFL.com news roundup (Nov 5)",
-      "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-thursday-nov-5"
+      "text": "Atlanta FINAL: OUT - RB Brian Robinson Jr. (hamstring, downgraded), WR Zachariah Branch (hamstring). Questionable - EDGE James Pearce Jr. (back), LB Divine Deablo (forearm), LB Yasir Abdullah (hamstring), WR Beaux Collins (hip), OT Cameron Williams (ankle). Michael Penix Jr. starts.",
+      "source": "CBS Sports (Week 9 final injury report)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-9-injury-report-seahawks-quenton-nelson-out-knee-procedure/"
     }
   ],
   "adjust": []

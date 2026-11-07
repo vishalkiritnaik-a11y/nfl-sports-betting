@@ -1,16 +1,16 @@
 {
   "game_id": "2026_09_GB_NE",
-  "updated": "2026-11-05T22:15:00Z",
+  "updated": "2026-11-07T20:00:00Z",
   "items": [
     {
-      "text": "Green Bay: DNP - LB Zaire Franklin (shin fracture), G Sean Rhyan (ankle, out ~a month), G/T Travis Glover (knee), TE Josh Whyle (concussion); limited - WR Christian Watson (ribs), CB Keisean Nixon (groin), G Aaron Banks, RB Chris Brooks. EDGE Micah Parsons practicing off PUP, targeting Thanksgiving week. Jordan Love starts.",
-      "source": "CBS Sports (Week 9 injury report, Nov 4)",
-      "url": "https://cbssports.com/nfl/news/nfl-week-9-injury-report-micah-parsons-jaylen-watson-rams"
+      "text": "Green Bay FINAL: OUT - EDGE Micah Parsons (knee/PUP), LB Zaire Franklin (shin), G Sean Rhyan (ankle), OL Travis Glover (knee), TE Josh Whyle (concussion). Questionable - CB Keisean Nixon (groin), RB Chris Brooks (ankle), RB MarShawn Lloyd (knee). Jordan Love starts.",
+      "source": "NFL.com (Week 9 injury report, all games)",
+      "url": "https://fantasy-www.nfl.com/news/nfl-week-9-injury-report-2026-season"
     },
     {
-      "text": "New England: DNP - WR A.J. Brown (ankle/knee), TE Hunter Henry (foot), DT Christian Barmore (illness), RB TreVeyon Henderson; limited - S Kevin Byard, CB Carlton Davis III, OT Morgan Moses, LB Gabe Jacas, OLB Dre'Mont Jones. QB Drake Maye (right shoulder) full. WR Romeo Doubs, G Mike Onwenu on IR.",
-      "source": "CBS Sports (Week 9 injury report, Nov 4)",
-      "url": "https://cbssports.com/nfl/news/nfl-week-9-injury-report-micah-parsons-jaylen-watson-rams"
+      "text": "New England FINAL: OUT - WR A.J. Brown (ankle/knee), RB TreVeyon Henderson (illness). Questionable - TE Hunter Henry (foot), OT Morgan Moses (foot), CB Carlton Davis III (neck), S Kevin Byard (chest), OL Greg Van Roten, WR Mack Hollins, S Brenden Schooler. Drake Maye starts. WR Romeo Doubs, G Mike Onwenu on IR.",
+      "source": "NFL.com (Week 9 injury report, all games)",
+      "url": "https://fantasy-www.nfl.com/news/nfl-week-9-injury-report-2026-season"
     }
   ],
   "adjust": []

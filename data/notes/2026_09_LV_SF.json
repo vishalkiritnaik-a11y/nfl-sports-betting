@@ -1,16 +1,16 @@
 {
   "game_id": "2026_09_LV_SF",
-  "updated": "2026-11-05T22:15:00Z",
+  "updated": "2026-11-07T20:00:00Z",
   "items": [
     {
-      "text": "San Francisco: GM John Lynch says WR Mike Evans (Achilles) and WR Deebo Samuel Sr. (hamstring) are unlikely to play Sunday (both sat last week too). Also DNP - RB Christian McCaffrey (hamstring), LT Trent Williams, S Siran Neal; limited - DE Nick Bosa (knee/calf), WR Christian Kirk, CB Upton Stout, CB Nate Hobbs, WR Demarcus Robinson. WR Ricky Pearsall out for season.",
-      "source": "NFL.com news roundup (Nov 5)",
-      "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-thursday-nov-5"
+      "text": "San Francisco FINAL: OUT - WR Mike Evans (Achilles), WR Deebo Samuel Sr. (hamstring), WR Christian Kirk (knee). RB Christian McCaffrey and DE Nick Bosa have no designation and will play. Questionable - WR Demarcus Robinson (ankle, likely active), CB Upton Stout, DB Nate Hobbs, DB Siran Neal. Brock Purdy starts.",
+      "source": "Yahoo Sports (Nov 6)",
+      "url": "https://sports.yahoo.com/articles/49ers-nick-bosa-christian-mccaffrey-235208616.html"
     },
     {
-      "text": "Las Vegas: CB Darien Porter (groin) DNP; limited - DT Thomas Booker, DT Foley Fatukasi, TE Ian Thomas. Kirk Cousins starts.",
-      "source": "NFL.com official injury report (Week 9, Nov 5)",
-      "url": "https://www.nfl.com/injuries/"
+      "text": "Las Vegas FINAL: DT Thomas Booker (ankle) OUT; CB Darien Porter (groin) questionable. Kirk Cousins starts.",
+      "source": "NFL.com (Week 9 injury report, all games)",
+      "url": "https://fantasy-www.nfl.com/news/nfl-week-9-injury-report-2026-season"
     }
   ],
   "adjust": [
@@ -18,7 +18,7 @@
       "market": "all",
       "side": "LV",
       "points": 0.5,
-      "reason": "San Francisco is expected to be without WRs Mike Evans and Deebo Samuel again, with Christian McCaffrey and Trent Williams also missing practice. The stats model doesn't price non-QB injuries"
+      "reason": "San Francisco is without three receivers (Mike Evans, Deebo Samuel, Christian Kirk), though McCaffrey and Bosa are back. The stats model doesn't price non-QB injuries"
     }
   ]
 }

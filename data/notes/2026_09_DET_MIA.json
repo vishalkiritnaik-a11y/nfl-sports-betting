@@ -1,17 +1,24 @@
 {
   "game_id": "2026_09_DET_MIA",
-  "updated": "2026-11-05T22:15:00Z",
+  "updated": "2026-11-07T20:00:00Z",
   "items": [
     {
-      "text": "Detroit: S Kerby Joseph (knee) OUT. DNP - LB Jack Campbell (neck; hospitalized after Week 8 backboard injury), C Cade Mays (ankle), CB D.J. Reed (hip), DE DJ Wonnum (concussion); limited - WR Amon-Ra St. Brown (rib), S Brian Branch, RB Jacob Saylors (neck). On IR: RB Isiah Pacheco, LB Devin White, G Ben Bartch.",
-      "source": "CBS Sports (Week 9 injury report, Nov 4)",
-      "url": "https://cbssports.com/nfl/news/nfl-week-9-injury-report-micah-parsons-jaylen-watson-rams"
+      "text": "Detroit FINAL: OUT - LB Jack Campbell (neck), S Kerby Joseph (knee), CB D.J. Reed (hip), C Cade Mays (ankle), EDGE DJ Wonnum (concussion). Questionable - WR Amon-Ra St. Brown (rib), RB Jacob Saylors (neck), RB Sione Vaki (ankle). Jared Goff starts.",
+      "source": "CBS Sports (Week 9 final injury report)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-9-injury-report-seahawks-quenton-nelson-out-knee-procedure/"
     },
     {
-      "text": "Miami: RB Jaylen Wright DNP; limited - DT Zach Sieler, EDGE Chop Robinson, EDGE Malik Herring, S Michael Taaffe, S Dante Trader Jr., RB Kaytron Allen. RB De'Von Achane (ACL) out for season. Malik Willis starts.",
-      "source": "NFL.com official injury report (Week 9, Nov 5)",
-      "url": "https://www.nfl.com/injuries/"
+      "text": "Miami FINAL: no players out or doubtful. Questionable - RB Jaylen Wright (quad), RB Kaytron Allen (quad), EDGE Malik Herring (neck). RB De'Von Achane (ACL) out for season. Malik Willis starts.",
+      "source": "CBS Sports (Week 9 final injury report)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-9-injury-report-seahawks-quenton-nelson-out-knee-procedure/"
     }
   ],
-  "adjust": []
+  "adjust": [
+    {
+      "market": "all",
+      "side": "MIA",
+      "points": 0.5,
+      "reason": "Detroit is missing five defensive and line starters (LB Jack Campbell, S Kerby Joseph, CB D.J. Reed, C Cade Mays, EDGE DJ Wonnum) while Miami has nobody ruled out. The stats model doesn't price non-QB injuries"
+    }
+  ]
 }

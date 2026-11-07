@@ -1,17 +1,24 @@
 {
   "game_id": "2026_09_ARI_SEA",
-  "updated": "2026-11-05T22:15:00Z",
+  "updated": "2026-11-07T20:00:00Z",
   "items": [
     {
-      "text": "Seattle QB: Sam Darnold (quad/ribs) ruled OUT; Drew Lock (right elbow, limited) starts, as the schedule lists. Also DNP - LT Charles Cross (ankle), WR Rashid Shaheed (knee), DT Leonard Williams (stinger), DT Brandon Pili, LB Connor O'Toole; limited - G Quenton Nelson, G Anthony Bradford, LB Uchenna Nwosu, RB Velus Jones.",
-      "source": "Arizona Sports (updated Nov 5)",
-      "url": "https://arizonasports.com/arizona-cardinals-injury-report/cardinals-seahawks-injury-report-michael-wilson-limited-sam-darnold-ruled-out"
+      "text": "Seattle FINAL: QB Sam Darnold (quad/ribs) OUT; Drew Lock starts, as the schedule lists. Also OUT - LT Charles Cross (ankle), G Quenton Nelson (knee, week-to-week after procedure), WR Rashid Shaheed (knee), DT Leonard Williams (stinger), LB Uchenna Nwosu (ankle), DT Brandon Pili (back). LB Connor O'Toole (foot) questionable.",
+      "source": "NFL.com (Week 9 injury report, all games)",
+      "url": "https://fantasy-www.nfl.com/news/nfl-week-9-injury-report-2026-season"
     },
     {
-      "text": "Arizona: Gardner Minshew starts (Carson Beck QB2; Jacoby Brissett DNP, not injury-related, reportedly being traded to Baltimore). DNP - OT Jayden Williams (knee), RB Bam Knight (concussion), OL Jon Gaines II (ankle), plus rest days for S Budda Baker, LB Josh Sweat, G Isaac Seumalo, C Hjalte Froholdt; limited - WR Michael Wilson (ribs), DL Walter Nolen III, G Isaiah Adams. RB Jeremiyah Love (IR), WR Kendrick Bourne (season), OT Paris Johnson Jr., RB James Conner out.",
-      "source": "Arizona Sports (updated Nov 5)",
-      "url": "https://arizonasports.com/arizona-cardinals-injury-report/cardinals-seahawks-injury-report-michael-wilson-limited-sam-darnold-ruled-out"
+      "text": "Arizona FINAL: OUT - RB Bam Knight (concussion), OL Jon Gaines II (ankle), OT Jayden Williams (knee). Questionable - G Isaiah Adams (ankle), DL Walter Nolen III (ankle), CB Max Melton (knee). Gardner Minshew starts (Jacoby Brissett reportedly traded). RB Jeremiyah Love on IR.",
+      "source": "NFL.com (Week 9 injury report, all games)",
+      "url": "https://fantasy-www.nfl.com/news/nfl-week-9-injury-report-2026-season"
     }
   ],
-  "adjust": []
+  "adjust": [
+    {
+      "market": "all",
+      "side": "ARI",
+      "points": 0.5,
+      "reason": "Beyond the QB change, Seattle is missing LT Charles Cross, G Quenton Nelson, WR Rashid Shaheed, DT Leonard Williams and LB Uchenna Nwosu, a bigger cluster than Arizona's two linemen and backup RB. The stats model doesn't price non-QB injuries"
+    }
+  ]
 }

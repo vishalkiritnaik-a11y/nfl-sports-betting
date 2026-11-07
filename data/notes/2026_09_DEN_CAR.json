@@ -1,16 +1,16 @@
 {
   "game_id": "2026_09_DEN_CAR",
-  "updated": "2026-11-05T22:15:00Z",
+  "updated": "2026-11-07T20:00:00Z",
   "items": [
     {
-      "text": "Denver: DNP - S Talanoa Hufanga (ankle, expected to miss multiple weeks), S Brandon Jones (hamstring), CB Kris Abrams-Draine (ankle), DL Eyioma Uwazurike (shoulder). WR Pat Bryant activated from IR (full). Bo Nix starts.",
-      "source": "CBS Sports (Week 9 injury report, Nov 4)",
-      "url": "https://cbssports.com/nfl/news/nfl-week-9-injury-report-micah-parsons-jaylen-watson-rams"
+      "text": "Denver FINAL: OUT - S Brandon Jones (hamstring), CB Kris Abrams-Draine (ankle), DL Eyioma Uwazurike (shoulder). Questionable - S Talanoa Hufanga (ankle), OLB Dondrea Tillman (hip), WR Pat Bryant (ankle, returning from IR). Bo Nix starts.",
+      "source": "Denver Broncos (Nov 6 injury report)",
+      "url": "https://www.denverbroncos.com/news/injuryreport/injury-report-s-talanoa-hufanga-among-broncos-questionable-for-week-9-game-vs-panthers-3-players-ruled-out"
     },
     {
-      "text": "Carolina: DNP - LB Jaelan Phillips (hamstring), CB Will Lee III (hamstring), G Damien Lewis (knee), LB Bobby Okereke (foot); limited - C Corey Bullock, G Torricelli Simpkins III. QB Bryce Young (ankle) full. On IR: OT Taylor Moton, OT Ikem Ekwonu, CB Jaycee Horn, CB Mike Jackson, WR Xavier Legette.",
-      "source": "NFL.com official injury report (Week 9, Nov 5)",
-      "url": "https://www.nfl.com/injuries/"
+      "text": "Carolina FINAL: OUT - OLB Jaelan Phillips (hamstring), G Damien Lewis (knee), LB Bobby Okereke (foot), CB Will Lee III (hamstring). Questionable - C Corey Bullock (quad), G Torricelli Simpkins III (ankle), OL Brady Christensen (hamstring). On IR: OTs Taylor Moton and Ikem Ekwonu, CBs Jaycee Horn and Mike Jackson. Bryce Young starts.",
+      "source": "Panthers.com (Week 9 Friday injury report)",
+      "url": "https://www.panthers.com/news/week-9-friday-injury-report-four-ruled-out-for-broncos"
     }
   ],
   "adjust": []

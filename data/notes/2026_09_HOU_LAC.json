@@ -1,16 +1,16 @@
 {
   "game_id": "2026_09_HOU_LAC",
-  "updated": "2026-11-05T22:15:00Z",
+  "updated": "2026-11-07T20:00:00Z",
   "items": [
     {
-      "text": "Houston: DNP - RB David Montgomery (groin), S Reed Blankenship (concussion/hand); limited - LB Azeez Al-Shaair (groin), TE Brevin Jordan, OT Braden Smith (ankle). OT Blake Fisher and S Jalen Pitre full. C.J. Stroud starts.",
-      "source": "CBS Sports (Week 9 injury report, Nov 4)",
-      "url": "https://cbssports.com/nfl/news/nfl-week-9-injury-report-micah-parsons-jaylen-watson-rams"
+      "text": "Houston FINAL: OUT - RB David Montgomery (groin), S Reed Blankenship (concussion/hand). LB Azeez Al-Shaair, OTs Blake Fisher and Braden Smith, TE Brevin Jordan, S Jalen Pitre no designation. C.J. Stroud starts.",
+      "source": "Chargers.com (Week 9 injury report)",
+      "url": "https://www.chargers.com/news/texans-injury-report-week-9-david-njoku"
     },
     {
-      "text": "Los Angeles Chargers: DNP - CB Deane Leonard (concussion), WR Brenen Thompson (quad/hamstring), S Kendall Williamson (calf), DE Khalil Mack (rest); limited - TE David Njoku, CBs Donte Jackson and Rodney Shelley, LB Denzel Perryman. On IR: S Derwin James Jr., OT Rashawn Slater, C Tyler Biadasz.",
-      "source": "NFL.com official injury report (Week 9, Nov 5)",
-      "url": "https://www.nfl.com/injuries/"
+      "text": "Los Angeles Chargers FINAL: OUT - CB Deane Leonard (concussion), S Kendall Williamson (calf). DOUBTFUL - TE David Njoku (fibula), LB Denzel Perryman (pectoral), WR Brenen Thompson (quad/hamstring), G Kayode Awosika (fibula). Khalil Mack, Donte Jackson, Rodney Shelley cleared. On IR: S Derwin James Jr., OT Rashawn Slater, C Tyler Biadasz. Justin Herbert starts.",
+      "source": "Chargers.com (Week 9 injury report)",
+      "url": "https://www.chargers.com/news/texans-injury-report-week-9-david-njoku"
     }
   ],
   "adjust": []

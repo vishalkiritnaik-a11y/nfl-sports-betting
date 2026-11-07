@@ -1,16 +1,16 @@
 {
   "game_id": "2026_09_LA_WAS",
-  "updated": "2026-11-05T22:15:00Z",
+  "updated": "2026-11-07T20:00:00Z",
   "items": [
     {
-      "text": "Los Angeles Rams: QB Matthew Stafford (right elbow) a full participant - expected to start. CB Jaylen Watson (shoulder surgery) to IR, out for season. DNP - CB Trent McDuffie, S Kam Curl, TE Colby Parkinson; DE Myles Garrett (knee) limited in his IR return window. WR Davante Adams on IR.",
-      "source": "CBS Sports (Week 9 injury report, Nov 4)",
-      "url": "https://cbssports.com/nfl/news/nfl-week-9-injury-report-micah-parsons-jaylen-watson-rams"
+      "text": "Los Angeles Rams FINAL: OUT - CB Jaylen Watson (shoulder, season), TE Terrance Ferguson (ankle/hamstring). LS Joe Cardona (ankle) doubtful. Questionable - CB Trent McDuffie (back), S Kam Curl (foot), TE Colby Parkinson (ribs), LB Grant Stuard, WR Jordan Whittington. Matthew Stafford starts. WR Davante Adams on IR.",
+      "source": "NFL.com (Week 9 injury report, all games)",
+      "url": "https://fantasy-www.nfl.com/news/nfl-week-9-injury-report-2026-season"
     },
     {
-      "text": "Washington: RB Jeremy McNichols, DT Daron Payne, DT Javon Kinlaw placed on IR. DNP - WR Treylon Burks (foot), WR Stefon Diggs (rest); limited - G Sam Cosmi (knee), TE John Bates, DT Shy Tuttle. QB Jayden Daniels (left elbow) full. WR Terry McLaurin, OT Laremy Tunsil out.",
-      "source": "CBS Sports (Week 9 injury report, Nov 4)",
-      "url": "https://cbssports.com/nfl/news/nfl-week-9-injury-report-micah-parsons-jaylen-watson-rams"
+      "text": "Washington FINAL: OUT - WR Dyami Brown (calf), WR Treylon Burks (foot); DT Jer'Zhan Newton (pectoral) questionable. RB Jeremy McNichols, DTs Daron Payne and Javon Kinlaw on IR; WR Terry McLaurin and OT Laremy Tunsil out. Jayden Daniels starts.",
+      "source": "CBS Sports (Week 9 final injury report)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-9-injury-report-seahawks-quenton-nelson-out-knee-procedure/"
     }
   ],
   "adjust": []

@@ -1,16 +1,16 @@
 {
   "game_id": "2026_09_DAL_IND",
-  "updated": "2026-11-05T22:15:00Z",
+  "updated": "2026-11-07T20:00:00Z",
   "items": [
     {
-      "text": "Dallas: DNP - S Caleb Downs (concussion/ankle), S P.J. Locke (concussion), TE Jake Ferguson (ankle), WR KaVontae Turpin (ribs); limited - WR George Pickens, G Tyler Smith (ankle), LB Dee Winters (calf), TE Luke Schoonmaker. Edge Malachi Lawrence (ankle) out multiple weeks, IR considered. LB Marist Liufau, DT Jonathan Bullard, S Jalen Thompson on IR.",
-      "source": "CBS Sports (Week 9 injury report, Nov 4)",
-      "url": "https://cbssports.com/nfl/news/nfl-week-9-injury-report-micah-parsons-jaylen-watson-rams"
+      "text": "Dallas FINAL: OUT - WR KaVontae Turpin (ribs), EDGE Malachi Lawrence (ankle). Questionable - WR George Pickens (hamstring), TE Jake Ferguson (ankle), TE Luke Schoonmaker (groin), CB Joey Porter Jr. (ankle), LB DeMarvion Overshown (hamstring/back), DT Jonathan Bullard (calf), LB Marist Liufau (forearm). Safeties Caleb Downs and P.J. Locke cleared (no designation). Dak Prescott starts.",
+      "source": "CBS Sports (Week 9 final injury report)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-9-injury-report-seahawks-quenton-nelson-out-knee-procedure/"
     },
     {
-      "text": "Indianapolis: DNP - CB Justin Walley (knee), LB Akeem Davis-Gaither (knee), TE Andrew Ogletree (knee), WR Keenan Allen and CB Charvarius Ward (rest); RB Jonathan Taylor limited (rest). Daniel Jones starts. CB Cam Taylor-Britt, WR Alec Pierce on IR.",
-      "source": "NFL.com official injury report (Week 9, Nov 5)",
-      "url": "https://www.nfl.com/injuries/"
+      "text": "Indianapolis FINAL: OUT - LB Akeem Davis-Gaither (knee), CB Justin Walley (knee). Questionable - OT Jalen Travis (thumb/hamstring), S A.J. Haulcy (ankle). Daniel Jones starts.",
+      "source": "CBS Sports (Week 9 final injury report)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-9-injury-report-seahawks-quenton-nelson-out-knee-procedure/"
     }
   ],
   "adjust": []
