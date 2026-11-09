@@ -1,21 +1,26 @@
 {
   "game_id": "2026_09_BUF_MIN",
-  "updated": "2026-11-07T20:00:00Z",
+  "updated": "2026-11-09T22:00:00Z",
   "items": [
     {
-      "text": "Minnesota QB: Kyler Murray (hamstring) OUT, week-to-week; Carson Wentz starts, Max Brosmer backup.",
-      "source": "Vikings.com (Nov 6 injury report)",
-      "url": "https://www.vikings.com/news/bills-injury-report-week-9-2026-nfl-season"
+      "text": "Minnesota QB: Kyler Murray (Grade 2 hamstring strain) OUT; Carson Wentz starts, Max Brosmer backup.",
+      "source": "ESPN (Vikings to start Wentz vs. Bills)",
+      "url": "https://www.espn.com/nfl/story/_/id/50390732/vikings-start-qb-wentz-bills-murray-injured"
     },
     {
-      "text": "Minnesota (statuses): OUT - WR Jauan Jennings (calf), RB Demond Claiborne (knee). Questionable - S Theo Jackson (quad), S Jay Ward (knee). LT Christian Darrisaw (shoulder), OLB Andrew Van Ginkel, CB Isaiah Rodgers no designation.",
-      "source": "A to Z Sports (Vikings final injury report)",
-      "url": "https://atozsports.com/nfl/minnesota-vikings-news/vikings-final-injury-report-vs-bills-christian-darrisaw-jauan-jennings-demond-claiborne/"
+      "text": "Minnesota (final): OUT - WR Jauan Jennings (calf), RB Demond Claiborne (knee). Questionable - S Theo Jackson (quad), S Jay Ward (knee). LT Christian Darrisaw, OLB Andrew Van Ginkel, CB Isaiah Rodgers, LB Jake Golday no designation, expected to play.",
+      "source": "Vikings.com (final Week 9 injury report)",
+      "url": "https://vikings.com/news/bills-injury-report-week-9-2026-nfl-season"
     },
     {
-      "text": "Buffalo (preliminary): WR Joshua Palmer (hamstring) OUT. Questionable - LT Dion Dawkins (rib), OL Alec Anderson (ankle), DL Greg Gaines (calf), DB Jordan Hancock (hamstring), WR Tyrell Shavers (knee). WR DJ Moore and RT Spencer Brown limited Friday, no designation; WR Khalil Shakir missed Friday (personal). S C.J. Gardner-Johnson suspended. Josh Allen starts.",
-      "source": "A to Z Sports (Vikings final injury report)",
-      "url": "https://atozsports.com/nfl/minnesota-vikings-news/vikings-final-injury-report-vs-bills-christian-darrisaw-jauan-jennings-demond-claiborne/"
+      "text": "Buffalo (final): OUT - WR Joshua Palmer (hamstring). Questionable - LT Dion Dawkins (rib; DNP all week, Tylan Grable would start), LG Alec Anderson (ankle; limited Sat, 'close call', Austin Corbett would start), DL Greg Gaines (calf), DB Jordan Hancock (hamstring), WR Tyrell Shavers (knee). S C.J. Gardner-Johnson suspended. Josh Allen starts.",
+      "source": "Athlon Sports (final injury report, Nov 9)",
+      "url": "https://athlonsports.com/nfl/trending/final-injury-report-for-bills-vikings-will-kyler-murray-joshua-palmer-play"
+    },
+    {
+      "text": "Buffalo OL: Dawkins and Anderson both game-time decisions; inactives (~6:45 pm ET) not yet posted at time of writing.",
+      "source": "Athlon Sports (Dawkins/Anderson availability)",
+      "url": "https://athlonsports.com/nfl/buffalo-bills/dion-dawkins-alec-anderson-availability-offensive-line-changes-vikings-blitz-test"
     }
   ],
   "adjust": [],
