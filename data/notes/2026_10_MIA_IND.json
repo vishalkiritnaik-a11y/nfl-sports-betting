@@ -1,0 +1,29 @@
+{
+  "game_id": "2026_10_MIA_IND",
+  "updated": "2026-11-10T22:30:00Z",
+  "items": [
+    {
+      "text": "Miami (early week): QB Malik Willis placed on IR (groin, out at least 4 weeks); Kyle McCord in line for his first NFL start (no prior start, so the model can't take a qb_start override; it still prices Willis). OUT - DT Zach Sieler (ruptured biceps, season-ending surgery). Monitor - RB Jaylen Wright (quad).",
+      "source": "NFL.com (Dolphins place Willis on IR; McCord in line to start, Nov 10)",
+      "url": "https://www.nfl.com/news/dolphins-place-qb-malik-willis-groin-on-injured-reserve-kyle-mccord-in-line-for-first-start"
+    },
+    {
+      "text": "Indianapolis (early week): OUT - RT Jalen Travis (knee, 2-4 weeks). IR - WR Alec Pierce (heel). Monitor - LB Jaylon Carlies (neck), CB Justin Walley, LB Akeem Davis-Gaither, S A.J. Haulcy (all inactive Wk9). Deadline sell-off: traded WR Josh Downs, WR Keenan Allen, G Quenton Nelson and DT DeForest Buckner. Daniel Jones expected to start.",
+      "source": "TSN/AP (Colts begin week facing uncertainty, Nov 9)",
+      "url": "https://www.tsn.ca/nfl/article/with-trade-talk-still-swirling-colts-begins-week-facing-challenge-of-uncertainty/"
+    },
+    {
+      "text": "IND: RT Jalen Travis out 2-4 weeks.",
+      "source": "Yahoo Sports (Colts' Jalen Travis out 2-4 weeks, Nov 10)",
+      "url": "https://sports.yahoo.com/articles/colts-jalen-travis-2-4-043058944.html"
+    }
+  ],
+  "adjust": [
+    {
+      "market": "all",
+      "side": "MIA",
+      "points": 0.5,
+      "reason": "Indianapolis traded away four starters (Nelson, Buckner, Downs, Allen) and lost RT Jalen Travis, outweighing Miami's loss of DT Zach Sieler. The stats model doesn't price non-QB injuries"
+    }
+  ]
+}

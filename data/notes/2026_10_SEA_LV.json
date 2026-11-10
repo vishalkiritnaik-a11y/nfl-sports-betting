@@ -1,0 +1,20 @@
+{
+  "game_id": "2026_10_SEA_LV",
+  "updated": "2026-11-10T22:30:00Z",
+  "items": [
+    {
+      "text": "Seattle (early week): OUT - QB Sam Darnold (quad + cracked rib; targeting return after Wk11 bye), LG Quenton Nelson (knee procedure, week-to-week). Monitor - DT Leonard Williams (stinger), LT Charles Cross, OLB Uchenna Nwosu, WR Rashid Shaheed (knee), all missed Wk9. Drew Lock (oblique, elbow) expected to start, limited in practice; Jalen Milroe backup.",
+      "source": "Seahawks.com (Updates on Darnold, Nelson & other injuries, Nov 9)",
+      "url": "https://www.seahawks.com/news/updates-on-sam-darnold-quenton-nelson-other-seahawks-injuries"
+    },
+    {
+      "text": "Las Vegas: Kirk Cousins traded to MIN Nov 10; rookie Fernando Mendoza takes over as starter per Schefter (Kubiak announcement pending). Monitor - Trey Zuhn III (concussion). No notable new injuries from the Wk9 loss at SF.",
+      "source": "NBC Sports/Rotoworld (Mendoza to take over as Raiders starter, Nov 10)",
+      "url": "https://www.nbcsports.com/fantasy/football/player-news/2026-11-10/mendoza-to-take-over-as-raiders-starter"
+    }
+  ],
+  "adjust": [],
+  "qb_start": {
+    "SEA": "Drew Lock"
+  }
+}

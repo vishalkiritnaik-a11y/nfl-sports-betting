@@ -1,0 +1,20 @@
+{
+  "game_id": "2026_10_LAC_BAL",
+  "updated": "2026-11-10T22:30:00Z",
+  "items": [
+    {
+      "text": "LA Chargers (early week, 0-8): QB Justin Herbert hurt his left (non-throwing) middle finger in Wk9, X-rays negative, Harbaugh says he 'should be good to go'. Day-to-day - WR Ladd McConkey (back spasms, did not play Wk9). Wk9 injuries - CB Isas Waxter, CB Cam Hart, DL Justin Eboigbe (all ankle). TE David Njoku and LB Denzel Perryman designated to return from IR.",
+      "source": "ESPN (Harbaugh: X-rays on Herbert's finger negative, Nov 9)",
+      "url": "https://www.espn.com/nfl/story/_/id/50437202/chargers-harbaugh-says-x-rays-herbert-finger-negative"
+    },
+    {
+      "text": "Baltimore (early week): Jacoby Brissett (acquired from ARI) confirmed by Minter as the starter vs LAC; QB Lamar Jackson (thumb) and QB Tyler Huntley on IR; Joe Fagnano (ankle) back to backup. Monitor - S Kyle Hamilton (hip, 'looks fairly good'), CB Nate Wiggins (illness), S Jaylinn Hawkins (knee).",
+      "source": "BaltimoreRavens.com (Hamilton update; Brissett starting vs Chargers, Nov 9)",
+      "url": "https://www.baltimoreravens.com/news/kyle-hamilton-injury-update-jacoby-brissett-starting-against-chargers-monday-night-minter-lamar-jackson-injury-conversations-private"
+    }
+  ],
+  "adjust": [],
+  "qb_start": {
+    "BAL": "Jacoby Brissett"
+  }
+}

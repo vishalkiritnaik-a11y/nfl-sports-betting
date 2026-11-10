@@ -1,0 +1,24 @@
+{
+  "game_id": "2026_10_MIN_GB",
+  "updated": "2026-11-10T22:30:00Z",
+  "items": [
+    {
+      "text": "Minnesota (early week): Vikings traded a 2027 3rd for QB Kirk Cousins (from LV) at the Nov 10 deadline; he is expected to start at GB. QB Kyler Murray (Grade 2 hamstring) week-to-week. Monitor - WR Jauan Jennings (calf), S Theo Jackson (quad), both inactive Wk9. IR - G Donovan Jackson, TE Josh Oliver, C Nick Samac.",
+      "source": "Heavy (Murray injury update after Cousins trade, Nov 10)",
+      "url": "https://heavy.com/sports/nfl/minnesota-vikings/kyler-murray-injury-kirk-cousins-trade/"
+    },
+    {
+      "text": "Green Bay (early week): OUT - RB Josh Jacobs (fractured finger, surgery; IR possible), G/C Sean Rhyan (high ankle, at least a month). Likely out - LB Zaire Franklin (hairline shin fracture), TE Josh Whyle (concussion), RB MarShawn Lloyd (knee). EDGE Micah Parsons (knee) only a 'smidgen' of optimism for Wk10. Monitor - CB Keisean Nixon (groin), LB Ty'Ron Hopper (chest). RB Chris Brooks has a good chance to return. Jordan Love starts.",
+      "source": "Packers.com (Jacobs to miss time after finger surgery, Nov 9)",
+      "url": "https://www.packers.com/news/packers-rb-josh-jacobs-to-miss-time-due-to-surgery-on-broken-finger-nov-9-2026"
+    }
+  ],
+  "adjust": [
+    {
+      "market": "all",
+      "side": "MIN",
+      "points": 0.5,
+      "reason": "Green Bay is without RB Josh Jacobs, G Sean Rhyan and likely LB Zaire Franklin, with Micah Parsons still not back, a heavier cluster than Minnesota's. The stats model doesn't price non-QB injuries"
+    }
+  ]
+}

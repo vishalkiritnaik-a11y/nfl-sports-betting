@@ -1,0 +1,24 @@
+{
+  "game_id": "2026_10_NE_DET",
+  "updated": "2026-11-10T22:30:00Z",
+  "items": [
+    {
+      "text": "New England (early week; plays in Munich, short week): from the 45-27 Wk9 loss to GB - RB Rhamondre Stevenson (knee, no surgery, 'short period' out), LT Will Campbell (knee, no diagnosis yet; Caleb Lomu at LT), OL Ben Brown (knee, Vrabel: 'probably won't make it this week'), CB Carlton Davis III (knee, did not return), S Brenden Schooler (hamstring). Likely OUT - RB TreVeyon Henderson (hospitalized, illness). Questionable - WR A.J. Brown (knee, missed 2 straight; to travel, no decision). IR - WR Romeo Doubs, OL Mike Onwenu (season), OL Alijah Vera-Tucker, OL Greg Van Roten. Drake Maye expected to start.",
+      "source": "Yahoo Sports (Patriots takeaways: Vrabel injury updates, Nov 9)",
+      "url": "https://sports.yahoo.com/articles/patriots-takeaways-mike-vrabel-trade-185814069.html"
+    },
+    {
+      "text": "Detroit (early week): OUT - S Kerby Joseph (knee, PUP window open; Campbell: 'I don't see him playing in Germany'). IR - LB Jack Campbell (neck), CB Thomas Harper (ankle), RB Isiah Pacheco (back surgery). Monitor - CB D.J. Reed (hip), C Cade Mays (ankle), EDGE DJ Wonnum (concussion), RB Jacob Saylors (neck), all inactive Wk9. No new injuries from the Wk9 win over MIA. Jared Goff expected to start.",
+      "source": "Detroit Sports Nation (Campbell on Kerby Joseph, Nov 10)",
+      "url": "https://detroitsportsnation.com/dan-campbell-kerby-joseph-injury-update-germany/richardknight/detroit-lions/11/10/2026/506524/"
+    }
+  ],
+  "adjust": [
+    {
+      "market": "all",
+      "side": "DET",
+      "points": 0.5,
+      "reason": "New England may be without LT Will Campbell, OL Ben Brown, both top RBs, CB Carlton Davis and WR A.J. Brown on a short week to Munich, a bigger cluster than Detroit's defensive absences. The stats model doesn't price non-QB injuries"
+    }
+  ]
+}

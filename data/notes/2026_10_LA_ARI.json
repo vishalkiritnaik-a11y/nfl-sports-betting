@@ -1,0 +1,17 @@
+{
+  "game_id": "2026_10_LA_ARI",
+  "updated": "2026-11-10T22:30:00Z",
+  "items": [
+    {
+      "text": "LA Rams (early week): WR Puka Nacua (MCL/PCL sprains + turf toe) likely headed to IR per McVay. IR - WR Davante Adams (hamstring surgery), TE Terrance Ferguson, CB Jaylen Watson, DE Kobie Turner, DT Poona Ford, K Blake Grupe (season). Questionable - LG Steve Avila (hamstring). Matthew Stafford starts.",
+      "source": "NBC Sports/Rotoworld (McVay: Nacua likely headed to IR, Nov 9)",
+      "url": "https://www.nbcsports.com/fantasy/football/player-news/2026-11-09/mcvay-nacua-knee-turf-toe-likely-headed-to-ir"
+    },
+    {
+      "text": "Arizona (early week): QB Gardner Minshew OUT (feared torn UCL, throwing elbow; likely season-ending surgery); Jacoby Brissett traded to BAL; rookie Carson Beck in line to start (no prior start, so the model can't take a qb_start override; it still prices Minshew). OUT - WR Michael Wilson (neck, season), WR Jalen Brooks (wrist). IR - RB Jeremiyah Love (ankle). Monitor - C Hjalte Froholdt (concussion), DT Roy Lopez (toe).",
+      "source": "NFL.com (Minshew likely needs season-ending surgery; Beck in line to start, Nov 9)",
+      "url": "https://www.nfl.com/news/nfl-network-cardinals-gardner-minshew-likely-needs-season-ending-elbow-surgery-carson-beck-in-line-to-start"
+    }
+  ],
+  "adjust": []
+}
