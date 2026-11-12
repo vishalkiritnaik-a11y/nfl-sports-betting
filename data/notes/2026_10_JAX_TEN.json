@@ -1,17 +1,24 @@
 {
   "game_id": "2026_10_JAX_TEN",
-  "updated": "2026-11-10T22:30:00Z",
+  "updated": "2026-11-12T22:05:00Z",
   "items": [
     {
-      "text": "Jacksonville (early week, extra rest after TNF Wk9): RB Bhayshul Tuten (foot/ankle) and DE Travon Walker (ribs) played through questionable tags; monitor Tuten. IR - S Eric Murray, DT DaVon Hamilton. Deadline adds S Jessie Bates, DT Jordan Davis, DT Davon Godchaux; Coen wants all three ready Sunday. Trevor Lawrence starts.",
-      "source": "NBC Sports/PFT (Coen on getting Bates ready, Nov 10)",
-      "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/liam-coen-definitely-a-curve-to-getting-jessie-bates-ready-this-week"
+      "text": "Jacksonville (Wed report; Thu report not yet posted): DNP - DE Travon Walker (rib), RB Bhayshul Tuten (ankle/foot), WR Jakobi Meyers (ankle); all three played through injuries Wk9. Meyers resumed practice Thu as Limited and is on track to play (Rotoworld). Limited - G Ezra Cleveland (knee/ankle), C Robert Hainsey (concussion), S Antonio Johnson (ankle), RB Chris Rodriguez Jr. (hand), LB Branson Combs (shoulder). Rest days - S Jessie Bates III, DT Jordan Davis (deadline adds). IR - S Eric Murray, DT DaVon Hamilton. Trevor Lawrence starts.",
+      "source": "Tennessee Titans (official Week 10 injury report, Titans vs. Jaguars); NBC Sports/Rotoworld (Meyers resumes practicing Thu)",
+      "url": "https://www.tennesseetitans.com/news/week-10-injury-report-titans-vs-jaguars"
     },
     {
-      "text": "Tennessee (early week, off bye): no major new injuries. Monitor - RB Tyjae Spears (knee, could return), LG Peter Skoronski, RT JC Latham, CB Jaylon Jones (preview list, not an official report). Cam Ward expected to start.",
-      "source": "SI Betting (Jaguars vs. Titans preview, Week 10)",
-      "url": "https://www.si.com/betting/jaguars-vs-titans-prediction-odds-spread-injuries-trends-for-nfl-week-10-2026"
+      "text": "Tennessee (Thu practice report): DNP both days - WR Carnell Tate (shoulder), LG Peter Skoronski (hamstring), LB Cody Barton (concussion), LB Anthony Hill Jr. (neck). DNP Thu - RB Tony Pollard (finger/rest, full Wed). Limited - RB Tyjae Spears (knee, returned to practice Thu), S Kevin Winston Jr. (shoulder). Full - RT JC Latham (finger), CB Jaylon Jones (knee), DL John Franklin-Myers, CB Marcus Harris. No game designations yet. Cam Ward starts.",
+      "source": "Tennessee Titans (official Week 10 injury report, Titans vs. Jaguars)",
+      "url": "https://www.tennesseetitans.com/news/week-10-injury-report-titans-vs-jaguars"
     }
   ],
-  "adjust": []
+  "adjust": [
+    {
+      "market": "all",
+      "side": "JAX",
+      "points": 0.5,
+      "reason": "Tennessee had four starters (WR Carnell Tate, LG Peter Skoronski, LBs Cody Barton and Anthony Hill Jr.) miss both Wednesday and Thursday practice, while Jacksonville's injured regulars played through their injuries last week and Meyers has resumed practicing. The stats model doesn't price non-QB injuries"
+    }
+  ]
 }

@@ -1,16 +1,16 @@
 {
   "game_id": "2026_10_SF_DAL",
-  "updated": "2026-11-10T22:30:00Z",
+  "updated": "2026-11-12T22:30:00Z",
   "items": [
     {
-      "text": "San Francisco (early week): OUT/IR - DL Gracen Halton (fractured/dislocated ankle). Likely OUT - WR Mike Evans (not expected ready). Day-to-day - CB Renardo Green (back), CB Deommodore Lenoir (foot). Expected back at practice - WR Deebo Samuel, DL C.J. West. Brock Purdy starts.",
-      "source": "49ers Webzone (Shanahan Monday transcript, Nov 9)",
-      "url": "https://www.49erswebzone.com/articles/204980-transcript-shanahan-provides-updates-discusses/"
+      "text": "San Francisco (Wed practice report, Nov 11; Thu report not yet posted): IR - DL Gracen Halton (ankle). DNP - WR Mike Evans (Achilles tendinitis; Shanahan: week-to-week, no timeline, likely misses third straight game), CB Renardo Green (back), CB Deommodore Lenoir (foot), LB Dre Greenlaw/RB Christian McCaffrey/LT Trent Williams (rest). Limited - WR Deebo Samuel (hamstring, returned after missing three games), DT C.J. West (knee, practice window opened), S Siran Neal (knee, foot), CB Upton Stout (shoulder, neck). Brock Purdy starts.",
+      "source": "49ers Webzone (49ers vs. Cowboys injury report: Deebo Samuel returns; 6 players miss practice, Nov 11)",
+      "url": "https://www.49erswebzone.com/articles/205067-cowboys-injury-returns-players-practice/"
     },
     {
-      "text": "Dallas (early week): OUT - TE Jake Ferguson (knee, multiple weeks), S P.J. Locke (concussion). Questionable - WR George Pickens (hamstring, inactive Wk9; 'chances are good'), CB Joey Porter Jr. (ankle, inactive Wk9), LB DeMarvion Overshown (hamstring/back), WR KaVontae Turpin (ribs). Dak Prescott starts.",
-      "source": "Yahoo Sports (Cowboys face injury decisions ahead of Week 10, Nov 10)",
-      "url": "https://sports.yahoo.com/articles/cowboys-face-difficult-injury-decisions-042102152.html"
+      "text": "Dallas (Wed practice report, Nov 11; Thu report not yet posted): Expected OUT for extended time - TE Jake Ferguson (knee/ankle), RB Tyler Goodson (ACL/MCL sprains). DNP - S P.J. Locke (concussion), CB Joey Porter Jr. (ankle, missed Wk9), EDGE Donovan Ezeiruaku (ankle), WR Jonathan Mingo (ankle), S Malik Hooker (personal), EDGE Von Miller (rest). Limited - WR George Pickens (hamstring, missed Wk9), LB DeMarvion Overshown (hamstring/back, missed Wk9), WR KaVontae Turpin (ribs). Dak Prescott starts.",
+      "source": "CBS Sports (NFL Week 10 injury report: Mike Evans still not practicing, Nov 11)",
+      "url": "https://www.cbssports.com/nfl/news/2026-nfl-week-10-injury-report-mike-evans-puka-nacua/"
     }
   ],
   "adjust": []

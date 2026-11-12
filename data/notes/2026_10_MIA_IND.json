@@ -1,21 +1,21 @@
 {
   "game_id": "2026_10_MIA_IND",
-  "updated": "2026-11-10T22:30:00Z",
+  "updated": "2026-11-12T22:00:00Z",
   "items": [
     {
-      "text": "Miami (early week): QB Malik Willis placed on IR (groin, out at least 4 weeks); Kyle McCord in line for his first NFL start (no prior start, so the model can't take a qb_start override; it still prices Willis). OUT - DT Zach Sieler (ruptured biceps, season-ending surgery). Monitor - RB Jaylen Wright (quad).",
-      "source": "NFL.com (Dolphins place Willis on IR; McCord in line to start, Nov 10)",
-      "url": "https://www.nfl.com/news/dolphins-place-qb-malik-willis-groin-on-injured-reserve-kyle-mccord-in-line-for-first-start"
+      "text": "Miami (Thu practice): DNP - C Aaron Brewer (concussion), WR Chris Bell (knee, downgraded from limited). Limited - LS Tucker Addington, CB Darrell Baker Jr. (knee), DE Malik Herring (neck), TE Will Kacmarek (quad/knee), WR Jared Wayne (quad). Full - RB Jaylen Wright, RB Kaytron Allen (quad), S Dante Trader Jr., S Michael Taaffe. IR - QB Malik Willis (groin), DT Zach Sieler (season).",
+      "source": "Yahoo Sports (Dolphins get some bad news on second Week 10 injury report, Nov 12)",
+      "url": "https://sports.yahoo.com/articles/dolphins-bad-news-second-week-211616087.html"
     },
     {
-      "text": "Indianapolis (early week): OUT - RT Jalen Travis (knee, 2-4 weeks). IR - WR Alec Pierce (heel). Monitor - LB Jaylon Carlies (neck), CB Justin Walley, LB Akeem Davis-Gaither, S A.J. Haulcy (all inactive Wk9). Deadline sell-off: traded WR Josh Downs, WR Keenan Allen, G Quenton Nelson and DT DeForest Buckner. Daniel Jones expected to start.",
-      "source": "TSN/AP (Colts begin week facing uncertainty, Nov 9)",
-      "url": "https://www.tsn.ca/nfl/article/with-trade-talk-still-swirling-colts-begins-week-facing-challenge-of-uncertainty/"
+      "text": "Miami QB: Kyle McCord will make his first NFL start with Willis on IR, per ESPN's Adam Schefter (no prior start, so no qb_start override; the model still prices Willis).",
+      "source": "CNY Central (McCord named Miami starter for Week 10, Nov 10)",
+      "url": "https://cnycentral.com/news/local/former-syracuse-qb-kyle-mccord-named-miami-starter-for-week-10-vs-colts"
     },
     {
-      "text": "IND: RT Jalen Travis out 2-4 weeks.",
-      "source": "Yahoo Sports (Colts' Jalen Travis out 2-4 weeks, Nov 10)",
-      "url": "https://sports.yahoo.com/articles/colts-jalen-travis-2-4-043058944.html"
+      "text": "Indianapolis (Thu practice): DNP - RT Jalen Travis (knee, expected out 2-4 weeks), LB Jaylon Carlies (neck), LB Akeem Davis-Gaither (knee), TE Mo Alie-Cox (groin), LS Luke Rhodes (hamstring), DT Grover Stewart (rest); DT Jerry Tillery (calf) downgraded to DNP per Yahoo. Full - S AJ Haulcy (ankle, returned), CB Justin Walley (knee), LB CJ Allen (back), CB Charvarius Ward, RB Jonathan Taylor. IR - WR Alec Pierce. Deadline trades sent away G Quenton Nelson, DT DeForest Buckner, WR Josh Downs and WR Keenan Allen. Daniel Jones expected to start.",
+      "source": "Colts.com (Practice Notebook: AJ Haulcy returns to practice, Nov 12)",
+      "url": "https://www.colts.com/news/practice-notebook-s-aj-haulcy-returns-to-practice"
     }
   ],
   "adjust": [
@@ -23,7 +23,7 @@
       "market": "all",
       "side": "MIA",
       "points": 0.5,
-      "reason": "Indianapolis traded away four starters (Nelson, Buckner, Downs, Allen) and lost RT Jalen Travis, outweighing Miami's loss of DT Zach Sieler. The stats model doesn't price non-QB injuries"
+      "reason": "Indianapolis traded away four starters (Nelson, Buckner, Downs, Allen) and is missing RT Jalen Travis plus LBs Carlies and Davis-Gaither, outweighing Miami's losses of DT Zach Sieler and possibly C Aaron Brewer. The stats model doesn't price non-QB injuries"
     }
   ]
 }

@@ -1,19 +1,26 @@
 {
   "game_id": "2026_10_SEA_LV",
-  "updated": "2026-11-10T22:30:00Z",
+  "updated": "2026-11-12T22:30:00Z",
   "items": [
     {
-      "text": "Seattle (early week): OUT - QB Sam Darnold (quad + cracked rib; targeting return after Wk11 bye), LG Quenton Nelson (knee procedure, week-to-week). Monitor - DT Leonard Williams (stinger), LT Charles Cross, OLB Uchenna Nwosu, WR Rashid Shaheed (knee), all missed Wk9. Drew Lock (oblique, elbow) expected to start, limited in practice; Jalen Milroe backup.",
-      "source": "Seahawks.com (Updates on Darnold, Nelson & other injuries, Nov 9)",
-      "url": "https://www.seahawks.com/news/updates-on-sam-darnold-quenton-nelson-other-seahawks-injuries"
+      "text": "Seattle (Wed practice report, Nov 11; Thu report not yet posted): OUT - QB Sam Darnold (ribs, quad; Macdonald said he will not play). DNP - LT Charles Cross (ankle), LG Quenton Nelson (knee, week-to-week after procedure; both widely expected to sit until after Wk11 bye), DE Leonard Williams (stinger), DT Brandon Pili (back), DT Jarran Reed (personal), WR Jaxon Smith-Njigba (rest). Limited - QB Drew Lock (right elbow, oblique), G Anthony Bradford (knee), EDGE Derick Hall (back), EDGE Uchenna Nwosu (ankle), LB Patrick O'Connell (toe), EDGE Connor O'Toole (foot). Full - WR Rashid Shaheed (knee), TE AJ Barner (finger). Drew Lock expected to start for second straight week.",
+      "source": "Seahawks.com (Week 10 Injury Report: Seahawks at Raiders, Nov 11)",
+      "url": "https://www.seahawks.com/news/week-10-injury-report-seahawks-at-raiders"
     },
     {
-      "text": "Las Vegas: Kirk Cousins traded to MIN Nov 10; rookie Fernando Mendoza takes over as starter per Schefter (Kubiak announcement pending). Monitor - Trey Zuhn III (concussion). No notable new injuries from the Wk9 loss at SF.",
-      "source": "NBC Sports/Rotoworld (Mendoza to take over as Raiders starter, Nov 10)",
-      "url": "https://www.nbcsports.com/fantasy/football/player-news/2026-11-10/mendoza-to-take-over-as-raiders-starter"
+      "text": "Las Vegas (Wed practice report, Nov 11; Thu report not yet posted): one of the healthiest teams in the league - Limited - DT Thomas Booker (ankle), DT Foley Fatukasi (shoulder/back), RG Trey Zuhn III (concussion; Kubiak: starter 'if he can go', Bryce Cabeldue the fallback). Full - TE Ian Thomas (ankle). Rookie Fernando Mendoza (No. 1 overall pick) makes his first NFL start after Kirk Cousins was traded to MIN.",
+      "source": "Yahoo Sports (Raiders Get Fantastic News on Injured Starter, Nov 12)",
+      "url": "https://sports.yahoo.com/articles/raiders-fantastic-news-injured-starter-002739000.html"
     }
   ],
-  "adjust": [],
+  "adjust": [
+    {
+      "market": "all",
+      "side": "LV",
+      "points": 0.5,
+      "reason": "Seattle is likely without LT Charles Cross and LG Quenton Nelson with DE Leonard Williams also DNP, while Las Vegas is nearly fully healthy. The stats model doesn't price non-QB injuries"
+    }
+  ],
   "qb_start": {
     "SEA": "Drew Lock"
   }

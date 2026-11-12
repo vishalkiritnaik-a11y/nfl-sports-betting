@@ -1,17 +1,29 @@
 {
   "game_id": "2026_10_LA_ARI",
-  "updated": "2026-11-10T22:30:00Z",
+  "updated": "2026-11-12T22:05:00Z",
   "items": [
     {
-      "text": "LA Rams (early week): WR Puka Nacua (MCL/PCL sprains + turf toe) likely headed to IR per McVay. IR - WR Davante Adams (hamstring surgery), TE Terrance Ferguson, CB Jaylen Watson, DE Kobie Turner, DT Poona Ford, K Blake Grupe (season). Questionable - LG Steve Avila (hamstring). Matthew Stafford starts.",
-      "source": "NBC Sports/Rotoworld (McVay: Nacua likely headed to IR, Nov 9)",
-      "url": "https://www.nbcsports.com/fantasy/football/player-news/2026-11-09/mcvay-nacua-knee-turf-toe-likely-headed-to-ir"
+      "text": "LA Rams (Wed report, walkthrough estimates; Thu report not yet posted): OUT - WR Puka Nacua (knee/toe; MCL/PCL sprains + turf toe, expected IR, ruled out). DNP - CB Trent McDuffie (back, missed Wk9), S Kam Curl (toe), LG Steve Avila (hamstring), TE Terrance Ferguson (ankle/hamstring, likely out a couple more weeks per McVay). Limited - OLB Myles Garrett (knee), TE Davis Allen (oblique), TE Colby Parkinson (ribs), LS Joe Cardona (ankle). IR - WR Davante Adams (hamstring), CB Jaylen Watson, DE Kobie Turner, DT Poona Ford, K Blake Grupe. Matthew Stafford (elbow) full participant, starts.",
+      "source": "Yahoo Sports (Official Cardinals-Rams Week 10 injury report); arizonasports.com",
+      "url": "https://sports.yahoo.com/articles/official-cardinals-rams-week-10-005054655.html"
     },
     {
-      "text": "Arizona (early week): QB Gardner Minshew OUT (feared torn UCL, throwing elbow; likely season-ending surgery); Jacoby Brissett traded to BAL; rookie Carson Beck in line to start (no prior start, so the model can't take a qb_start override; it still prices Minshew). OUT - WR Michael Wilson (neck, season), WR Jalen Brooks (wrist). IR - RB Jeremiyah Love (ankle). Monitor - C Hjalte Froholdt (concussion), DT Roy Lopez (toe).",
-      "source": "NFL.com (Minshew likely needs season-ending surgery; Beck in line to start, Nov 9)",
-      "url": "https://www.nfl.com/news/nfl-network-cardinals-gardner-minshew-likely-needs-season-ending-elbow-surgery-carson-beck-in-line-to-start"
+      "text": "Arizona (Wed report; Thu report not yet posted): QB Gardner Minshew OUT (feared torn UCL, throwing elbow); Jacoby Brissett traded to BAL. HC Mike LaFleur officially named rookie Carson Beck the starter (first NFL start, so no qb_start override; the model still prices Minshew). Veteran Josh Johnson (11 career starts) signed off CIN practice squad as backup. DNP - C Hjalte Froholdt (concussion), RG Jon Gaines II (ankle), DT Roy Lopez (toe/ankle); rest days for S Budda Baker, G Isaac Seumalo, OLB Josh Sweat, LB Mack Wilson Sr. Limited - LT Jayden Williams (knee), RB Bam Knight (concussion), CB Max Melton (knee/hand), DL Dante Stills (shoulder), S Andrew Wingard (groin); DL Zach Carter and TE Hunter Long back from IR. OUT for season - WR Michael Wilson (neck), WR Kendrick Bourne, LT Paris Johnson Jr. (biceps, IR). OUT - WR Jalen Brooks (wrist). IR - RB Jeremiyah Love (ankle).",
+      "source": "Arizona Cardinals (Injury Report: Week 10 vs Rams); ESPN (Cardinals to start rookie QB Carson Beck)",
+      "url": "https://www.azcardinals.com/news/injury-report-week-10-vs-rams"
+    },
+    {
+      "text": "Arizona QB: Cardinals signing 40-year-old Josh Johnson (50 games, 11 starts; played for LaFleur with 2021 Jets) after Minshew's injury; Beck remains the named starter for Sunday.",
+      "source": "arizonasports.com (Report: Cardinals signing QB Josh Johnson after injury to Gardner Minshew)",
+      "url": "https://arizonasports.com/nfl/arizona-cardinals/report-cardinals-signing-qb-josh-johnson-after-injury-to-gardner-minshew"
     }
   ],
-  "adjust": []
+  "adjust": [
+    {
+      "market": "all",
+      "side": "ARI",
+      "points": 0.5,
+      "reason": "The Rams are without both top receivers (Puka Nacua out, Davante Adams on IR) with CB Trent McDuffie, S Kam Curl and LG Steve Avila all missing practice, which outweighs Arizona's WR and interior-line absences. The stats model doesn't price non-QB injuries"
+    }
+  ]
 }

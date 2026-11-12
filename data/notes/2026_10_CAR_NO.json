@@ -1,16 +1,16 @@
 {
   "game_id": "2026_10_CAR_NO",
-  "updated": "2026-11-10T22:30:00Z",
+  "updated": "2026-11-12T22:00:00Z",
   "items": [
     {
-      "text": "Carolina (early week): IR - CB Jaycee Horn (quad), CB Mike Jackson (groin), OT Taylor Moton, CB Akayleb Evans, RB Jonathon Brooks; PUP - OT Ikem Ekwonu. Questionable - LB Jaelan Phillips (hamstring), LB Bobby Okereke (foot), G Damien Lewis (knee), CB Will Lee III (hamstring), all inactive Wk9. WR Xavier Legette to be designated to return. Bryce Young expected to start.",
-      "source": "ESPN (Panthers injury status, Nov 9)",
-      "url": "https://www.espn.com/nfl/team/injuries/_/name/car/carolina-panthers"
+      "text": "Carolina (Thu practice): DNP - LB Bobby Okereke (foot, also missed Wk9; the only player held out). Limited - EDGE Jaelan Phillips (hamstring), G Damien Lewis (knee). Full - CB Will Lee III (hamstring) and everyone else listed, incl. CB Mike Jackson, RB Jonathon Brooks, WR Xavier Legette (IR return windows). Still out per earlier reports: IR - CB Jaycee Horn, OT Taylor Moton; PUP - OT Ikem Ekwonu. Bryce Young expected to start.",
+      "source": "Panthers.com (Week 10 Thursday injury report, Nov 12)",
+      "url": "https://www.panthers.com/news/week-10-thursday-injury-report-only-one-player-held-out-of-practice"
     },
     {
-      "text": "New Orleans (early week): C Erik McCoy (biceps) to miss time, week-to-week. IR - RB Travis Etienne Jr. Questionable - RB CJ Donaldson (shoulder/concussion). DT Davon Godchaux traded to JAX. Tyler Shough expected to start.",
-      "source": "ESPN (Saints C Erik McCoy to miss time, Nov 9)",
-      "url": "https://www.espn.com/nfl/story/_/id/50434942/saints-center-erik-mccoy-miss-biceps-injury"
+      "text": "New Orleans (Thu practice): OUT - C Erik McCoy (biceps; Moore says out Sunday, Cesar Ruiz to C, rookie Jeremiah Wright at RG). DNP - RB CJ Donaldson (shoulder), DT Christen Miller (knee, downgraded). Limited - RB Travis Etienne Jr. (hamstring, IR, practicing toward activation), OT Kelvin Banks Jr. (ankle), G David Edwards (knee), CB Martin Emerson Jr. (shin), OT Taliese Fuaga (knee, new), CB Quincy Riley (knee, new). Full - RB Alvin Kamara, TE Noah Fant. Tyler Shough expected to start.",
+      "source": "Crescent City Sports (Kamara practices Thursday, Ruiz to start at center, Nov 12)",
+      "url": "https://crescentcitysports.com/alvin-kamara-practices-thursday-but-cesar-ruiz-to-start-at-center-for-saints-vs-panthers/"
     }
   ],
   "adjust": [
@@ -18,7 +18,7 @@
       "market": "all",
       "side": "NO",
       "points": 0.5,
-      "reason": "Carolina is without both starting tackles and its top two corners, with three more defensive starters questionable, against New Orleans missing mainly C Erik McCoy. The stats model doesn't price non-QB injuries"
+      "reason": "Carolina remains without both starting tackles, CB Jaycee Horn and likely LB Bobby Okereke, a heavier cluster than New Orleans missing C Erik McCoy with several linemen limited. The stats model doesn't price non-QB injuries"
     }
   ]
 }

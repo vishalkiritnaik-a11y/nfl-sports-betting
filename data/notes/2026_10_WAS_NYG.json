@@ -1,21 +1,16 @@
 {
   "game_id": "2026_10_WAS_NYG",
-  "updated": "2026-11-10T22:30:00Z",
+  "updated": "2026-11-12T22:00:00Z",
   "items": [
     {
-      "text": "Washington (early week, estimated Mon report): DNP - WR Treylon Burks (foot), C Lucas Patrick (concussion, in protocol), TE Colson Yankoff (knee). Limited - TE Chig Okonkwo (hip), DT Shy Tuttle (shoulder). Full - QB Jayden Daniels (left/non-throwing elbow). IR/season - WR Terry McLaurin, WR Jaylin Lane, DT Daron Payne, DT Javon Kinlaw, LB Leo Chenal; IR - RB Jacory Croskey-Merritt (groin); LT Laremy Tunsil out until ~December. Jayden Daniels expected to start.",
-      "source": "Commanders.com (Week 10 injury report, Nov 9)",
-      "url": "https://www.commanders.com/news/commanders-vs-giants-week-10-injury-report-2026"
+      "text": "Washington (final report, TNF): OUT - C Lucas Patrick (concussion), TE Colson Yankoff (knee). No doubtful/questionable. WR Treylon Burks (foot) DNP Wednesday after working Tuesday but carries no game designation; Quinn says he should be available. No designation - TE Chig Okonkwo (hip), DT Shy Tuttle (shoulder), TE John Bates, C Matt Gulbin (all full); CB Amik Robertson (ankle) limited. IR/season - WR Terry McLaurin, WR Jaylin Lane, DT Daron Payne, DT Javon Kinlaw, LB Leo Chenal, RB Jacory Croskey-Merritt; LT Laremy Tunsil out until ~December. Jayden Daniels (left elbow) full all week, starts.",
+      "source": "Sports Illustrated / Commanders On SI (final injury report, Nov 11)",
+      "url": "https://www.si.com/nfl/commanders/onsi/commanders-giants-final-injury-report-week-10"
     },
     {
-      "text": "NY Giants (early week, estimated Mon report): Limited - QB J.J. McCarthy (hip pointer from Wk9; Harbaugh: 'it does look like he's going to play'), RB Cam Skattebo (hamstring, missed Wk9, expected full go), WR Darnell Mooney (chest), OLB Abdul Carter (knee/back), LB Malik Harrison (groin). Full - WR Malik Nabers, OT Andrew Thomas, OT Jermaine Eluemunor. IR - QB Jaxson Dart (knee, regular season), EDGE Brian Burns and LB Tremaine Edmunds (season), RB Tyrone Tracy Jr.",
-      "source": "Giants.com (Week 10 injury report, Nov 9)",
-      "url": "https://www.giants.com/news/giants-vs-commanders-week-10-injury-report-qb-j-j-mccarthy-rb-cam-skattebo-limited"
-    },
-    {
-      "text": "NYG QB McCarthy (hip pointer) on track to play Thursday.",
-      "source": "CBS Sports (McCarthy on track for TNF, Nov 9)",
-      "url": "https://www.cbssports.com/nfl/news/jj-mccarthy-injury-giants-qb-on-track-commanders-thursday-night-football/"
+      "text": "NY Giants (final report, TNF): Questionable - LB Malik Harrison (groin, limited all week), the only Giant with a designation. Cleared/full - QB J.J. McCarthy (hip), RB Cam Skattebo (hamstring, returns after missing Wk9), OLB Abdul Carter (knee/back), WR Darnell Mooney, WR Malik Nabers, LT Andrew Thomas, RT Jermaine Eluemunor, TE Theo Johnson, CB Colton Hood. IR - QB Jaxson Dart, EDGE Brian Burns, LB Tremaine Edmunds, RB Tyrone Tracy Jr. J.J. McCarthy starts.",
+      "source": "Giants.com (Week 10 tracker, final injury report Nov 11)",
+      "url": "https://www.giants.com/news/week-10-tracker-latest-news-notes-roster-moves-washington-commanders"
     }
   ],
   "adjust": []

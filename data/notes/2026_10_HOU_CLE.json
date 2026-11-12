@@ -1,16 +1,21 @@
 {
   "game_id": "2026_10_HOU_CLE",
-  "updated": "2026-11-10T22:30:00Z",
+  "updated": "2026-11-12T22:00:00Z",
   "items": [
     {
-      "text": "Houston (early week): TBD - RB David Montgomery (groin, out since Wk5, may return to practice), OT Braden Smith (ankle, inactive Wk9), S Reed Blankenship (concussion/hand, likely misses 3rd straight). IR - WR Jaylin Noel, WR Jayden Higgins (season), DT Mario Edwards Jr. No new injuries from the 44-22 win over LAC. C.J. Stroud expected to start.",
-      "source": "Yahoo Sports (Texans surge after bye, Nov 9)",
-      "url": "https://sports.yahoo.com/articles/texans-surge-bye-stroud-5-224008396.html"
+      "text": "Houston (Thu practice): DNP - LB Azeez Al-Shaair (groin/personal, 2nd straight day), RB David Montgomery (groin, ramping up but Ryans not committing to a Wk10 return). RB Woody Marks (knee) left Wednesday's practice early and was not practicing Thursday; G Keylan Rutledge working through a stinger (DNP Wed). Wed report also had DNP - TE Brevin Jordan (finger/foot); Limited - S Reed Blankenship (concussion/hand), WR Tank Dell, WR Marvin Harrison Jr. (hamstring), CB Jaylin Smith, LB Jacob Hummel, G Wyatt Teller (illness). C.J. Stroud expected to start.",
+      "source": "ClutchPoints via Yahoo Sports (Montgomery back at practice, Nov 12)",
+      "url": "https://sports.yahoo.com/articles/texans-david-montgomery-finally-back-194446592.html"
     },
     {
-      "text": "Cleveland QB: Deshaun Watson cleared concussion protocol and is expected to return as QB1 per ESPN's Fowler (Shedeur Sanders started Wk9), but Monken has not officially named a starter. Monitor - DT Maliek Collins (illness, sat Wk9). IR - OL Teven Jenkins, LB Jeremiah Owusu-Koramoah, DT Kalia Davis (season).",
-      "source": "ESPN (Browns returning to Watson as QB1 in Week 10, Nov 9)",
-      "url": "https://www.espn.com/nfl/story/_/id/50433760/source-browns-returning-deshaun-watson-qb1-week-10"
+      "text": "Cleveland (Thu practice): DNP - WR Denzel Boston (toe, team's leading receiver; Monken calls it 'a little toe issue'), S Ronnie Hickman (concussion), FB Michael Burton (calf). C Elgton Jenkins (knee) returned to practice Thursday. Wed limited: CB Denzel Ward (quad), LB Carson Schwesinger (wrist/ankle), LB Quincy Williams (hamstring), TE Harold Fannin Jr. (groin), OT Tytus Howard (knee), OT Austin Barber (calf), DT Maliek Collins (elbow).",
+      "source": "PFT/NBC Sports via Yahoo Sports (Boston remains out of Thursday's practice, Nov 12)",
+      "url": "https://sports.yahoo.com/articles/denzel-boston-remains-thursdays-practice-183208966.html"
+    },
+    {
+      "text": "Cleveland QB: the Browns confirmed Deshaun Watson (cleared concussion protocol) is set to start vs. Houston over Shedeur Sanders, who started Wk9.",
+      "source": "NBC Sports / PFT (Browns plan on starting Watson, Nov 11)",
+      "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/reports-browns-still-plan-on-starting-deshaun-watson-against-texans"
     }
   ],
   "adjust": []

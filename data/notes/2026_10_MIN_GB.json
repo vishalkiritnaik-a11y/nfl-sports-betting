@@ -1,24 +1,17 @@
 {
   "game_id": "2026_10_MIN_GB",
-  "updated": "2026-11-10T22:30:00Z",
+  "updated": "2026-11-12T22:00:00Z",
   "items": [
     {
-      "text": "Minnesota (early week): Vikings traded a 2027 3rd for QB Kirk Cousins (from LV) at the Nov 10 deadline; he is expected to start at GB. QB Kyler Murray (Grade 2 hamstring) week-to-week. Monitor - WR Jauan Jennings (calf), S Theo Jackson (quad), both inactive Wk9. IR - G Donovan Jackson, TE Josh Oliver, C Nick Samac.",
-      "source": "Heavy (Murray injury update after Cousins trade, Nov 10)",
-      "url": "https://heavy.com/sports/nfl/minnesota-vikings/kyler-murray-injury-kirk-cousins-trade/"
+      "text": "Minnesota (Wed estimated report; Thursday report not yet found): DNP - LB Blake Cashman (concussion), TE T.J. Hockenson (wrist/chest), EDGE Kyle Van Noy (calf), WR Jauan Jennings (calf), DL Tyrion Ingram-Dawkins (ankle), QB Kyler Murray (hamstring). Limited - S Jay Ward (knee), QB Carson Wentz (ankle). Full - S Theo Jackson (quad). Newly acquired Kirk Cousins expected to start, with Wentz as backup if healthy.",
+      "source": "CBS Sports (NFL Week 10 injury report, Nov 11)",
+      "url": "https://www.cbssports.com/nfl/news/2026-nfl-week-10-injury-report-mike-evans-puka-nacua/"
     },
     {
-      "text": "Green Bay (early week): OUT - RB Josh Jacobs (fractured finger, surgery; IR possible), G/C Sean Rhyan (high ankle, at least a month). Likely out - LB Zaire Franklin (hairline shin fracture), TE Josh Whyle (concussion), RB MarShawn Lloyd (knee). EDGE Micah Parsons (knee) only a 'smidgen' of optimism for Wk10. Monitor - CB Keisean Nixon (groin), LB Ty'Ron Hopper (chest). RB Chris Brooks has a good chance to return. Jordan Love starts.",
-      "source": "Packers.com (Jacobs to miss time after finger surgery, Nov 9)",
-      "url": "https://www.packers.com/news/packers-rb-josh-jacobs-to-miss-time-due-to-surgery-on-broken-finger-nov-9-2026"
+      "text": "Green Bay (Thu practice): DNP - RB Josh Jacobs (broken finger, surgery Fri; may miss only two games), C Sean Rhyan (ankle; John Williams likely starts at C), LB Zaire Franklin (shin, likely misses 4th straight), S Javon Bullard (ankle/knee), EDGE Lukas Van Ness (back), TE Josh Whyle (concussion). EDGE Micah Parsons (knee, PUP window) practicing in pads; unclear if in team drills. RB Chris Brooks and WR Skyy Moore (IR return windows) practicing; LB Ty'Ron Hopper (illness) practiced. Jordan Love starts.",
+      "source": "Packers On SI (Packers Thursday update from practice, Nov 12)",
+      "url": "https://www.si.com/nfl/packers/onsi/packers-thursday-update-from-practice-parsons-smack-ol-injured-starters"
     }
   ],
-  "adjust": [
-    {
-      "market": "all",
-      "side": "MIN",
-      "points": 0.5,
-      "reason": "Green Bay is without RB Josh Jacobs, G Sean Rhyan and likely LB Zaire Franklin, with Micah Parsons still not back, a heavier cluster than Minnesota's. The stats model doesn't price non-QB injuries"
-    }
-  ]
+  "adjust": []
 }

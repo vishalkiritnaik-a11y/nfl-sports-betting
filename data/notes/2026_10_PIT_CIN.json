@@ -1,16 +1,16 @@
 {
   "game_id": "2026_10_PIT_CIN",
-  "updated": "2026-11-10T22:30:00Z",
+  "updated": "2026-11-12T22:30:00Z",
   "items": [
     {
-      "text": "Pittsburgh (off bye): WR Michael Pittman Jr. (foot) and DL Derrick Harmon (foot) eligible to come off IR, 'getting close' but no projection yet. No new injuries. Aaron Rodgers starts.",
-      "source": "Yahoo Sports/PennLive (Steelers update on two injured starters, Nov 9-10)",
-      "url": "https://sports.yahoo.com/articles/pittsburgh-steelers-huge-two-injured-214650177.html"
+      "text": "Pittsburgh (Wed practice report, Nov 11; Thu report not yet posted): IR - WR Michael Pittman Jr. (foot; practice window not opened, won't return for Wk10 per Yahoo). Limited - DT Derrick Harmon (foot, designated to return from IR, hasn't played since Wk4), S DeShon Elliott (ankle). DNP (rest) - T.J. Watt, Cameron Heyward, TE Darnell Washington. Full - CB Brandin Echols (hamstring), WR Ben Skowronek (calf), DB Doneiko Slaughter (hamstring). Aaron Rodgers starts.",
+      "source": "Steelers.com (Week 10 Injury Report (Bengals), Nov 11)",
+      "url": "https://www.steelers.com/news/week-10-injury-report-bengals-x6285"
     },
     {
-      "text": "Cincinnati (early week, back from Madrid): IR - DE Cashius Howell (wrist). Monitor - LG Dylan Fairchild (pec/shoulder, hurt late Wk9; update Wednesday), S Kyle Dugger (quad, inactive 2 straight), CB DJ Turner II (heel). Joe Burrow starts.",
-      "source": "Bengals.com (Postgame quick hits, Week 9 Madrid, Nov 8)",
-      "url": "https://www.bengals.com/news/postgame-quick-hits-thoughts-observations-week-9-2026-madrid-victory-falcons"
+      "text": "Cincinnati (Wed practice report, Nov 11 - estimated, walkthrough; Thu report not yet posted): IR - DE Cashius Howell (wrist). DNP - S Kyle Dugger (quad, inactive last 2 games), DT Jonathan Allen (rest). Limited - LG Dylan Fairchild (pectoral), CB DJ Turner II (ankle). Joe Burrow starts.",
+      "source": "Bengals.com (Week 10 Injury Report, Nov 11)",
+      "url": "https://www.bengals.com/news/bengals-steelers-week-10-2026-injury-report"
     }
   ],
   "adjust": []

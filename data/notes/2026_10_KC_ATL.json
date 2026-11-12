@@ -1,16 +1,16 @@
 {
   "game_id": "2026_10_KC_ATL",
-  "updated": "2026-11-10T22:30:00Z",
+  "updated": "2026-11-12T22:00:00Z",
   "items": [
     {
-      "text": "Kansas City (early week): QB Patrick Mahomes (right/throwing elbow sprain in Wk9, MRI showed no major injury) day-to-day; Reid: 'more positive news than negative', reassess Wednesday, practice may be limited; Justin Fields backup. Day-to-day - WR Xavier Worthy (hamstring), RT Jaylon Moore (ankle). TBD - CB Mansoor Delane (shoulder), DT Peter Woods (neck), both inactive Wk9. IR - WR Tyquan Thornton, CB L'Jarius Sneed, LT Josh Simmons (eligible Wk11). Mahomes expected to start.",
-      "source": "ESPN (Reid: Mahomes day-to-day with elbow injury, Nov 9)",
-      "url": "https://www.espn.com/nfl/story/_/id/50434564/chiefs-qb-patrick-mahomes-day-day-elbow-injury"
+      "text": "Kansas City (Wednesday report): QB Patrick Mahomes (right elbow/knee) FULL participant, on track to start. DNP - RT Jaylon Moore (ankle), DT Peter Woods (neck). Limited - DT Omarr Norman-Lott (knee). Full - WR Xavier Worthy (hamstring), CB Mansoor Delane (shoulder), TE Travis Kelce (ankle), WR Rashee Rice (knee), S Jaden Hicks (shoulder), LB Jeff Bassa (hand), QB Justin Fields (neck). IR - WR Tyquan Thornton, CB L'Jarius Sneed, LT Josh Simmons (eligible Wk11). Thursday report not yet found. Mahomes starts.",
+      "source": "Chiefs.com (Week 10 injury report vs Falcons, Nov 11)",
+      "url": "https://www.chiefs.com/news/week-10-injury-report-chiefs-vs-falcons-2026"
     },
     {
-      "text": "Atlanta (early week, 3-6 after loss to CIN in Madrid): TBD - WR Zachariah Branch (hamstring, may miss multiple games). Monitor - LB Divine Deablo (forearm fracture, aggravated late Wk9), WR Olamide Zaccheaus (concussion check, returned), EDGE James Pearce Jr. (back). IR - RB Brian Robinson Jr., DE Samson Ebukam, DT Da'Shawn Hand. S Jessie Bates traded; DeMarcco Hellams starts at S. Michael Penix Jr. expected to start.",
-      "source": "AP via La Nacion (Falcons after loss to Bengals, Nov 9)",
-      "url": "https://www.lanacion.com.ar/usa/falcons-are-on-a-path-to-9th-straight-losing-season-after-self-inflicted-mistakes-against-bengals-nid09112026/"
+      "text": "Atlanta (Thursday report): DNP - WR Zachariah Branch (hamstring), LB Divine Deablo (forearm), RT Jawaan Taylor (rest). Limited - DE James Pearce Jr. (back, missed Wed), DT Gervon Dexter Sr. (illness, missed Wed), LB Josh Woods (ankle), LB Kendal Daniels (Achilles), DE Cam Thomas (groin). Full - DE Za'Darius Smith (rest). IR - RB Brian Robinson Jr., DE Samson Ebukam, DT Da'Shawn Hand. Michael Penix Jr. starts.",
+      "source": "AtlantaFalcons.com (Thursday injury report, Nov 12)",
+      "url": "https://www.atlantafalcons.com/news/falcons-injury-report-gervon-dexter-sr-james-pearce-jr-return-practice"
     }
   ],
   "adjust": []
