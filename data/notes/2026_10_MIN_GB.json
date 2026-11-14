@@ -1,16 +1,21 @@
 {
   "game_id": "2026_10_MIN_GB",
-  "updated": "2026-11-12T22:00:00Z",
+  "updated": "2026-11-14T22:30:00Z",
   "items": [
     {
-      "text": "Minnesota (Wed estimated report; Thursday report not yet found): DNP - LB Blake Cashman (concussion), TE T.J. Hockenson (wrist/chest), EDGE Kyle Van Noy (calf), WR Jauan Jennings (calf), DL Tyrion Ingram-Dawkins (ankle), QB Kyler Murray (hamstring). Limited - S Jay Ward (knee), QB Carson Wentz (ankle). Full - S Theo Jackson (quad). Newly acquired Kirk Cousins expected to start, with Wentz as backup if healthy.",
-      "source": "CBS Sports (NFL Week 10 injury report, Nov 11)",
-      "url": "https://www.cbssports.com/nfl/news/2026-nfl-week-10-injury-report-mike-evans-puka-nacua/"
+      "text": "Minnesota (final report): OUT - QB Kyler Murray (hamstring), LB Blake Cashman (concussion), TE T.J. Hockenson (wrist/chest), DT Tyrion Ingram-Dawkins (ankle), WR Jauan Jennings (calf). QUESTIONABLE - LB Kyle Van Noy (calf), WR Jordan Addison (thumb), S Josh Metellus (shoulder). Kirk Cousins (acquired from LV) expected to start; matches the schedule.",
+      "source": "CBS Sports (NFL Week 10 injury report: final game statuses, Nov 13)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-10-injury-report-chiefs-kenneth-walker-aj-brown/"
     },
     {
-      "text": "Green Bay (Thu practice): DNP - RB Josh Jacobs (broken finger, surgery Fri; may miss only two games), C Sean Rhyan (ankle; John Williams likely starts at C), LB Zaire Franklin (shin, likely misses 4th straight), S Javon Bullard (ankle/knee), EDGE Lukas Van Ness (back), TE Josh Whyle (concussion). EDGE Micah Parsons (knee, PUP window) practicing in pads; unclear if in team drills. RB Chris Brooks and WR Skyy Moore (IR return windows) practicing; LB Ty'Ron Hopper (illness) practiced. Jordan Love starts.",
-      "source": "Packers On SI (Packers Thursday update from practice, Nov 12)",
-      "url": "https://www.si.com/nfl/packers/onsi/packers-thursday-update-from-practice-parsons-smack-ol-injured-starters"
+      "text": "Green Bay (final report + Sat moves): OUT - RB Josh Jacobs (finger, surgery), EDGE Micah Parsons (knee/illness), C Sean Rhyan (ankle), TE Josh Whyle (concussion). DOUBTFUL - LB Zaire Franklin (shin). QUESTIONABLE - RB Chris Brooks (ankle) and WR Skyy Moore (both activated from IR Sat), S Javon Bullard (ankle/knee), OL Travis Glover (knee), S Xavier McKinney (foot), EDGE Lukas Van Ness (back), G Kevin Zeitler (ankle/triceps). Jordan Love starts.",
+      "source": "CBS Sports (NFL Week 10 injury report: final game statuses, Nov 13)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-10-injury-report-chiefs-kenneth-walker-aj-brown/"
+    },
+    {
+      "text": "Minnesota QB: Vikings coach Kevin O'Connell says the goal is for Kirk Cousins to play Sunday; Packers coach Matt LaFleur: 'He'll be starting.'",
+      "source": "NFL.com (Vikings won't commit to Kirk Cousins starting vs. Packers)",
+      "url": "https://www.nfl.com/news/vikings-wont-commit-to-kirk-cousins-starting-packers"
     }
   ],
   "adjust": []

@@ -1,16 +1,16 @@
 {
   "game_id": "2026_10_PIT_CIN",
-  "updated": "2026-11-12T22:30:00Z",
+  "updated": "2026-11-14T22:30:00Z",
   "items": [
     {
-      "text": "Pittsburgh (Wed practice report, Nov 11; Thu report not yet posted): IR - WR Michael Pittman Jr. (foot; practice window not opened, won't return for Wk10 per Yahoo). Limited - DT Derrick Harmon (foot, designated to return from IR, hasn't played since Wk4), S DeShon Elliott (ankle). DNP (rest) - T.J. Watt, Cameron Heyward, TE Darnell Washington. Full - CB Brandin Echols (hamstring), WR Ben Skowronek (calf), DB Doneiko Slaughter (hamstring). Aaron Rodgers starts.",
-      "source": "Steelers.com (Week 10 Injury Report (Bengals), Nov 11)",
-      "url": "https://www.steelers.com/news/week-10-injury-report-bengals-x6285"
+      "text": "Pittsburgh (final report): QUESTIONABLE - DT Derrick Harmon (foot, IR return window). No one ruled out. IR - WR Michael Pittman Jr. (foot). Aaron Rodgers starts.",
+      "source": "Yahoo Sports (Steelers vs. Bengals Week 10 final injury report)",
+      "url": "https://sports.yahoo.com/articles/steelers-vs-bengals-week-10-014658835.html"
     },
     {
-      "text": "Cincinnati (Wed practice report, Nov 11 - estimated, walkthrough; Thu report not yet posted): IR - DE Cashius Howell (wrist). DNP - S Kyle Dugger (quad, inactive last 2 games), DT Jonathan Allen (rest). Limited - LG Dylan Fairchild (pectoral), CB DJ Turner II (ankle). Joe Burrow starts.",
-      "source": "Bengals.com (Week 10 Injury Report, Nov 11)",
-      "url": "https://www.bengals.com/news/bengals-steelers-week-10-2026-injury-report"
+      "text": "Cincinnati (final report): OUT - S Kyle Dugger (quad). DOUBTFUL - CB Jalen Davis (hamstring), WR Andrei Iosivas (thumb), G Brian Parker (knee). IR - DE Cashius Howell. Joe Burrow starts.",
+      "source": "CBS Sports (NFL Week 10 injury report: final game statuses, Nov 13)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-10-injury-report-chiefs-kenneth-walker-aj-brown/"
     }
   ],
   "adjust": []

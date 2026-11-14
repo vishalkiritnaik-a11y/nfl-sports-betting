@@ -1,17 +1,29 @@
 {
   "game_id": "2026_10_SF_DAL",
-  "updated": "2026-11-12T22:30:00Z",
+  "updated": "2026-11-14T22:30:00Z",
   "items": [
     {
-      "text": "San Francisco (Wed practice report, Nov 11; Thu report not yet posted): IR - DL Gracen Halton (ankle). DNP - WR Mike Evans (Achilles tendinitis; Shanahan: week-to-week, no timeline, likely misses third straight game), CB Renardo Green (back), CB Deommodore Lenoir (foot), LB Dre Greenlaw/RB Christian McCaffrey/LT Trent Williams (rest). Limited - WR Deebo Samuel (hamstring, returned after missing three games), DT C.J. West (knee, practice window opened), S Siran Neal (knee, foot), CB Upton Stout (shoulder, neck). Brock Purdy starts.",
-      "source": "49ers Webzone (49ers vs. Cowboys injury report: Deebo Samuel returns; 6 players miss practice, Nov 11)",
-      "url": "https://www.49erswebzone.com/articles/205067-cowboys-injury-returns-players-practice/"
+      "text": "San Francisco (final report): OUT - WR Mike Evans (Achilles). QUESTIONABLE - CB Renardo Green (back), CB Deommodore Lenoir (foot), CB Upton Stout (shoulder/neck), CB Nate Hobbs (adductor), DT C.J. West (knee), LB Dre Greenlaw (rest), LT Trent Williams (rest). WR Deebo Samuel cleared. IR - DL Gracen Halton. Brock Purdy starts.",
+      "source": "CBS Sports (NFL Week 10 injury report: final game statuses, Nov 13)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-10-injury-report-chiefs-kenneth-walker-aj-brown/"
     },
     {
-      "text": "Dallas (Wed practice report, Nov 11; Thu report not yet posted): Expected OUT for extended time - TE Jake Ferguson (knee/ankle), RB Tyler Goodson (ACL/MCL sprains). DNP - S P.J. Locke (concussion), CB Joey Porter Jr. (ankle, missed Wk9), EDGE Donovan Ezeiruaku (ankle), WR Jonathan Mingo (ankle), S Malik Hooker (personal), EDGE Von Miller (rest). Limited - WR George Pickens (hamstring, missed Wk9), LB DeMarvion Overshown (hamstring/back, missed Wk9), WR KaVontae Turpin (ribs). Dak Prescott starts.",
-      "source": "CBS Sports (NFL Week 10 injury report: Mike Evans still not practicing, Nov 11)",
-      "url": "https://www.cbssports.com/nfl/news/2026-nfl-week-10-injury-report-mike-evans-puka-nacua/"
+      "text": "Dallas (final report + Sat moves): OUT - TE Jake Ferguson (knee/ankle), EDGE Donovan Ezeiruaku (ankle), S P.J. Locke III (concussion), WR Jonathan Mingo (ankle/foot), CB Devin Moore (hip, downgraded Sat); RB Tyler Goodson placed on IR. DOUBTFUL - S Juanyeh Thomas (hamstring). QUESTIONABLE - CB Joey Porter Jr. (ankle), CB DaRon Bland (ankle), DT Jonathan Bullard (calf, activated from IR), S Alijah Clark (illness). WR George Pickens (hamstring) says he's ready and is not on the report. Dak Prescott starts.",
+      "source": "CBS Sports (NFL Week 10 injury report: final game statuses, Nov 13)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-10-injury-report-chiefs-kenneth-walker-aj-brown/"
+    },
+    {
+      "text": "Cowboys place Tyler Goodson on IR, activate Jonathan Bullard, elevate RB Israel Abanikanda and CB Derion Kendrick; Devin Moore ruled out (Nov 14).",
+      "source": "Yahoo Sports (Cowboys place RB Tyler Goodson on IR, Nov 14)",
+      "url": "https://sports.yahoo.com/articles/cowboys-place-rb-tyler-goodson-194708921.html"
     }
   ],
-  "adjust": []
+  "adjust": [
+    {
+      "market": "all",
+      "side": "SF",
+      "points": 0.5,
+      "reason": "Dallas is without TE Jake Ferguson, EDGE Donovan Ezeiruaku and S P.J. Locke III with S Juanyeh Thomas doubtful and both starting corners questionable, outweighing San Francisco's loss of WR Mike Evans. The stats model doesn't price non-QB injuries"
+    }
+  ]
 }

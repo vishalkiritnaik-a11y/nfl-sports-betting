@@ -1,16 +1,16 @@
 {
   "game_id": "2026_10_SEA_LV",
-  "updated": "2026-11-12T22:30:00Z",
+  "updated": "2026-11-14T22:30:00Z",
   "items": [
     {
-      "text": "Seattle (Wed practice report, Nov 11; Thu report not yet posted): OUT - QB Sam Darnold (ribs, quad; Macdonald said he will not play). DNP - LT Charles Cross (ankle), LG Quenton Nelson (knee, week-to-week after procedure; both widely expected to sit until after Wk11 bye), DE Leonard Williams (stinger), DT Brandon Pili (back), DT Jarran Reed (personal), WR Jaxon Smith-Njigba (rest). Limited - QB Drew Lock (right elbow, oblique), G Anthony Bradford (knee), EDGE Derick Hall (back), EDGE Uchenna Nwosu (ankle), LB Patrick O'Connell (toe), EDGE Connor O'Toole (foot). Full - WR Rashid Shaheed (knee), TE AJ Barner (finger). Drew Lock expected to start for second straight week.",
-      "source": "Seahawks.com (Week 10 Injury Report: Seahawks at Raiders, Nov 11)",
-      "url": "https://www.seahawks.com/news/week-10-injury-report-seahawks-at-raiders"
+      "text": "Seattle (final report): OUT - QB Sam Darnold (ribs/quad), LT Charles Cross (ankle), LG Quenton Nelson (knee), DE Leonard Williams (stinger). No other designations. Drew Lock starts for the second straight week.",
+      "source": "CBS Sports (NFL Week 10 injury report: final game statuses, Nov 13)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-10-injury-report-chiefs-kenneth-walker-aj-brown/"
     },
     {
-      "text": "Las Vegas (Wed practice report, Nov 11; Thu report not yet posted): one of the healthiest teams in the league - Limited - DT Thomas Booker (ankle), DT Foley Fatukasi (shoulder/back), RG Trey Zuhn III (concussion; Kubiak: starter 'if he can go', Bryce Cabeldue the fallback). Full - TE Ian Thomas (ankle). Rookie Fernando Mendoza (No. 1 overall pick) makes his first NFL start after Kirk Cousins was traded to MIN.",
-      "source": "Yahoo Sports (Raiders Get Fantastic News on Injured Starter, Nov 12)",
-      "url": "https://sports.yahoo.com/articles/raiders-fantastic-news-injured-starter-002739000.html"
+      "text": "Las Vegas (final report): QUESTIONABLE - DT Thomas Booker (ankle), WR Dont'e Thornton Jr. (back). No one ruled out. Rookie Fernando Mendoza makes his first NFL start after Kirk Cousins was traded to MIN; matches the schedule.",
+      "source": "CBS Sports (NFL Week 10 injury report: final game statuses, Nov 13)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-10-injury-report-chiefs-kenneth-walker-aj-brown/"
     }
   ],
   "adjust": [
@@ -18,7 +18,7 @@
       "market": "all",
       "side": "LV",
       "points": 0.5,
-      "reason": "Seattle is likely without LT Charles Cross and LG Quenton Nelson with DE Leonard Williams also DNP, while Las Vegas is nearly fully healthy. The stats model doesn't price non-QB injuries"
+      "reason": "Seattle is without LT Charles Cross, LG Quenton Nelson and DE Leonard Williams, while Las Vegas has no one ruled out. The stats model doesn't price non-QB injuries"
     }
   ],
   "qb_start": {

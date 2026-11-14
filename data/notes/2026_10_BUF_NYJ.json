@@ -1,16 +1,16 @@
 {
   "game_id": "2026_10_BUF_NYJ",
-  "updated": "2026-11-12T22:05:00Z",
+  "updated": "2026-11-14T22:30:00Z",
   "items": [
     {
-      "text": "Buffalo (Thu practice report; Wed was a walkthrough, so those designations are estimates): DNP - RT Spencer Brown (ankle, downgraded from Limited Wed). Limited - LT Dion Dawkins (rib) and LG Alec Anderson (ankle), both missed Wk9; C Connor McGovern (neck); CB Christian Benford (wrist); TE Dalton Kincaid (ankle); DB Sam Franklin (shoulder, added Thu). Full - DT Greg Gaines (calf), DE T.J. Sanders, G Ar'maj Reed-Adams. Four OL starters on the report. IR - WR Joshua Palmer (hamstring). No game designations yet. Josh Allen starts.",
-      "source": "New York Jets (official Week 10 injury report vs. Bills - Thursday)",
-      "url": "https://www.newyorkjets.com/news/jets-injury-report-week-10-vs-bills-thursday-11-12-2026"
+      "text": "Buffalo (final report): DOUBTFUL - RT Spencer Brown (ankle). QUESTIONABLE - CB Christian Benford (wrist), DB Jordan Hancock (hamstring), DB Sam Franklin Jr. (shoulder). LT Dion Dawkins and LG Alec Anderson carry no designation. IR - WR Joshua Palmer. Josh Allen starts.",
+      "source": "CBS Sports (NFL Week 10 injury report: final game statuses, Nov 13)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-10-injury-report-chiefs-kenneth-walker-aj-brown/"
     },
     {
-      "text": "NY Jets (Thu practice report): DNP - DT Harrison Phillips (ankle) and LB Trevin Wallace (groin), both DNP Wed and Thu; CB Jarvis Brownlee Jr. (illness, added Thu). Limited - WR Garrett Wilson (concussion, missed Wk9; limited Wed and Thu), WR Omar Cooper Jr. (ankle), DE Joseph Ossai (ankle), CB Nahshon Wright (back). Full - S VJ Payne (knee, returning from IR). IR - DT T'Vondre Sweat, DT David Onyemata, T Max Mitchell. No game designations yet. Geno Smith starts.",
-      "source": "New York Jets (official Week 10 injury report vs. Bills - Thursday)",
-      "url": "https://www.newyorkjets.com/news/jets-injury-report-week-10-vs-bills-thursday-11-12-2026"
+      "text": "NY Jets (final report): OUT - LB Trevin Wallace (groin). QUESTIONABLE - WR Garrett Wilson (concussion), DT Harrison Phillips (ankle), CB Jarvis Brownlee Jr. (illness), WR Omar Cooper Jr. (ankle), DE Joseph Ossai (ankle), WR Adonai Mitchell (knee), CB Nahshon Wright (back), S VJ Payne (back). IR - DT T'Vondre Sweat, DT David Onyemata, T Max Mitchell. Geno Smith starts.",
+      "source": "CBS Sports (NFL Week 10 injury report: final game statuses, Nov 13)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-10-injury-report-chiefs-kenneth-walker-aj-brown/"
     }
   ],
   "adjust": []

@@ -1,16 +1,16 @@
 {
   "game_id": "2026_10_NE_DET",
-  "updated": "2026-11-12T22:00:00Z",
+  "updated": "2026-11-14T22:30:00Z",
   "items": [
     {
-      "text": "New England (Wed report + Thu update; Munich): OUT - RB TreVeyon Henderson (illness), C/G Ben Brown (knee), CB Carlton Davis III (knee); none traveled to Germany. Wed DNP - RB Rhamondre Stevenson (knee), TE Cameron Latu (back), OL Walter Rouse (concussion), S Brenden Schooler (hamstring). Wed limited - WR A.J. Brown (ankle/knee, first practice since late Oct; traveled, no final decision), S Kevin Byard (chest), TE Hunter Henry (foot), RT Morgan Moses (foot), OL Greg Van Roten (hamstring), CB Charles Woods (hamstring), FB Reggie Gilliam (knee, IR window). Thursday (walk-through in Germany): several upgraded to limited; A.J. Brown and Stevenson reported on track to play. LT Will Campbell not on the injury report. Drake Maye (right shoulder) full, starts.",
-      "source": "Patriots.com (Week 10 injury report, Nov 11) / The Grey Manes (Thursday report, Nov 12)",
-      "url": "https://www.patriots.com/news/week-10-injury-report-patriots-at-lions"
+      "text": "New England (final report, Munich): OUT - RB TreVeyon Henderson (illness), C/G Ben Brown (knee), CB Carlton Davis III (knee). QUESTIONABLE - WR A.J. Brown (ankle/knee; Vrabel says he and Stevenson looked 'pretty good'), RB Rhamondre Stevenson (knee), CB Charles Woods (hamstring), OL Greg Van Roten (hamstring), FB Reggie Gilliam (knee), S Kevin Byard (chest), S Brenden Schooler (hamstring), OL Walter Rouse (concussion), TE Cameron Latu (back). Drake Maye starts.",
+      "source": "CBS Sports (NFL Week 10 injury report: final game statuses, Nov 13)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-10-injury-report-chiefs-kenneth-walker-aj-brown/"
     },
     {
-      "text": "Detroit (Thursday report): OUT - S Kerby Joseph (knee; full in practice but not activated, did not travel), CB D.J. Reed (hip), C Cade Mays (ankle). DNP - RB Sione Vaki (ankle). Limited - WR Amon-Ra St. Brown (rib). Full - S Brian Branch (hip), EDGE DJ Wonnum (concussion), RB Jacob Saylors (neck/hamstring). IR - LB Jack Campbell, CB Thomas Harper, RB Isiah Pacheco. QB Jared Goff (chest) limited Wed, listed limited/full Thu in reports, not on out list; Goff expected to start.",
-      "source": "Sports Illustrated / Lions On SI (Week 10 Thursday injury report, Nov 12)",
-      "url": "https://www.si.com/nfl/lions/onsi/lions-week-10-thursday-injury-report-three-out-joseph-full-participant"
+      "text": "Detroit (final report): OUT - S Kerby Joseph (knee), CB D.J. Reed (hip), C Cade Mays (ankle). QUESTIONABLE - WR Amon-Ra St. Brown (rib), RB Sione Vaki (ankle). IR - LB Jack Campbell, CB Thomas Harper, RB Isiah Pacheco. Jared Goff (chest) not designated, starts.",
+      "source": "CBS Sports (NFL Week 10 injury report: final game statuses, Nov 13)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-10-injury-report-chiefs-kenneth-walker-aj-brown/"
     }
   ],
   "adjust": []

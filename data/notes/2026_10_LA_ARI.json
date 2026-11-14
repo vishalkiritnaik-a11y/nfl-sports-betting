@@ -1,29 +1,17 @@
 {
   "game_id": "2026_10_LA_ARI",
-  "updated": "2026-11-12T22:05:00Z",
+  "updated": "2026-11-14T22:30:00Z",
   "items": [
     {
-      "text": "LA Rams (Wed report, walkthrough estimates; Thu report not yet posted): OUT - WR Puka Nacua (knee/toe; MCL/PCL sprains + turf toe, expected IR, ruled out). DNP - CB Trent McDuffie (back, missed Wk9), S Kam Curl (toe), LG Steve Avila (hamstring), TE Terrance Ferguson (ankle/hamstring, likely out a couple more weeks per McVay). Limited - OLB Myles Garrett (knee), TE Davis Allen (oblique), TE Colby Parkinson (ribs), LS Joe Cardona (ankle). IR - WR Davante Adams (hamstring), CB Jaylen Watson, DE Kobie Turner, DT Poona Ford, K Blake Grupe. Matthew Stafford (elbow) full participant, starts.",
-      "source": "Yahoo Sports (Official Cardinals-Rams Week 10 injury report); arizonasports.com",
-      "url": "https://sports.yahoo.com/articles/official-cardinals-rams-week-10-005054655.html"
+      "text": "LA Rams (final report): OUT - LG Steve Avila (hamstring), TE Terrance Ferguson (ankle/hamstring). QUESTIONABLE - CB Trent McDuffie (back), S Kam Curl (toe), OLB Myles Garrett (knee/rest), TE Davis Allen (oblique), LS Joe Cardona (ankle). IR - WR Puka Nacua (knee/toe), WR Davante Adams (hamstring), CB Jaylen Watson, DE Kobie Turner, DT Poona Ford, K Blake Grupe. Matthew Stafford starts.",
+      "source": "TheRams.com (Rams Injury Report, Week 10 at Cardinals)",
+      "url": "https://www.therams.com/news/rams-injury-report-week-10-2026-at-cardinals-trent-mcduffie-steve-avila"
     },
     {
-      "text": "Arizona (Wed report; Thu report not yet posted): QB Gardner Minshew OUT (feared torn UCL, throwing elbow); Jacoby Brissett traded to BAL. HC Mike LaFleur officially named rookie Carson Beck the starter (first NFL start, so no qb_start override; the model still prices Minshew). Veteran Josh Johnson (11 career starts) signed off CIN practice squad as backup. DNP - C Hjalte Froholdt (concussion), RG Jon Gaines II (ankle), DT Roy Lopez (toe/ankle); rest days for S Budda Baker, G Isaac Seumalo, OLB Josh Sweat, LB Mack Wilson Sr. Limited - LT Jayden Williams (knee), RB Bam Knight (concussion), CB Max Melton (knee/hand), DL Dante Stills (shoulder), S Andrew Wingard (groin); DL Zach Carter and TE Hunter Long back from IR. OUT for season - WR Michael Wilson (neck), WR Kendrick Bourne, LT Paris Johnson Jr. (biceps, IR). OUT - WR Jalen Brooks (wrist). IR - RB Jeremiyah Love (ankle).",
-      "source": "Arizona Cardinals (Injury Report: Week 10 vs Rams); ESPN (Cardinals to start rookie QB Carson Beck)",
-      "url": "https://www.azcardinals.com/news/injury-report-week-10-vs-rams"
-    },
-    {
-      "text": "Arizona QB: Cardinals signing 40-year-old Josh Johnson (50 games, 11 starts; played for LaFleur with 2021 Jets) after Minshew's injury; Beck remains the named starter for Sunday.",
-      "source": "arizonasports.com (Report: Cardinals signing QB Josh Johnson after injury to Gardner Minshew)",
-      "url": "https://arizonasports.com/nfl/arizona-cardinals/report-cardinals-signing-qb-josh-johnson-after-injury-to-gardner-minshew"
+      "text": "Arizona (final report): OUT - QB Gardner Minshew (elbow), C Hjalte Froholdt (concussion), RG Jon Gaines II (ankle), DT Zach Carter (knee). QUESTIONABLE - LT Jayden Williams (knee), DT Roy Lopez (toe/ankle), CB Max Melton (knee/hand), TE Hunter Long (knee), S Andrew Wingard (groin), DL Darius Robinson (wrist). Season-ending - WR Michael Wilson, WR Kendrick Bourne, LT Paris Johnson Jr. IR - RB Jeremiyah Love. Rookie Carson Beck makes his first NFL start (no prior start, so no qb_start override; the model still prices Minshew); Josh Johnson signed as backup.",
+      "source": "CBS Sports (NFL Week 10 injury report: final game statuses, Nov 13)",
+      "url": "https://www.cbssports.com/nfl/news/nfl-week-10-injury-report-chiefs-kenneth-walker-aj-brown/"
     }
   ],
-  "adjust": [
-    {
-      "market": "all",
-      "side": "ARI",
-      "points": 0.5,
-      "reason": "The Rams are without both top receivers (Puka Nacua out, Davante Adams on IR) with CB Trent McDuffie, S Kam Curl and LG Steve Avila all missing practice, which outweighs Arizona's WR and interior-line absences. The stats model doesn't price non-QB injuries"
-    }
-  ]
+  "adjust": []
 }
