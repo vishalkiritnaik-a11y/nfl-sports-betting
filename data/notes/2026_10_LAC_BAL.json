@@ -1,19 +1,26 @@
 {
   "game_id": "2026_10_LAC_BAL",
-  "updated": "2026-11-14T22:30:00Z",
+  "updated": "2026-11-16T22:05:00Z",
   "items": [
     {
-      "text": "LA Chargers (final report, Sat Nov 14, preliminary for MNF): OUT - G Branson Taylor (ankle), CB Isas Waxter (ankle), S Kendall Williamson (calf). DOUBTFUL - WR Brenen Thompson (hamstring). QUESTIONABLE - WR Ladd McConkey (back, DNP all week), G Kayode Awosika (fibula), DL Justin Eboigbe (ankle), TE David Njoku, LB Denzel Perryman and OL Trey Pipkins III (all need IR activation). Justin Herbert (left finger) not designated; starts.",
-      "source": "Yahoo Sports (Chargers list Ladd McConkey as questionable for Monday night, Nov 14)",
-      "url": "https://sports.yahoo.com/articles/chargers-list-ladd-mcconkey-questionable-213426977.html"
+      "text": "LA Chargers (MNF day update, Mon Nov 16): OUT - WR Ladd McConkey (back; downgraded Sunday, did not travel), CB Isas Waxter (ankle), S Kendall Williamson (calf). G Branson Taylor (ankle) placed on IR; OL Rashawn Slater on IR. WR Brenen Thompson (hamstring) was doubtful on the final report. Activated from IR: TE David Njoku (fibula) and LB Denzel Perryman (pectoral, season debut); DE Myles Adams elevated. Still questionable: G Kayode Awosika (fibula), DL Justin Eboigbe (ankle); WR Tre' Harris off the report. Justin Herbert starts. Official inactives not yet released (~6:45pm ET).",
+      "source": "NBC Sports/PFT (Chargers activate TE David Njoku, LB Denzel Perryman for Monday night vs. Ravens, Nov 16); Yahoo Sports (Ladd McConkey ruled out for Week 10, Nov 15)",
+      "url": "https://nbcsports.com/nfl/profootballtalk/rumor-mill/news/chargers-activate-te-david-njoku-lb-denzel-perryman-for-monday-night-vs-ravens"
     },
     {
-      "text": "Baltimore (Fri practice report): no active-roster player missed practice Thu or Fri. Limited Fri - S Jaylinn Hawkins (knee); Full - S Kyle Hamilton (hip), WR Rashod Bateman (calf), CB Nate Wiggins (illness), G Olaivavega Ioane. IR - QB Lamar Jackson (thumb, 6-10 weeks), QB Tyler Huntley. Jacoby Brissett (acquired from ARI) starts.",
-      "source": "Chargers.com (Chargers vs. Ravens injury report, Nov 13)",
-      "url": "https://www.chargers.com/news/chargers-vs-ravens-injury-report-ladd-mcconkey-daiyan-henley-2026"
+      "text": "Baltimore (final report, Sat Nov 14): OUT - S Jaylinn Hawkins (knee, fourth straight game). QUESTIONABLE - RB Adam Randall (neck/hamstring, possible activation). WR Rashod Bateman (calf) and G Vega Ioane (knee/shoulder) practiced and are not designated; Calais Campbell and Ronnie Stanley had rest days. QB Lamar Jackson (dislocated right thumb) out 6-10 weeks; Jacoby Brissett (acquired from ARI) makes his first Ravens start.",
+      "source": "BaltimoreRavens.com (Ravens rule out Jaylinn Hawkins for Monday Night Football, Nov 14); Yahoo Sports MNF preview (Nov 16)",
+      "url": "https://www.baltimoreravens.com/news/injury-report-ravens-chargers-jaylinn-hawkins-2026"
     }
   ],
-  "adjust": [],
+  "adjust": [
+    {
+      "market": "all",
+      "side": "BAL",
+      "points": 0.5,
+      "reason": "Chargers are without WR1 Ladd McConkey, starting G Branson Taylor, CB Isas Waxter and S Kendall Williamson (likely WR Brenen Thompson too), while Baltimore is missing only S Jaylinn Hawkins. The stats model doesn't price non-QB injuries"
+    }
+  ],
   "qb_start": {
     "BAL": "Jacoby Brissett"
   }
