@@ -1,0 +1,29 @@
+{
+  "game_id": "2026_11_TB_DET",
+  "updated": "2026-11-17T22:00:00Z",
+  "items": [
+    {
+      "text": "Tampa Bay QB: Baker Mayfield (foot/ankle, in and out of a walking boot over the bye) is uncertain; not considered long-term, IR not considered. Rookie Jalon Daniels would start if he can't. Team signed Easton Stick to the active roster. Game-time decision possible.",
+      "source": "ESPN (Nov 15)",
+      "url": "https://www.espn.com/nfl/story/_/id/50486637/sources-baker-mayfield-status-uncertain-vs-lions"
+    },
+    {
+      "text": "Early-week (Tue) note; first official practice reports come Wednesday. Tampa Bay: QUESTIONABLE - S Antoine Winfield Jr. (ankle). IR - WR Jalen McMillan, LB Christian Rozeboom, CB Josh Hayes.",
+      "source": "ESPN NFL injury status page (Nov 16-17)",
+      "url": "https://www.espn.com/nfl/injuries"
+    },
+    {
+      "text": "Early-week (Tue) note; first official practice reports come Wednesday. Detroit: DE Aidan Hutchinson tore his ACL vs NE and is out for the season. OUT last week - S Kerby Joseph (knee), CB D.J. Reed, C Cade Mays. IR - LB Jack Campbell, LB Devin White, G Ben Bartch, RB Isiah Pacheco. Jared Goff starts.",
+      "source": "NFL.com news roundup (Mon Nov 16)",
+      "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-nov-16"
+    }
+  ],
+  "adjust": [
+    {
+      "market": "all",
+      "side": "TB",
+      "points": 0.5,
+      "reason": "Detroit has lost DE Aidan Hutchinson for the season on top of S Kerby Joseph, CB D.J. Reed, C Cade Mays and LB Jack Campbell, while Tampa Bay's non-QB absences are lighter. The stats model doesn't price non-QB injuries"
+    }
+  ]
+}

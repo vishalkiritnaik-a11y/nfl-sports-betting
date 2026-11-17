@@ -1,0 +1,25 @@
+{
+  "game_id": "2026_11_BAL_CAR",
+  "updated": "2026-11-17T22:00:00Z",
+  "items": [
+    {
+      "text": "Baltimore QB: Lamar Jackson on IR (thumb), likely out for the regular season; Tyler Huntley (turf toe) out for the season. Jacoby Brissett, who started Week 10, is expected to start. The schedule still lists Huntley.",
+      "source": "NBC Sports Week 11 injury report (Nov 17)",
+      "url": "https://www.nbcsports.com/fantasy/football/news/nfl-week-11-injury-report-drake-maye-likely-done-for-season-surgery-for-jordan-addison"
+    },
+    {
+      "text": "Early-week (Tue) note; first official practice reports come Wednesday. Baltimore: DL Nnamdi Madubuike (hamstring) and rookie G Olaivavega Ioane (shoulder) left Monday's loss to LAC. OUT - S Jaylinn Hawkins (knee). IR - C Ethan Pocic, K Tyler Loop, RB Adam Randall.",
+      "source": "NFL.com news roundup (Mon Nov 16)",
+      "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-nov-16"
+    },
+    {
+      "text": "Early-week (Tue) note; first official practice reports come Wednesday. Carolina: OUT last week - LB Bobby Okereke, CB Will Lee III, OT Ikem Ekwonu (knee). IR - CB Jaycee Horn, G Brady Christensen, CB Mike Jackson, RB Jonathon Brooks. Bryce Young starts.",
+      "source": "ESPN NFL injury status page (Nov 16-17)",
+      "url": "https://www.espn.com/nfl/injuries"
+    }
+  ],
+  "adjust": [],
+  "qb_start": {
+    "BAL": "Jacoby Brissett"
+  }
+}
