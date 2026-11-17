@@ -1,0 +1,395 @@
+{
+ "season": 2026,
+ "trained_through_week": 10,
+ "for_week": 11,
+ "generated": "2026-11-17T19:31:59Z",
+ "version": "game-v1.0",
+ "changed": false,
+ "incumbent": {
+  "rating": {
+   "k_mult": 1.0,
+   "prior_regress": 0.5
+  },
+  "model": {
+   "alpha": 25.0,
+   "logit_c": 0.05,
+   "half_life": null
+  },
+  "prior": {
+   "n": 1420,
+   "log_loss": 0.630868045660934,
+   "accuracy": 0.6485915492957747,
+   "margin_mae": 10.12015042011734,
+   "total_mae": 10.4192465852265
+  },
+  "current": {
+   "n": 149,
+   "log_loss": 0.6189938457932899,
+   "accuracy": 0.6577181208053692,
+   "margin_mae": 9.93482822455634,
+   "total_mae": 10.997838589492002
+  }
+ },
+ "chosen": {
+  "rating": {
+   "k_mult": 1.0,
+   "prior_regress": 0.5
+  },
+  "model": {
+   "alpha": 25.0,
+   "logit_c": 0.05,
+   "half_life": null
+  },
+  "prior": {
+   "n": 1420,
+   "log_loss": 0.630868045660934,
+   "accuracy": 0.6485915492957747,
+   "margin_mae": 10.12015042011734,
+   "total_mae": 10.4192465852265
+  },
+  "current": {
+   "n": 149,
+   "log_loss": 0.6189938457932899,
+   "accuracy": 0.6577181208053692,
+   "margin_mae": 9.93482822455634,
+   "total_mae": 10.997838589492002
+  }
+ },
+ "rule": "switch only if log loss improves by at least 0.0005 on both 2021-2025 and 2026 to date",
+ "grid": [
+  {
+   "rating": {
+    "k_mult": 0.6,
+    "prior_regress": 0.35
+   },
+   "model": {
+    "alpha": 10.0,
+    "logit_c": 0.05,
+    "half_life": 3.0
+   },
+   "prior": {
+    "n": 1420,
+    "log_loss": 0.6314357053029099,
+    "accuracy": 0.652112676056338,
+    "margin_mae": 10.131652310604254,
+    "total_mae": 10.421794782647838
+   },
+   "current": {
+    "n": 149,
+    "log_loss": 0.6152044824234216,
+    "accuracy": 0.6577181208053692,
+    "margin_mae": 9.88580419443141,
+    "total_mae": 11.05091126051773
+   }
+  },
+  {
+   "rating": {
+    "k_mult": 0.6,
+    "prior_regress": 0.35
+   },
+   "model": {
+    "alpha": 25.0,
+    "logit_c": 0.05,
+    "half_life": 3.0
+   },
+   "prior": {
+    "n": 1420,
+    "log_loss": 0.6313943920583917,
+    "accuracy": 0.6507042253521127,
+    "margin_mae": 10.127737685069725,
+    "total_mae": 10.420898236381438
+   },
+   "current": {
+    "n": 149,
+    "log_loss": 0.6152866215304346,
+    "accuracy": 0.6577181208053692,
+    "margin_mae": 9.88719802553416,
+    "total_mae": 11.051913275076535
+   }
+  },
+  {
+   "rating": {
+    "k_mult": 0.6,
+    "prior_regress": 0.35
+   },
+   "model": {
+    "alpha": 60.0,
+    "logit_c": 0.05,
+    "half_life": 3.0
+   },
+   "prior": {
+    "n": 1420,
+    "log_loss": 0.6313192885491684,
+    "accuracy": 0.65,
+    "margin_mae": 10.122336961454122,
+    "total_mae": 10.419611055991544
+   },
+   "current": {
+    "n": 149,
+    "log_loss": 0.6154637399410974,
+    "accuracy": 0.6577181208053692,
+    "margin_mae": 9.891260766707227,
+    "total_mae": 11.054055052392279
+   }
+  },
+  {
+   "rating": {
+    "k_mult": 1.0,
+    "prior_regress": 0.35
+   },
+   "model": {
+    "alpha": 10.0,
+    "logit_c": 0.05,
+    "half_life": 3.0
+   },
+   "prior": {
+    "n": 1420,
+    "log_loss": 0.6316539396076776,
+    "accuracy": 0.65,
+    "margin_mae": 10.138570407420723,
+    "total_mae": 10.415564136054105
+   },
+   "current": {
+    "n": 149,
+    "log_loss": 0.6153643469077011,
+    "accuracy": 0.6510067114093959,
+    "margin_mae": 9.856539464497132,
+    "total_mae": 11.030689055613822
+   }
+  },
+  {
+   "rating": {
+    "k_mult": 1.0,
+    "prior_regress": 0.35
+   },
+   "model": {
+    "alpha": 25.0,
+    "logit_c": 0.05,
+    "half_life": 3.0
+   },
+   "prior": {
+    "n": 1420,
+    "log_loss": 0.631611493328616,
+    "accuracy": 0.65,
+    "margin_mae": 10.134435564070834,
+    "total_mae": 10.41455443090712
+   },
+   "current": {
+    "n": 149,
+    "log_loss": 0.6154434656731352,
+    "accuracy": 0.6510067114093959,
+    "margin_mae": 9.858279513587288,
+    "total_mae": 11.03144600170874
+   }
+  },
+  {
+   "rating": {
+    "k_mult": 0.6,
+    "prior_regress": 0.35
+   },
+   "model": {
+    "alpha": 10.0,
+    "logit_c": 0.05,
+    "half_life": null
+   },
+   "prior": {
+    "n": 1420,
+    "log_loss": 0.6304836984767372,
+    "accuracy": 0.6514084507042254,
+    "margin_mae": 10.112673520246874,
+    "total_mae": 10.42663478644709
+   },
+   "current": {
+    "n": 149,
+    "log_loss": 0.6166403014158917,
+    "accuracy": 0.6644295302013423,
+    "margin_mae": 9.923631784851924,
+    "total_mae": 11.04938238381542
+   }
+  },
+  {
+   "rating": {
+    "k_mult": 1.0,
+    "prior_regress": 0.35
+   },
+   "model": {
+    "alpha": 60.0,
+    "logit_c": 0.05,
+    "half_life": 3.0
+   },
+   "prior": {
+    "n": 1420,
+    "log_loss": 0.6315232679003236,
+    "accuracy": 0.6492957746478873,
+    "margin_mae": 10.128437487777344,
+    "total_mae": 10.412740753208896
+   },
+   "current": {
+    "n": 149,
+    "log_loss": 0.6156077403334564,
+    "accuracy": 0.6510067114093959,
+    "margin_mae": 9.862209143556491,
+    "total_mae": 11.033067526467041
+   }
+  },
+  {
+   "rating": {
+    "k_mult": 0.6,
+    "prior_regress": 0.35
+   },
+   "model": {
+    "alpha": 25.0,
+    "logit_c": 0.05,
+    "half_life": null
+   },
+   "prior": {
+    "n": 1420,
+    "log_loss": 0.6304531602521959,
+    "accuracy": 0.6507042253521127,
+    "margin_mae": 10.11043658395649,
+    "total_mae": 10.42600492299126
+   },
+   "current": {
+    "n": 149,
+    "log_loss": 0.6167119981491086,
+    "accuracy": 0.6644295302013423,
+    "margin_mae": 9.9244044287599,
+    "total_mae": 11.049744996145057
+   }
+  },
+  {
+   "rating": {
+    "k_mult": 0.6,
+    "prior_regress": 0.35
+   },
+   "model": {
+    "alpha": 60.0,
+    "logit_c": 0.05,
+    "half_life": null
+   },
+   "prior": {
+    "n": 1420,
+    "log_loss": 0.6304097014667658,
+    "accuracy": 0.65,
+    "margin_mae": 10.10656307555665,
+    "total_mae": 10.425134525674418
+   },
+   "current": {
+    "n": 149,
+    "log_loss": 0.6168465659743625,
+    "accuracy": 0.6644295302013423,
+    "margin_mae": 9.927322251171582,
+    "total_mae": 11.050575155532933
+   }
+  },
+  {
+   "rating": {
+    "k_mult": 1.5,
+    "prior_regress": 0.35
+   },
+   "model": {
+    "alpha": 10.0,
+    "logit_c": 0.05,
+    "half_life": 3.0
+   },
+   "prior": {
+    "n": 1420,
+    "log_loss": 0.6320723964332113,
+    "accuracy": 0.6471830985915493,
+    "margin_mae": 10.149681202037398,
+    "total_mae": 10.413157970178643
+   },
+   "current": {
+    "n": 149,
+    "log_loss": 0.615670721519758,
+    "accuracy": 0.6510067114093959,
+    "margin_mae": 9.838311031365736,
+    "total_mae": 11.013003331193211
+   }
+  }
+ ],
+ "weekly_current_season": [
+  {
+   "week": 1,
+   "games": 16,
+   "model_correct": 8,
+   "market_correct": 12,
+   "model_log_loss": 0.6767400972082331,
+   "market_log_loss": 0.620923313902527
+  },
+  {
+   "week": 2,
+   "games": 16,
+   "model_correct": 10,
+   "market_correct": 11,
+   "model_log_loss": 0.6956072869331873,
+   "market_log_loss": 0.6576962325485192
+  },
+  {
+   "week": 3,
+   "games": 16,
+   "model_correct": 9,
+   "market_correct": 9,
+   "model_log_loss": 0.686101413271505,
+   "market_log_loss": 0.700048785591805
+  },
+  {
+   "week": 4,
+   "games": 16,
+   "model_correct": 9,
+   "market_correct": 9,
+   "model_log_loss": 0.5975391291013983,
+   "market_log_loss": 0.6248593878660428
+  },
+  {
+   "week": 5,
+   "games": 14,
+   "model_correct": 10,
+   "market_correct": 9,
+   "model_log_loss": 0.6244297644686249,
+   "market_log_loss": 0.6501675601902859
+  },
+  {
+   "week": 6,
+   "games": 14,
+   "model_correct": 7,
+   "market_correct": 7,
+   "model_log_loss": 0.7216162139015465,
+   "market_log_loss": 0.7210193350050682
+  },
+  {
+   "week": 7,
+   "games": 14,
+   "model_correct": 10,
+   "market_correct": 10,
+   "model_log_loss": 0.7038650735804628,
+   "market_log_loss": 0.6625195424035909
+  },
+  {
+   "week": 8,
+   "games": 14,
+   "model_correct": 11,
+   "market_correct": 11,
+   "model_log_loss": 0.49551808520486473,
+   "market_log_loss": 0.5445698797208658
+  },
+  {
+   "week": 9,
+   "games": 15,
+   "model_correct": 14,
+   "market_correct": 14,
+   "model_log_loss": 0.4124493129290989,
+   "market_log_loss": 0.4169881857038912
+  },
+  {
+   "week": 10,
+   "games": 14,
+   "model_correct": 10,
+   "market_correct": 10,
+   "model_log_loss": 0.5651091846326829,
+   "market_log_loss": 0.547585707932194
+  }
+ ],
+ "games_in_training": 7426,
+ "seconds": 275
+}
