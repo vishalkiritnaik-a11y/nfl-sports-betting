@@ -1,16 +1,16 @@
 {
   "game_id": "2026_11_CIN_WAS",
-  "updated": "2026-11-17T22:00:00Z",
+  "updated": "2026-11-19T22:30:00Z",
   "items": [
     {
-      "text": "Early-week (Tue) note; first official practice reports come Wednesday. Cincinnati: QUESTIONABLE last week - LB Oren Burks (groin), G Dalton Risner (knee). OUT - S Kyle Dugger, OT Myles Hinton (illness). IR - WR Andrei Iosivas, TE Erick All Jr. (season). Joe Burrow starts.",
-      "source": "ESPN NFL injury status page (Nov 16-17)",
-      "url": "https://www.espn.com/nfl/injuries"
+      "text": "Cincinnati (first report, Thu): QB Joe Burrow (illness) full. DNP - G Dalton Risner (knees). LIMITED - G Dylan Fairchild (oblique), S Kyle Dugger (quad). S Dax Hill (illness) listed. WR Andrei Iosivas full, expected back. Burrow starts.",
+      "source": "SI Bengals (Nov 19)",
+      "url": "https://www.si.com/nfl/bengals/onsi/bengals-injury-report-joe-burrow-dalton-risner-on-opening-commanders-injury-list-01m7stek0ccw"
     },
     {
-      "text": "Early-week (Tue) note; first official practice reports come Wednesday. Washington: IR - DT Daron Payne (season), WR Terry McLaurin (season), OT Laremy Tunsil, LB Leo Chenal, RB Jacory Croskey-Merritt (designated to return). Jayden Daniels starts.",
-      "source": "ESPN NFL injury status page (Nov 16-17)",
-      "url": "https://www.espn.com/nfl/injuries"
+      "text": "Washington (first report, Thu): QB Jayden Daniels (elbow) full, starts. LIMITED - S Quan Martin (shoulder). WR Stefon Diggs rest. Full - C Lucas Patrick, RB Jacory Croskey-Merritt (IR return). IR - DT Daron Payne, WR Terry McLaurin, OT Laremy Tunsil, LB Leo Chenal (long-term, already reflected in recent games).",
+      "source": "Commanders.com Week 11 injury report",
+      "url": "https://www.commanders.com/news/commanders-vs-bengals-week-11-injury-report"
     }
   ],
   "adjust": []

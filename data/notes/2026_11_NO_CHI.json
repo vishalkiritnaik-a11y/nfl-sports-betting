@@ -1,17 +1,24 @@
 {
   "game_id": "2026_11_NO_CHI",
-  "updated": "2026-11-17T22:00:00Z",
+  "updated": "2026-11-19T22:30:00Z",
   "items": [
     {
-      "text": "Early-week (Tue) note; first official practice reports come Wednesday. New Orleans: OUT last week - C Erik McCoy, RT Taliese Fuaga, OL Asim Richards (knee, out a few weeks per Kellen Moore). QUESTIONABLE - LB Pete Werner (hamstring). IR - DT Christen Miller, DT Bryan Bresee. Tyler Shough starts. If McCoy and Fuaga stay out, the OL cluster may justify a CHI adjustment later in the week.",
-      "source": "ESPN NFL injury status page (Nov 16-17)",
-      "url": "https://www.espn.com/nfl/injuries"
+      "text": "New Orleans (Wed/Thu): DNP - C Erik McCoy (biceps), RT Taliese Fuaga (knee), OT Asim Richards (knee, out multiple weeks); OL status 'no better' Thursday. Also DNP - LB Pete Werner (hamstring), CB Martin Emerson Jr. (concussion); RB Alvin Kamara and S Justin Reid non-injury. LIMITED - WR Jordyn Tyson (chest), CB Decamerion Richardson (thigh). Tyler Shough starts.",
+      "source": "Crescent City Sports (Nov 19)",
+      "url": "https://crescentcitysports.com/saints-offensive-line-injury-status-no-better-thursday-ahead-of-bears-trip/"
     },
     {
-      "text": "Early-week (Tue) note; first official practice reports come Wednesday. Chicago (off a bye): RB Kyle Monangai (toe/thumb) says he is on track to return. WR Luther Burden III (concussion) must clear protocol. IR - OT Braxton Jones (season), TE Cole Kmet (season), S Coby Bryant. Caleb Williams starts.",
-      "source": "NFL.com news roundup (Mon Nov 16)",
-      "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-nov-16"
+      "text": "Chicago (Wed/Thu): CB Kyler Gordon (shoulder) DNP both days, in danger of missing Sunday. DT Jeffery Simmons (knee) limited, expected available. WR Luther Burden III cleared concussion protocol (full); RB Kyle Monangai full. IR - OT Braxton Jones, TE Cole Kmet. Caleb Williams starts.",
+      "source": "Yahoo Sports Bears Thursday injury report",
+      "url": "https://sports.yahoo.com/articles/bears-thursday-injury-report-updates-204035094.html"
     }
   ],
-  "adjust": []
+  "adjust": [
+    {
+      "market": "all",
+      "side": "CHI",
+      "points": 0.5,
+      "reason": "New Orleans looks set to be without three offensive linemen (McCoy, Fuaga, Richards) plus LB Werner and CB Emerson, against Chicago missing only CB Kyler Gordon. The stats model doesn't price non-QB injuries"
+    }
+  ]
 }

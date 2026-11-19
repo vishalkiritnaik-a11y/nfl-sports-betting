@@ -1,21 +1,21 @@
 {
   "game_id": "2026_11_PIT_PHI",
-  "updated": "2026-11-17T22:00:00Z",
+  "updated": "2026-11-19T22:30:00Z",
   "items": [
     {
-      "text": "Kickoff flexed from 4:25 to 1:00 p.m. ET. Philadelphia QB: Jalen Hurts out for the season (blood clots); Joe Milton III starts again (matches schedule).",
-      "source": "Yahoo / Steelers Now",
-      "url": "https://sports.yahoo.com/articles/steelers-eagles-week-11-game-181543613.html"
+      "text": "Kickoff flexed to 1:00 p.m. ET. Philadelphia QB: Jalen Hurts on IR (blood clots, expected out for season); Nick Sirianni confirmed Joe Milton III starts (matches schedule).",
+      "source": "NBC Sports / Rotoworld (Nov 18)",
+      "url": "https://www.nbcsports.com/fantasy/football/player-news/2026-11-18/joe-milton-announced-as-eagles-week-11-starter"
     },
     {
-      "text": "Early-week (Tue) note; first official practice reports come Wednesday. Philadelphia (off a bye): OUT before bye - WR DeVonta Smith (hamstring), CB Jonathan Jones, LB Jihaad Campbell, WR Dontayvion Wicks. QUESTIONABLE - LB Zack Baun (back). RB Will Shipley designated to return from IR.",
-      "source": "ESPN NFL injury status page (Nov 16-17)",
-      "url": "https://www.espn.com/nfl/injuries"
+      "text": "Philadelphia (Wed): DNP - LB Zack Baun (back). LIMITED - WR DeVonta Smith (hamstring), WR Dontayvion Wicks (ankle), CB Jonathan Jones (hamstring), DB Michael Carter II (abdomen), OLB Nolan Smith (illness), RB Will Shipley (IR return). Full - RB Saquon Barkley, LB Jihaad Campbell.",
+      "source": "PhiladelphiaEagles.com injury report",
+      "url": "https://philadelphiaeagles.com/team/injury-report"
     },
     {
-      "text": "Early-week (Tue) note; first official practice reports come Wednesday. Pittsburgh: DOUBTFUL last week - G Mason McCormick (ankle); OUT - S DeShon Elliott (knee). WRs Michael Pittman Jr. (foot) and Roman Wilson (finger) on IR but hoped back this week. Aaron Rodgers starts.",
-      "source": "ESPN NFL injury status page (Nov 16-17)",
-      "url": "https://www.espn.com/nfl/injuries"
+      "text": "Pittsburgh (Wed/Thu): LB Nick Herbig (hip/ribs) DNP both days; LB Patrick Queen (hand) limited. WR Michael Pittman Jr. and S DeShon Elliott upgraded to full Thu; WR Roman Wilson full. G Mason McCormick (ankle, carted off Week 10) likely out multiple weeks. Aaron Rodgers starts.",
+      "source": "ClutchPoints (McCormick) / Eagles.com report",
+      "url": "https://clutchpoints.com/nfl/pittsburgh-steelers/steelers-news-mike-mccarthy-still-uncertain-mason-mccormick-brutal-ankle-injury"
     }
   ],
   "adjust": []

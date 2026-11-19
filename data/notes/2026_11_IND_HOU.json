@@ -1,27 +1,24 @@
 {
   "game_id": "2026_11_IND_HOU",
-  "updated": "2026-11-17T22:00:00Z",
+  "updated": "2026-11-19T22:30:00Z",
   "items": [
     {
-      "text": "Houston (Mon estimated report, short week): DNP - DE Danielle Hunter (hamstring), WR Marvin Harrison Jr. (hamstring), LB Azeez Al-Shaair (groin), TE Brevin Jordan (foot/illness), RB Woody Marks (concussion). LIMITED - LB Jake Hummel (groin). FULL - RB David Montgomery (groin), WR Tank Dell, OT Blake Fisher, G Wyatt Teller, C/G Keylan Rutledge, CB Kamari Lassiter, S Reed Blankenship. C.J. Stroud starts.",
-      "source": "Houston Texans official Week 11 injury report (Nov 16)",
-      "url": "https://www.houstontexans.com/news/week-11-injury-report-texans-vs-colts"
+      "text": "Indianapolis (final TNF report): OUT - LT Bernhard Raimann (concussion), RT Jalen Travis (knee), CB Charvarius Ward (knee), DT Jerry Tillery (calf), TE Will Mallory (hamstring). QUESTIONABLE - CB Sauce Gardner (calf, no practice all week), T Charlie Heck (personal), WR Anthony Gould (toe), LS Luke Rhodes (hamstring). IR - WR Alec Pierce, TE Mo Alie-Cox, LB Jaylon Carlies. Daniel Jones starts. Inactives come ~90 min before kickoff.",
+      "source": "Athlon Sports final injury report (Nov 18-19)",
+      "url": "https://athlonsports.com/nfl/trending/final-injury-report-for-colts-texans-will-marvin-harrison-jr-sauce-gardner-play"
     },
     {
-      "text": "Houston (Tue): Woody Marks ruled out for Thursday; Hunter and Harrison Jr. not expected to play; Al-Shaair set for groin surgery; Montgomery practicing and expected back.",
-      "source": "FantasyPros / Aaron Wilson (Nov 17)",
-      "url": "https://www.fantasypros.com/nfl/news/620778/woody-marks-concussion-ruled-out-week-11.php"
-    },
-    {
-      "text": "Indianapolis (Mon estimated report): DNP - LT Bernhard Raimann (concussion), RT Jalen Travis (knee), CB Sauce Gardner (calf), CB Charvarius Ward (knee), DT Jerry Tillery (calf), LB Jaylon Carlies (neck), TE Will Mallory (hamstring), LS Luke Rhodes (hamstring). LIMITED - WR Anthony Gould (toe). IR - WR Alec Pierce. If both tackles and both starting CBs sit, the Colts side becomes the bigger cluster; check Wednesday's final report.",
-      "source": "Houston Texans official Week 11 injury report (Nov 16)",
-      "url": "https://www.houstontexans.com/news/week-11-injury-report-texans-vs-colts"
-    },
-    {
-      "text": "Indianapolis QB: Shane Steichen says Daniel Jones (league-high 12 INTs) remains the starter for Thursday despite benching talk; not injured.",
-      "source": "NBC Sports / PFT",
-      "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-to-stick-with-daniel-jones-as-their-starter-for-thursday-nights-game"
+      "text": "Houston (final TNF report): OUT - DE Danielle Hunter (hamstring), WR Marvin Harrison Jr. (hamstring), RB Woody Marks (concussion), TE Brevin Jordan (foot/illness). QUESTIONABLE - G Wyatt Teller (back), CB Jaylin Smith (hamstring), LB Jake Hummel (groin). IR - LB Azeez Al-Shaair (groin surgery). RB David Montgomery and WR Tank Dell full, no designation (Montgomery returns). C.J. Stroud starts.",
+      "source": "Yahoo Sports / SI Week 11 injury report",
+      "url": "https://sports.yahoo.com/articles/week-11-injury-report-colts-220744208.html"
     }
   ],
-  "adjust": []
+  "adjust": [
+    {
+      "market": "all",
+      "side": "HOU",
+      "points": 0.5,
+      "reason": "Indianapolis is without both starting tackles (Raimann, Travis) and CB Charvarius Ward with CB Sauce Gardner questionable after missing all practice, which outweighs Houston losing DE Hunter, WR Harrison Jr. and LB Al-Shaair. The stats model doesn't price non-QB injuries"
+    }
+  ]
 }

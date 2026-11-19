@@ -1,17 +1,24 @@
 {
   "game_id": "2026_11_TEN_DAL",
-  "updated": "2026-11-17T22:00:00Z",
+  "updated": "2026-11-19T22:30:00Z",
   "items": [
     {
-      "text": "Early-week (Tue) note; first official practice reports come Wednesday. Tennessee: WR Carnell Tate (shoulder) missed Week 10, coach hopeful for this week; QUESTIONABLE - WR Wan'Dale Robinson (ankle), S Tony Adams (concussion). OUT - LB Anthony Hill Jr. IR - G Peter Skoronski. Cam Ward starts.",
-      "source": "ESPN NFL injury status page (Nov 16-17)",
-      "url": "https://www.espn.com/nfl/injuries"
+      "text": "Tennessee (Wed/Thu): S Tony Adams (concussion) and RB Tyjae Spears (knee) upgraded DNP to limited. LIMITED - WR Carnell Tate (shoulder), LB Anthony Hill Jr. (neck), G Fernando Carmona (ankle, IR return). WR Wan'Dale Robinson off the report. IR - G Peter Skoronski. Cam Ward practicing, starts.",
+      "source": "TennesseeTitans.com Week 11 injury report",
+      "url": "https://www.tennesseetitans.com/news/week-11-injury-report-titans-at-cowboys"
     },
     {
-      "text": "Early-week (Tue) note; first official practice reports come Wednesday. Dallas: G Tyler Booker (high ankle sprain, ~4 weeks) and CB DaRon Bland (high ankle sprain) out. OUT last week - TE Jake Ferguson, WR Jonathan Mingo, S Juanyeh Thomas, S P.J. Locke, LB Donovan Ezeiruaku. IR - S Jalen Thompson, RB Tyler Goodson. Dak Prescott starts.",
-      "source": "ESPN NFL injury status page (Nov 16-17)",
-      "url": "https://www.espn.com/nfl/injuries"
+      "text": "Dallas (Wed): DNP and expected to miss Sunday - CB DaRon Bland (ankle), G Tyler Booker (ankle), TE Jake Ferguson (knee/ankle), S P.J. Locke (concussion). DNP but could return - LB Donovan Ezeiruaku, WR Jonathan Mingo (ankles). LIMITED - S Juanyeh Thomas (hamstring), S Jalen Thompson (IR return window). Dak Prescott starts.",
+      "source": "Yahoo Sports / Blogging The Boys",
+      "url": "https://sports.yahoo.com/articles/dallas-cowboys-injury-updates-jalen-003720108.html"
     }
   ],
-  "adjust": []
+  "adjust": [
+    {
+      "market": "all",
+      "side": "TEN",
+      "points": 0.5,
+      "reason": "Dallas expects to be without four starters (CB Bland, G Booker, TE Ferguson, S Locke) while Tennessee's injured players are trending toward playing. The stats model doesn't price non-QB injuries"
+    }
+  ]
 }

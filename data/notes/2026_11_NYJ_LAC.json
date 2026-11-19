@@ -1,21 +1,21 @@
 {
   "game_id": "2026_11_NYJ_LAC",
-  "updated": "2026-11-17T22:00:00Z",
+  "updated": "2026-11-19T22:30:00Z",
   "items": [
     {
-      "text": "NY Jets QB: Geno Smith (left ankle; also checked for concussion) avoided a major injury per tests; Aaron Glenn says he starts if healthy. Rookie Cade Klubnik, who played half of Week 10, starts if not. Watch Wednesday-Friday practice.",
-      "source": "ESPN (Nov 16)",
-      "url": "https://www.espn.com/nfl/story/_/id/50502082/geno-smith-remains-jets-qb1-injury-aaron-glenn-says"
+      "text": "NY Jets QB: Geno Smith (ankle) limited Wednesday and seen limping; says starting is 'the plan'; Aaron Glenn: 'We'll see how the week goes.' Jets' preview says he remains in line for his 11th straight start. Rookie Cade Klubnik starts if not. Check Friday status.",
+      "source": "Yahoo Sports (Nov 19)",
+      "url": "https://sports.yahoo.com/articles/geno-smith-plans-play-against-002220361.html"
     },
     {
-      "text": "Early-week (Tue) note; first official practice reports come Wednesday. NY Jets: QUESTIONABLE - WR Omar Cooper Jr. (ankle), G Dylan Parham (knee). IR - OT Max Mitchell, DT T'Vondre Sweat, WR Arian Smith.",
-      "source": "ESPN NFL injury status page (Nov 16-17)",
-      "url": "https://www.espn.com/nfl/injuries"
+      "text": "NY Jets (Wed): DNP - WR Omar Cooper Jr. (ankle/hip, in doubt), DL Harrison Phillips (ankle), WR Isaiah Williams (ribs). LIMITED - EDGE Joseph Ossai, G Dylan Parham (knee), LB Trevin Wallace (groin), DL David Onyemata (IR return window). IR - OT Max Mitchell, DT T'Vondre Sweat, WR Arian Smith.",
+      "source": "NewYorkJets.com injury report",
+      "url": "https://www.newyorkjets.com/team/injury-report/"
     },
     {
-      "text": "Early-week (Tue) note; first official practice reports come Wednesday. LA Chargers: WR Ladd McConkey (back) out last week; DOUBTFUL - WR Brenen Thompson (hamstring). TE David Njoku and LB Denzel Perryman activated from IR. IR - S Derwin James Jr., OT Rashawn Slater, OL Branson Taylor. Justin Herbert starts.",
-      "source": "ESPN NFL injury status page (Nov 16-17)",
-      "url": "https://www.espn.com/nfl/injuries"
+      "text": "LA Chargers (Wed): DNP - LB Daiyan Henley (knee), TE Charlie Kolar (concussion), WR Brenen Thompson (hamstring), DBs Rodney Shelley and Isas Waxter; OLB Khalil Mack rest. LIMITED - WR Ladd McConkey (back), CB Donte Jackson (groin), DT Justin Eboigbe, OT Trey Pipkins (IR return window). IR - S Derwin James Jr., OT Rashawn Slater. Justin Herbert starts.",
+      "source": "Chargers.com injury report",
+      "url": "https://www.chargers.com/news/chargers-vs-jets-injury-report-ladd-mcconkey-daiyan-henley-week-10-2026"
     }
   ],
   "adjust": []

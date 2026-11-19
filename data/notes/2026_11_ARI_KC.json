@@ -1,21 +1,21 @@
 {
   "game_id": "2026_11_ARI_KC",
-  "updated": "2026-11-17T22:00:00Z",
+  "updated": "2026-11-19T22:30:00Z",
   "items": [
     {
-      "text": "Arizona QB: Gardner Minshew on IR with a torn UCL (season-ending surgery). Rookie Carson Beck started Week 10 and starts again. The schedule still lists Minshew.",
-      "source": "ESPN NFL injury status page (Nov 16-17)",
-      "url": "https://www.espn.com/nfl/injuries"
+      "text": "Arizona QB: Gardner Minshew injured (IR); rookie Carson Beck makes his second straight start. The schedule still lists Minshew.",
+      "source": "CBS Sports preview",
+      "url": "https://www.cbssports.com/nfl/news/chiefs-look-to-avoid-trap-against-injury-depleted-cardinals/"
     },
     {
-      "text": "Early-week (Tue) note; first official practice reports come Wednesday. Arizona: LB Jordan Burch (MCL) out for the season, S Andrew Wingard (wrist/hand) out an extended period, OT Jayden Williams (knee) out. IR - RB James Conner, RB Jeremiyah Love, WR Michael Wilson (season), DT Zachary Carter.",
-      "source": "NFL.com news roundup (Mon Nov 16)",
-      "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-nov-16"
+      "text": "Arizona (Wed): DNP - DL Walter Nolen III (illness); S Budda Baker, G Isaac Seumalo, OLB Josh Sweat, LB Mack Wilson rest days. LIMITED - C Hjalte Froholdt (concussion protocol), G Jon Gaines II (ankle), LT Jayden Williams (knee), CB Max Melton. IR - S Andrew Wingard, LB Jordan Burch, RB James Conner, RB Jeremiyah Love, WR Michael Wilson, OT Paris Johnson II.",
+      "source": "AZCardinals.com Week 11 injury report",
+      "url": "https://www.azcardinals.com/news/injury-report-week-11-vs-chiefs"
     },
     {
-      "text": "Early-week (Tue) note; first official practice reports come Wednesday. Kansas City: RB Kenneth Walker III (groin) missed Week 10 but is expected back. QUESTIONABLE - G Trey Smith (concussion). OUT - TE Jared Wiley (fractured ankle), OT Jaylon Moore, DT Peter Woods. IR - CB L'Jarius Sneed, OT Josh Simmons, WR Tyquan Thornton. Patrick Mahomes starts.",
-      "source": "Yahoo Sports Week 11 injury report (Nov 16)",
-      "url": "https://sports.yahoo.com/fantasy/article/nfl-injury-report-week-11-latest-news-updates-for-drake-maye-kenneth-walker-iii-brock-bowers-more-players-for-fantasy-football-183145114.html"
+      "text": "Kansas City (Wed/Thu): DNP both days - RB Kenneth Walker III (groin, expected to miss a 2nd game; Emmett Johnson starts), G Trey Smith (concussion), OT Jaylon Moore (ankle). LIMITED - DT Omarr Norman-Lott (knee). LB Nick Bolton upgraded to full. Patrick Mahomes full, starts.",
+      "source": "Yahoo Sports (Chiefs)",
+      "url": "https://sports.yahoo.com/articles/chiefs-rb-kenneth-walker-remains-212513784.html"
     }
   ],
   "adjust": [],

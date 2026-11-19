@@ -1,16 +1,16 @@
 {
   "game_id": "2026_11_MIA_BUF",
-  "updated": "2026-11-17T22:00:00Z",
+  "updated": "2026-11-19T22:30:00Z",
   "items": [
     {
-      "text": "Early-week (Tue) note; first official practice reports come Wednesday. Miami: QB Malik Willis on IR (groin/abdomen, surgery possible); Kyle McCord starts, matches schedule. OUT last week - C Aaron Brewer, WR Chris Bell, CB Darrell Baker Jr. IR - RB De'Von Achane (season), DT Zach Sieler. QUESTIONABLE - DT Jordan Phillips (arm), C Andrew Meyer (stinger).",
-      "source": "ESPN NFL injury status page (Nov 16-17)",
-      "url": "https://www.espn.com/nfl/injuries"
+      "text": "Miami (Wed practice): DNP - C Aaron Brewer (concussion), CB Jaylin Simpson (knee), S Dante Trader Jr. (shoulder/groin), WR Jared Wayne (quad), P Bradley Pinion (groin). LIMITED - WR Chris Bell (knee), CB Julius Brents (neck), C Andrew Meyer (neck). IR - QB Malik Willis, RB De'Von Achane, DT Zach Sieler, DT Jordan Phillips (new). Kyle McCord starts (2nd straight).",
+      "source": "Yahoo Sports Dolphins injury report",
+      "url": "https://sports.yahoo.com/articles/dolphins-injury-report-week-11-160427252.html"
     },
     {
-      "text": "Early-week (Tue) note; first official practice reports come Wednesday. Buffalo: QUESTIONABLE (from Week 10) - CB Christian Benford (groin), CB Dee Alford (concussion), LB Dorian Williams (calf). OUT - WR Tyrell Shavers (knee). IR - WR Joshua Palmer. Josh Allen starts.",
-      "source": "ESPN NFL injury status page (Nov 16-17)",
-      "url": "https://www.espn.com/nfl/injuries"
+      "text": "Buffalo (Wed walk-through estimate / Thu): DNP - CB Christian Benford (groin), CB Dee Alford (concussion), TE Dalton Kincaid (thumb/ankle, also out Thu), LB Dorian Williams (calf), RG O'Cyrus Torrence (personal). LIMITED - S Cole Bishop, S Damar Hamlin, S Amani Hooker, RB Ray Davis. IR - WR Joshua Palmer, G Ar'maj Reed-Adams. Josh Allen starts. Watch Friday designations for the CBs and Kincaid.",
+      "source": "Yahoo Sports / RotoWire",
+      "url": "https://sports.yahoo.com/articles/bills-more-bad-news-dalton-070628782.html"
     }
   ],
   "adjust": []

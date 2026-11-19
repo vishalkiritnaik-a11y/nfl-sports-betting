@@ -1,16 +1,16 @@
 {
   "game_id": "2026_11_MIN_SF",
-  "updated": "2026-11-17T22:00:00Z",
+  "updated": "2026-11-19T22:30:00Z",
   "items": [
     {
-      "text": "Early-week (Tue) note; first official practice reports come Wednesday. Minnesota: WR Jordan Addison needs thumb surgery, could go to IR. OUT - TE T.J. Hockenson (wrist/chest), LB Blake Cashman, QB Kyler Murray (hamstring). QUESTIONABLE - LB Andrew Van Ginkel (quad, expected to practice). IR - G Donovan Jackson. Kirk Cousins starts.",
-      "source": "ESPN NFL injury status page (Nov 16-17)",
-      "url": "https://www.espn.com/nfl/injuries"
+      "text": "Minnesota (Wed): DNP - WR Jordan Addison (thumb surgery, out coming weeks, no IR for now), QB Kyler Murray (hamstring). LIMITED - TE T.J. Hockenson (wrist), OLB Andrew Van Ginkel (quad), OLB Kyle Van Noy (calf), S Jay Ward (knee). Full - LB Blake Cashman (likely clears protocol), WR Jauan Jennings. IR - G Donovan Jackson. Kirk Cousins starts.",
+      "source": "Vikings.com injury report",
+      "url": "https://www.vikings.com/news/49ers-injury-report-week-11-2026-nfl-season"
     },
     {
-      "text": "Early-week (Tue) note; first official practice reports come Wednesday. San Francisco: WR Mike Evans (Achilles) may return to practice this week. WR Brandon Aiyuk on roster exemption. IR - CB Nate Hobbs, WR Christian Kirk, WR Ricky Pearsall (season). Brock Purdy starts.",
-      "source": "ESPN NFL injury status page (Nov 16-17)",
-      "url": "https://www.espn.com/nfl/injuries"
+      "text": "San Francisco (Wed, game in Mexico City): DNP - WR Mike Evans (Achilles tendinitis, missed 3 weeks), LB Dre Greenlaw (neck); RB Christian McCaffrey and LT Trent Williams rest. LIMITED - S Ji'Ayir Brown (ankle), CB Renardo Green (back), CB Upton Stout. CB Nate Hobbs full. Brock Purdy starts.",
+      "source": "49ers Webzone (Nov 19)",
+      "url": "https://www.49erswebzone.com/articles/205288-vikings-injury-players-wednesdays-practice/"
     }
   ],
   "adjust": []
