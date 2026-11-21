@@ -1,16 +1,16 @@
 {
   "game_id": "2026_11_MIN_SF",
-  "updated": "2026-11-19T22:30:00Z",
+  "updated": "2026-11-21T21:59:00Z",
   "items": [
     {
-      "text": "Minnesota (Wed): DNP - WR Jordan Addison (thumb surgery, out coming weeks, no IR for now), QB Kyler Murray (hamstring). LIMITED - TE T.J. Hockenson (wrist), OLB Andrew Van Ginkel (quad), OLB Kyle Van Noy (calf), S Jay Ward (knee). Full - LB Blake Cashman (likely clears protocol), WR Jauan Jennings. IR - G Donovan Jackson. Kirk Cousins starts.",
-      "source": "Vikings.com injury report",
+      "text": "Minnesota (final, game in Mexico City): OUT - QB Kyler Murray (hamstring), WR Jordan Addison (thumb surgery). QUESTIONABLE - CB Isaiah Rodgers (quad), S Jay Ward (knee). TE T.J. Hockenson full, no designation; WR Jauan Jennings expected back; LB Blake Cashman expected to play. IR - G Donovan Jackson. Kirk Cousins starts.",
+      "source": "Vikings.com Week 11 injury report",
       "url": "https://www.vikings.com/news/49ers-injury-report-week-11-2026-nfl-season"
     },
     {
-      "text": "San Francisco (Wed, game in Mexico City): DNP - WR Mike Evans (Achilles tendinitis, missed 3 weeks), LB Dre Greenlaw (neck); RB Christian McCaffrey and LT Trent Williams rest. LIMITED - S Ji'Ayir Brown (ankle), CB Renardo Green (back), CB Upton Stout. CB Nate Hobbs full. Brock Purdy starts.",
-      "source": "49ers Webzone (Nov 19)",
-      "url": "https://www.49erswebzone.com/articles/205288-vikings-injury-players-wednesdays-practice/"
+      "text": "San Francisco (final): no outs. QUESTIONABLE (9) - WR Mike Evans (Achilles, 'a little sore', team decision Sat), LB Dre Greenlaw (neck), QB Mac Jones (illness, backup), RB Jordan James (calf), DL Khalid Kareem (ankle), LB Luke Gifford (chest), CB Upton Stout (shoulder/neck), DT CJ West and CB Nate Hobbs (both need IR activation). Brock Purdy starts.",
+      "source": "Yahoo / NBC Sports Bay Area",
+      "url": "https://sports.yahoo.com/articles/49ers-injury-report-mike-evans-192729980.html"
     }
   ],
   "adjust": []

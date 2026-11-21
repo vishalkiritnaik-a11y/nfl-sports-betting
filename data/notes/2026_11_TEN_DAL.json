@@ -1,24 +1,24 @@
 {
   "game_id": "2026_11_TEN_DAL",
-  "updated": "2026-11-19T22:30:00Z",
+  "updated": "2026-11-21T21:59:00Z",
   "items": [
     {
-      "text": "Tennessee (Wed/Thu): S Tony Adams (concussion) and RB Tyjae Spears (knee) upgraded DNP to limited. LIMITED - WR Carnell Tate (shoulder), LB Anthony Hill Jr. (neck), G Fernando Carmona (ankle, IR return). WR Wan'Dale Robinson off the report. IR - G Peter Skoronski. Cam Ward practicing, starts.",
-      "source": "TennesseeTitans.com Week 11 injury report",
+      "text": "Tennessee (final): OUT - G Fernando Carmona Jr. (ankle); RB Tyjae Spears (knee) placed on IR Sat. QUESTIONABLE (all full Fri) - WR Carnell Tate (shoulder), LB Anthony Hill Jr. (neck), CB Micah Robinson (hip), S Tony Adams (concussion). RB Michael Carter elevated. IR - G Peter Skoronski, WR Wan'Dale Robinson. Cam Ward starts.",
+      "source": "Titans.com Week 11 injury report",
       "url": "https://www.tennesseetitans.com/news/week-11-injury-report-titans-at-cowboys"
     },
     {
-      "text": "Dallas (Wed): DNP and expected to miss Sunday - CB DaRon Bland (ankle), G Tyler Booker (ankle), TE Jake Ferguson (knee/ankle), S P.J. Locke (concussion). DNP but could return - LB Donovan Ezeiruaku, WR Jonathan Mingo (ankles). LIMITED - S Juanyeh Thomas (hamstring), S Jalen Thompson (IR return window). Dak Prescott starts.",
-      "source": "Yahoo Sports / Blogging The Boys",
-      "url": "https://sports.yahoo.com/articles/dallas-cowboys-injury-updates-jalen-003720108.html"
+      "text": "Dallas (final): OUT - CB DaRon Bland (ankle, to IR Sat), G Tyler Booker (ankle), TE Jake Ferguson (knee/ankle), S P.J. Locke (concussion), S Jalen Thompson (hamstring), CB Devin Moore (hip), WR Jonathan Mingo (ankle). QUESTIONABLE - TE Luke Schoonmaker (illness), LB Jaishawn Barham (hip/groin). Sat: RB Jashaun Corbin and CB Derion Kendrick elevated. Dak Prescott starts.",
+      "source": "NFL.com Week 11 injury report / ClutchPoints",
+      "url": "https://clutchpoints.com/nfl/dallas-cowboys/cowboys-news-dallas-places-daron-bland-on-ir-in-latest-batch-of-roster-moves"
     }
   ],
   "adjust": [
     {
       "market": "all",
       "side": "TEN",
-      "points": 0.5,
-      "reason": "Dallas expects to be without four starters (CB Bland, G Booker, TE Ferguson, S Locke) while Tennessee's injured players are trending toward playing. The stats model doesn't price non-QB injuries"
+      "points": 0.75,
+      "reason": "Dallas has seven players out including five starters (CB Bland, G Booker, TE Ferguson, S Locke, S Thompson), gutting its secondary, while Tennessee loses only G Carmona and RB Spears. The stats model doesn't price non-QB injuries"
     }
   ]
 }

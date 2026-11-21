@@ -1,16 +1,16 @@
 {
   "game_id": "2026_11_LV_DEN",
-  "updated": "2026-11-19T22:30:00Z",
+  "updated": "2026-11-21T21:59:00Z",
   "items": [
     {
-      "text": "Las Vegas (Wed/Thu): TE Brock Bowers (ankle/quad) DNP Wednesday, 'day-by-day', back on the field at the start of Thursday practice. DNP - DT Tonka Hemingway (stinger). LIMITED - DT Folorunso Fatukasi (toe), K Matt Gay (hip). DT Thomas Booker full. IR - DE Patrick Johnson. Fernando Mendoza starts.",
-      "source": "Raiders.com / CBS Sports",
+      "text": "Las Vegas (final): OUT - DT Tonka Hemingway (stinger). QUESTIONABLE - TE Brock Bowers (ankle/quad, limited Thu/Fri, game-time call), K Matt Gay (hip), DT Folorunso Fatukasi (toe). IR - DE Patrick Johnson. Fernando Mendoza starts.",
+      "source": "Raiders.com Week 11 injury report",
       "url": "https://www.raiders.com/news/raiders-broncos-week-11-injury-report"
     },
     {
-      "text": "Denver (off a bye, Wed): no DNPs. Full - WR Jaylen Waddle and CB Riley Moss (both cleared concussions), S Talanoa Hufanga. LIMITED - CB Kris Abrams-Draine, S Brandon Jones (hamstring). IR - RB RJ Harvey, LB Jonah Elliss. Bo Nix starts.",
-      "source": "SI Raiders-Broncos preview",
-      "url": "https://www.si.com/betting/raiders-vs-broncos-prediction-odds-spread-injuries-trends-for-nfl-week-11-2026"
+      "text": "Denver (final): OUT - TE Caleb Lohner (foot). QUESTIONABLE - S Brandon Jones (hamstring). S Talanoa Hufanga, CB Riley Moss, WR Jaylen Waddle no designation. IR - RB RJ Harvey, LB Jonah Elliss. Bo Nix starts.",
+      "source": "NFL.com Week 11 injury report",
+      "url": "https://www.nfl.com/news/nfl-week-11-injury-report-2026-season"
     }
   ],
   "adjust": []

@@ -1,16 +1,16 @@
 {
   "game_id": "2026_11_MIA_BUF",
-  "updated": "2026-11-19T22:30:00Z",
+  "updated": "2026-11-21T21:59:00Z",
   "items": [
     {
-      "text": "Miami (Wed practice): DNP - C Aaron Brewer (concussion), CB Jaylin Simpson (knee), S Dante Trader Jr. (shoulder/groin), WR Jared Wayne (quad), P Bradley Pinion (groin). LIMITED - WR Chris Bell (knee), CB Julius Brents (neck), C Andrew Meyer (neck). IR - QB Malik Willis, RB De'Von Achane, DT Zach Sieler, DT Jordan Phillips (new). Kyle McCord starts (2nd straight).",
-      "source": "Yahoo Sports Dolphins injury report",
-      "url": "https://sports.yahoo.com/articles/dolphins-injury-report-week-11-160427252.html"
+      "text": "Miami (final): OUT - WR Jared Wayne (quad), P Bradley Pinion (groin). DOUBTFUL - CB Jaylin Simpson (knee), S Dante Trader Jr. (shoulder/groin). QUESTIONABLE - C Aaron Brewer (concussion, trending up), CB Marcellas Dial (toe). Sat: DTs Zach Sieler, Jordan Phillips and Zeek Biggers on IR (only three DTs left), CB Darrell Baker Jr. activated from PUP, K Daniel Carlson and P Jack Browning elevated. IR - QB Malik Willis, RB De'Von Achane. Kyle McCord starts (2nd straight).",
+      "source": "SI Dolphins On SI (Sat updates)",
+      "url": "https://www.si.com/nfl/dolphins/onsi/breaking-down-the-dolphins-saturday-updates-for-the-week-11-buffalo-game-01m7zpgkhcst"
     },
     {
-      "text": "Buffalo (Wed walk-through estimate / Thu): DNP - CB Christian Benford (groin), CB Dee Alford (concussion), TE Dalton Kincaid (thumb/ankle, also out Thu), LB Dorian Williams (calf), RG O'Cyrus Torrence (personal). LIMITED - S Cole Bishop, S Damar Hamlin, S Amani Hooker, RB Ray Davis. IR - WR Joshua Palmer, G Ar'maj Reed-Adams. Josh Allen starts. Watch Friday designations for the CBs and Kincaid.",
-      "source": "Yahoo Sports / RotoWire",
-      "url": "https://sports.yahoo.com/articles/bills-more-bad-news-dalton-070628782.html"
+      "text": "Buffalo (final): OUT - CB Christian Benford (groin), LB Dorian Williams (calf). DOUBTFUL - TE Dalton Kincaid (thumb/ankle). QUESTIONABLE - DT Ed Oliver (oblique), DT T.J. Sanders (shoulder), S Damar Hamlin (toe), TE Jackson Hawes (shoulder). CB Dee Alford no designation. Sat: LB Shaq Thompson and CB Tre'Davious White elevated. Josh Allen starts.",
+      "source": "NFL.com Week 11 injury report / Bills roster moves",
+      "url": "https://www.nfl.com/news/nfl-week-11-injury-report-2026-season"
     }
   ],
   "adjust": []

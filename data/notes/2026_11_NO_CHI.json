@@ -1,16 +1,16 @@
 {
   "game_id": "2026_11_NO_CHI",
-  "updated": "2026-11-19T22:30:00Z",
+  "updated": "2026-11-21T21:59:00Z",
   "items": [
     {
-      "text": "New Orleans (Wed/Thu): DNP - C Erik McCoy (biceps), RT Taliese Fuaga (knee), OT Asim Richards (knee, out multiple weeks); OL status 'no better' Thursday. Also DNP - LB Pete Werner (hamstring), CB Martin Emerson Jr. (concussion); RB Alvin Kamara and S Justin Reid non-injury. LIMITED - WR Jordyn Tyson (chest), CB Decamerion Richardson (thigh). Tyler Shough starts.",
-      "source": "Crescent City Sports (Nov 19)",
-      "url": "https://crescentcitysports.com/saints-offensive-line-injury-status-no-better-thursday-ahead-of-bears-trip/"
+      "text": "New Orleans (final): OUT - C Erik McCoy (biceps), RT Taliese Fuaga (knee), OT Asim Richards (knee), CB Martin Emerson Jr. (concussion). QUESTIONABLE - LB Pete Werner (hamstring, no practice all week, leans out), CB Decamerion Richardson (thigh). Third-stringer Mason Murphy at RT, rookie Jeremiah Wright at RG. Kamara available. Tyler Shough starts.",
+      "source": "Saints.com roster moves/game status",
+      "url": "https://www.neworleanssaints.com/news/saints-roster-moves-week-11-elevations-game-status-bears-2026"
     },
     {
-      "text": "Chicago (Wed/Thu): CB Kyler Gordon (shoulder) DNP both days, in danger of missing Sunday. DT Jeffery Simmons (knee) limited, expected available. WR Luther Burden III cleared concussion protocol (full); RB Kyle Monangai full. IR - OT Braxton Jones, TE Cole Kmet. Caleb Williams starts.",
-      "source": "Yahoo Sports Bears Thursday injury report",
-      "url": "https://sports.yahoo.com/articles/bears-thursday-injury-report-updates-204035094.html"
+      "text": "Chicago (final): OUT - CB Kyler Gordon (shoulder). QUESTIONABLE - WR Zavion Thomas (ankle). Cleared - WR Luther Burden III, RB Kyle Monangai (returns), DT Jeffery Simmons. Sat: RB Salvon Ahmed elevated. IR - OT Braxton Jones, TE Cole Kmet. Caleb Williams starts.",
+      "source": "NFL.com Week 11 injury report",
+      "url": "https://www.nfl.com/news/nfl-week-11-injury-report-2026-season"
     }
   ],
   "adjust": [
@@ -18,7 +18,7 @@
       "market": "all",
       "side": "CHI",
       "points": 0.5,
-      "reason": "New Orleans looks set to be without three offensive linemen (McCoy, Fuaga, Richards) plus LB Werner and CB Emerson, against Chicago missing only CB Kyler Gordon. The stats model doesn't price non-QB injuries"
+      "reason": "New Orleans is without three offensive linemen (McCoy, Fuaga, Richards) and CB Emerson with LB Werner unlikely, against Chicago missing only CB Kyler Gordon. The stats model doesn't price non-QB injuries"
     }
   ]
 }

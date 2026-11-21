@@ -1,24 +1,31 @@
 {
   "game_id": "2026_11_BAL_CAR",
-  "updated": "2026-11-19T22:30:00Z",
+  "updated": "2026-11-21T21:59:00Z",
   "items": [
     {
-      "text": "Baltimore QB: Lamar Jackson and Tyler Huntley both on IR; Jacoby Brissett starts again. The schedule still lists Huntley.",
-      "source": "Panthers.com Know Your Foe (Nov 18)",
-      "url": "https://www.panthers.com/news/know-your-foe-week-11-baltimore-ravens-carolina-panthers"
+      "text": "Baltimore QB: Lamar Jackson (thumb) on IR and Tyler Huntley out for the season; Jacoby Brissett starts again. The schedule still lists Huntley.",
+      "source": "Baltimore Chronicle",
+      "url": "https://baltimorechronicle.com/sport/ravens-vs-panthers-week-11-time-tv-brissett/"
     },
     {
-      "text": "Baltimore (Wed/Thu): DNP both days - DT Nnamdi Madubuike (hamstring). G Vega Ioane (shoulder) upgraded to full Thu. LIMITED - S Jaylinn Hawkins (knee). RB Adam Randall activated from IR. IR - C Ethan Pocic, G Jovaughn Gwyn, K Tyler Loop.",
-      "source": "BaltimoreRavens.com injury report (Nov 19)",
-      "url": "https://baltimoreravens.com/news/ravens-injury-report-vega-ioane-panthers-2026"
+      "text": "Baltimore (final): OUT - DT Nnamdi Madubuike (hamstring), CB Marlon Humphrey (personal), S Jaylinn Hawkins (knee). No questionables. Sat: DT David Olajiga and TE Nick Vannett elevated. IR - C Ethan Pocic, G Jovaughn Gwyn, K Tyler Loop.",
+      "source": "Ravens.com / NFL.com Week 11 injury report",
+      "url": "https://www.baltimoreravens.com/news/ravens-elevate-practice-squad-nick-vannett-david-olajiga-2026"
     },
     {
-      "text": "Carolina (Wed/Thu): DNP - LB Bobby Okereke (foot), S Isaiah Simmons (knee). TEs Darren Waller and Tommy Tremble back at practice Thu. CB Will Lee III full. OT Ikem Ekwonu on PUP, OT Taylor Moton on IR (fibula), CB Jaycee Horn IR. Bryce Young (foot) full, starts.",
-      "source": "SicScore Week 11 matchup injury report",
-      "url": "https://sicscore.com/news/nfl-week-11-injury-report-matchup-by-matchup-betting-and-fantasy-football-preview"
+      "text": "Carolina (final): OUT - LB Bobby Okereke (foot), S Isaiah Simmons (knee, moved to IR Sat); a third player (possibly DT Matt Ioannidis) may also be out - unconfirmed. QUESTIONABLE - RB Jonathon Brooks (groin), TEs Tommy Tremble and Darren Waller (knees), OL Brady Christensen (hamstring), CB Mike Jackson (groin, activated from IR Sat). OT Ikem Ekwonu PUP, OT Taylor Moton and CB Jaycee Horn IR. Bryce Young starts.",
+      "source": "Panthers.com (Sat moves) / NFL.com",
+      "url": "https://www.panthers.com/news/panthers-activate-mike-jackson-from-ir-among-other-moves-isaiah-simmons-ir"
     }
   ],
-  "adjust": [],
+  "adjust": [
+    {
+      "market": "all",
+      "side": "CAR",
+      "points": 0.5,
+      "reason": "Baltimore is without three defensive starters (DT Madubuike, CB Humphrey, S Hawkins) on top of its interior-line injuries, while Carolina's two outs are partly offset by questionable tags rather than absences. The stats model doesn't price non-QB injuries"
+    }
+  ],
   "qb_start": {
     "BAL": "Jacoby Brissett"
   }

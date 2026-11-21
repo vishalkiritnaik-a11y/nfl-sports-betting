@@ -1,21 +1,21 @@
 {
   "game_id": "2026_11_TB_DET",
-  "updated": "2026-11-19T22:30:00Z",
+  "updated": "2026-11-21T21:59:00Z",
   "items": [
     {
-      "text": "Tampa Bay QB: Baker Mayfield (foot sprain) DNP Wednesday (Jalon Daniels took first-team reps), then upgraded to limited Thursday and is trending toward starting; Todd Bowles decides Friday. Rookie Jalon Daniels starts if not. Possible late QB change.",
-      "source": "Tampa Bay Times via Yahoo (Nov 19)",
-      "url": "https://sports.yahoo.com/articles/baker-mayfield-practices-trending-toward-180133872.html"
+      "text": "Tampa Bay QB: Baker Mayfield (foot/thumb) QUESTIONABLE after limited Thu/Fri; Bowles: 'trending in the right direction' but no starter named. Game-time decision; undrafted rookie Jalon Daniels starts if he can't go. Possible late QB change.",
+      "source": "NFL.com",
+      "url": "https://www.nfl.com/news/buccaneers-baker-mayfield-questionable-to-play-vs-lions"
     },
     {
-      "text": "Tampa Bay (Wed/Thu): S Antoine Winfield Jr. (ankle) DNP both days. LB Yaya Diaby limited. OT Tristan Wirfs, TE Cade Otton, CB Josh Hayes full. IR - WR Jalen McMillan, LB Christian Rozeboom.",
-      "source": "BucsReport (Nov 19)",
-      "url": "https://bucsreport.com/2026/11/19/buccaneers-to-decide-friday-on-baker-mayfield-jalon-daniels-for-lions-game/"
+      "text": "Tampa Bay (final): OUT - S Antoine Winfield Jr. (ankle), CB Josh Hayes (knee). QUESTIONABLE - OLB YaYa Diaby (knee). Sat: S J.J. Roberts elevated. IR - WR Jalen McMillan, LB Christian Rozeboom.",
+      "source": "Buccaneers.com game preview",
+      "url": "https://www.buccaneers.com/news/2026-game-preview-buccaneers-lions-week-11"
     },
     {
-      "text": "Detroit (Wed est./Thu): C Cade Mays (ankle) DNP both days. S Kerby Joseph (knee) full, Dan Campbell says he will play on a pitch count. LIMITED - CB D.J. Reed (hip, first practice back), CB Ennis Rakestraw Jr., CB Khalil Dorsey, LB Joe Bachie. DE Aidan Hutchinson out for season (ACL). IR - LB Jack Campbell. Jared Goff starts.",
-      "source": "DetroitLions.com practice report (Nov 19)",
-      "url": "https://www.detroitlions.com/news/lions-vs-buccaneers-practice-report-nov-19-reed-joseph-rakestraw"
+      "text": "Detroit (final): C Cade Mays (ankle) OUT, placed on IR Sat. QUESTIONABLE - CB D.J. Reed (hip), CB Ennis Rakestraw Jr. (shoulder), CB Khalil Dorsey (ankle), RB Sione Vaki (ankle), DL Tyler Lacy (shoulder), LB Joe Bachie (knee). S Kerby Joseph returns (no designation). Sat: CB Nick Whiteside signed, LB Owen Pappoe elevated. DE Aidan Hutchinson (season), LB Jack Campbell (IR). Jared Goff starts.",
+      "source": "SI All Lions",
+      "url": "https://www.si.com/nfl/lions/onsi/detroit-lions-place-center-on-ir-sign-cb-elevate-linebacker"
     }
   ],
   "adjust": [
@@ -23,7 +23,7 @@
       "market": "all",
       "side": "TB",
       "points": 0.5,
-      "reason": "Detroit is still without DE Aidan Hutchinson (season), LB Jack Campbell and C Cade Mays with its corners limited, outweighing Tampa Bay missing S Antoine Winfield Jr., though Kerby Joseph's return narrows the gap. The stats model doesn't price non-QB injuries"
+      "reason": "Detroit is without DE Hutchinson, LB Campbell and C Mays with three corners questionable, which outweighs Tampa Bay missing S Winfield and CB Hayes. The stats model doesn't price non-QB injuries"
     }
   ]
 }

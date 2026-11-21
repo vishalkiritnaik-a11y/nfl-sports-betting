@@ -1,25 +1,22 @@
 {
   "game_id": "2026_11_ARI_KC",
-  "updated": "2026-11-19T22:30:00Z",
+  "updated": "2026-11-21T21:59:00Z",
   "items": [
     {
-      "text": "Arizona QB: Gardner Minshew injured (IR); rookie Carson Beck makes his second straight start. The schedule still lists Minshew.",
-      "source": "CBS Sports preview",
-      "url": "https://www.cbssports.com/nfl/news/chiefs-look-to-avoid-trap-against-injury-depleted-cardinals/"
+      "text": "Arizona QB: Carson Beck (back spasms) downgraded to OUT Saturday; 40-year-old Josh Johnson makes his first Cardinals start (team confirmed), rookie Joey Aguilar backs up. Gardner Minshew on IR. Schedule now lists Johnson.",
+      "source": "AZCardinals.com",
+      "url": "https://www.azcardinals.com/news/josh-johnson-start-confirmed-after-carson-beck-downgraded"
     },
     {
-      "text": "Arizona (Wed): DNP - DL Walter Nolen III (illness); S Budda Baker, G Isaac Seumalo, OLB Josh Sweat, LB Mack Wilson rest days. LIMITED - C Hjalte Froholdt (concussion protocol), G Jon Gaines II (ankle), LT Jayden Williams (knee), CB Max Melton. IR - S Andrew Wingard, LB Jordan Burch, RB James Conner, RB Jeremiyah Love, WR Michael Wilson, OT Paris Johnson II.",
-      "source": "AZCardinals.com Week 11 injury report",
-      "url": "https://www.azcardinals.com/news/injury-report-week-11-vs-chiefs"
+      "text": "Arizona (final): OUT - QB Carson Beck, G Jon Gaines II (ankle), DL Zach Carter (knee). C Hjalte Froholdt (concussion) and DL Walter Nolen III cleared. IR - S Andrew Wingard, LB Jordan Burch, RBs James Conner and Jeremiyah Love, WR Michael Wilson, OT Paris Johnson II.",
+      "source": "ESPN",
+      "url": "https://www.espn.com/nfl/story/_/id/50553035/cardinals-downgrade-qb-carson-beck-josh-johnson-set-start"
     },
     {
-      "text": "Kansas City (Wed/Thu): DNP both days - RB Kenneth Walker III (groin, expected to miss a 2nd game; Emmett Johnson starts), G Trey Smith (concussion), OT Jaylon Moore (ankle). LIMITED - DT Omarr Norman-Lott (knee). LB Nick Bolton upgraded to full. Patrick Mahomes full, starts.",
-      "source": "Yahoo Sports (Chiefs)",
-      "url": "https://sports.yahoo.com/articles/chiefs-rb-kenneth-walker-remains-212513784.html"
+      "text": "Kansas City (final): OUT - RB Kenneth Walker III (groin; Emmett Johnson leads), G Trey Smith (concussion), OT Jaylon Moore (ankle). QUESTIONABLE - DT Omarr Norman-Lott (knee), DL Peter Woods (neck). Sat: RB Nate Carter, C/G Pete Nygra elevated. Patrick Mahomes full all week, starts.",
+      "source": "Chiefs.com Week 11 injury report",
+      "url": "https://www.chiefs.com/news/week-11-injury-report-cardinals-vs-chiefs-2026"
     }
   ],
-  "adjust": [],
-  "qb_start": {
-    "ARI": "Carson Beck"
-  }
+  "adjust": []
 }

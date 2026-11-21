@@ -1,21 +1,16 @@
 {
   "game_id": "2026_11_PIT_PHI",
-  "updated": "2026-11-19T22:30:00Z",
+  "updated": "2026-11-21T21:59:00Z",
   "items": [
     {
-      "text": "Kickoff flexed to 1:00 p.m. ET. Philadelphia QB: Jalen Hurts on IR (blood clots, expected out for season); Nick Sirianni confirmed Joe Milton III starts (matches schedule).",
-      "source": "NBC Sports / Rotoworld (Nov 18)",
-      "url": "https://www.nbcsports.com/fantasy/football/player-news/2026-11-18/joe-milton-announced-as-eagles-week-11-starter"
+      "text": "Kickoff 1:00 p.m. ET. Philadelphia (final): OUT - WR Dontayvion Wicks (ankle/foot), LB Zack Baun (back). DOUBTFUL - LB Smael Mondon Jr. (ankle). QUESTIONABLE - RB Will Shipley (needs IR activation). EDGE Jonathan Greenard (ankle) DNP Fri but no designation. WR DeVonta Smith good to go. Jalen Hurts on IR; Joe Milton III starts (2nd straight), Tanner McKee backup.",
+      "source": "PhillyVoice",
+      "url": "https://www.phillyvoice.com/eagles-steelers-week-11-injury-report-analysis/"
     },
     {
-      "text": "Philadelphia (Wed): DNP - LB Zack Baun (back). LIMITED - WR DeVonta Smith (hamstring), WR Dontayvion Wicks (ankle), CB Jonathan Jones (hamstring), DB Michael Carter II (abdomen), OLB Nolan Smith (illness), RB Will Shipley (IR return). Full - RB Saquon Barkley, LB Jihaad Campbell.",
-      "source": "PhiladelphiaEagles.com injury report",
-      "url": "https://philadelphiaeagles.com/team/injury-report"
-    },
-    {
-      "text": "Pittsburgh (Wed/Thu): LB Nick Herbig (hip/ribs) DNP both days; LB Patrick Queen (hand) limited. WR Michael Pittman Jr. and S DeShon Elliott upgraded to full Thu; WR Roman Wilson full. G Mason McCormick (ankle, carted off Week 10) likely out multiple weeks. Aaron Rodgers starts.",
-      "source": "ClutchPoints (McCormick) / Eagles.com report",
-      "url": "https://clutchpoints.com/nfl/pittsburgh-steelers/steelers-news-mike-mccarthy-still-uncertain-mason-mccormick-brutal-ankle-injury"
+      "text": "Pittsburgh (final): LB Nick Herbig (hip/ribs) DNP all week - Steelers list him questionable, NFL.com out; unlikely to play. QUESTIONABLE - LB Patrick Queen (hand), WR Michael Pittman Jr. (foot, IR return), WR Roman Wilson (hand), G Gennings Dunker (knee), S DeShon Elliott (knee). G Mason McCormick on IR (Spencer Anderson starts). Aaron Rodgers starts.",
+      "source": "Steelers.com Week 11 injury report",
+      "url": "https://www.steelers.com/news/week-11-injury-report-eagles"
     }
   ],
   "adjust": []
