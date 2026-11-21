@@ -1,5 +1,5 @@
 {
- "last_run": "2026-11-21T02:41:35Z",
+ "last_run": "2026-11-21T03:51:48Z",
  "season": 2026,
  "week": 11,
  "trigger_slot": null,
@@ -16,7 +16,7 @@
    "wind_kickoff_mph": 13.6,
    "gust_mph": 21.0,
    "precip_prob_pct": 2,
-   "lead_hours": 39.3,
+   "lead_hours": 38.1,
    "total_delta": -1.84
   },
   "2026_11_BAL_CAR": {
@@ -26,8 +26,8 @@
    "wind_mph": 8.9,
    "wind_kickoff_mph": 8.8,
    "gust_mph": 18.3,
-   "precip_prob_pct": 45,
-   "lead_hours": 39.3,
+   "precip_prob_pct": 51,
+   "lead_hours": 38.1,
    "total_delta": 0.0
   },
   "2026_11_NO_CHI": {
@@ -37,8 +37,8 @@
    "wind_mph": 11.9,
    "wind_kickoff_mph": 9.7,
    "gust_mph": 24.4,
-   "precip_prob_pct": 89,
-   "lead_hours": 39.3,
+   "precip_prob_pct": 66,
+   "lead_hours": 38.1,
    "total_delta": 0.0
   },
   "2026_11_TEN_DAL": {
@@ -48,8 +48,8 @@
    "wind_mph": 15.9,
    "wind_kickoff_mph": 14.6,
    "gust_mph": 23.5,
-   "precip_prob_pct": 1,
-   "lead_hours": 39.3
+   "precip_prob_pct": 0,
+   "lead_hours": 38.1
   },
   "2026_11_TB_DET": {
    "status": "indoor"
@@ -61,8 +61,8 @@
    "wind_mph": 16.0,
    "wind_kickoff_mph": 16.0,
    "gust_mph": 26.2,
-   "precip_prob_pct": 36,
-   "lead_hours": 39.3,
+   "precip_prob_pct": 9,
+   "lead_hours": 38.1,
    "total_delta": -3.06
   },
   "2026_11_JAX_NYG": {
@@ -72,8 +72,8 @@
    "wind_mph": 5.4,
    "wind_kickoff_mph": 4.3,
    "gust_mph": 11.6,
-   "precip_prob_pct": 69,
-   "lead_hours": 39.3,
+   "precip_prob_pct": 86,
+   "lead_hours": 38.1,
    "total_delta": 0.0
   },
   "2026_11_NYJ_LAC": {
@@ -87,7 +87,7 @@
    "wind_kickoff_mph": 5.6,
    "gust_mph": 7.3,
    "precip_prob_pct": 0,
-   "lead_hours": 42.7,
+   "lead_hours": 41.6,
    "total_delta": 0.0
   },
   "2026_11_PIT_PHI": {
@@ -97,8 +97,8 @@
    "wind_mph": 7.5,
    "wind_kickoff_mph": 4.2,
    "gust_mph": 17.5,
-   "precip_prob_pct": 67,
-   "lead_hours": 42.7,
+   "precip_prob_pct": 80,
+   "lead_hours": 41.6,
    "total_delta": 0.0
   },
   "2026_11_MIN_SF": {
@@ -108,8 +108,8 @@
    "wind_mph": 4.0,
    "wind_kickoff_mph": 0.7,
    "gust_mph": 8.5,
-   "precip_prob_pct": 67,
-   "lead_hours": 46.6,
+   "precip_prob_pct": 46,
+   "lead_hours": 45.5,
    "total_delta": 0.0
   },
   "2026_11_CIN_WAS": {
@@ -119,8 +119,8 @@
    "wind_mph": 7.9,
    "wind_kickoff_mph": 7.7,
    "gust_mph": 19.0,
-   "precip_prob_pct": 5,
-   "lead_hours": 70.6,
+   "precip_prob_pct": 0,
+   "lead_hours": 69.4,
    "total_delta": 0.0
   }
  }
