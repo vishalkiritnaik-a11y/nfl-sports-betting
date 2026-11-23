@@ -1,16 +1,16 @@
 {
   "game_id": "2026_11_CIN_WAS",
-  "updated": "2026-11-21T21:59:00Z",
+  "updated": "2026-11-23T22:10:00Z",
   "items": [
     {
-      "text": "Cincinnati (final, Sat): OUT - RG Dalton Risner (knees; Jalen Rivers starts). DOUBTFUL - WR Andrei Iosivas (thumb) and CB Jalen Davis (hamstring), both pending IR activation. QUESTIONABLE - LG Dylan Fairchild (oblique, full Sat), CB Dax Hill (illness, no practice but Taylor expects him to play), S Kyle Dugger (quad, full Fri), LB Swayze Bozeman and G Brian Parker II (IR returns). LB Oren Burks (groin) to IR. Joe Burrow (illness) full Thu/Fri, no designation, starts.",
-      "source": "PFT / NBC Sports",
-      "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bengals-rule-out-dalton-risner-list-dax-hill-and-dylan-fairchild-as-questionable"
+      "text": "Cincinnati (final): OUT - RG Dalton Risner (knee; Jalen Rivers starts), LB Oren Burks (groin). DOUBTFUL - WR Andrei Iosivas (thumb) and CB Jalen Davis (hamstring). QUESTIONABLE - CB Dax Hill (illness, DNP Sat, expected to play), LG Dylan Fairchild (oblique), S Kyle Dugger (quad), LB Swayze Bozeman, G Brian Parker II (all full Sat). Joe Burrow cleared from illness, off the report, starts.",
+      "source": "Athlon Sports final injury report (Mon)",
+      "url": "https://athlonsports.com/nfl/trending/final-injury-report-for-bengals-commanders-will-joe-burrow-jacory-croskey-merritt-play"
     },
     {
-      "text": "Washington (Sat): QUESTIONABLE - RB Rachaad White (heel, DNP Sat), CB Amik Robertson (ankle, new Sat DNP), RB Jacory Croskey-Merritt (groin, needs IR activation), C Lucas Patrick (concussion, 'good to go'). S Quan Martin and WR Treylon Burks no designation. Nick Allegretti expected at C. IR - DT Daron Payne, WR Terry McLaurin, OT Laremy Tunsil, LB Leo Chenal. Jayden Daniels (elbow) full all week, starts. Final statuses due Monday.",
-      "source": "Commanders.com Week 11 injury report",
-      "url": "https://www.commanders.com/news/commanders-vs-bengals-week-11-injury-report"
+      "text": "Washington (final): QUESTIONABLE - RB Rachaad White (heel, DNP Sat), RB Jacory Croskey-Merritt (groin, full Sat, expected to return; Quinn 'optimistic on both' RBs), CB Amik Robertson (ankle, limited), C Lucas Patrick (concussion, full all week). IR - WR Terry McLaurin, OT Laremy Tunsil, DT Daron Payne, LB Leo Chenal. Jayden Daniels (elbow) full practice, starts. Inactives not yet posted at time of note.",
+      "source": "SportsBettingDime final injury reports (Mon)",
+      "url": "https://www.sportsbettingdime.com/news/nfl/final-bengals-vs-commanders-injury-reports-updates-on-rachaad-white-dax-hill-andrei-iosivas-jacory-croskey-merritt/"
     }
   ],
   "adjust": []
