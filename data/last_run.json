@@ -1,5 +1,5 @@
 {
- "last_run": "2026-11-23T21:54:43Z",
+ "last_run": "2026-11-23T22:16:44Z",
  "season": 2026,
  "week": 11,
  "trigger_slot": null,
@@ -48,8 +48,8 @@
    "wind_mph": 11.8,
    "wind_kickoff_mph": 10.7,
    "gust_mph": 26.8,
-   "precip_prob_pct": 14,
-   "lead_hours": 3.3,
+   "precip_prob_pct": 17,
+   "lead_hours": 3.0,
    "total_delta": -0.36
   }
  }
