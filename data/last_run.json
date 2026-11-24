@@ -1,5 +1,5 @@
 {
- "last_run": "2026-11-24T21:04:20Z",
+ "last_run": "2026-11-24T21:40:29Z",
  "season": 2026,
  "week": 12,
  "trigger_slot": null,
@@ -19,7 +19,7 @@
    "wind_kickoff_mph": 6.2,
    "gust_mph": 9.6,
    "precip_prob_pct": 0,
-   "lead_hours": 48.4
+   "lead_hours": 47.8
   },
   "2026_12_KC_BUF": {
    "status": "forecast",
@@ -29,7 +29,7 @@
    "wind_kickoff_mph": 17.6,
    "gust_mph": 40.5,
    "precip_prob_pct": 95,
-   "lead_hours": 52.3,
+   "lead_hours": 51.7,
    "total_delta": -4.35
   },
   "2026_12_DEN_PIT": {
@@ -40,7 +40,7 @@
    "wind_kickoff_mph": 14.4,
    "gust_mph": 32.7,
    "precip_prob_pct": 66,
-   "lead_hours": 70.9,
+   "lead_hours": 70.3,
    "total_delta": -2.56
   },
   "2026_12_NO_CIN": {
@@ -51,7 +51,7 @@
    "wind_kickoff_mph": 8.8,
    "gust_mph": 15.2,
    "precip_prob_pct": 45,
-   "lead_hours": 116.9,
+   "lead_hours": 116.3,
    "total_delta": 0.0
   },
   "2026_12_BAL_HOU": {
@@ -62,7 +62,7 @@
    "wind_kickoff_mph": 7.8,
    "gust_mph": 9.6,
    "precip_prob_pct": 2,
-   "lead_hours": 116.9
+   "lead_hours": 116.3
   },
   "2026_12_NYG_IND": {
    "status": "forecast",
@@ -72,7 +72,7 @@
    "wind_kickoff_mph": 10.1,
    "gust_mph": 23.3,
    "precip_prob_pct": 52,
-   "lead_hours": 116.9
+   "lead_hours": 116.3
   },
   "2026_12_NYJ_MIA": {
    "status": "forecast",
@@ -82,7 +82,7 @@
    "wind_kickoff_mph": 9.4,
    "gust_mph": 13.4,
    "precip_prob_pct": 37,
-   "lead_hours": 116.9,
+   "lead_hours": 116.3,
    "total_delta": 0.0
   },
   "2026_12_ATL_MIN": {
@@ -96,7 +96,7 @@
    "wind_kickoff_mph": 1.1,
    "gust_mph": 1.1,
    "precip_prob_pct": 9,
-   "lead_hours": 116.9,
+   "lead_hours": 116.3,
    "total_delta": 0.0
   },
   "2026_12_NE_LAC": {
@@ -110,7 +110,7 @@
    "wind_kickoff_mph": 4.9,
    "gust_mph": 4.5,
    "precip_prob_pct": 0,
-   "lead_hours": 120.3
+   "lead_hours": 119.7
   },
   "2026_12_SEA_SF": {
    "status": "forecast",
@@ -120,7 +120,7 @@
    "wind_kickoff_mph": 10.7,
    "gust_mph": 17.4,
    "precip_prob_pct": 59,
-   "lead_hours": 120.3,
+   "lead_hours": 119.7,
    "total_delta": -0.36
   },
   "2026_12_LV_CLE": {
@@ -131,7 +131,7 @@
    "wind_kickoff_mph": 15.3,
    "gust_mph": 28.4,
    "precip_prob_pct": 53,
-   "lead_hours": 124.3,
+   "lead_hours": 123.7,
    "total_delta": -2.7
   },
   "2026_12_CAR_TB": {
@@ -142,7 +142,7 @@
    "wind_kickoff_mph": 12.9,
    "gust_mph": 29.3,
    "precip_prob_pct": 18,
-   "lead_hours": 148.2,
+   "lead_hours": 147.6,
    "total_delta": -1.48
   }
  }
