@@ -1,56 +1,149 @@
 {
- "last_run": "2026-11-23T22:16:44Z",
+ "last_run": "2026-11-24T21:04:20Z",
  "season": 2026,
- "week": 11,
+ "week": 12,
  "trigger_slot": null,
  "pregame_refreshed": [],
  "weather": {
-  "2026_11_IND_HOU": {
-   "status": "observed"
+  "2026_12_GB_LA": {
+   "status": "indoor"
   },
-  "2026_11_MIA_BUF": {
-   "status": "observed"
+  "2026_12_CHI_DET": {
+   "status": "indoor"
   },
-  "2026_11_BAL_CAR": {
-   "status": "observed"
+  "2026_12_PHI_DAL": {
+   "status": "forecast",
+   "roof_type": "retractable",
+   "temp_f": 55.3,
+   "wind_mph": 6.8,
+   "wind_kickoff_mph": 6.2,
+   "gust_mph": 9.6,
+   "precip_prob_pct": 0,
+   "lead_hours": 48.4
   },
-  "2026_11_NO_CHI": {
-   "status": "observed"
-  },
-  "2026_11_TEN_DAL": {
-   "status": "observed"
-  },
-  "2026_11_TB_DET": {
-   "status": "observed"
-  },
-  "2026_11_ARI_KC": {
-   "status": "observed"
-  },
-  "2026_11_PIT_PHI": {
-   "status": "observed"
-  },
-  "2026_11_NYJ_LAC": {
-   "status": "observed"
-  },
-  "2026_11_JAX_NYG": {
-   "status": "observed"
-  },
-  "2026_11_LV_DEN": {
-   "status": "observed"
-  },
-  "2026_11_MIN_SF": {
-   "status": "observed"
-  },
-  "2026_11_CIN_WAS": {
+  "2026_12_KC_BUF": {
    "status": "forecast",
    "roof_type": "outdoor",
-   "temp_f": 55.7,
-   "wind_mph": 11.8,
+   "temp_f": 36.2,
+   "wind_mph": 17.6,
+   "wind_kickoff_mph": 17.6,
+   "gust_mph": 40.5,
+   "precip_prob_pct": 95,
+   "lead_hours": 52.3,
+   "total_delta": -4.35
+  },
+  "2026_12_DEN_PIT": {
+   "status": "forecast",
+   "roof_type": "outdoor",
+   "temp_f": 37.5,
+   "wind_mph": 14.4,
+   "wind_kickoff_mph": 14.4,
+   "gust_mph": 32.7,
+   "precip_prob_pct": 66,
+   "lead_hours": 70.9,
+   "total_delta": -2.56
+  },
+  "2026_12_NO_CIN": {
+   "status": "forecast",
+   "roof_type": "outdoor",
+   "temp_f": 55.4,
+   "wind_mph": 8.8,
+   "wind_kickoff_mph": 8.8,
+   "gust_mph": 15.2,
+   "precip_prob_pct": 45,
+   "lead_hours": 116.9,
+   "total_delta": 0.0
+  },
+  "2026_12_BAL_HOU": {
+   "status": "forecast",
+   "roof_type": "retractable",
+   "temp_f": 77.0,
+   "wind_mph": 7.8,
+   "wind_kickoff_mph": 7.8,
+   "gust_mph": 9.6,
+   "precip_prob_pct": 2,
+   "lead_hours": 116.9
+  },
+  "2026_12_NYG_IND": {
+   "status": "forecast",
+   "roof_type": "retractable",
+   "temp_f": 53.3,
+   "wind_mph": 10.1,
+   "wind_kickoff_mph": 10.1,
+   "gust_mph": 23.3,
+   "precip_prob_pct": 52,
+   "lead_hours": 116.9
+  },
+  "2026_12_NYJ_MIA": {
+   "status": "forecast",
+   "roof_type": "outdoor",
+   "temp_f": 75.9,
+   "wind_mph": 9.4,
+   "wind_kickoff_mph": 9.4,
+   "gust_mph": 13.4,
+   "precip_prob_pct": 37,
+   "lead_hours": 116.9,
+   "total_delta": 0.0
+  },
+  "2026_12_ATL_MIN": {
+   "status": "indoor"
+  },
+  "2026_12_TEN_JAX": {
+   "status": "forecast",
+   "roof_type": "outdoor",
+   "temp_f": 69.4,
+   "wind_mph": 1.2,
+   "wind_kickoff_mph": 1.1,
+   "gust_mph": 1.1,
+   "precip_prob_pct": 9,
+   "lead_hours": 116.9,
+   "total_delta": 0.0
+  },
+  "2026_12_NE_LAC": {
+   "status": "indoor"
+  },
+  "2026_12_WAS_ARI": {
+   "status": "forecast",
+   "roof_type": "retractable",
+   "temp_f": 74.1,
+   "wind_mph": 4.9,
+   "wind_kickoff_mph": 4.9,
+   "gust_mph": 4.5,
+   "precip_prob_pct": 0,
+   "lead_hours": 120.3
+  },
+  "2026_12_SEA_SF": {
+   "status": "forecast",
+   "roof_type": "outdoor",
+   "temp_f": 65.7,
+   "wind_mph": 10.7,
    "wind_kickoff_mph": 10.7,
-   "gust_mph": 26.8,
-   "precip_prob_pct": 17,
-   "lead_hours": 3.0,
+   "gust_mph": 17.4,
+   "precip_prob_pct": 59,
+   "lead_hours": 120.3,
    "total_delta": -0.36
+  },
+  "2026_12_LV_CLE": {
+   "status": "forecast",
+   "roof_type": "outdoor",
+   "temp_f": 48.3,
+   "wind_mph": 15.3,
+   "wind_kickoff_mph": 15.3,
+   "gust_mph": 28.4,
+   "precip_prob_pct": 53,
+   "lead_hours": 124.3,
+   "total_delta": -2.7
+  },
+  "2026_12_CAR_TB": {
+   "status": "forecast",
+   "roof_type": "outdoor",
+   "temp_f": 65.3,
+   "wind_mph": 12.9,
+   "wind_kickoff_mph": 12.9,
+   "gust_mph": 29.3,
+   "precip_prob_pct": 18,
+   "lead_hours": 148.2,
+   "total_delta": -1.48
   }
  }
 }
