@@ -1,0 +1,24 @@
+{
+  "game_id": "2026_12_NO_CIN",
+  "updated": "2026-11-24T23:30:00Z",
+  "items": [
+    {
+      "text": "New Orleans (early week): missed last game - C Erik McCoy, RT Taliese Fuaga, OT Asim Richards, CB Martin Emerson Jr., LB Pete Werner (hamstring), S Justin Reid. TE Juwan Johnson (hamstring) being evaluated. IR - DT Bryan Bresee, DT Christen Miller, G Dillon Radunz. Tyler Shough (non-throwing hand) starts.",
+      "source": "ESPN NFL Injuries",
+      "url": "https://www.espn.com/nfl/injuries"
+    },
+    {
+      "text": "Cincinnati (early week, after MNF): missed last game - G Dalton Risner, S Kyle Dugger (quad), WR Andrei Iosivas (thumb), CB Jalen Davis. IR - LB Oren Burks (groin), TE Erick All Jr. (ACL). LB Swayze Bozeman, G Brian Parker II activated. Burrow healthy.",
+      "source": "Bengals.com",
+      "url": "https://www.bengals.com/news/bengals-commanders-recap-postgame-notes-quotes-stats-week-11-2026-monday-night-football"
+    }
+  ],
+  "adjust": [
+    {
+      "market": "all",
+      "side": "CIN",
+      "points": 0.5,
+      "reason": "New Orleans has been without C McCoy, RT Fuaga, OT Richards, CB Emerson and LB Werner, while Cincinnati's absences are mostly depth plus G Risner and S Dugger. The stats model doesn't price non-QB injuries"
+    }
+  ]
+}

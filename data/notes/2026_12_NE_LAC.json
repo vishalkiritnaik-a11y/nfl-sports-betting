@@ -1,0 +1,32 @@
+{
+  "game_id": "2026_12_NE_LAC",
+  "updated": "2026-11-24T23:30:00Z",
+  "items": [
+    {
+      "text": "New England QB: Drake Maye (fractured fibula) expected out at least six weeks; Vrabel: 'Tommy's our starter.' Tommy DeVito starts.",
+      "source": "Boston.com",
+      "url": "https://www.boston.com/sports/new-england-patriots/2026/11/23/tommys-our-starter-patriots-are-sticking-with-tommy-devito-following-drake-mayes-injury/"
+    },
+    {
+      "text": "New England (early week): WR A.J. Brown (hamstring) out multiple weeks. IR - WR Romeo Doubs (shoulder), RB TreVeyon Henderson. G Alijah Vera-Tucker returned to practice.",
+      "source": "NBC Sports / Rotoworld",
+      "url": "https://www.nbcsports.com/fantasy/football/news/nfl-week-12-injury-report-drake-mayes-updated-timeline-dalton-kincaid-returns-to-practice-and-more"
+    },
+    {
+      "text": "LA Chargers QB (uncertain): Justin Herbert in concussion protocol after Wk11; DJ Uiagalelei next up, Jake Browning promoted. Also monitoring RB Keaton Mitchell (knee), EDGE Akheem Mesidor (ankle); LB Daiyan Henley, CB Tarheeb Still missed Wk11.",
+      "source": "Chargers.com",
+      "url": "https://www.chargers.com/news/justin-herbert-injury-update-nfl-protocol-week-12"
+    }
+  ],
+  "adjust": [
+    {
+      "market": "all",
+      "side": "LAC",
+      "points": 0.5,
+      "reason": "New England is without its top receivers A.J. Brown and Romeo Doubs plus RB Henderson, outweighing the Chargers' defensive questions (Henley, Still, Mesidor). The stats model doesn't price non-QB injuries"
+    }
+  ],
+  "qb_start": {
+    "NE": "Tommy DeVito"
+  }
+}

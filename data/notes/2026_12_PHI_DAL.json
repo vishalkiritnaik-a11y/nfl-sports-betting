@@ -1,0 +1,29 @@
+{
+  "game_id": "2026_12_PHI_DAL",
+  "updated": "2026-11-24T23:30:00Z",
+  "items": [
+    {
+      "text": "Philadelphia QB: Jalen Hurts on IR (blood clots in lungs), out for the season. Joe Milton III makes his third start Thursday; Tanner McKee (rib) limited.",
+      "source": "Yardbarker",
+      "url": "https://www.yardbarker.com/nfl/articles/joe_milton_brings_cowboys_familiarity_into_eagles_thanksgiving_game/s1_17810_44609982"
+    },
+    {
+      "text": "Philadelphia (early week, Mon estimate): DNP - CB Quinyon Mitchell (hamstring, new), CB Jonathan Jones (ankle), LB Smael Mondon (ankle), OLB Arnold Ebiketie (oblique). LIMITED - RB Saquon Barkley (neck/illness, left last game), TE Dallas Goedert (shin). FULL - WR DeVonta Smith, DT Jalen Carter, OLB Jonathan Greenard. IR - LB Zack Baun, RB Tank Bigsby.",
+      "source": "PhiladelphiaEagles.com",
+      "url": "https://www.philadelphiaeagles.com/news/eagles-at-cowboys-injury-report-2026-nfl-week-12-thanksgiving"
+    },
+    {
+      "text": "Dallas (early week, Mon estimate): DNP - TE Jake Ferguson (knee/ankle), G Tyler Booker (ankle), LB Dee Winters (knee), LB Jaishawn Barham (hip/groin). LIMITED - S P.J. Locke (concussion), WR Jonathan Mingo (ankle). FULL - QB Dak Prescott (left hand), CB Joey Porter Jr. IR - CB DaRon Bland, EDGE Malachi Lawrence.",
+      "source": "PhillyVoice",
+      "url": "https://www.phillyvoice.com/eagles-cowboys-week-12-injury-report-analysis-2026/"
+    }
+  ],
+  "adjust": [
+    {
+      "market": "all",
+      "side": "DAL",
+      "points": 0.5,
+      "reason": "Philadelphia's top two corners (Mitchell, Jones) plus LB Mondon and OLB Ebiketie missed Monday's estimate with Barkley and Goedert limited, a heavier load than Dallas missing TE Ferguson, G Booker and LB Winters. The stats model doesn't price non-QB injuries"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "game_id": "2026_12_WAS_ARI",
+  "updated": "2026-11-24T23:30:00Z",
+  "items": [
+    {
+      "text": "Arizona QB (uncertain): Gardner Minshew on season-ending IR. Carson Beck (back spasms) 'day to day'; Josh Johnson started Wk11 and is 'on deck' vs WAS. No starter named - Beck could reclaim the job if he practices.",
+      "source": "azcardinals.com",
+      "url": "https://www.azcardinals.com/news/the-future-of-carson-beck-s-back-and-chiefs-aftermath-cardinals"
+    },
+    {
+      "text": "Arizona (early week): out for season - WR Michael Wilson (neck), WR Kendrick Bourne, WR Jalen Brooks. IR - RB Jeremiyah Love, S Andrew Wingard. DC Nick Rallis fired Monday.",
+      "source": "Arizona Sports",
+      "url": "https://arizonasports.com/?p=3638035"
+    },
+    {
+      "text": "Washington (early week, short week after MNF win): QB Jayden Daniels hurt his left (non-throwing) hand vs CIN but stayed in; watch Wednesday's report. RB Jacory Croskey-Merritt activated from IR. WR Terry McLaurin out for season.",
+      "source": "Yahoo Sports",
+      "url": "https://sports.yahoo.com/articles/commanders-reporter-shares-concerning-jayden-184650369.html"
+    }
+  ],
+  "adjust": [],
+  "qb_start": {
+    "ARI": "Josh Johnson"
+  }
+}
