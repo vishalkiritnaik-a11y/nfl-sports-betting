@@ -1,21 +1,16 @@
 {
   "game_id": "2026_12_ATL_MIN",
-  "updated": "2026-11-24T23:30:00Z",
+  "updated": "2026-11-26T22:30:00Z",
   "items": [
     {
-      "text": "Minnesota QB: Kirk Cousins has started Wks 10-11 and is expected to start; Kyler Murray (hamstring) targeting a Week 12 return but reportedly QB2 when healthy. Watch Wednesday practice.",
-      "source": "CBS Sports",
-      "url": "https://www.cbssports.com/nfl/players/2180829/kyler-murray/"
+      "text": "Minnesota (Wed est.): DNP - WR Jordan Addison (thumb), LT Christian Darrisaw (shoulder), DL Jalen Redmond, CB Isaiah Rodgers, S Harrison Smith (thigh). QB Kyler Murray (hamstring) limited; Kirk Cousins starts.",
+      "source": "Vikings.com",
+      "url": "https://www.vikings.com/news/falcons-injury-report-week-12-2026-nfl-season"
     },
     {
-      "text": "Minnesota (early week): WR Jordan Addison (thumb surgery) not expected to play; LT Christian Darrisaw (shoulder) may miss (Ryan Van Demark would start); CB Isaiah Rodgers (quad) inactive Wk11; TE Josh Oliver injured.",
-      "source": "Heavy",
-      "url": "https://heavy.com/sports/nfl/minnesota-vikings/jordan-addison-injury-update-falcons-game/"
-    },
-    {
-      "text": "Atlanta (off bye): Week 12 depth chart lists Michael Penix Jr. QB1, Tua Tagovailoa QB2. No new injuries noted; RB Brian Robinson Jr. on IR.",
-      "source": "AtlantaFalcons.com",
-      "url": "https://www.atlantafalcons.com/news/atlanta-falcons-week-12-depth-chart-vs-minnesota-vikings"
+      "text": "Atlanta (Thu practice): DNP - WRs Zachariah Branch, Jahan Dotson (hamstrings), S DeMarcco Hellams (foot), G Matthew Bergeron (hamstring), DB Billy Bowman Jr. LIMITED - DE Cameron Thomas, LB Kendal Daniels. Michael Penix Jr. starts (off bye).",
+      "source": "Yahoo Sports",
+      "url": "https://sports.yahoo.com/nfl/articles/falcons-week-12-injury-report-184525106.html"
     }
   ],
   "adjust": []

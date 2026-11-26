@@ -1,16 +1,16 @@
 {
   "game_id": "2026_12_CAR_TB",
-  "updated": "2026-11-24T23:30:00Z",
+  "updated": "2026-11-26T22:30:00Z",
   "items": [
     {
-      "text": "Tampa Bay (early week): Baker Mayfield played through foot/thumb in Wk11, expected to start. CB Benjamin Morrison (hamstring) and CB Jacob Parrish (back) had MRIs Monday, results pending; DL Elijah Simmons in concussion protocol. IR - WR Jalen McMillan.",
-      "source": "CBS Sports",
-      "url": "https://www.cbssports.com/fantasy/football/news/buccaneers-benjamin-morrison-undergoes-mri-on-monday/"
+      "text": "Tampa Bay (Thu estimated): DNP - S Antoine Winfield Jr. (ankle), CB Benjamin Morrison (hamstring/back). LIMITED - CB Jacob Parrish, LB Josiah Trotter, DL Elijah Simmons. FULL - QB Baker Mayfield, TE Cade Otton, WR Jalen McMillan. Mayfield starts.",
+      "source": "Buccaneers.com",
+      "url": "https://www.buccaneers.com/news/buccaneers-panthers-injury-report-nov-26-week-12"
     },
     {
-      "text": "Carolina (early week): WR Jalen Coker cleared concussion protocol; no other new injuries. Bryce Young starts. IR - RB Jonathan Brooks.",
-      "source": "NFL.com",
-      "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-nov-23"
+      "text": "Carolina (Thu projected): DNP - WR Tetairoa McMillan (foot), LB Bobby Okereke (foot), LB Patrick Jones II (ankle), TE Mitchell Evans. LIMITED - TE Darren Waller, LB Jaelan Phillips. FULL - QB Bryce Young, RB Jonathon Brooks (IR window). Young starts.",
+      "source": "Panthers.com",
+      "url": "https://www.panthers.com/news/week-12-thursday-injury-report-five-listed-as-not-participating-in-projected-practice"
     }
   ],
   "adjust": []

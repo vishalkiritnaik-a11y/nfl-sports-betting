@@ -1,22 +1,29 @@
 {
   "game_id": "2026_12_SEA_SF",
-  "updated": "2026-11-24T23:30:00Z",
+  "updated": "2026-11-26T22:30:00Z",
   "items": [
     {
-      "text": "Seattle QB (uncertain): Sam Darnold (ribs/quad) practiced Monday for the first time in three weeks; Macdonald plans for him to start but 'we'll see how Wednesday goes.' Drew Lock starts if not.",
-      "source": "NBC Sports / Rotoworld",
-      "url": "https://www.nbcsports.com/fantasy/football/player-news/2026-11-24/macdonald-unsure-about-darnold-vs-49ers"
+      "text": "Seattle (Wed practice): DNP - LG Quenton Nelson (knee), RT Abraham Lucas (ankle) (both expected out), DT Jarran Reed (toe), OLB DeMarcus Lawrence (shoulder). LIMITED - LT Charles Cross, RG Anthony Bradford, WR Jaxon Smith-Njigba (ankle), DT Leonard Williams, LB Ernest Jones IV, QB Drew Lock (elbow). FULL - QB Sam Darnold; expected to start.",
+      "source": "Seahawks.com",
+      "url": "https://www.seahawks.com/news/week-12-injury-report-seahawks-at-49ers"
     },
     {
-      "text": "Seattle (early week): not practicing Mon - LG Quenton Nelson (knee), RT Abraham Lucas (ankle), RG Anthony Bradford. Back on field - LT Charles Cross, DL Leonard Williams. IR - RB George Holani.",
-      "source": "The Spokesman-Review",
-      "url": "https://www.spokesman.com/stories/2026/nov/23/seahawks-qb-sam-darnold-returns-to-practice-as-tea/"
+      "text": "San Francisco QB (uncertain): Brock Purdy (ankle sprain, not high-ankle) DNP Wed; Shanahan said there is a 'possibility' he won't play. Mac Jones starts if not. Rapoport calls it minor, day-to-day.",
+      "source": "NFL.com",
+      "url": "https://www.nfl.com/news/brock-purdy-sits-out-practice-ankle-sprain-49ers-seahawks"
     },
     {
-      "text": "San Francisco (early week): RT Colton McKivitz (ankle fracture/dislocation) out for season, Vederian Lowe starts; CB Deommodore Lenoir (foot) left Wk11, uncertain. IR - WRs Ricky Pearsall, Christian Kirk. Brock Purdy starts.",
+      "text": "San Francisco (Wed practice): DNP - WR Mike Evans (Achilles tendinitis, workload), WR Jordan Watkins, S Siran Neal; rest - RB Christian McCaffrey, LT Trent Williams. LIMITED - CB Deommodore Lenoir (foot), CB Upton Stout, LB Dre Greenlaw. RT Colton McKivitz out for season; IR - WRs Ricky Pearsall, Christian Kirk.",
       "source": "49ers Webzone",
-      "url": "https://www.49erswebzone.com/articles/205424-shanahan-shares-heartbreaking-colton-mckivitz/"
+      "url": "https://www.49erswebzone.com/articles/205537-49ers-seahawks-injury-report-practice/"
     }
   ],
-  "adjust": []
+  "adjust": [
+    {
+      "market": "all",
+      "side": "SF",
+      "points": 0.5,
+      "reason": "Seattle is likely without starting guards/tackles Nelson and Lucas with Cross and Bradford limited and DL Reed and Lawrence not practicing, a heavier non-QB load than San Francisco's. The stats model doesn't price non-QB injuries"
+    }
+  ]
 }

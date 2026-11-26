@@ -1,16 +1,21 @@
 {
   "game_id": "2026_12_DEN_PIT",
-  "updated": "2026-11-24T23:30:00Z",
+  "updated": "2026-11-26T22:30:00Z",
   "items": [
     {
-      "text": "Pittsburgh (Tue practice): DNP - OLB Alex Highsmith (ankle; McCarthy: 'tough for him to make it'), WR Ben Skowronek (calf). LIMITED - OLB Nick Herbig (hip/ribs, missed Wk11). FULL - WR Michael Pittman Jr. (foot, in IR window, expected back). IR - LG Mason McCormick (ankle). Aaron Rodgers starts.",
-      "source": "Yahoo Sports (Behind the Steel Curtain)",
-      "url": "https://sports.yahoo.com/nfl/articles/steelers-alex-highsmith-misses-practice-213059424.html"
+      "text": "Pittsburgh QB: Steelers released Aaron Rodgers (Nov 25); Mason Rudolph starts vs DEN (schedule listing correct).",
+      "source": "NFL.com",
+      "url": "https://www.nfl.com/news/steelers-release-aaron-rodgers"
     },
     {
-      "text": "Denver (early week): S Brandon Jones (hamstring) has missed 3 games; DL Sai'vion Jones uncertain. IR - RB RJ Harvey (knee), TE Caleb Lohner, LB Jonah Elliss; RB Tyler Badie window opened. Bo Nix starts.",
-      "source": "Yahoo Sports",
-      "url": "https://sports.yahoo.com/nfl/articles/broncos-injury-report-brandon-jones-213655143.html"
+      "text": "Pittsburgh (final report): OUT - OLB Alex Highsmith (ankle), WR Ben Skowronek (calf, to IR), G Gennings Dunker (knee, IR). QUESTIONABLE - LB Cole Holcomb (heel). OLB Nick Herbig full Thu, will play; WR Michael Pittman Jr. activated from IR. IR - LG Mason McCormick.",
+      "source": "Steel Curtain Network",
+      "url": "https://steelcurtainnetwork.com/steelers-vs-broncos-injury-report-steelers-have-rule-out-two-one-questionable-in-week-12/"
+    },
+    {
+      "text": "Denver (final report): OUT - DE Sai'vion Jones (hamstring), S Taylor Rapp (quad), TE Caleb Lohner (foot). QUESTIONABLE - RB Tyler Badie (thumb, needs IR activation). S Brandon Jones (hamstring) no designation, set to return. IR - RB RJ Harvey, LB Jonah Elliss. Bo Nix starts.",
+      "source": "Denver Broncos",
+      "url": "https://www.denverbroncos.com/news/injuryreport/injury-report-s-brandon-jones-not-assigned-game-status-3-broncos-ruled-out-for-week-12-game-vs-steelers"
     }
   ],
   "adjust": []

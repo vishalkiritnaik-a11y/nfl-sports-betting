@@ -1,21 +1,16 @@
 {
   "game_id": "2026_12_LV_CLE",
-  "updated": "2026-11-24T23:30:00Z",
+  "updated": "2026-11-26T22:30:00Z",
   "items": [
     {
-      "text": "Las Vegas (early week): TE Brock Bowers (ankle/quad) missed Wk11, Kubiak optimistic he returns. DT Adam Butler (concussion), DT Tim Keenan III (knee), DT JJ Pegues (forearm) hurt vs DEN; DT Tonka Hemingway (stinger) out last game. Fernando Mendoza starts.",
+      "text": "Las Vegas (Wed practice): DNP - DT Adam Butler (concussion), DT Tim Keenan III (knee). LIMITED - TE Brock Bowers (ankle), DT Tonka Hemingway. Fernando Mendoza starts.",
+      "source": "Raiders.com",
+      "url": "https://www.raiders.com/news/raiders-browns-week-12-injury-report"
+    },
+    {
+      "text": "Cleveland (Wed practice, off bye): DNP - WR Denzel Boston (quad), RG Austin Barber (knee), DE Derek Barnett, DE Isaiah McGuire. LIMITED - TE Harold Fannin Jr., C Elgton Jenkins, RB Raheim Sanders. Deshaun Watson starts.",
       "source": "Yahoo Sports",
-      "url": "https://sports.yahoo.com/articles/raiders-defensive-tackle-depth-tested-194515732.html"
-    },
-    {
-      "text": "Cleveland (Tue, post-bye): DNP - WR Denzel Boston, RG Austin Barber, DE Derek Barnett, DE Isaiah McGuire, LB Quincy Williams. S Ronnie Hickman back from concussion.",
-      "source": "Heavy",
-      "url": "https://heavy.com/sports/nfl/cleveland-browns/grim-injury-news-on-denzel-boston-after-bye"
-    },
-    {
-      "text": "Cleveland QB: Week 12 unofficial depth chart lists Deshaun Watson QB1, Shedeur Sanders QB2.",
-      "source": "ClevelandBrowns.com",
-      "url": "https://www.clevelandbrowns.com/news/browns-announce-unofficial-depth-chart-for-week-12-vs-the-raiders"
+      "url": "https://sports.yahoo.com/nfl/articles/browns-raiders-week-12-injuries-134828380.html"
     }
   ],
   "adjust": []

@@ -1,21 +1,21 @@
 {
   "game_id": "2026_12_WAS_ARI",
-  "updated": "2026-11-24T23:30:00Z",
+  "updated": "2026-11-26T22:30:00Z",
   "items": [
     {
-      "text": "Arizona QB (uncertain): Gardner Minshew on season-ending IR. Carson Beck (back spasms) 'day to day'; Josh Johnson started Wk11 and is 'on deck' vs WAS. No starter named - Beck could reclaim the job if he practices.",
-      "source": "azcardinals.com",
-      "url": "https://www.azcardinals.com/news/the-future-of-carson-beck-s-back-and-chiefs-aftermath-cardinals"
+      "text": "Arizona QB: Carson Beck (back) DNP Wed and Thu; Josh Johnson expected to start again. Gardner Minshew on season-ending IR.",
+      "source": "CBS Sports",
+      "url": "https://www.cbssports.com/fantasy/football/news/cardinals-carson-beck-stays-dnp-on-thursday/"
     },
     {
-      "text": "Arizona (early week): out for season - WR Michael Wilson (neck), WR Kendrick Bourne, WR Jalen Brooks. IR - RB Jeremiyah Love, S Andrew Wingard. DC Nick Rallis fired Monday.",
-      "source": "Arizona Sports",
-      "url": "https://arizonasports.com/?p=3638035"
+      "text": "Arizona (Wed practice): OG Jon Gaines II (ankle) DNP after setback; LB Cody Simon limited. Out for season - WRs Michael Wilson, Kendrick Bourne, Jalen Brooks; IR - RB Jeremiyah Love, S Andrew Wingard.",
+      "source": "Arizona Cardinals",
+      "url": "https://www.azcardinals.com/news/injury-report-week-12-vs-commanders"
     },
     {
-      "text": "Washington (early week, short week after MNF win): QB Jayden Daniels hurt his left (non-throwing) hand vs CIN but stayed in; watch Wednesday's report. RB Jacory Croskey-Merritt activated from IR. WR Terry McLaurin out for season.",
-      "source": "Yahoo Sports",
-      "url": "https://sports.yahoo.com/articles/commanders-reporter-shares-concerning-jayden-184650369.html"
+      "text": "Washington (Wed est./Thu): DNP - WR Stefon Diggs (personal), CB Amik Robertson (ankle). LIMITED - WR Treylon Burks, DE Charles Omenihu. FULL - QB Jayden Daniels (left hand/elbow). WR Terry McLaurin out for season. Daniels starts.",
+      "source": "Commanders.com",
+      "url": "https://www.commanders.com/news/commanders-vs-cardinals-week-12-injury-report"
     }
   ],
   "adjust": [],

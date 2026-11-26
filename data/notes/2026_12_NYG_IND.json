@@ -1,21 +1,21 @@
 {
   "game_id": "2026_12_NYG_IND",
-  "updated": "2026-11-24T23:30:00Z",
+  "updated": "2026-11-26T22:30:00Z",
   "items": [
     {
-      "text": "Indianapolis QB: Colts waived Daniel Jones Nov 20; Anthony Richardson Sr. named starter vs NYG (schedule listing correct).",
-      "source": "NFL.com",
-      "url": "https://www.nfl.com/news/colts-waive-daniel-jones-name-anthony-richardson-new-starting-quarterback"
+      "text": "Indianapolis QB: Colts waived Daniel Jones Nov 20; Anthony Richardson Sr. starts vs NYG (schedule listing correct).",
+      "source": "NBC Sports (Rotoworld)",
+      "url": "https://www.nbcsports.com/fantasy/football/player-news/2026-11-20/anthony-richardson-will-start-for-colts-vs-giants"
     },
     {
-      "text": "Indianapolis (early week): RB Seth McGowan (hamstring) will miss time. Out Wk11, no update yet - OT Jalen Travis (knee), OT Bernhard Raimann, CB Charvarius Ward (knee), DT Jerry Tillery (calf), TE Will Mallory. IR - WR Alec Pierce, LB Jaylon Carlies, LB Akeem Davis-Gaither, TE Mo Alie-Cox, CB Cam Taylor-Britt.",
-      "source": "ESPN",
-      "url": "https://www.espn.com/nfl/team/injuries/_/name/ind/indianapolis-colts"
-    },
-    {
-      "text": "NY Giants (early week): CB Greg Newsome II (high ankle sprain) out multiple weeks; LB Kayvon Thibodeaux returned after a knock. J.J. McCarthy starts.",
+      "text": "Indianapolis (Wed practice): DNP - CB Charvarius Ward (knee), OT Jalen Travis (knee), DT Jerry Tillery (calf), TEs Will Mallory, Andrew Ogletree, RB Seth McGowan. FULL - LT Bernhard Raimann (concussion), CB Sauce Gardner (calf), CB Cam Taylor-Britt (IR window). IR - WR Alec Pierce, LBs Jaylon Carlies, Akeem Davis-Gaither.",
       "source": "Giants.com",
-      "url": "https://www.giants.com/news/week-12-tracker-latest-news-notes-roster-moves-indianapolis-colts-nfl"
+      "url": "https://www.giants.com/news/injury-report-statuses-for-giants-vs-colts"
+    },
+    {
+      "text": "NY Giants (Wed practice): DNP - OLB Abdul Carter (ankle; Harbaugh: 'should be fine'), DL Shelby Harris (illness), CB Dru Phillips (illness). LIMITED - TE Isaiah Likely, LB Arvell Reese. IR - CB Greg Newsome II. J.J. McCarthy starts.",
+      "source": "Giants.com",
+      "url": "https://www.giants.com/news/injury-report-statuses-for-giants-vs-colts"
     }
   ],
   "adjust": [
@@ -23,7 +23,7 @@
       "market": "all",
       "side": "NYG",
       "points": 0.5,
-      "reason": "Indianapolis missed both starting tackles, CB Charvarius Ward and DT Tillery last week with WR Pierce and two LBs on IR, against the Giants' main loss of CB Newsome. The stats model doesn't price non-QB injuries"
+      "reason": "Indianapolis is still missing CB Ward, OT Travis and DT Tillery with WR Pierce and two LBs on IR, a heavier load than the Giants' loss of CB Newsome. The stats model doesn't price non-QB injuries"
     }
   ]
 }

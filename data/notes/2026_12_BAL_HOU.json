@@ -1,17 +1,29 @@
 {
   "game_id": "2026_12_BAL_HOU",
-  "updated": "2026-11-24T23:30:00Z",
+  "updated": "2026-11-26T22:30:00Z",
   "items": [
     {
-      "text": "Baltimore (early week): QB Lamar Jackson (thumb) on IR, Week 16 earliest; Jacoby Brissett starts. CB Marlon Humphrey (team discipline) availability TBD. Missed last game - DL Nnamdi Madubuike (hamstring), S Jaylinn Hawkins (knee). IR - C Ethan Pocic, K Tyler Loop. Derrick Henry evaluated for concussion late vs CAR, said he felt fine.",
-      "source": "ESPN NFL Injuries",
-      "url": "https://www.espn.com/nfl/injuries"
+      "text": "Baltimore (Thu practice): DNP - DT Nnamdi Madubuike (hamstring). LIMITED - S Jaylinn Hawkins (knee), CB Chidobe Awuzie (back), G Vega Ioane (hand). FULL - RB Derrick Henry (concussion protocol, expected to play), WRs Zay Flowers, Rashod Bateman. Lamar Jackson (thumb) on IR; Jacoby Brissett starts.",
+      "source": "Yahoo Sports",
+      "url": "https://sports.yahoo.com/nfl/articles/ravens-encouraging-injury-news-derrick-213754874.html"
     },
     {
-      "text": "Houston (early week): DE Danielle Hunter (hamstring) missed 2 games, less likely to play; RB Woody Marks (concussion) trending to return. WR Marvin Harrison Jr. (hamstring), G Wyatt Teller (back) out last game. IR - LB Azeez Al-Shaair. C.J. Stroud starts.",
-      "source": "Texans On SI",
-      "url": "https://www.si.com/nfl/texans/onsi/texans-provide-updates-on-danielle-hunter-woody-marks-ahead-of-week-12"
+      "text": "Baltimore: CB Marlon Humphrey back at practice after team-discipline deactivation; status TBD.",
+      "source": "Baltimore Ravens",
+      "url": "https://www.baltimoreravens.com/news/marlon-humphrey-returns-to-practice-nnamdi-madubuike-jaylinn-hawkins-calais-campbell"
+    },
+    {
+      "text": "Houston (Wed practice): DNP - DE Danielle Hunter (hamstring, out since Wk10), DT Sheldon Rankins (ankle), LG Keylan Rutledge (stinger), WR Kayshon Boutte (hip), TE Brevin Jordan. LIMITED - WR Marvin Harrison Jr. (hamstring, trending to play). FULL - RB Woody Marks (concussion). IR - LB Azeez Al-Shaair. C.J. Stroud starts.",
+      "source": "Houston Texans",
+      "url": "https://www.houstontexans.com/news/week-12-injury-report-texans-vs-ravens"
     }
   ],
-  "adjust": []
+  "adjust": [
+    {
+      "market": "all",
+      "side": "BAL",
+      "points": 0.5,
+      "reason": "Houston is likely without DE Hunter, DT Rankins, LG Rutledge and WR Boutte, while Baltimore's main absence is DT Madubuike with Henry, Flowers and Bateman practicing fully. The stats model doesn't price non-QB injuries"
+    }
+  ]
 }
